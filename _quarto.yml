@@ -1,0 +1,33 @@
+project:
+  type: book
+
+book:
+  title: "Profound Puzzles: Deep Mathematics through Playful Problems"
+  author: "Vasiliev N.B., Gutenmacher V.L., Rabbot Zh.M., Toom A.L."
+  favicon: cover.png
+  sidebar: 
+    background: "#F5F5F5"
+    logo: cover.png
+    search: true
+  chapters:
+    - index.qmd
+    - par1.qmd
+    - par2.qmd
+    - par3.qmd
+    - par4.qmd
+    - par5.qmd
+    - par6.qmd
+    - subjectindex.qmd
+    - references.qmd
+
+
+format:
+  html:
+    theme:
+      light: cosmo
+    code-fold: false
+    css: custom.css
+
+
+
+

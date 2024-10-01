@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; INTEGERS AND POLYNOMIALS – Profound Puzzles: Deep Mathematics through Playful Problems</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./par3.html" rel="next">
+<link href="./par1.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./par2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">INTEGERS AND POLYNOMIALS</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Profound Puzzles: Deep Mathematics through Playful Problems</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">INTRODUCTORY PROBLEMS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">INTEGERS AND POLYNOMIALS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">CONSTRUCTIONS IN THE PLANE AND IN SPACE</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>INEQUALITIES, EXTREMAL PROBLEMS, ESTIMATES</strong></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">UNUSUAL EXAMPLES AND CONSTRUCTIONS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">SEQUENCES AND ITERATIONS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./subjectindex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Thematic Index</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#problems-discussion" id="toc-problems-discussion" class="nav-link active" data-scroll-target="#problems-discussion"><span class="header-section-number">2.1</span> Problems Discussion</a></li>
+  <li><a href="#independent-practice-problems" id="toc-independent-practice-problems" class="nav-link" data-scroll-target="#independent-practice-problems"><span class="header-section-number">2.2</span> Independent Practice Problems</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">INTEGERS AND POLYNOMIALS</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>2-1. A student was sent an assignment consisting of 20 problems. For each correctly solved problem, they get 8 points, for each incorrectly solved problem - minus 5 points, for a problem they didn’t attempt to solve - 0 points. The student received a total of 13 points. How many problems did they attempt to solve?</p>
+<p>2-2. Is it possible to exchange 25 rubles for 1-ruble, 3-ruble, and 5-ruble bills so that you get a total of 10 bills?</p>
+<p>2-3. A rectangle 272 × 204 mm is drawn on graph paper (its sides follow the grid lines). Draw its diagonal and mark all the grid nodes that lie on it. Into how many parts do the nodes divide the diagonal?</p>
+<p>2-4. a) From a rectangle 324 × 141 mm, several squares with a side of 141 mm are cut off until a rectangle remains with one side length less than 141 mm. From the resulting rectangle, squares are cut off, the sides of which are equal in length to its smaller side, as long as possible, and so on. What is the side length of the last square?</p>
+<ol start="2" type="a">
+<li>Find any two numbers a and b so that when cutting a rectangle a × b in this way, squares of six different sizes are obtained.</li>
+</ol>
+<p>2-5. Three machines print pairs of integers on cards. Each machine, after reading a certain card, produces a new card; after reading a card with the pair (m;n), the first machine produces a card (m - n;n), the second - a card (m + n;n), the third - a card (n;m). Let there initially be a card with a pair of numbers (19; 86). Is it possible, using the machines in any order, to obtain from it a card: a) (31; 13); b) (12; 21)?</p>
+<p>2-6. One master makes blue pencil marks on a long ribbon from its beginning every 36 cm. Another master makes red pencil marks from the beginning every 25 cm. Can a blue mark be at a distance of 1 cm from any red mark?</p>
+<p>2-7. Is it possible to divide an angle of 19° into 19 equal parts using only a compass and a ruler?</p>
+<p>2-8. A circle is divided by 20 points into 20 equal parts. How many different closed polygonal lines of 20 equal segments with vertices at these points can be constructed? (Two polygonal lines that can be obtained from each other by rotation are considered the same.)</p>
+<p>2-9. Is it true that from 100 arbitrary integers, one can always choose: a) 15; b) 16 such that the difference of any two is divisible by 7?</p>
+<p>2-10. Prove that if the sum of squares of two integers is divisible by 3, then each of them is divisible by 3.</p>
+<p>2-11. Prove that there exist infinitely many natural numbers that cannot be represented as the sum of cubes of three non-negative integers.</p>
+<p>2-12. There are 28 students in a class who sit in pairs at 14 desks. At the beginning of each month, the teacher seats them so that two people who have never sat together before sit at each desk. What is the maximum number of months the teacher will be able to do this?</p>
+<p>2-13. Find any three consecutive natural numbers, each of which is divisible by the square of an integer greater than one.</p>
+<p>2-14. Is it possible to arrange all 12 numbers 1, 2, …, 12 in a circle so that for any three numbers a, b, c standing in a row, the number <span class="math inline">\(b^2 - ac\)</span> is divisible by 13?</p>
+<p>2-15. Is it true that for any natural n, the number <span class="math inline">\(n^3 + 5n - 1\)</span> is prime?</p>
+<p>2-16. Prove that for any integer n, the number <span class="math inline">\(n^3 - 5n + 4\)</span> is divisible by 120.</p>
+<p>2-17. Is there a polynomial p(x) with integer coefficients such that: a) p(0) = 19, p(1) = 85, p(2) = 1985; b) p(1) = 19, p(19) = 85?</p>
+<p>2-18. Factor the polynomial: a) <span class="math inline">\(x^8 + x^4 + 1\)</span> into three factors, b) <span class="math inline">\(x^5 + x + 1\)</span> into two factors with integer coefficients.</p>
+<p>2-19. For what value of a do the polynomials <span class="math inline">\(x^3 + ax + 1\)</span> and <span class="math inline">\(x^2 + ax + 1\)</span> have a common root?</p>
+<p>2-20. Consider the set M of natural numbers representable as <span class="math inline">\(x^2 + 5y^2\)</span>, where x and y are some integers. a) Prove that the product of two numbers from M also belongs to M. b) Let’s call a number from M greater than 1 basic if it is not divisible by any number from M except itself and 1. Are there numbers from M that can be represented in two different ways as a product of basic numbers? c) Prove that there are infinitely many basic numbers.</p>
+<p>2-21. It’s easy to specify a triple of squares of integers forming an arithmetic progression: 1, 25, 49. Find three more such triples (from squares of numbers that have no common divisor).</p>
+<p>2-22. a) Find 7 solutions in integers for the equation <span class="math inline">\(y^2 = 6(x^3 - x)\)</span>. b) Find 4 more solutions in rational numbers.</p>
+<section id="problems-discussion" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="problems-discussion"><span class="header-section-number">2.1</span> Problems Discussion</h2>
+<p><strong>Problem 2-1. Answer:</strong> The student solved 13 problems. Let <span class="math inline">\(x\)</span> be the number of correctly solved problems, and <span class="math inline">\(y\)</span> be the number of incorrectly solved problems. Then <span class="math inline">\(8x - 5y = 13\)</span>. Rewriting this equation in the form <span class="math display">\[8(x + y) = 13(1 + y),\]</span> we see that the number <span class="math inline">\(x + y\)</span> is divisible by 13. On the other hand, according to the condition, <span class="math inline">\(x + y\)</span> is not greater than 20. Therefore, <span class="math inline">\(x + y = 13\)</span> (in this case, <span class="math inline">\(x = 6, y = 7\)</span>).</p>
+<p>— It is possible to solve the equation <span class="math inline">\(8x - 5y = 13\)</span> in this way. One solution is immediately guessed: <span class="math inline">\(x_0 = 1, y_0 = -1\)</span>. For any integer <span class="math inline">\(t\)</span>, the pair of numbers <span class="math inline">\(x = 1 + 5t, y = -1 + 8t\)</span> also satisfies this equation. Indeed, <span class="math inline">\(8(1 + 5t) - 5(-1 + 8t) = (8 + 5) + (40t - 40t) = 13\)</span>. Moreover, <span class="math inline">\(x + y = 13t\)</span>, and since <span class="math inline">\(x + y \le 20\)</span>, then <span class="math inline">\(t = 1, x + y = 13, x = 6, y = 7\)</span>.</p>
+<p>For any linear equation of the form <span class="math inline">\(ax - by = c\)</span> (where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are coprime numbers), the general form of solutions in integers can be written according to the same scheme. We find some integer solution <span class="math inline">\((x_0; y_0)\)</span>. Then <span class="math inline">\(x = x_0 + bt, y = y_0 + at\)</span>, where <span class="math inline">\(t \in \mathbb{Z}\)</span>, are all the solutions.</p>
+<p><strong>Problem 2-2. Answer:</strong> It is not possible.</p>
+<p>Suppose that it is possible to take <span class="math inline">\(k\)</span> one-ruble, <span class="math inline">\(l\)</span> three-ruble, and <span class="math inline">\(m\)</span> five-ruble bills so that the conditions of the problem are satisfied, i.e., <span class="math inline">\(k + l + m = 10\)</span> and <span class="math inline">\(k + 3l + 5m = 25\)</span>.</p>
+<p>Subtracting the first equality from the second, we get: <span class="math inline">\(2l + 4m = 15\)</span>. But the last equality is impossible, since its left side is even, and the right side is not. Therefore, our assumption is incorrect.</p>
+<p>— In general, an equation of the form <span class="math inline">\(ax - by = c\)</span> has a solution in integers if and only if <span class="math inline">\(c\)</span> is divisible by the greatest common divisor gcd<span class="math inline">\((a, b)\)</span> of the numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. In problem 2-2, <span class="math inline">\(c = 15\)</span> is not divisible by gcd<span class="math inline">\((a, b) =\)</span> gcd<span class="math inline">\((2, 4) = 2\)</span>.</p>
+<p><strong>Problem 2-3. Answer:</strong> into 68 parts. Divide each of the two adjacent sides of the rectangle into 68 equal parts and draw straight lines through the division points along the grid lines. Then the diagonal of the rectangle will be divided by the grid nodes into 68 equal parts, which are the diagonals of rectangles of size <span class="math inline">\(3 \times 4\)</span> mm. There are no grid nodes on the diagonal of each such rectangle.</p>
+<p>∇ In the general case, the diagonal of an <span class="math inline">\(m \times n\)</span> rectangle is divided by the grid nodes into gcd<span class="math inline">\((m, n)\)</span> equal segments.</p>
+<p><strong>Problem 2-4.</strong> a) <strong>Answer:</strong> 3 mm. Let’s perform division with remainder: <span class="math inline">\(324 = 141 \times 2 + 42\)</span> (2 squares with a side of 141 mm), <span class="math inline">\(141 = 42 \times 3 + 15\)</span> (3 squares with a side of 42 mm), <span class="math inline">\(42 = 15 \times 2 + 12\)</span> (2 squares with a side of 15 mm), <span class="math inline">\(15 = 12 \times 1 + 3\)</span> (1 square with a side of 12 mm), <span class="math inline">\(12 = 3 \times 4\)</span> (4 squares with a side of 3 mm).</p>
+<p>∇ For an arbitrary rectangle <span class="math inline">\(a \times b\)</span>, the length of the side of the last square is equal to gcd<span class="math inline">\((a, b)\)</span>.</p>
+<p>Indeed, the procedure of successive division with remainder that we performed in the solution of the problem is the Euclidean algorithm for finding gcd<span class="math inline">\((a, b)\)</span> (see [34, 88, 98]).</p>
+<p>The Euclidean algorithm is based on the following fact. Let <span class="math inline">\(a = bq + r\)</span>, then gcd<span class="math inline">\((a, b) =\)</span> gcd<span class="math inline">\((b, r)\)</span>. The algorithm itself can be described as follows. If we have two numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, where <span class="math inline">\(a &gt; b &gt; 0\)</span>, then first we divide <span class="math inline">\(a\)</span> by <span class="math inline">\(b\)</span> and get the remainder <span class="math inline">\((0 \le r &lt; b)\)</span>. Then we divide <span class="math inline">\(b\)</span> by <span class="math inline">\(r\)</span> and find the remainder <span class="math inline">\(r_2 (0 \le r_2 &lt; r)\)</span>. Next, we divide <span class="math inline">\(r\)</span> by <span class="math inline">\(r_2\)</span>, and we get the remainder <span class="math inline">\(r_3 (0 \le r_3 &lt; r_2)\)</span>, and so on, until some remainder <span class="math inline">\(r_{n-1}\)</span> is divisible by the remainder <span class="math inline">\(r_n\)</span> without a remainder, i.e., <span class="math inline">\(r_{n+1} = 0\)</span>. The last non-zero remainder <span class="math inline">\(r_n\)</span> is gcd<span class="math inline">\((a, b)\)</span>. In fact, <span class="math inline">\(r_n =\)</span> gcd<span class="math inline">\((r_n, r_{n-1}) =\)</span> gcd<span class="math inline">\((r_{n-1}, r_{n-2}) = ... =\)</span> gcd<span class="math inline">\((r_2, r_1) =\)</span> gcd<span class="math inline">\((r_1, b) =\)</span> gcd<span class="math inline">\((a, b)\)</span>.</p>
+<p>In problem 2-4 a), we encountered a geometric illustration of this algorithm.</p>
+<p>Note also that from the sequence of quotients <span class="math inline">\(q_1, q_2, ..., q_n\)</span> obtained in the process of applying the Euclidean algorithm, one can write the expansion of the fraction <span class="math inline">\(a/b\)</span> into a continued fraction (see [66, 61, 119]): <span class="math display">\[\frac{a}{b} = q_1 + \frac{1}{q_2 + \frac{1}{q_3 + ... + \frac{1}{q_n}}}\]</span></p>
+<ol start="2" type="a">
+<li><strong>Answer:</strong> for example, <span class="math inline">\(a = 21, b = 13\)</span>.</li>
+</ol>
+<p>Indeed, let’s perform division with remainder: <span class="math inline">\(21 = 1 \times 13 + 8\)</span>; <span class="math inline">\(13 = 1 \times 8 + 5\)</span>; <span class="math inline">\(8 = 1 \times 5 + 3\)</span>; <span class="math inline">\(5 = 1 \times 3 + 2\)</span>; <span class="math inline">\(3 = 1 \times 2 + 1\)</span>; <span class="math inline">\(2 = 2 \times 1\)</span>. Thus, we get squares with sides of 13, 8, 5, 3, 2, 1, respectively – six different sizes.</p>
+<p>∇ For any natural number <span class="math inline">\(n\)</span>, it is possible to find such numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> that the cutting will result in exactly <span class="math inline">\(n\)</span> different sizes of squares.</p>
+<p>As such numbers, one can take the numbers <span class="math inline">\(F_{n+2}\)</span> and <span class="math inline">\(F_{n+1}\)</span> of the Fibonacci sequence, which is defined as follows: <span class="math inline">\(F_1 = 1, F_2 = 1, F_3 = 2, ..., F_k = F_{k-1} + F_{k-2}\)</span> for <span class="math inline">\(k \ge 3\)</span>.</p>
+<p>If we set <span class="math inline">\(a = F_{n+2}\)</span> and <span class="math inline">\(b = F_{n+1}\)</span>, then each time only one square with a side length of <span class="math inline">\(F_{k-1}\)</span> will be cut off from the rectangle <span class="math inline">\(F_k \times F_{k-1}\)</span>, and a rectangle <span class="math inline">\(F_{k-1} \times F_{k-2}\)</span> will remain.</p>
+<p>In the solution of problem 2-4 b), we took <span class="math inline">\(F_7 = 13\)</span> and <span class="math inline">\(F_8 = 21\)</span>; the sizes of the squares turned out to be equal to the first six different Fibonacci numbers: 1, 2, 3, 5, 8, 13.</p>
+<p>The constructed example of a rectangle <span class="math inline">\(a \times b\)</span> has the smallest possible (for a given <span class="math inline">\(n\)</span>) dimensions; in other words, if the numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are not greater than <span class="math inline">\(F_{n+2}\)</span>, then the Euclidean algorithm gives gcd<span class="math inline">\((a, b)\)</span> not greater than <span class="math inline">\(n\)</span> in <span class="math inline">\(n\)</span> steps (see [63]).</p>
+<p>Note also that for the ratio <span class="math inline">\(F_{n+1}/F_n\)</span> of two adjacent Fibonacci numbers, the expansion into a continued fraction has an extremely simple form; it consists only of ones. For example, <span class="math display">\[\frac{F_8}{F_7} = \frac{21}{13} = 1 + \frac{1}{1 + \frac{1}{1 + \frac{1}{1 + \frac{1}{1 + \frac{1}{1}}}}}\]</span></p>
+<p><strong>Problem 2-5.</strong> a) <strong>Answer:</strong> It is possible.</p>
+<p>Let’s denote the operations of the machines as I, II, III, respectively, and agree to write <span class="math inline">\(n\)</span> consecutive operations of I or II as <span class="math inline">\(I^n\)</span> or <span class="math inline">\(II^n\)</span>, respectively.</p>
+<p>Then the card (31; 13) can be obtained from the card (19; 86) as follows:</p>
+<p>(19; 86) <span class="math inline">\(\xrightarrow{III}\)</span> (86; 19) <span class="math inline">\(\xrightarrow{I^4}\)</span> (10; 19) <span class="math inline">\(\xrightarrow{III}\)</span> (19; 10) <span class="math inline">\(\xrightarrow{I}\)</span> (9; 10) <span class="math inline">\(\xrightarrow{III}\)</span> (10; 9) <span class="math inline">\(\xrightarrow{I}\)</span> (1; 9) <span class="math inline">\(\xrightarrow{III}\)</span> (9; 1) <span class="math inline">\(\xrightarrow{I}\)</span> (8; 1) <span class="math inline">\(\xrightarrow{III}\)</span> (1; 8) <span class="math inline">\(\xrightarrow{II}\)</span> (9; 8) <span class="math inline">\(\xrightarrow{III}\)</span> (8; 9) <span class="math inline">\(\xrightarrow{II^7}\)</span> (22; 9) <span class="math inline">\(\xrightarrow{III}\)</span> (9; 22) <span class="math inline">\(\xrightarrow{II^2}\)</span> (31; 22) <span class="math inline">\(\xrightarrow{III}\)</span> (22; 31) <span class="math inline">\(\xrightarrow{II}\)</span> (31; 13)</p>
+<ol start="2" type="a">
+<li>Answer: it’s not possible.</li>
+</ol>
+<p>Since operations I, II, III preserve gcd(m,n), and gcd(19; 81) = 1 ≠ gcd(12; 21) = 3, it’s impossible to obtain the card (12; 21) from the card (19; 81).</p>
+<p>∇ The necessary and sufficient condition for obtaining a card (a, b) from a card (m, n) is that gcd(m, n) = gcd(a, b).</p>
+<p>The necessity of this condition is obvious; all operations I, II, III preserve gcd.</p>
+<p>If this condition is met, then both cards can be reduced to a card (d, d) using operations I and III according to the Euclidean algorithm.</p>
+<p>Indeed, each step of the Euclidean algorithm is division with remainder of number a by number b: <span class="math inline">\(a = bq + r\)</span> <span class="math inline">\((0 \leq r &lt; b)\)</span>. This step can be performed as follows:</p>
+<p><span class="math inline">\((a,b) \xrightarrow{I^q} (r,b)\)</span></p>
+<p>Then, after the operation <span class="math inline">\((r,b) \xrightarrow{III} (b,r)\)</span>, we can similarly make the next step of the algorithm and so on until we get the card (d,d).</p>
+<p>Going along the chain <span class="math inline">\((a, b) \rightarrow ... \rightarrow (d, d)\)</span> in reverse order, replacing operation I with operation II, we will get the card (a,b) from the card (d,d).</p>
+<p>Thus, by performing a “descent” from (m, n) to (d, d), and then an “ascent” from (d, d) to (a, b), we will ultimately go from card (m, n) to card (a, b), which was required. Problem 2-6. Answer: it can.</p>
+<p>For example, the 9th blue mark and the 13th red mark are 1 cm apart from each other, because <span class="math inline">\(13 \cdot 25 - 9 \cdot 36 = 1\)</span>. In this problem, we essentially needed to find some solution in integers to one of the equations:</p>
+<p><span class="math inline">\(25x - 36y = 1\)</span>, <span class="math inline">\(25x - 36y = -1\)</span></p>
+<p>or prove that such solutions do not exist.</p>
+<p>There is a standard procedure by which one can always find a solution to the equation <span class="math inline">\(ax + by = 1\)</span>, if <span class="math inline">\(\gcd(a,b) = 1\)</span>. Let’s demonstrate it on our problem. Let’s write out all the steps of the Euclidean algorithm (see discussion of problem 2-4 a)) for finding <span class="math inline">\(\gcd(36,25)\)</span>:</p>
+<p><span class="math inline">\(36 = 25 \cdot 1 + 11\)</span>; <span class="math inline">\(25 = 11 \cdot 2 + 3\)</span>; <span class="math inline">\(11 = 3 \cdot 3 + 2\)</span>; <span class="math inline">\(3 = 2 \cdot 1 + 1\)</span>.</p>
+<p>Let’s rewrite this chain of equalities as:</p>
+<p><span class="math inline">\(11 = 36 - 25 \cdot 1\)</span>; <span class="math inline">\(3 = 25 - 11 \cdot 2\)</span>; <span class="math inline">\(2 = 11 - 3 \cdot 3\)</span>; <span class="math inline">\(1 = 3 - 2 \cdot 1\)</span>.</p>
+<p>Then we get:</p>
+<p><span class="math inline">\(1 = 3 - (11 - 3 \cdot 3) = 3 \cdot 4 - 11 = (25 - 11 \cdot 2) \cdot 4 - 11 =\)</span> <span class="math inline">\(= 25 \cdot 4 - 11 \cdot 9 = 25 \cdot 4 - (36 - 25) \cdot 9 = 25 \cdot 13 - 36 \cdot 9\)</span>.</p>
+<p>As a result, we get the equality <span class="math inline">\(25 \cdot 13 - 36 \cdot 9 = 1\)</span>, giving one solution (13, 9) to the equation <span class="math inline">\(25x - 36y = 1\)</span>.</p>
+<p>Problem 2-7. Answer: it is possible.</p>
+<p>Draw any circle with the center at the vertex of the given angle. The sides of this angle cut out an arc of 19° on the circle.</p>
+<p>If we consecutively mark off this arc on the circle 18 more times with a compass, then, since <span class="math inline">\(19 \times 19 = 361\)</span>, the last mark will cut off an arc of 1° from the first arc. Marking off this arc 17 more times with a compass, we will divide the 19° arc into 19 equal parts. Connecting the resulting marks with the vertex of the angle, we will divide the given 19° angle into 19 equal parts.</p>
+<p>Let <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> be coprime natural numbers (<span class="math inline">\(\gcd(m,n) = 1\)</span>) and <span class="math inline">\(m &lt; n\)</span>. By marking off equal arcs on the circle consecutively one after another, each comprising <span class="math inline">\(\frac{1}{n}\)</span> of the full circle, we can obtain all vertices of a regular <span class="math inline">\(n\)</span>-gon inscribed in the circle in <span class="math inline">\(n\)</span> steps (making <span class="math inline">\(m\)</span> full rotations in the process). At some <span class="math inline">\(x\)</span>-th step we will get a vertex adjacent to the initial one, at which point we will have made some number <span class="math inline">\(y\)</span> of full rotations and also passed <span class="math inline">\(\frac{1}{n}\)</span> of the circle, so that <span class="math inline">\(x \cdot \frac{m}{n} = y + \frac{1}{n}\)</span>. From this we get a geometric method for solving the equation</p>
+<p><span class="math inline">\(xm - yn = 1\)</span></p>
+<p>in integers. In our problem <span class="math inline">\(m = 19\)</span>, <span class="math inline">\(n = 360\)</span>, <span class="math inline">\(x = 19\)</span>, <span class="math inline">\(y = 1\)</span>. Problem 2-8. Answer: 4 polygonal lines.</p>
+<p>Let’s consider some division point as the initial one and number all division points clockwise starting from it with numbers <span class="math inline">\(1, 2, 3, ..., 20\)</span>.</p>
+<p>Polygonal lines with equal links will be obtained if we sequentially connect each point with the <span class="math inline">\(k\)</span>-th one after it until we return to the initial point <span class="math inline">\(1\)</span>.</p>
+<p>For <span class="math inline">\(k = 1\)</span>, we get a regular 20-gon with vertices at points <span class="math inline">\(1, 2, 3, ..., 20\)</span>.</p>
+<p>For <span class="math inline">\(k = 2\)</span>, a regular 10-gon with vertices at points <span class="math inline">\(1, 3, 5, ..., 19\)</span>.</p>
+<p>For <span class="math inline">\(k = 3\)</span>, a self-intersecting closed polygonal line with 20 vertices at points <span class="math inline">\(1, 4, 7, 10, 13, 16, 19, 2, 5, 8, 11, 14, 17, 20, 3, 6, 9, 12, 15, 18\)</span>.</p>
+<p>For <span class="math inline">\(k = 4\)</span>, a regular pentagon.</p>
+<p>For <span class="math inline">\(k = 5\)</span>, a square.</p>
+<p>For <span class="math inline">\(k = 6\)</span>, a self-intersecting closed polygonal line with 10 vertices at points <span class="math inline">\(1, 7, 13, 19, 5, 11, 17, 3, 9, 15\)</span>.</p>
+<p>For <span class="math inline">\(k = 7\)</span>, again a 20-link polygonal line.</p>
+<p>For <span class="math inline">\(k = 8\)</span>, a 5-link polygonal line (a five-pointed star).</p>
+<p>For <span class="math inline">\(k = 9\)</span>, again a 20-link polygonal line.</p>
+<p>For <span class="math inline">\(k = 10\)</span>, we get a degenerate 2-link polygonal line - a twice traversed segment.</p>
+<p>For <span class="math inline">\(k = 11\)</span>, we get the same polygonal line as for <span class="math inline">\(k = 9\)</span>, since connecting points through 10 clockwise is the same as connecting them through 8 counterclockwise.</p>
+<p>Similarly, for <span class="math inline">\(k = 12, 13, ..., 19\)</span>, we get the same polygonal lines as for <span class="math inline">\(k = 8, 7, ..., 1\)</span> respectively.</p>
+<p>Thus, there are a total of four different 20-link polygonal lines, they are obtained for <span class="math inline">\(k = 1, 3, 7, 9\)</span>.</p>
+<p>∇ For any <span class="math inline">\(n\)</span>, the number of different regular <span class="math inline">\(n\)</span>-link closed polygonal lines will be equal to the number of natural numbers less than <span class="math inline">\(\frac{n}{2}\)</span> and coprime with <span class="math inline">\(n\)</span>.</p>
+<p>The number of natural numbers less than a given number <span class="math inline">\(n\)</span> and coprime with it is usually denoted by <span class="math inline">\(\phi(n)\)</span>. The function <span class="math inline">\(\phi(n)\)</span> is called Euler’s function; if <span class="math inline">\(p_1, p_2, ..., p_l\)</span> are all distinct prime numbers included in the factorization of the number <span class="math inline">\(n\)</span> into prime factors, then ϕ(n)=n(1−1p1)(1−1p2)…(1−1pl). ϕ(n)=n(1−p1​1​)(1−p2​1​)…(1−pl​1​).</p>
+<p>The answer to the generalization of problem 2-8 can be written as follows: the number of different regular <span class="math inline">\(n\)</span>-link polygonal lines is equal to <span class="math inline">\(\frac{\phi(n)}{2}\)</span>. In particular, if <span class="math inline">\(n = 20\)</span>, then <span class="math inline">\(\phi(20) = 20\left(1 - \frac{1}{2}\right)\left(1 - \frac{1}{5}\right) = 8\)</span>, and the number of polygonal lines is equal to <span class="math inline">\(\frac{8}{2} = 4\)</span> (see [88]). Problem 2-9. a) Answer: correct. The difference of two numbers is divisible by 7 if and only if the remainders of these numbers when divided by 7 are equal. When dividing by 7, there are seven possible remainders: 0, 1, 2, 3, 4, 5, 6. Let’s assume that it’s impossible to choose 15 required numbers from 100. This means that no more than 14 numbers give a remainder of 0 when divided by 7, no more than 14 numbers give a remainder of 1, and similarly for remainders 2, 3, 4, 5, 6. But then the total number of numbers would be no more than <span class="math inline">\(14 \cdot 7 = 98 &lt; 100\)</span>, and our assumption is incorrect.</p>
+<p>∇ The solution to problem 2-9 a) is a typical example of applying the pigeonhole principle: if <span class="math inline">\(nk + 1\)</span> rabbits are in <span class="math inline">\(n\)</span> cages, then at least one cage has no fewer than <span class="math inline">\(k + 1\)</span> rabbits (see [43]). Indeed, if each cage had no more than <span class="math inline">\(k\)</span> rabbits, then the total number of rabbits would be no more than <span class="math inline">\(nk\)</span>, which contradicts the condition.</p>
+<ol start="2" type="a">
+<li>Answer: incorrect. Let’s provide a counterexample: the first hundred natural numbers from 1 to 100. Among them, there are 14 numbers: 7, 14, …, 98, giving a remainder of 0; 15 numbers each giving remainders of 1 and 2; 14 numbers each giving remainders of 3, 4, 5, 6. Therefore, among them, there are no 16 numbers for which the difference of any two is divisible by 7.</li>
+</ol>
+<p>Problem 2-10. Every integer is either divisible by 3 or gives a remainder of 1 or 2 when divided by 3.</p>
+<p>If a number <span class="math inline">\(n\)</span> is divisible by 3, it can be written as <span class="math inline">\(n = 3k\)</span>, so its square can be written as <span class="math inline">\(9k^2\)</span>, which is clearly divisible by 3.</p>
+<p>If a number <span class="math inline">\(n\)</span> gives a remainder of 1 when divided by 3, it can be written as <span class="math inline">\(n = 3k + 1\)</span>, then for its square we get: <span class="math inline">\(n^2 = 3(3k^2 + 2k) + 1\)</span>, which shows that the square also gives a remainder of 1 when divided by 3.</p>
+<p>If a number <span class="math inline">\(n\)</span> gives a remainder of 2 when divided by 3, similarly we get: <span class="math inline">\(n^2 = 3(3k^2 + 4k + 1) + 1\)</span>, i.e., in this case too, the square of the number <span class="math inline">\(n\)</span> gives a remainder of 1 when divided by 3.</p>
+<p>If exactly one of two numbers is not divisible by 3, then its square when divided by 3 gives, as we have seen, a remainder of 1, so the sum of the squares of these two numbers when divided by 3 gives a remainder of 1; and if neither of the two numbers is divisible by 3, then their squares both give remainders of 1 when divided by 3, so the sum of their squares when divided by 3 will give a remainder of 2.</p>
+<p>Thus, the sum of the squares of two integers is divisible by 3 only if each of them is divisible by 3. If a number n gives a remainder of 1 when divided by 3, it can be written as n = 3k + 1, then for its square we get: <span class="math inline">\(n^2 = 3(3k^2 + 2k) + 1\)</span>, from which it’s clear that the square when divided by 3 also gives a remainder of 1.</p>
+<p>If a number n gives a remainder of 2 when divided by 3, we similarly get: <span class="math inline">\(n^2 = 3(3k^2 + 4k + 1) + 1\)</span>, i.e., in this case too, the square of the number n gives a remainder of 1 when divided by 3.</p>
+<p>If exactly one of two numbers is not divisible by 3, then its square when divided by 3 gives, as we have seen, a remainder of 1, so the sum of the squares of these two numbers when divided by 3 gives a remainder of 1; and if neither of the two numbers is divisible by 3, then their squares both give remainders of 1 when divided by 3, so the sum of their squares when divided by 3 will give a remainder of 2.</p>
+<p>Thus, the sum of the squares of two integers is divisible by 3 only if each of them is divisible by 3.</p>
+<p>∇ The transition from integers to their remainders when divided by a fixed number m is the main technique in problems on the divisibility of integers. The following simple rule is constantly used: to find the remainder of the division by m of the sum or product of two (or several) integers, it is sufficient to perform the same operations with the remainders and find what remainder the result gives when divided by m.</p>
+<p>Let’s show, for example, that the statement of problem 2-10 remains true if we replace the number 3 in its condition with the number 7. By squaring the numbers from 0 to 6, we can see that the remainders given by the squares of integers when divided by 7 are only 0, 1, 2, and 4. Since no two of these four numbers, except for a pair of zeros, sum to a number divisible by 7, the sum of the squares of two integers is divisible by 7 only if each number is divisible by 7.</p>
+<p>For experts. The question of whether, for a given prime number p, the sum of squares of two integers <span class="math inline">\(x^2 + y^2\)</span> can be divisible by p if neither of them is divisible by p, is equivalent to this: is (-1) a quadratic residue modulo p, i.e., does there exist such z that <span class="math inline">\(1 + z^2\)</span> is divisible by p.&nbsp;The answer (known since Euler): this is possible for numbers p of the form 4k + 1 (p = 5, 13, 17, 29, …) and impossible for p = 4k + 3 (p = 3, 7, 11, 19, 23, …) A generalization of this fact, allowing for any two numbers q and p to quickly decide whether q is a quadratic residue modulo p, is the quadratic reciprocity law of Gauss (see [31, 88]). Problem 2-11. Let’s show that no number of the form 9n + 4, where n is a natural number, can be represented as the sum of three cubes; since there are infinitely many numbers of this form, the statement of the problem will follow from this.</p>
+<p>Any integer has either the form 3l, or 3l + 1, or 3l - 1, where l is an integer. Therefore, the cube of any integer has the form either <span class="math inline">\(27l^3\)</span>, or</p>
+<p><span class="math inline">\(27l^3 \pm 27l^2 + 9l \pm 1 = 9(3l^3 \pm 3l^2 + l) \pm 1\)</span>,</p>
+<p>i.e., it has the form either 9m or 9m ± 1.</p>
+<p>Combining these possibilities in all ways, we get that the sum of cubes of three integers is represented by one of the following variants: 9n; 9n ± 1; 9n ± 2; 9n ± 3, but cannot equal a number of the form 9n + 4 (and, by the way, 9n - 4).</p>
+<p>is divisible by p.&nbsp;The answer (known since Euler): this is possible for numbers p of the form 4k + 1 (p = 5, 13, 17, 29, …) and impossible for p = 4k + 3 (p = 3, 7, 11, 19, 23, …) A generalization of this fact, allowing for any two numbers q and p to quickly decide whether q is a quadratic residue modulo p, is the quadratic reciprocity law of Gauss (see [31, 88]).</p>
+<p>∇ In 1909, the following hypotheses of E. Waring (1770) were proved: every natural number can be represented as the sum of no more than 9 cubes of natural numbers; for each natural k, any natural number can be represented as the sum of w or fewer k-th powers of natural numbers, where w depends only on k. The first hypothesis was proved by A. Wieferich, the second by D. Hilbert (its elementary proof was obtained by Yu.V. Linnik). The smallest value of w = w(k) is unknown already for k = 4 (see [5, 118]).</p>
+<p>Interestingly, every natural number n can be easily represented as the sum of five cubes of integers.</p>
+<p>Indeed, n - n^3 is divisible by 6 for all n.&nbsp;Therefore, n = n^3 + 6t, where t is an integer. Hence</p>
+<p><span class="math inline">\(n = n^3 + (t+1)^3 + (t-1)^3 + (-t)^3 + (-t)^3\)</span>.</p>
+<p>Problem 2-12. Since each student could sit with no more than 27 students, this could not last more than 27 months.</p>
+<p>Let’s show how the teacher could seat the students for 27 months.</p>
+<p>Let’s number the students from 1 to 28. We place the numbers from 1 to 27 on a circle at the vertices of a regular 27-gon, and number 28 at the center of this circle. We connect points 1 and 28 with a line segment. We connect the remaining points in pairs with line segments perpendicular to this segment - see Figure 10,a. We seat the students as follows: if two numbers are connected by a segment, we seat the corresponding students at the same desk.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig10.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 10</figcaption>
+</figure>
+</div>
+<p>In the next month, we connect points 2 and 28 with a line segment and draw perpendicular segments through the remaining points; we seat the students according to this scheme - Figure 10,b. Then we take in turn the segments 28-3, 28-4, …, 28-27 and draw segments perpendicular to each of them. Let’s note that in Figure 10a, the sum of the numbers of each pair of circle points connected by a segment is equal to 29, which gives a remainder of 2 when divided by 27, and point 1 is connected to the center point 28. This last pair is in a special position: among the numbers from 1 to 27, it’s impossible to find such a pair for number 1, other than itself, so that the sum of the numbers in this pair gives a remainder of 2 when divided by 27.</p>
+<p>In Figure 10b, the situation is similar: the sums of pairs of numbers of connected points give a remainder of 4 when divided by 27, and for number 2, among the numbers from 1 to 27, there is no suitable pair other than itself; this number 2 is connected to the center 28.</p>
+<p>These observations lead to the following numerical interpretation of the schedule given in problem 2-12.</p>
+<p>We fix some number <span class="math inline">\(r\)</span> from 1 to 27. We pair those numbers from 1 to 27 which, when summed, give a remainder <span class="math inline">\(r\)</span> when divided by 27. In this case, only the number <span class="math inline">\(x\)</span> will remain unpaired, which, when summed with itself, gives a remainder <span class="math inline">\(r\)</span> when divided by 27. If <span class="math inline">\(r\)</span> is even, then <span class="math inline">\(x = \frac{r}{2}\)</span>, and if odd, then <span class="math inline">\(x = \frac{r+27}{2}\)</span>. We connect this number <span class="math inline">\(x\)</span> with number 28.</p>
+<p>For any even number <span class="math inline">\(n\)</span> of students, a schedule for <span class="math inline">\(n-1\)</span> months can be similarly compiled. To do this, we need to pair those numbers from the set of all integers from 1 to <span class="math inline">\(n-1\)</span> whose sum gives a remainder <span class="math inline">\(r\)</span> when divided by <span class="math inline">\(n-1\)</span>. If <span class="math inline">\(r\)</span> is even, then the number <span class="math inline">\(\frac{r}{2}\)</span> will remain unpaired, and if odd, then the number <span class="math inline">\(\frac{r+n-1}{2}\)</span>; we pair this number with the remaining number <span class="math inline">\(n\)</span> (see [34], [124]).</p>
+<p>Problem 2-13. Answer: for example, 48, 49, 50 or 548, 549, 550.</p>
+<p>It can be shown that in general, for any <span class="math inline">\(k\)</span>, there exist <span class="math inline">\(k\)</span> consecutive natural numbers, each of which is divisible by the square of an integer greater than one.</p>
+<p>Here it’s appropriate to use the so-called Chinese Remainder Theorem (see [88]): whatever the natural pairwise coprime numbers <span class="math inline">\(a_1, a_2, ..., a_n\)</span> and non-negative integers <span class="math inline">\(r_1, r_2, ..., r_n\)</span> (<span class="math inline">\(r_1 &lt; a_1, r_2 &lt; a_2, ..., r_n &lt; a_n\)</span>), there exists such a natural number <span class="math inline">\(m\)</span>, which when divided by the numbers <span class="math inline">\(a_1, a_2, ..., a_n\)</span> gives remainders <span class="math inline">\(r_1, r_2, ..., r_n\)</span> respectively.</p>
+<p>Let <span class="math inline">\(p_1^2, p_2^2, ..., p_n^2\)</span> be squares of <span class="math inline">\(n\)</span> different prime numbers. Then, according to this theorem, there exists such an integer <span class="math inline">\(m\)</span> that when divided by the numbers <span class="math inline">\(p_1^2, p_2^2, ..., p_n^2\)</span> gives remainders <span class="math inline">\(p_1^2 - 1, p_2^2 - 2, ..., p_n^2 - n\)</span> respectively. Therefore, <span class="math inline">\(n\)</span> consecutive numbers <span class="math inline">\(m+1, m+2, ..., m+n\)</span> will be divisible by <span class="math inline">\(p_1^2, p_2^2, ..., p_n^2\)</span> respectively.</p>
+<p>The example (548, 549, 550) given in the answer was selected in this way: we set <span class="math inline">\(p_1 = 2, p_2 = 3, p_3 = 5\)</span>, find the number <span class="math inline">\(m\)</span> which gives remainders 3, 7, and 22 respectively when divided by 4, 9, and 25; for example, the number <span class="math inline">\(m = 547\)</span> works. This number m can be chosen as follows. We look for it in the form: m = a ⋅ 9 ⋅ 25 + 4 ⋅ b ⋅ 25 + 4 ⋅ 9 ⋅ c.</p>
+<p>We need the number a ⋅ 9 ⋅ 25 to give a remainder of 3 when divided by 4, the number 4⋅b⋅25 to give a remainder of 7 when divided by 9, and the number 4⋅9⋅c to give a remainder of 22 when divided by 25. By setting a=-1, b=7, c=2, we get m=547.</p>
+<p>Problem 2-14. Answer: it’s possible.</p>
+<p>Figure 11 shows two examples of the required arrangement. This can be verified by simple counting.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig11.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 11</figcaption>
+</figure>
+</div>
+<p>∇ The numbers written on the first circle in Figure 11a clockwise are the remainders from dividing consecutive powers 1, 2, 2², 2³, …, 2¹¹ by 13, and counterclockwise - the remainders of consecutive powers 1, 7, 7², 7³, …, 7¹¹. Naturally, for any three adjacent numbers a, b, c (and therefore for their remainders when divided by 13), the number b² - ac is divisible by 13; if three numbers a, b, c form a geometric progression, then b² = ac.</p>
+<p>Similarly, in Figure 11b, the remainders from dividing by 13 consecutive powers 1, 6, 6², …, 6¹¹ (clockwise) and 1, 11, 11², …, 11¹¹ (counterclockwise) are written out.</p>
+<p>The numbers 2, 6, 11, 7 standing next to 1 in Figure 11 are the remainders when dividing 2, 2⁵, 2⁷, 2¹¹ by 13.</p>
+<p>In general, for any prime p there exists a primitive root - a number coprime with p-1 numbers from 1 to p-2 (see the comment to problem 2-8).</p>
+<p>In problem 2-14, p=13, φ(p-1)=φ(12)=4, as there are 4 numbers, 1, 5, 7, 11, coprime with 12 and less than it: all primitive roots are remainders from dividing 2, 2⁵, 2⁷, 2¹¹ by 13 (see [88]). Problem 2-15. Answer: incorrect. For example, for n = 6, the number <span class="math inline">\(n^3 + 5n - 1\)</span> is equal to <span class="math inline">\(5 \cdot 72\)</span>.</p>
+<p>An expert would immediately answer the problem’s question negatively, since, apart from constants, there are no polynomials <span class="math inline">\(F(n)\)</span> with integer coefficients whose values are prime numbers for all natural <span class="math inline">\(n\)</span>.</p>
+<p>Indeed, if the constant term <span class="math inline">\(a\)</span> of the polynomial is not equal to 0 or ±1, then the values of <span class="math inline">\(F(ka)\)</span> for integer <span class="math inline">\(k\)</span> are divisible by <span class="math inline">\(a\)</span>, and among them there are composite numbers.</p>
+<p>If <span class="math inline">\(a = ±1\)</span>, then one can first “shift” the polynomial <span class="math inline">\(F(n)\)</span> to <span class="math inline">\(F(n+h) = G(n)\)</span> so that the constant term becomes different from ±1.</p>
+<p>In problem 2-15, to find <span class="math inline">\(n\)</span> for which <span class="math inline">\(F(n) = n^3 + 5n - 1\)</span> is a composite number, one can proceed as follows. Let <span class="math inline">\(n = m + 1\)</span>; the polynomial <span class="math inline">\(F(m+1) = (m+1)^3 + 5(m+1) - 1\)</span> has a constant term equal to 5, and therefore <span class="math inline">\(F(6)\)</span> is divisible by 5.</p>
+<p>Note that in 1970, our compatriot mathematician Yu. V. Matiyasevich proved the existence of a polynomial of 21 variables with integer coefficients having the following property: the set of its positive values for integer values of the variables coincides with the set of prime numbers (see [47, 54, 100]).</p>
+<p>Problem 2-16. Let’s factor the given number: <span class="math inline">\(n^5 - 5n^3 + 4n = n(n^4 - 5n^2 + 4) = n(n^2 - 1)(n^2 - 4) = (n-2)(n-1)n(n+1)(n+2)\)</span>.</p>
+<p>The result is a product of five consecutive integers. One of these numbers is necessarily divisible by 5, one of three consecutive numbers is divisible by 3, and out of four consecutive numbers, one is divisible by 4 and another by 2. Therefore, the product is divisible by 120.</p>
+<p>Another, combinatorial solution to this problem can be obtained if we notice that for <span class="math inline">\(n &gt; 3\)</span> the number <span class="math inline">\(\frac{(n+2)(n+1)n(n-1)(n-2)}{1 \cdot 2 \cdot 3 \cdot 4 \cdot 5}\)</span> is the binomial coefficient <span class="math inline">\(C_{n+2}^5\)</span> (the number of 5-element subsets of <span class="math inline">\((n+2)\)</span> elements), and this number is undoubtedly an integer.</p>
+<p>In general, a polynomial <span class="math inline">\(F(x)\)</span> takes integer values for all integer <span class="math inline">\(x\)</span> if and only if it can be represented as a sum <span class="math inline">\(F(x) = \sum_k a_k C_x^k\)</span> with integer coefficients <span class="math inline">\(a_k\)</span>, where <span class="math inline">\(C_x^k = \frac{x(x-1)...(x-k+1)}{k!}\)</span>. Problem 2-17. a) Answer: yes.</p>
+<p>It is convenient to search for such a polynomial in the form <span class="math inline">\(p(x) = ax(x-1) + bx + c\)</span>.</p>
+<p>Substituting <span class="math inline">\(x = 0\)</span>, <span class="math inline">\(x = 1\)</span>, and <span class="math inline">\(x = 2\)</span> into this identity, we obtain a convenient “triangular” system of linear equations for determining the coefficients <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span>:</p>
+<p><span class="math inline">\(c = 19\)</span> <span class="math inline">\(b + c = 85\)</span> <span class="math inline">\(2a + 2b + c = 1985\)</span></p>
+<p>From which we find: <span class="math inline">\(c = 19\)</span>, <span class="math inline">\(b = 66\)</span>, <span class="math inline">\(a = 917\)</span>, and we get the answer: <span class="math inline">\(p(x) = 917x^2 - 851x + 19\)</span>.</p>
+<p>Similarly, it is convenient to search for a polynomial of degree no higher than <span class="math inline">\(n\)</span> that takes given values at given <span class="math inline">\(n+1\)</span> points <span class="math inline">\(c_1, c_2, \dots, c_{n+1}\)</span>. Writing <span class="math inline">\(p(x)\)</span> in the form <span class="math inline">\(p(x) = b_0 + b_1(x-c_1) + b_2(x-c_1)(x-c_2) + \dots + b_n(x-c_1)(x-c_2)\dots(x-c_n)\)</span> and substituting <span class="math inline">\(x = c_1, c_2, \dots, c_{n+1}\)</span> into this identity, we obtain a triangular linear system for determining the <span class="math inline">\(n+1\)</span> unknown coefficients <span class="math inline">\(b_0, b_1, \dots, b_n\)</span>.</p>
+<p>The indicated method for finding a polynomial with given values is called Newton’s interpolation method.</p>
+<ol start="2" type="a">
+<li>Answer: no, it does not exist.</li>
+</ol>
+<p>For the proof, we use the following statement: if a polynomial <span class="math inline">\(p(x) = a_0x^n + a_1x^{n-1} + a_2x^{n-2} + \dots + a_{n-1}x + a_n\)</span> with integer coefficients is given, then for any integers <span class="math inline">\(c\)</span> and <span class="math inline">\(d\)</span>, the integer <span class="math inline">\(p(c) - p(d)\)</span> is divisible by <span class="math inline">\(c-d\)</span>.</p>
+<p>According to this statement, the number <span class="math inline">\(p(19) - p(1) = 1985 - 85 = 1900 - 19 = 1881\)</span> should be divisible by <span class="math inline">\(19 - 1 = 18\)</span>. However, <span class="math inline">\(1881 = 1800 + 81\)</span>, so <span class="math inline">\(1881/18\)</span> is not an integer. Since <span class="math inline">\(p(19) - p(1) = 66\)</span> which is not divisible by <span class="math inline">\(18\)</span>, the answer follows.</p>
+<p>Let’s prove the validity of the stated assertion: <span class="math inline">\(p(c) - p(d) = (a_0c^n + a_1c^{n-1} + \dots + a_{n-1}c + a_n) - (a_0d^n + a_1d^{n-1} + \dots + a_{n-1}d + a_n) = a_0(c^n - d^n) + a_1(c^{n-1} - d^{n-1}) + \dots + a_{n-1}(c - d)\)</span>.</p>
+<p>For any natural <span class="math inline">\(k\)</span>, the formula <span class="math inline">\(c^k - d^k = (c-d)(c^{k-1} + c^{k-2}d + \dots + cd^{k-2} + d^{k-1})\)</span> holds (it is obtained from the formula for the sum of <span class="math inline">\(k\)</span> terms of a geometric progression with the first term <span class="math inline">\(c^{k-1}\)</span> and common ratio <span class="math inline">\(d/c\)</span>). Therefore, each term in the obtained equality for <span class="math inline">\(p(c) - p(d)\)</span> is divisible by <span class="math inline">\(c-d\)</span>, which means the entire sum is divisible by <span class="math inline">\(c-d\)</span>.</p>
+<p>Similarly, one can show that for any polynomial <span class="math inline">\(p(x)\)</span> and any number <span class="math inline">\(d\)</span>, the polynomial <span class="math inline">\(p(x) - p(d)\)</span> is divisible by the polynomial <span class="math inline">\(x-d\)</span>, i.e., <span class="math inline">\(p(x) - p(d) = (x-d)q(x)\)</span>, where <span class="math inline">\(q(x)\)</span> is some polynomial. Rewriting this identity as <span class="math inline">\(p(x) = (x-d)q(x) + p(d)\)</span>, we obtain the following Bézout’s theorem: the remainder of dividing the polynomial <span class="math inline">\(p(x)\)</span> by the binomial <span class="math inline">\((x-d)\)</span> is <span class="math inline">\(p(d)\)</span>.</p>
+<p>Problem 2-18. a) Answer: <span class="math inline">\((x^2-x+1)(x^2+x+1)(x^4-x^2+1)\)</span>.</p>
+<p>Indeed: <span class="math inline">\(x^8 + x^4 + 1 = x^8 + 2x^4 + 1 - x^4 =  (x^4+1)^2 - (x^2)^2 = (x^4+1-x^2)(x^4+1+x^2) = (x^4-x^2+1)(x^4+x^2+1)=(x^4-x^2+1)(x^2+x+1)(x^2-x+1).\)</span></p>
+<ol start="2" type="a">
+<li>Answer: <span class="math inline">\((x^2+x+1)(x^3-x+1)\)</span>.</li>
+</ol>
+<p>Indeed: <span class="math inline">\(x^5+x+1 = x^5-x^2+x^2+x+1 = x^2(x^3-1)+x^2+x+1 = x^2(x-1)(x^2+x+1)+x^2+x+1= (x^2+x+1)(x^3-x^2+1)=(x^2+x+1)(x^3-x+1)\)</span>.</p>
+<p>There exist polynomials of any degree with integer coefficients that cannot be factored into a product of polynomials of lower degree with integer coefficients (for example, <span class="math inline">\(x^n-2\)</span>). They are called irreducible (over the ring of integers).</p>
+<p>There are algorithms that allow one to find the factorization of any polynomial into irreducible factors or show that it is irreducible itself (see [85, 117]).</p>
+<p>Problem 2-19. Answer: for <span class="math inline">\(a = -2\)</span>.</p>
+<p>Let the polynomials <span class="math inline">\(f(x) = x^4 + ax^2 + 1\)</span> and <span class="math inline">\(g(x) = x^3 + ax + 1\)</span> have a common root <span class="math inline">\(x_0\)</span>. Then, multiplying the second polynomial by <span class="math inline">\(x\)</span> and subtracting it from the first, we obtain a polynomial having the same root, and this polynomial is <span class="math inline">\(f(x) - xg(x) = 1 - x\)</span>. Its only root is <span class="math inline">\(x_0 = 1\)</span>. The polynomials <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> have this root for <span class="math inline">\(a = -2\)</span>; to verify this, it is sufficient to set <span class="math inline">\(f(1)\)</span> and <span class="math inline">\(g(1)\)</span> equal to zero – both of these numbers are equal to <span class="math inline">\(a + 2\)</span>.</p>
+<p>In order for the polynomials <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> to have a common root <span class="math inline">\(x_0\)</span>, it is necessary that both of them be divisible by the polynomial <span class="math inline">\(x - x_0\)</span> (Bézout’s theorem, see problem 2-17). The greatest common divisor of two polynomials can be found using the Euclidean algorithm – just like finding the greatest common divisor of two numbers. In the solution of problem 2-19, we performed one step of this algorithm – we divided the polynomial <span class="math inline">\(f(x)\)</span> by <span class="math inline">\(g(x)\)</span> with a remainder that turned out to be <span class="math inline">\(1-x\)</span>.</p>
+<p>If we further divide <span class="math inline">\(g(x)\)</span> by <span class="math inline">\((x-1)\)</span> using long division, we get the remainder <span class="math inline">\(a+2\)</span>: <span class="math inline">\(g(x) = (x-1)(x^2 + x + a + 1) + (a+2)\)</span>. If <span class="math inline">\(a = -2\)</span>, the remainder is 0; if <span class="math inline">\(a \ne -2\)</span>, then the polynomials do not have a common divisor of degree greater than 0.</p>
+<p>Problem 2-20. a) Let <span class="math inline">\(k = a^2 + 5b^2\)</span> and <span class="math inline">\(l = c^2 + 5d^2\)</span> be any two numbers from the set <span class="math inline">\(M\)</span>. Then <span class="math inline">\(kl = (a^2 + 5b^2)(c^2 + 5d^2) = (ac - 5bd)^2 + 5(ad + bc)^2\)</span>. (*)</p>
+<p>Thus, <span class="math inline">\(kl = x^2 + 5y^2\)</span>, where <span class="math inline">\(x = ac - 5bd\)</span>, <span class="math inline">\(y = ad + bc\)</span>, i.e., the number <span class="math inline">\(kl\)</span> belongs to <span class="math inline">\(M\)</span>.</p>
+<ol start="2" type="a">
+<li><p>Answer: they exist. For example, <span class="math inline">\(84 = 4 \cdot 21 = 6 \cdot 14\)</span>. Let’s show that all five written numbers belong to the set <span class="math inline">\(M\)</span>: <span class="math inline">\(4 = 2^2 + 5 \cdot 0^2\)</span>, <span class="math inline">\(6 = 1^2 + 5 \cdot 1^2\)</span>, <span class="math inline">\(14 = 3^2 + 5 \cdot 1^2\)</span>, <span class="math inline">\(21 = 4^2 + 5 \cdot 1^2\)</span>, <span class="math inline">\(84 = 2^2 + 5 \cdot 4^2\)</span>. To show that the numbers 4, 6, 14, 21 are basic, let’s write out all the numbers from <span class="math inline">\(M\)</span> greater than 1 and not exceeding 21: 4, 5, 6, 9, 14, 16, 20, 21. Among them, all except 16, 20 are basic, because each of them is not divisible by any of the previous ones.</p></li>
+<li><p>Suppose, to the contrary, that there is a finite number of basic numbers: <span class="math inline">\(b_1, b_2, \dots, b_n\)</span>. Then the number <span class="math inline">\(1 + 5(b_1 \dots b_n)\)</span>, obviously belonging to <span class="math inline">\(M\)</span>, is not divisible by any of the numbers <span class="math inline">\(b_1, b_2, \dots, b_n\)</span>, so it is itself basic and not equal to any of <span class="math inline">\(b_1, b_2, \dots, b_n\)</span>, which contradicts the assumption.</p></li>
+</ol>
+<p>Note the analogy between the set <span class="math inline">\(M\)</span> and the set of all natural numbers. Just as every natural number is decomposed into a product of prime numbers, any number from <span class="math inline">\(M\)</span> is decomposed into a product of basic numbers. However, if a natural number is uniquely decomposed into prime factors (the fundamental theorem of arithmetic), then, according to problem 2-20 b), this is not true for numbers from the set <span class="math inline">\(M\)</span>.</p>
+<p>For experts. The identity (*) is related to the rule of multiplication of numbers of the form <span class="math inline">\(x + y\sqrt{-5}\)</span> (see [48]): <span class="math inline">\((a + b\sqrt{-5})(c + d\sqrt{-5}) = (ac - 5bd) + (ad + bc)\sqrt{-5}\)</span>. The question of factorization of numbers from <span class="math inline">\(M\)</span> is equivalent to the question of factorization in the ring of numbers of the form <span class="math inline">\(x + y\sqrt{-5}\)</span>, where <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are integers. Problems of factorization in rings of this type played an important role in the history of mathematics. From these problems arose a new branch of mathematics – algebraic number theory (see [82]).</p>
+<p>Problem 2-21. Answer: for example, <span class="math inline">\((7^2, 13^2, 17^2)\)</span>, <span class="math inline">\((17^2, 25^2, 31^2)\)</span>, <span class="math inline">\((31^2, 41^2, 49^2)\)</span>. A triple of squares <span class="math inline">\(p^2, q^2, r^2\)</span> forms an arithmetic progression if and only if <span class="math inline">\(p^2 + r^2 = 2q^2\)</span> or <span class="math inline">\((r-q)(r+q) = (q-p)(q+p)\)</span>. For example, for the third of the indicated triples <span class="math inline">\((p=31, q=41, r=49)\)</span> we get <span class="math inline">\((49-41)(49+41) = (41-31)(41+31) = 720\)</span>.</p>
+<p>Here are the general formulas for such triples (of coprime numbers): <span class="math inline">\(p = n^2 + 2mn - m^2\)</span>, <span class="math inline">\(q = m^2 + n^2\)</span>, <span class="math inline">\(r = m^2 + 2mn - n^2\)</span>, where <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> are arbitrary coprime numbers. If for some <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> the numbers <span class="math inline">\(p, q, r\)</span> have a common divisor, then we can reduce them by it. (This happens when the numbers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> are both odd; then the corresponding numbers <span class="math inline">\(p, q, r\)</span> have a common factor of 2. As is easy to show, there can be no other common factors.)</p>
+<p>That numbers of this form are suitable can be verified by substituting them into the relation <span class="math inline">\((p-q)(p+q) = (q-r)(q+r)\)</span>. These formulas can be arrived at in various ways; we will indicate one of them (see [122]). Let <span class="math inline">\(p^2 + r^2 = 2q^2\)</span>. Dividing all terms of this equation by <span class="math inline">\(q^2\)</span>, we get <span class="math inline">\((p/q)^2 + (r/q)^2 = 2\)</span>. Denoting <span class="math inline">\(p/q\)</span> by <span class="math inline">\(x\)</span> and <span class="math inline">\(r/q\)</span> by <span class="math inline">\(y\)</span>, we get the equation <span class="math inline">\(x^2 + y^2 = 2\)</span>. Thus, the problem of finding the numbers <span class="math inline">\(p, q, r\)</span> reduces to solving the equation <span class="math inline">\(x^2 + y^2 = 2\)</span> in rational numbers <span class="math inline">\(x, y\)</span>.</p>
+<p>Problem 2-22. Answers: a) seven integer solutions: <span class="math inline">\((0;0)\)</span>, <span class="math inline">\((1;0)\)</span>, <span class="math inline">\((-1;0)\)</span>, <span class="math inline">\((2;6)\)</span>, <span class="math inline">\((2;-6)\)</span>, <span class="math inline">\((3;12)\)</span>, <span class="math inline">\((3;-12)\)</span>; b) four more rational solutions: <span class="math inline">\((\pm\frac{7}{3}, \pm\frac{31}{9})\)</span>.</p>
+<p>How to find new rational solutions from existing ones can be explained geometrically. Our equation defines a certain curve in the <span class="math inline">\(Oxy\)</span> coordinate plane. Let us know any two points of this curve whose coordinates <span class="math inline">\((x_1, y_1)\)</span> and <span class="math inline">\((x_2, y_2)\)</span> are rational numbers. The line passing through these points intersects the curve at a third point since the equation of the curve has the third degree. The coordinates <span class="math inline">\(x_3, y_3\)</span> of this third point will be rational functions of <span class="math inline">\(x_1, y_1, x_2, y_2\)</span> with integer coefficients, i.e., also rational numbers.</p>
+<p>Thus, starting from any two solutions <span class="math inline">\((x_1; y_1)\)</span>, <span class="math inline">\((x_2; y_2)\)</span> of the equation in rational numbers, we obtain a new solution <span class="math inline">\((x_3; y_3)\)</span> in rational numbers. Now let’s present the results of the corresponding calculations. The line passing through the given points <span class="math inline">\((x_1; y_1)\)</span> and <span class="math inline">\((x_2; y_2)\)</span> is given by the equation <span class="math inline">\(y = t(x - x_1) + y_1\)</span>, where <span class="math inline">\(t = (y_2 - y_1)/(x_2 - x_1)\)</span>. Substituting <span class="math inline">\(y\)</span> into the equation <span class="math inline">\(y^2 = 6(x^3 - x)\)</span>, we obtain a third-degree equation with respect to <span class="math inline">\(x\)</span>, two roots <span class="math inline">\(x_1, x_2\)</span> of which are known to us (since the points lie on the curve), and the third can be found by Vieta’s theorem. Thus, we have obtained formulas that allow us to find new solutions from known rational solutions of the equation <span class="math inline">\(y^2 = 6(x^3 - x)\)</span>. Problem 2-15. Answer: incorrect. For example, for n = 6, the number <span class="math inline">\(n^3 + 5n - 1\)</span> is equal to <span class="math inline">\(5 \cdot 72\)</span>.</p>
+<p>An expert would immediately answer the problem’s question negatively, since, apart from constants, there are no polynomials <span class="math inline">\(F(n)\)</span> with integer coefficients whose values are prime numbers for all natural <span class="math inline">\(n\)</span>.</p>
+<p>Indeed, if the constant term <span class="math inline">\(a\)</span> of the polynomial is not equal to 0 or ±1, then the values of <span class="math inline">\(F(ka)\)</span> for integer <span class="math inline">\(k\)</span> are divisible by <span class="math inline">\(a\)</span>, and among them there are composite numbers.</p>
+<p>If <span class="math inline">\(a = ±1\)</span>, then one can first “shift” the polynomial <span class="math inline">\(F(n)\)</span> to <span class="math inline">\(F(n+h) = G(n)\)</span> so that the constant term becomes different from ±1.</p>
+<p>In problem 2-15, to find <span class="math inline">\(n\)</span> for which <span class="math inline">\(F(n) = n^3 + 5n - 1\)</span> is a composite number, one can proceed as follows. Let <span class="math inline">\(n = m + 1\)</span>; the polynomial <span class="math inline">\(F(m+1) = (m+1)^3 + 5(m+1) - 1\)</span> has a constant term equal to 5, and therefore <span class="math inline">\(F(6)\)</span> is divisible by 5.</p>
+<p>Note that in 1970, our compatriot mathematician Yu. V. Matiyasevich proved the existence of a polynomial of 21 variables with integer coefficients having the following property: the set of its positive values for integer values of the variables coincides with the set of prime numbers (see [47, 54, 100]).</p>
+<p>Problem 2-16. Let’s factor the given number: <span class="math inline">\(n^5 - 5n^3 + 4n = n(n^4 - 5n^2 + 4) = n(n^2 - 1)(n^2 - 4) = (n-2)(n-1)n(n+1)(n+2)\)</span>.</p>
+<p>The result is a product of five consecutive integers. One of these numbers is necessarily divisible by 5, one of three consecutive numbers is divisible by 3, and out of four consecutive numbers, one is divisible by 4 and another by 2. Therefore, the product is divisible by 120.</p>
+<p>Another, combinatorial solution to this problem can be obtained if we notice that for <span class="math inline">\(n &gt; 3\)</span> the number <span class="math inline">\(\frac{(n+2)(n+1)n(n-1)(n-2)}{1 \cdot 2 \cdot 3 \cdot 4 \cdot 5}\)</span> is the binomial coefficient <span class="math inline">\(C_{n+2}^5\)</span> (the number of 5-element subsets of <span class="math inline">\((n+2)\)</span> elements), and this number is undoubtedly an integer.</p>
+<p>In general, a polynomial <span class="math inline">\(F(x)\)</span> takes integer values for all integer <span class="math inline">\(x\)</span> if and only if it can be represented as a sum <span class="math inline">\(F(x) = \sum_k a_k C_x^k\)</span> with integer coefficients <span class="math inline">\(a_k\)</span>, where <span class="math inline">\(C_x^k = \frac{x(x-1)...(x-k+1)}{k!}\)</span>.</p>
+<p>Problem 2-17. a) Answer: yes.</p>
+<p>It is convenient to search for such a polynomial in the form <span class="math inline">\(p(x) = ax(x-1) + bx + c\)</span>.</p>
+<p>Substituting <span class="math inline">\(x = 0\)</span>, <span class="math inline">\(x = 1\)</span>, and <span class="math inline">\(x = 2\)</span> into this identity, we obtain a convenient “triangular” system of linear equations for determining the coefficients <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span>:</p>
+<p><span class="math inline">\(c = 19\)</span> <span class="math inline">\(b + c = 85\)</span> <span class="math inline">\(2a + 2b + c = 1985\)</span></p>
+<p>From which we find: <span class="math inline">\(c = 19\)</span>, <span class="math inline">\(b = 66\)</span>, <span class="math inline">\(a = 917\)</span>, and we get the answer: <span class="math inline">\(p(x) = 917x^2 - 851x + 19\)</span>.</p>
+<p>Similarly, it is convenient to search for a polynomial of degree no higher than <span class="math inline">\(n\)</span> that takes given values at given <span class="math inline">\(n+1\)</span> points <span class="math inline">\(c_1, c_2, \dots, c_{n+1}\)</span>. Writing <span class="math inline">\(p(x)\)</span> in the form <span class="math inline">\(p(x) = b_0 + b_1(x-c_1) + b_2(x-c_1)(x-c_2) + \dots + b_n(x-c_1)(x-c_2)\dots(x-c_n)\)</span> and substituting <span class="math inline">\(x = c_1, c_2, \dots, c_{n+1}\)</span> into this identity, we obtain a triangular linear system for determining the <span class="math inline">\(n+1\)</span> unknown coefficients <span class="math inline">\(b_0, b_1, \dots, b_n\)</span>.</p>
+<p>The indicated method for finding a polynomial with given values is called Newton’s interpolation method.</p>
+<ol start="2" type="a">
+<li>Answer: no, it does not exist.</li>
+</ol>
+<p>For the proof, we use the following statement: if a polynomial <span class="math inline">\(p(x) = a_0x^n + a_1x^{n-1} + a_2x^{n-2} + \dots + a_{n-1}x + a_n\)</span> with integer coefficients is given, then for any integers <span class="math inline">\(c\)</span> and <span class="math inline">\(d\)</span>, the integer <span class="math inline">\(p(c) - p(d)\)</span> is divisible by <span class="math inline">\(c-d\)</span>.</p>
+<p>According to this statement, the number <span class="math inline">\(p(19) - p(1) = 1985 - 85 = 1900 - 19 = 1881\)</span> should be divisible by <span class="math inline">\(19 - 1 = 18\)</span>. However, <span class="math inline">\(1881 = 1800 + 81\)</span>, so <span class="math inline">\(1881/18\)</span> is not an integer. Since <span class="math inline">\(p(19) - p(1) = 66\)</span> which is not divisible by <span class="math inline">\(18\)</span>, the answer follows.</p>
+<p>Let’s prove the validity of the stated assertion: <span class="math inline">\(p(c) - p(d) = (a_0c^n + a_1c^{n-1} + \dots + a_{n-1}c + a_n) - (a_0d^n + a_1d^{n-1} + \dots + a_{n-1}d + a_n) = a_0(c^n - d^n) + a_1(c^{n-1} - d^{n-1}) + \dots + a_{n-1}(c - d)\)</span>.</p>
+<p>For any natural <span class="math inline">\(k\)</span>, the formula <span class="math inline">\(c^k - d^k = (c-d)(c^{k-1} + c^{k-2}d + \dots + cd^{k-2} + d^{k-1})\)</span> holds (it is obtained from the formula for the sum of <span class="math inline">\(k\)</span> terms of a geometric progression with the first term <span class="math inline">\(c^{k-1}\)</span> and common ratio <span class="math inline">\(d/c\)</span>). Therefore, each term in the obtained equality for <span class="math inline">\(p(c) - p(d)\)</span> is divisible by <span class="math inline">\(c-d\)</span>, which means the entire sum is divisible by <span class="math inline">\(c-d\)</span>.</p>
+<p>Similarly, one can show that for any polynomial <span class="math inline">\(p(x)\)</span> and any number <span class="math inline">\(d\)</span>, the polynomial <span class="math inline">\(p(x) - p(d)\)</span> is divisible by the polynomial <span class="math inline">\(x-d\)</span>, i.e., <span class="math inline">\(p(x) - p(d) = (x-d)q(x)\)</span>, where <span class="math inline">\(q(x)\)</span> is some polynomial. Rewriting this identity as <span class="math inline">\(p(x) = (x-d)q(x) + p(d)\)</span>, we obtain the following Bézout’s theorem: the remainder of dividing the polynomial <span class="math inline">\(p(x)\)</span> by the binomial <span class="math inline">\((x-d)\)</span> is <span class="math inline">\(p(d)\)</span>.</p>
+<p>Problem 2-18. a) Answer: <span class="math inline">\((x^2-x+1)(x^2+x+1)(x^4-x^2+1)\)</span>.</p>
+<p>Indeed: <span class="math inline">\(x^8 + x^4 + 1 = x^8 + 2x^4 + 1 - x^4 = (x^4+1)^2 - (x^2)^2 = (x^4+1-x^2)(x^4+1+x^2) = (x^4-x^2+1)(x^4+x^2+1)=(x^4-x^2+1)(x^2+x+1)(x^2-x+1).\)</span></p>
+<ol start="2" type="a">
+<li>Answer: <span class="math inline">\((x^2+x+1)(x^3-x+1)\)</span>.</li>
+</ol>
+<p>Indeed: <span class="math inline">\(x^5+x+1 = x^5-x^2+x^2+x+1 = x^2(x^3-1)+x^2+x+1 = x^2(x-1)(x^2+x+1)+x^2+x+1= (x^2+x+1)(x^3-x^2+1)=(x^2+x+1)(x^3-x+1)\)</span>.</p>
+<p>There exist polynomials of any degree with integer coefficients that cannot be factored into a product of polynomials of lower degree with integer coefficients (for example, <span class="math inline">\(x^n-2\)</span>). They are called irreducible (over the ring of integers).</p>
+<p>There are algorithms that allow one to find the factorization of any polynomial into irreducible factors or show that it is irreducible itself (see [85, 117]).</p>
+<p>Problem 2-19. Answer: for <span class="math inline">\(a = -2\)</span>.</p>
+<p>Let the polynomials <span class="math inline">\(f(x) = x^4 + ax^2 + 1\)</span> and <span class="math inline">\(g(x) = x^3 + ax + 1\)</span> have a common root <span class="math inline">\(x_0\)</span>. Then, multiplying the second polynomial by <span class="math inline">\(x\)</span> and subtracting it from the first, we obtain a polynomial having the same root, and this polynomial is <span class="math inline">\(f(x) - xg(x) = 1 - x\)</span>.</p>
+<p>Its only root is <span class="math inline">\(x_0 = 1\)</span>. The polynomials <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> have this root for <span class="math inline">\(a = -2\)</span>; to verify this, it is sufficient to set <span class="math inline">\(f(1)\)</span> and <span class="math inline">\(g(1)\)</span> equal to zero – both of these numbers are equal to <span class="math inline">\(a + 2\)</span>.</p>
+<p>In order for the polynomials <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> to have a common root <span class="math inline">\(x_0\)</span>, it is necessary that both of them be divisible by the polynomial <span class="math inline">\(x - x_0\)</span> (Bézout’s theorem, see problem 2-17). The greatest common divisor of two polynomials can be found using the Euclidean algorithm – just like finding the greatest common divisor of two numbers. In the solution of problem 2-19, we performed one step of this algorithm – we divided the polynomial <span class="math inline">\(f(x)\)</span> by <span class="math inline">\(g(x)\)</span> with a remainder that turned out to be <span class="math inline">\(1-x\)</span>.</p>
+<p>If we further divide <span class="math inline">\(g(x)\)</span> by <span class="math inline">\((x-1)\)</span> using long division, we get the remainder <span class="math inline">\(a+2\)</span>: <span class="math inline">\(g(x) = (x-1)(x^2 + x + a + 1) + (a+2)\)</span>. If <span class="math inline">\(a = -2\)</span>, the remainder is 0; if <span class="math inline">\(a \ne -2\)</span>, then the polynomials do not have a common divisor of degree greater than 0.</p>
+<p>Problem 2-20. a) Let <span class="math inline">\(k = a^2 + 5b^2\)</span> and <span class="math inline">\(l = c^2 + 5d^2\)</span> be any two numbers from the set <span class="math inline">\(M\)</span>. Then <span class="math inline">\(kl = (a^2 + 5b^2)(c^2 + 5d^2) = (ac - 5bd)^2 + 5(ad + bc)^2\)</span>. (*)</p>
+<p>Thus, <span class="math inline">\(kl = x^2 + 5y^2\)</span>, where <span class="math inline">\(x = ac - 5bd\)</span>, <span class="math inline">\(y = ad + bc\)</span>, i.e., the number <span class="math inline">\(kl\)</span> belongs to <span class="math inline">\(M\)</span>.</p>
+<ol start="2" type="a">
+<li><p>Answer: they exist. For example, <span class="math inline">\(84 = 4 \cdot 21 = 6 \cdot 14\)</span>. Let’s show that all five written numbers belong to the set <span class="math inline">\(M\)</span>: <span class="math inline">\(4 = 2^2 + 5 \cdot 0^2\)</span>, <span class="math inline">\(6 = 1^2 + 5 \cdot 1^2\)</span>, <span class="math inline">\(14 = 3^2 + 5 \cdot 1^2\)</span>, <span class="math inline">\(21 = 4^2 + 5 \cdot 1^2\)</span>, <span class="math inline">\(84 = 2^2 + 5 \cdot 4^2\)</span>. To show that the numbers 4, 6, 14, 21 are basic, let’s write out all the numbers from <span class="math inline">\(M\)</span> greater than 1 and not exceeding 21: 4, 5, 6, 9, 14, 16, 20, 21. Among them, all except 16, 20 are basic, because each of them is not divisible by any of the previous ones.</p></li>
+<li><p>Suppose, to the contrary, that there is a finite number of basic numbers: <span class="math inline">\(b_1, b_2, \dots, b_n\)</span>. Then the number <span class="math inline">\(1 + 5(b_1 \dots b_n)\)</span>, obviously belonging to <span class="math inline">\(M\)</span>, is not divisible by any of the numbers <span class="math inline">\(b_1, b_2, \dots, b_n\)</span>, so it is itself basic and not equal to any of <span class="math inline">\(b_1, b_2, \dots, b_n\)</span>, which contradicts the assumption.</p></li>
+</ol>
+<p>Note the analogy between the set <span class="math inline">\(M\)</span> and the set of all natural numbers. Just as every natural number is decomposed into a product of prime numbers, any number from <span class="math inline">\(M\)</span> is decomposed into a product of basic numbers. However, if a natural number is uniquely decomposed into prime factors (the fundamental theorem of arithmetic), then, according to problem 2-20 b), this is not true for numbers from the set <span class="math inline">\(M\)</span>.</p>
+<p>For experts. The identity (*) is related to the rule of multiplication of numbers of the form <span class="math inline">\(x + y\sqrt{-5}\)</span> (see [48]): <span class="math inline">\((a + b\sqrt{-5})(c + d\sqrt{-5}) = (ac - 5bd) + (ad + bc)\sqrt{-5}\)</span>. The question of factorization of numbers from <span class="math inline">\(M\)</span> is equivalent to the question of factorization in the ring of numbers of the form <span class="math inline">\(x + y\sqrt{-5}\)</span>, where <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are integers. Problems of factorization in rings of this type played an important role in the history of mathematics. From these problems arose a new branch of mathematics – algebraic number theory (see [82]).</p>
+<p>Problem 2-21. Answer: for example, <span class="math inline">\((7^2, 13^2, 17^2)\)</span>, <span class="math inline">\((17^2, 25^2, 31^2)\)</span>, <span class="math inline">\((31^2, 41^2, 49^2)\)</span>. A triple of squares <span class="math inline">\(p^2, q^2, r^2\)</span> forms an arithmetic progression if and only if <span class="math inline">\(p^2 + r^2 = 2q^2\)</span> or <span class="math inline">\((r-q)(r+q) = (q-p)(q+p)\)</span>. For example, for the third of the indicated triples <span class="math inline">\((p=31, q=41, r=49)\)</span> we get <span class="math inline">\((49-41)(49+41) = (41-31)(41+31) = 720\)</span>.</p>
+<p>Here are the general formulas for such triples (of coprime numbers): <span class="math inline">\(p = n^2 + 2mn - m^2\)</span>, <span class="math inline">\(q = m^2 + n^2\)</span>, <span class="math inline">\(r = m^2 + 2mn - n^2\)</span>, where <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> are arbitrary coprime numbers. If for some <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> the numbers <span class="math inline">\(p, q, r\)</span> have a common divisor, then we can reduce them by it. (This happens when the numbers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> are both odd; then the corresponding numbers <span class="math inline">\(p, q, r\)</span> have a common factor of 2. As is easy to show, there can be no other common factors.)</p>
+<p>That numbers of this form are suitable can be verified by substituting them into the relation <span class="math inline">\((p-q)(p+q) = (q-r)(q+r)\)</span>. These formulas can be arrived at in various ways; we will indicate one of them (see [122]). Let <span class="math inline">\(p^2 + r^2 = 2q^2\)</span>. Dividing all terms of this equation by <span class="math inline">\(q^2\)</span>, we get <span class="math inline">\((p/q)^2 + (r/q)^2 = 2\)</span>. Denoting <span class="math inline">\(p/q\)</span> by <span class="math inline">\(x\)</span> and <span class="math inline">\(r/q\)</span> by <span class="math inline">\(y\)</span>, we get the equation <span class="math inline">\(x^2 + y^2 = 2\)</span>. Thus, the problem of finding the numbers <span class="math inline">\(p, q, r\)</span> reduces to solving the equation <span class="math inline">\(x^2 + y^2 = 2\)</span> in rational numbers <span class="math inline">\(x, y\)</span>.</p>
+<p>Problem 2-22. Answers: a) seven integer solutions: <span class="math inline">\((0;0)\)</span>, <span class="math inline">\((1;0)\)</span>, <span class="math inline">\((-1;0)\)</span>, <span class="math inline">\((2;6)\)</span>, <span class="math inline">\((2;-6)\)</span>, <span class="math inline">\((3;12)\)</span>, <span class="math inline">\((3;-12)\)</span>; b) four more rational solutions: <span class="math inline">\((\pm\frac{7}{3}, \pm\frac{31}{9})\)</span>.</p>
+<p>How to find new rational solutions from existing ones can be explained geometrically. Our equation defines a certain curve in the <span class="math inline">\(Oxy\)</span> coordinate plane. Let us know any two points of this curve whose coordinates <span class="math inline">\((x_1, y_1)\)</span> and <span class="math inline">\((x_2, y_2)\)</span> are rational numbers. The line passing through these points intersects the curve at a third point since the equation of the curve has the third degree. The coordinates <span class="math inline">\(x_3, y_3\)</span> of this third point will be rational functions of <span class="math inline">\(x_1, y_1, x_2, y_2\)</span> with integer coefficients, i.e., also rational numbers.</p>
+<p>Thus, starting from any two solutions <span class="math inline">\((x_1; y_1)\)</span>, <span class="math inline">\((x_2; y_2)\)</span> of the equation in rational numbers, we obtain a new solution <span class="math inline">\((x_3; y_3)\)</span> in rational numbers. Now let’s present the results of the corresponding calculations. The line passing through the given points <span class="math inline">\((x_1; y_1)\)</span> and <span class="math inline">\((x_2; y_2)\)</span> is given by the equation <span class="math inline">\(y = t(x - x_1) + y_1\)</span>, where <span class="math inline">\(t = (y_2 - y_1)/(x_2 - x_1)\)</span>. Substituting <span class="math inline">\(y\)</span> into the equation <span class="math inline">\(y^2 = 6(x^3 - x)\)</span>, we obtain a third-degree equation with respect to <span class="math inline">\(x\)</span>, two roots <span class="math inline">\(x_1, x_2\)</span> of which are known to us (since the points lie on the curve), and the third can be found by Vieta’s theorem. Thus, we have obtained formulas that allow us to find new solutions from known rational solutions of the equation <span class="math inline">\(y^2 = 6(x^3 - x)\)</span>. For experts. It is natural to ask the following questions. Will we, by the indicated method (drawing lines through known rational points), obtain new rational points each time? Is the set of rational points finite or infinite? How can they all be described? How many integer points are among them?</p>
+<p>To answer these questions, it is advisable to introduce an associative addition operation on the third-degree curve. It is more convenient to describe it for a curve given by the equation <span class="math inline">\(y^2 = x^3 + ax + b\)</span>. (3) (Any non-singular curve <span class="math inline">\(P(x,y) = 0\)</span> of the third degree can be reduced to this form by some transformation of variables; moreover, if the coefficients of <span class="math inline">\(P(x,y)\)</span> were integers, the problem of finding rational points on the curve <span class="math inline">\(P(x,y) = 0\)</span> can be reduced to a similar problem for the curve (3) with integers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>; for our curve <span class="math inline">\(y^2 = 6(x^3 - x)\)</span>, it is sufficient to change the variables <span class="math inline">\(v = 6x\)</span>, <span class="math inline">\(u = 6y\)</span> - it will take the form <span class="math inline">\(u^2 = v^3 - 36v\)</span>).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig12.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 12</figcaption>
+</figure>
+</div>
+<p>Consider two points <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> on the curve (3), and find the third intersection point of the line <span class="math inline">\(AB\)</span> with this curve. Denote by <span class="math inline">\(A \oplus B\)</span> the point symmetric to it with respect to the <span class="math inline">\(Ox\)</span> axis (Fig. 12). Then for any three points <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span> of the curve, the relation <span class="math inline">\((A \oplus B) \oplus C = A \oplus (B \oplus C)\)</span> holds. This associativity property has an interesting geometric interpretation. If two triples of lines are drawn in the plane such that lines from different triples intersect at 9 points, then a third-degree curve containing 8 of these points must also contain the ninth. If we add a point at infinity <span class="math inline">\(Z\)</span> to the curve, then the set of all its points with the operation <span class="math inline">\(\oplus\)</span> forms a commutative group (the property <span class="math inline">\(A \oplus B = B \oplus A\)</span> is obvious). The point <span class="math inline">\(Z\)</span> plays the role of zero in this group; the point <span class="math inline">\(\ominus A\)</span>, opposite to the point <span class="math inline">\(A\)</span>, is considered to be the point symmetric to <span class="math inline">\(A\)</span> with respect to the <span class="math inline">\(Ox\)</span> axis. The condition that three points <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span> belong to the same line has the form <span class="math inline">\(A \oplus B = \ominus C\)</span> or <span class="math inline">\(A \oplus B \oplus C = Z\)</span>.</p>
+<p>Rational points on the curve (3) with integer <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> also form a group with respect to the operation <span class="math inline">\(\oplus\)</span>. For our curve <span class="math inline">\(y^2 = 6(x^3 - x)\)</span>, the addition of points is given by formulas (1), (1’), (2), namely <span class="math inline">\((x_1; y_1) \oplus (x_2; y_2) = (x_3; -y_3)\)</span>; <span class="math inline">\((x_1; y_1) \oplus (x_1; y_1) = 2(x_1; y_1) = (x_4; y_4)\)</span>. All the points indicated in the answer can be easily obtained from three points: <span class="math inline">\(E(1;0)\)</span>, <span class="math inline">\(F(-1;0)\)</span>, <span class="math inline">\(G(2;6)\)</span>. Moreover, <span class="math inline">\(E \oplus F\)</span> has coordinates <span class="math inline">\((0;0)\)</span>, <span class="math inline">\(E \oplus G = (3;12)\)</span>, <span class="math inline">\(F \oplus G = (-\frac{1}{3}; \frac{4}{3})\)</span>, <span class="math inline">\(E \oplus F \oplus G = (-\frac{1}{2}; -\frac{2}{3})\)</span>, <span class="math inline">\(G \oplus G = 2G = (\frac{25}{24}; -\frac{35}{48})\)</span>, <span class="math inline">\(2G \oplus F = (-\frac{1}{49}; \frac{120}{49})\)</span>, <span class="math inline">\(2G \oplus E = (49; 840)\)</span>, etc. (Note that <span class="math inline">\(2E = 2F = 2(E \oplus F) = Z\)</span>).</p>
+<p>Finding the complete group of rational points for a specific curve (3) is a very difficult problem. It is known that this is a group with a finite number of generators (Mordell’s theorem), but it is not easy to find even the number of its generators of infinite order (i.e., the number of independent points <span class="math inline">\(A\)</span> of the curve for which <span class="math inline">\(nA \ne Z\)</span> for any <span class="math inline">\(n\)</span>) in a specific case. (See [122]).</p>
+<p>Integer points, as can be seen from our example, can appear among rational points quite unexpectedly. However, according to Thue’s theorem, there are always only a finite number of them on a non-singular curve of degree 3 (or greater).</p>
+<p>Another “finiteness theorem” was a recent mathematical sensation: in 1983, a proof (by the young mathematician Faltings) of Mordell’s conjecture appeared: on a non-singular curve <span class="math inline">\(P(x,y) = 0\)</span> of genus greater than 1 (the curve is assumed to be non-singular at infinity), there can be only a finite number of rational points (here <span class="math inline">\(P(x,y)\)</span> is an irreducible polynomial with integer coefficients). The genus of a curve <span class="math inline">\(P(x,y)\)</span> is a relatively easily computable integer characteristic related to the degree <span class="math inline">\(n\)</span> of the polynomial <span class="math inline">\(P(x,y)\)</span>. Curves of genus 0 include circles and other second-order curves, and curves of genus 1 include non-singular third-degree curves. As for non-singular curves <span class="math inline">\(P(x,y) = 0\)</span> of degree <span class="math inline">\(n &gt; 4\)</span>, their genus, as a rule, is not less than two, and therefore they can contain only a finite number of rational points. In particular, this applies to the Fermat curve <span class="math inline">\(x^n + y^n = 1\)</span> for <span class="math inline">\(n &gt; 4\)</span>. (For more details, see [125]).</p>
+</section>
+<section id="independent-practice-problems" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="independent-practice-problems"><span class="header-section-number">2.2</span> Independent Practice Problems</h2>
+<p>2-23. There are containers of two types: 130 kg and 160 kg. It is necessary to fully load a truck with a carrying capacity of 3 tons with them. Can this be done?</p>
+<p>2-24. A wheel with a radius of 18 cm rolls along a circle with a radius of 40 cm. A nail is driven into the wheel, which, hitting the circle, leaves marks on it. a) How many such marks will the nail leave on the circle? b) How many times will the wheel roll along the entire circle before the nail hits a point already marked earlier?</p>
+<p>2-25. A motorcycle relay race was held on a ring road. The start and finish were in the same place. The length of the ring road is 330 km, and the length of each stage is 75 km (the movement along the road is one-way). How many points were there on the road where the relay was passed, and what is the distance between adjacent points?</p>
+<p>2-26. It is known about a certain figure in the plane that when rotated around point O by an angle of 48°, it transforms into itself. Can it be asserted that it transforms into itself when rotated around point O by an angle of: a) 90°; b) 72°?</p>
+<p>2-27. A figure in the plane transforms into itself when rotated around point O by an angle of 19°. Prove that it transforms into itself when rotated by an angle of 86°.</p>
+<p>2-28. Find the greatest common divisor of the numbers: a) <span class="math inline">\(2^{63} - 1\)</span> and <span class="math inline">\(2^{91} - 1\)</span>; b) <span class="math inline">\(2^{19} + 1\)</span> and <span class="math inline">\(2^{86} + 1\)</span>.</p>
+<p>2-29. From a parallelogram with an acute angle of 60° and sides <span class="math inline">\(a &gt; b\)</span> (<span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are integers), an equilateral triangle is cut off by a straight line passing through a vertex. The same operation is performed on the remaining trapezoid - a parallelogram is obtained from the trapezoid, and so on, until a rhombus is obtained. a) What will be the side of the rhombus if <span class="math inline">\(a = 1986\)</span>, <span class="math inline">\(b = 1800\)</span>? b) Find some <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> such that with such a cutting of the parallelogram, triangles of eight different sizes are obtained.</p>
+<p>2-30. A rectangle is divided into 1x1 cm cells. A number is written inside each cell. It is known that the sum of all numbers in each horizontal row is equal to 1, and in each vertical column is equal to 2. Can the area of the rectangle be equal to 1986 cm²?</p>
+<p>2-31. Is it true that: a) from 100 integers, one can always choose two such that their sum is divisible by 7; b) from 5 integers, one can always choose two such that the difference of their squares is divisible by 7?</p>
+<p>2-32. Let the lengths of all three sides of a right triangle be integers. Can the lengths of both legs be odd?</p>
+<p>2-33. Find three such prime numbers that their sum is 5 times less than their product.</p>
+<p>2-34. Find all such prime numbers <span class="math inline">\(p\)</span> that the number a) <span class="math inline">\(p^2 + 13\)</span>; b) <span class="math inline">\(p^2 + 14\)</span> is prime.</p>
+<p>2-35. Prove that the following numbers are composite: a) <span class="math inline">\(2^{3^{1987}} + 1\)</span>; b) <span class="math inline">\(2^{3^{1987}} - 1\)</span>.</p>
+<p>2-36. Find all pairs of integers satisfying the equation: a) <span class="math inline">\(x^2 = y^2 + 2y + 13\)</span>; b) <span class="math inline">\(x^2 - 3xy + 2y^2 = 3\)</span>.</p>
+<p>2-37. Prove that the following equations have no integer solutions: a) <span class="math inline">\(y^2 = 5x^2 + 6\)</span>; b) <span class="math inline">\(2x - 1 = y^2\)</span> (<span class="math inline">\(x &gt; 1\)</span>).</p>
+<p>2-38. Prove that if the sum of several integers is divisible by 6, then the sum of their cubes is also divisible by 6.</p>
+<p>2-39. Prove that for any integers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span>, the number <span class="math inline">\(m^5n - mn^5\)</span> is divisible by 30.</p>
+<p>2-40. Prove that if the number <span class="math inline">\(a^k - 1\)</span> is divisible by <span class="math inline">\(k^m\)</span>, then <span class="math inline">\(a^{km+1} - 1\)</span> is divisible by <span class="math inline">\(k^{m+1}\)</span> (<span class="math inline">\(a, k, m\)</span> are natural numbers).</p>
+<p>2-41. Find the last three digits of the sum <span class="math inline">\(1^{100} + 2^{100} + 3^{100} + 4^{100} + \dots + 999999^{100} + 1000000^{100}\)</span>.</p>
+<p>2-42. Find any four consecutive natural numbers, each of which is divisible by the square of an integer greater than one.</p>
+<p>2-43. Write the six numbers 1, 2, 3, 4, 5, 6 around a circle in such an order that for any three numbers <span class="math inline">\(a, b, c\)</span> standing in a row, the number <span class="math inline">\(b^2 - ac\)</span> is divisible by 7.</p>
+<p>2-44. Specify such an <span class="math inline">\(n\)</span> for which the number <span class="math inline">\(n^4 + 4\)</span> is composite.</p>
+<p>2-45. Prove that for all natural <span class="math inline">\(n &gt; 1\)</span>, the number a) <span class="math inline">\(n^4 + 4\)</span>; b) <span class="math inline">\(n^5 + n^4 + 1\)</span> is composite.</p>
+<p>2-46. Factor the polynomial <span class="math inline">\(x^9 + x^4 - x - 1\)</span> into 5 factors with integer coefficients.</p>
+<p>2-47. Prove that the polynomial <span class="math inline">\((x+1)^{2n} - x^{2n} - 2x - 1\)</span> is divisible by the polynomial <span class="math inline">\(x(x+1)(2x+1)\)</span>.</p>
+<p>2-48. For what values of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is the polynomial <span class="math inline">\(x^n - ax^{n-1} + bx - 1\)</span> divisible by <span class="math inline">\((x-1)^2\)</span>?</p>
+<p>2-49. It is known that the polynomial <span class="math inline">\(f(x)\)</span> gives a remainder of 3 when divided by <span class="math inline">\(x-1\)</span>, and a remainder of 5 when divided by <span class="math inline">\(x-2\)</span>. What remainder does this polynomial give when divided by <span class="math inline">\((x-1)(x-2)\)</span>?</p>
+<p>2-50. Prove that the polynomial <span class="math inline">\(x^{2^{n}} + 1\)</span> cannot be factored into the product of two non-zero degree polynomials with integer coefficients.</p>
+<p>2-53. Does there exist such a natural <span class="math inline">\(n\)</span> that the number <span class="math inline">\(3^{n} + 1\)</span> is divisible by: a) <span class="math inline">\(5^{1000}\)</span>; b) <span class="math inline">\(10^{1000}\)</span>?</p>
+<p>2-54. There are many cards, each of which has one of the numbers 2, 3, 5, 7 written on it. Is it possible to arrange in a row a) 15; b) 16 cards so that none of the products of several consecutive numbers is a perfect square? c) What is the largest number of cards on which one of the first <span class="math inline">\(n\)</span> prime numbers is written that can be arranged in a row so that this condition is met?</p>
+<p>2-55. Trees grow at all integer points <span class="math inline">\((x;y)\)</span> of the coordinate plane <span class="math inline">\(Oxy\)</span>. What is the greatest width of a road that can be drawn in this forest without touching the trees, if its edges must be straight lines parallel to the line a) <span class="math inline">\(3y = 5x\)</span>; b) <span class="math inline">\(ax = by\)</span>, where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are given natural numbers? (We neglect the thickness of the trunks.)</p>
+<p>2-56. a) Find four triples <span class="math inline">\((x; y; z)\)</span> of coprime numbers satisfying the equation <span class="math inline">\(x^2 + 2y^2 = z^2\)</span>. b) Prove that there are infinitely many such triples.</p>
+<p>2-57. A natural number <span class="math inline">\(n &gt; 1\)</span> has the property that all natural numbers less than <span class="math inline">\(n\)</span> and coprime to it form an arithmetic progression. Prove that the number <span class="math inline">\(n\)</span> is either a power of two or a prime number.</p>
+<p>2-58. a) Find a two-digit number if it is known that the last two digits of its square coincide with this number. b) Prove that for every <span class="math inline">\(n\)</span>, there exists an <span class="math inline">\(n\)</span>-digit number that coincides with the last <span class="math inline">\(n\)</span> digits of its square (an <span class="math inline">\(n\)</span>-digit number can start with zero).</p>
+<p>2-59. a) Find ten triples <span class="math inline">\((x; y; z)\)</span> of natural numbers satisfying the equation <span class="math inline">\(x^2 + y^2 + z^2 = 3xyz\)</span>. b) Prove that there are infinitely many such triples.</p>
+<p>2-60. Prove that the number <span class="math inline">\((\sqrt[3]{3} - \sqrt{2})^{1987}\)</span> can be represented in the form <span class="math inline">\(a\sqrt[3]{3} - b\sqrt{2}\)</span>, where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are integers such that <span class="math inline">\(3a^2 - 2b^2 = 1\)</span>.</p>
+<p>2-61. Consider the set M of natural numbers representable in the form <span class="math inline">\(x^2 + xy + y^2\)</span>, where x and y are some integers.</p>
+<ol type="a">
+<li>Prove that the product of two numbers from M also belongs to M.</li>
+<li>Let’s call a number from M, greater than 1, basic if it is not divisible by any of the numbers from M except itself. Does there exist a number from M that can be represented in two different ways as a product of basic numbers?</li>
+</ol>
+<p>2-62. Find five triples of natural numbers (x; y; z) satisfying the equation <span class="math inline">\(x!y! = z!\)</span>.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./par1.html" class="pagination-link" aria-label="INTRODUCTORY PROBLEMS">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">INTRODUCTORY PROBLEMS</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./par3.html" class="pagination-link" aria-label="CONSTRUCTIONS IN THE PLANE AND IN SPACE">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">CONSTRUCTIONS IN THE PLANE AND IN SPACE</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
