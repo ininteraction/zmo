@@ -1,4 +1,4 @@
-# **INEQUALITIES, EXTREMAL PROBLEMS, ESTIMATES**  
+# INEQUALITIES, EXTREMAL PROBLEMS, ESTIMATES
 **Problems**
 
 **4-1.** In a right triangle, $a$ and $b$ are the legs, $c$ is the hypotenuse, and $h$ is the altitude dropped onto the hypotenuse. Prove that $c + h$ is greater than $a + b$.
