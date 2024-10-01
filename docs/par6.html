@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>6&nbsp; SEQUENCES AND ITERATIONS – Profound Puzzles: Deep Mathematics through Playful Problems</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./subjectindex.html" rel="next">
+<link href="./par5.html" rel="prev">
+<link href="./cover.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="custom.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./par6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">SEQUENCES AND ITERATIONS</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./cover.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Profound Puzzles: Deep Mathematics through Playful Problems</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">INTRODUCTORY PROBLEMS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">INTEGERS AND POLYNOMIALS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">CONSTRUCTIONS IN THE PLANE AND IN SPACE</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>INEQUALITIES, EXTREMAL PROBLEMS, ESTIMATES</strong></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">UNUSUAL EXAMPLES AND CONSTRUCTIONS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par6.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">SEQUENCES AND ITERATIONS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./subjectindex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Thematic Index</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#problems-discussion" id="toc-problems-discussion" class="nav-link active" data-scroll-target="#problems-discussion"><span class="header-section-number">6.1</span> Problems Discussion</a></li>
+  <li><a href="#independent-practice-problems" id="toc-independent-practice-problems" class="nav-link" data-scroll-target="#independent-practice-problems"><span class="header-section-number">6.2</span> Independent Practice Problems</a></li>
+  <li><a href="#hints-for-independent-practice-problems" id="toc-hints-for-independent-practice-problems" class="nav-link" data-scroll-target="#hints-for-independent-practice-problems"><span class="header-section-number">6.3</span> Hints for Independent Practice Problems</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">SEQUENCES AND ITERATIONS</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>6-1.</strong> a) Find the hundredth digit after the decimal point in the decimal representation of the number 1/7. b) Find a six-digit number that, when multiplied by the numbers 2, 3, 4, 5, 6, gives six-digit numbers that differ from it only in the order of digits.</p>
+<p><strong>6-2.</strong> A flock of white geese flew over a chain of lakes. On each lake, half of the geese plus half a goose landed, and the rest flew on. All geese landed on seven lakes. How many geese were in the flock?</p>
+<p><strong>6-3.</strong> The sequence <span class="math inline">\((a_n)\)</span> is given by the first two terms <span class="math inline">\(a_1 = 2\)</span>, <span class="math inline">\(a_2 = 3\)</span> and the condition <span class="math inline">\(a_{k+2} = a_{k+1} a_k\)</span> (k = 1, 2, 3, …). Find <span class="math inline">\(a_{1986}\)</span>.</p>
+<p><strong>6-4.</strong> Each of the two vessels contains <span class="math inline">\(A\)</span> liters of water. From the first vessel, half of the water in it is poured into the second, then from the second, a third of the water in it is poured into the first, then from the first, a quarter of the water in it is poured into the second, and so on. How much water will be in each of the vessels after 100 transfers?</p>
+<p><strong>6-5.</strong> There are two vessels. They contain 1 liter of water in total. Half of the water from the first vessel is poured into the second, then half of the water in the second vessel is poured into the first, then half of the water in the first vessel is poured into the second, and so on. Prove that regardless of how much water was originally in each of the vessels, after 100 transfers they will contain <span class="math inline">\(\frac{2}{3}\)</span> and <span class="math inline">\(\frac{1}{3}\)</span> liters, respectively, accurate to 1 milliliter.</p>
+<p><strong>6-6.</strong> A numerical sequence is being constructed: its first term is <span class="math inline">\(\frac{1986}{3}\)</span>, and each subsequent term, starting from the second, is equal to the sum of the digits of the previous one. Find the tenth term of this sequence.</p>
+<p><strong>6-7.</strong> Around a clearing, there are 12 houses, painted white and red, in which 12 gnomes have settled. Each gnome has an odd number of friends. In January, the first gnome paints his house the color that the majority of his friends’ houses are painted. In February, the second (clockwise) gnome does the same, in March – the third, and so on. Prove that there will come a moment after which the color of the house of each gnome will stop changing.</p>
+<p><strong>6-8.</strong> Imagine that on an infinite sheet of checkered paper, several (a finite number) cells “got sick”. Every hour, the following changes occur simultaneously: if a cell is sick, and two cells, to the left and below it, are healthy, then it recovers; if a cell is healthy, and two cells, below and to the left of it, are sick, then it gets sick (the rest of the cells remain as they were). Prove that, no matter how the sick cells were originally located, after some time all cells will be healthy.</p>
+<p><strong>6-9.</strong> A corporal stands in front of a row of <span class="math inline">\(N\)</span> soldiers and commands: “Left-RIGHT!” On this command, some soldiers turn left, the rest - right. After that, every second, every two soldiers facing each other turn their backs to each other. Prove that the movement will stop after a finite time, and estimate after how many seconds this will definitely happen.</p>
+<p><strong>6-10.</strong> On the table of an official of the Ministry of Circumlocution<span class="math inline">\(^1\)</span> lie <span class="math inline">\(n\)</span> volumes of the British Encyclopedia, stacked in several piles. Every day, coming to work, the official takes one volume from each pile, forms a new pile from them, arranges the piles by the number of volumes (in descending order), and fills out a statement in which he indicates the number of volumes in each pile. For example, if on the first day the statement says (8, 3, 1, 1), then the next day the record will be (7, 4, 2), then – (6, 3, 3, 1), (5, 4, 2, 2), etc. What will be written in the statement in a month if the total number of volumes <span class="math inline">\(n\)</span> is: a) 6; b) 10? (The initial division into piles can be arbitrary.)</p>
+<p><strong>6-11.</strong> How many ten-digit numbers are there, consisting of the digits 2 and 5, such that two twos do not stand next to each other?</p>
+<p><strong>6-12.</strong> The guys are standing in a circle. They need to choose a leader, and they are counted as follows: the first remains in the circle, the next one clockwise – the second – leaves the circle, the next one – the third – remains, the fourth one leaves, etc., every other one around the circle. The circle is constantly narrowing until only one person remains in it. Determine who exactly will remain (what place he originally stood in, counting from the first clockwise), if there were initially: a) 64 people; b) 1986 people.</p>
+<p><strong>6-13.</strong> The infinite sequence of zeros and ones 0110100110010110… is compiled according to the following rule. First, zero is written. Then an infinite number of steps are taken. At each step, a new piece of the same length is added to the already written piece of the sequence, obtained from it by replacing all zeros with ones, and ones with zeros. a) Which digit, 0 or 1, is in the 1986th place? b) Will this sequence, starting from some place, be periodic?</p>
+<p><strong>6-14.</strong> The following game was played at a math party. A spectator from the audience wrote two consecutive natural numbers on two pieces of paper (one on each piece of paper) and rolled them into balls. The presenter gave two mathematicians, A and B, to draw one piece of paper each; each of them looked at what number was written on his piece of paper, but did not tell the other. Then the following meaningful dialogue took place between A and B.</p>
+<p>A: I don’t know what your number is. B: And I don’t know what your number is. A: And I don’t know what your number is. B: And I don’t know what your number is. ……………………..</p>
+<p>Ten times A said that he did not know what number B had, and ten times B replied that he did not know what number A had. The audience got tired of this, but suddenly, for the eleventh time, A said: “Now I know what your number is.” Then the presenter intervened in the dialogue and asked the audience what numbers A and B could have. What should they answer him?</p>
+<p><strong>6-15.</strong> On a rectangular map, a map of the same area was placed, but on a smaller scale (Fig. 77). Prove that you can pierce both maps with a needle at once so that the puncture point depicts the same point of the area on both maps.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig77.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 77</figcaption>
+</figure>
+</div>
+<p><strong>6-16.</strong> Prove that the sequence</p>
+<p>1, 1 + 1/2, 1 + 1/2 + 1/3, …, 1 + 1/2 + … + 1/n, …</p>
+<p>has a limit, and find it.</p>
+<p><strong>6-17.</strong> The sequence <span class="math inline">\((a_n)\)</span> is given by</p>
+<p>1, 2/1, 3/2, 5/3, 8/5, …</p>
+<p>for each <span class="math inline">\(n = 1, 2, 3, ...\)</span>. Find a number that is less than all members of the sequence with even numbers (<span class="math inline">\(a_2\)</span>, <span class="math inline">\(a_4\)</span>, <span class="math inline">\(a_6\)</span>, …) and at the same time greater than all its members with odd numbers (<span class="math inline">\(a_1\)</span>, <span class="math inline">\(a_3\)</span>, <span class="math inline">\(a_5\)</span>, …).</p>
+<section id="problems-discussion" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="problems-discussion"><span class="header-section-number">6.1</span> Problems Discussion</h2>
+<p><strong>Problem 6-1.</strong> a) Answer: 8.</p>
+<p>Let’s start dividing 1 by 7 “by corner” and we will see that the sequence of digits of the quotient after the decimal point will be periodic with a period of 6 digits: (142857). Since 100 = 6 ⋅ 16 + 4, the fourth digit of the period – the digit 8 – will be in the 100th place after the decimal point.</p>
+<p>∇ For any natural numbers <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span>, the fraction <span class="math inline">\(\frac{p}{q}\)</span> is represented either by a finite decimal fraction or by an infinite periodic decimal fraction. Indeed, dividing <span class="math inline">\(p\)</span> by <span class="math inline">\(q\)</span> “by corner”, we will get the remainders when dividing some natural numbers by <span class="math inline">\(q\)</span>. The remainder when dividing by <span class="math inline">\(q\)</span> can be a non-negative integer less than <span class="math inline">\(q\)</span>. Therefore, after no more than <span class="math inline">\(q\)</span> divisions, either some next remainder will be zero and we will get a finite decimal fraction, or some two remainders will coincide and from this place the quotients will be periodically repeated. This reasoning uses the Dirichlet principle, which was discussed in the discussion of problem 2-9.</p>
+<ol start="2" type="a">
+<li>Answer: 142857.</li>
+</ol>
+<p>Indeed, multiplying this number by 2, 3, 4, 5, and 6, we get the numbers 285714, 428571, 571428, 714285, and 857142, respectively.</p>
+<p>∇ The answer in problem b) is the number made up of the digits of the period of the expansion of the number 1/7 into a decimal fraction. The five numbers written out are, in turn, the periods of the expansion of the numbers 2/7, 3/7, 4/7, 5/7, 6/7 into a decimal fraction. This is easy to verify when dividing the number 1 by 7 by corner: from the second step we divide 3 by 7, starting from the third step – 2 by 7, then – 6, 4, and 5.</p>
+<p><strong>Problem 6-2.</strong> Answer: 127 geese.</p>
+<p>Let one more goose, the Gray Goose, fly with the flock of white geese all the time. If <span class="math inline">\(m\)</span> white geese and the Gray Goose fly up to a certain lake, then <span class="math inline">\(\frac{m}{2} + \frac{1}{2} = \frac{m+1}{2}\)</span> – exactly half of all geese – land on this lake. Therefore, after each lake, the number of flying geese is halved. After seven lakes, it decreases by <span class="math inline">\(2^7 = 128\)</span> times, and one Gray Goose remains flying. This means that there were 128 geese in the beginning, of which 127 were white.</p>
+<p>∇ The Gray Goose appeared in the solution of the problem not by chance. Let <span class="math inline">\(x_k\)</span> denote the number of flying white geese when there are still <span class="math inline">\(k\)</span> lakes ahead. Then the condition of the problem is written as follows: <span class="math inline">\(x_{k-1} = \frac{x_k}{2} + \frac{1}{2}\)</span>. From here we get a recurrence relation for the sequence <span class="math inline">\((x_n)\)</span>: <span class="math inline">\(x_k = 2x_{k-1} + 1\)</span>.</p>
+<p>Adding the Gray Goose, we essentially made a change of variable: <span class="math inline">\(y_n = x_n + 1\)</span> and got a new sequence <span class="math inline">\((y_n)\)</span>. Substituting <span class="math inline">\(x_k = y_k - 1\)</span> and <span class="math inline">\(x_{k-1} = y_{k-1} - 1\)</span> into the relation (*), we see that the sequence <span class="math inline">\((y_k)\)</span> satisfies a simpler relation: <span class="math inline">\(y_k = 2 y_{k-1}\)</span>. <span class="math inline">\((y_k)\)</span> is a geometric progression with a common ratio of 2, and, therefore, its general term has the form <span class="math inline">\(y_n = 2^n y_0\)</span>. Returning to the sequence <span class="math inline">\((x_n)\)</span>, we find the formula for its general term: <span class="math inline">\(x_n = 2^n - 1\)</span>.</p>
+<p>Now consider a more general case of the sequence <span class="math inline">\((x_n)\)</span>, given by the relation</p>
+<p><span class="math inline">\(x_k = q x_{k-1} + d\)</span>. (**)</p>
+<p>If <span class="math inline">\(q = 1\)</span>, then <span class="math inline">\((x_n)\)</span> is an arithmetic progression and its general term is given by the formula <span class="math inline">\(x_n = x_0 + d(n-1)\)</span>.</p>
+<p>If <span class="math inline">\(q \ne 1\)</span> and <span class="math inline">\(d = 0\)</span>, then <span class="math inline">\((x_n)\)</span> is a geometric progression and <span class="math inline">\(x_n = q^n x_0\)</span>. If <span class="math inline">\(q \ne 1\)</span> and <span class="math inline">\(d \ne 0\)</span>, then we are looking for such <span class="math inline">\(z\)</span> that the sequence <span class="math inline">\(y_n = x_n + z\)</span> becomes a geometric progression. Substituting <span class="math inline">\(x_k = y_k - z\)</span> and <span class="math inline">\(x_{k-1} = y_{k-1} - z\)</span> into the relation (**), we get:</p>
+<p><span class="math inline">\(y_k = q y_{k-1} + z(1-q) + d\)</span>. If we choose <span class="math inline">\(z\)</span> so that <span class="math inline">\(z(1-q) + d = 0\)</span>, then <span class="math inline">\(y_k = q y_{k-1}\)</span>, whence <span class="math inline">\(y_n = q^n y_0\)</span>. Thus, the formula for the general term is found: <span class="math inline">\(x_n = q^n (x_0 + z) - z\)</span>, where <span class="math inline">\(z = \frac{d}{1-q}\)</span>. In our problem, <span class="math inline">\(q = 2\)</span>, <span class="math inline">\(x_0 = 0\)</span>, <span class="math inline">\(d = 1\)</span>, and <span class="math inline">\(z = 1\)</span> (one Gray Goose).</p>
+<p><strong>Problem 6-3.</strong> Answer: <span class="math inline">\(a_{1986} = \frac{2}{3}\)</span>.</p>
+<p>Let’s write out the first terms of this sequence:</p>
+<p>2, 3, 3/2, 1/2, 1/3, 2/3, 2, 3, …</p>
+<p>Since the two adjacent terms <span class="math inline">\(a_7\)</span> and <span class="math inline">\(a_8\)</span> are the same as <span class="math inline">\(a_1\)</span> and <span class="math inline">\(a_2\)</span>, and each subsequent term is calculated from the two previous ones, the sequence will repeat with a period of 6. Since 1986 is divisible by 6, then <span class="math inline">\(a_{1986} = a_6 = \frac{2}{3}\)</span>.</p>
+<p>∇ <strong>In general,</strong> for any non-zero first two terms <span class="math inline">\(a_1\)</span> and <span class="math inline">\(a_2\)</span>, the sequence from problem 6-2 repeats with a period of 6, i.e., <span class="math inline">\(a_{n+6} = a_n\)</span>. To verify this, it is sufficient to write out the first eight terms of the sequence:</p>
+<p><span class="math inline">\(a_1, a_2, a_1a_2, 1, a_1, 1/a_2, a_1a_2, 1, a_1, ...\)</span></p>
+<p>It is convenient to denote <span class="math inline">\(\ln a_n\)</span> by <span class="math inline">\(x_n\)</span>, then the sequence <span class="math inline">\((x_n)\)</span> will satisfy the condition: <span class="math inline">\(x_{n+2} = x_{n+1} - x_n\)</span> (for <span class="math inline">\(n \ge 1\)</span>) and, of course, will also be periodic with a period of 6. A more general fact is true: if</p>
+<p><span class="math display">\[d = 2 \cos \frac{k\pi}{m},\]</span></p>
+<p>where <span class="math inline">\(k\)</span> and <span class="math inline">\(m\)</span> (<span class="math inline">\(k &lt; m\)</span>) are coprime natural numbers, then the sequence for which <span class="math inline">\(x_{n+2} = dx_{n+1} - x_n\)</span> is periodic with a period of <span class="math inline">\(2m\)</span>. For <span class="math inline">\(k = 1, m = 3\)</span>, we get</p>
+<p><span class="math display">\[d = 2 \cos \frac{\pi}{3} = 1\]</span></p>
+<p>and the period of the sequence is equal to <span class="math inline">\(2m = 6\)</span>.</p>
+<p><strong>Problem 6-4. Answer:</strong> The same amount as was initially - <span class="math inline">\(A\)</span> liters of water in each.</p>
+<p>To verify this, we will show that after every two subsequent transfers, the amount of water remains the same. When <span class="math inline">\(\frac{1}{k}\)</span>-th part of the water from another container is added to a container, it becomes</p>
+<p><span class="math display">\[A \left(1 + \frac{1}{k} \right) = A \frac{k+1}{k} \text{ liters.}\]</span></p>
+<p>After this, when <span class="math inline">\(\frac{1}{k+1}\)</span>-th part is poured out of it, it becomes</p>
+<p><span class="math display">\[A \frac{k+1}{k} \left(1 - \frac{1}{k+1} \right) = A \frac{k+1}{k} \cdot \frac{k}{k+1} = A \text{ liters.}\]</span></p>
+<p><strong>Problem 6-5.</strong> Note that if the first container had <span class="math inline">\(\frac{1}{2}\)</span> liters and the second had <span class="math inline">\(\frac{1}{3}\)</span> liters, then after the first transfer, the volumes would have swapped places, and after the second transfer, they would have become the same as at the beginning.</p>
+<p>We will count from such a state. Let after an even number of transfers, the first container has <span class="math inline">\(\left(\frac{2}{3} + p \right)\)</span> liters, where <span class="math inline">\(-\frac{1}{6} \le p \le \frac{1}{6}\)</span>, then the second container will have <span class="math inline">\(\left(\frac{1}{3} - p \right)\)</span> liters of water. After the next transfer, these containers will have respectively <span class="math inline">\(\left(\frac{1}{3} + \frac{p}{2} \right)\)</span> liters and <span class="math inline">\(\left(\frac{2}{3} - \frac{p}{2} \right)\)</span> liters of water, and then <span class="math inline">\(\left(\frac{2}{3} + \frac{p}{4} \right)\)</span> liters and <span class="math inline">\(\left(\frac{1}{3} - \frac{p}{4} \right)\)</span> liters.</p>
+<p>So, after every two transfers, the addition <span class="math inline">\(p\)</span> decreases by a factor of 4. This means that after 100 transfers (50 pairs of transfers), the addition <span class="math inline">\(p\)</span> will decrease by a factor of <span class="math inline">\(4^{50}\)</span> and the containers will have: <span class="math inline">\(\frac{2}{3} + p \cdot \frac{1}{4^{50}}\)</span> and <span class="math inline">\(\frac{1}{3} - p \cdot \frac{1}{4^{50}}\)</span> liters. Since the addition <span class="math inline">\(p\)</span> satisfies the inequality <span class="math inline">\(-\frac{1}{6} \le p \le \frac{1}{6}\)</span>, the addition <span class="math inline">\(p \cdot \frac{1}{4^{50}}\)</span> is less than <span class="math inline">\(\frac{1}{10000}\)</span> and thus the containers will have, with high accuracy, <span class="math inline">\(\frac{2}{3}\)</span> liters and <span class="math inline">\(\frac{1}{3}\)</span> liters.</p>
+<p>∇ <strong>If you pour</strong> not half, but <span class="math inline">\(\frac{1}{n}\)</span>-th part of the water each time, then after 100 transfers, with high accuracy, the containers will have <span class="math inline">\(\frac{n}{2n-1}\)</span> and <span class="math inline">\(\frac{n-1}{2n-1}\)</span> liters of water, respectively.</p>
+<p>Let’s show how to find this answer. If the first container has <span class="math inline">\(x\)</span> liters of water and the second container has <span class="math inline">\(y\)</span> liters of water, then after the first transfer, the first container will have <span class="math inline">\(x\left(1-\frac{1}{n}\right) + \frac{y}{n} = x\left(\frac{n-1}{n}\right) + \frac{y}{n}\)</span> liters. For the amount in the first container to be <span class="math inline">\(x\)</span> again after the second transfer, the following relation must hold: <span class="math inline">\(y = x\left(\frac{n-1}{n}\right)\)</span>. Since <span class="math inline">\(x+y=1\)</span>, we get <span class="math inline">\(x = \frac{n}{2n-1}\)</span> liters, <span class="math inline">\(y = \frac{n-1}{2n-1}\)</span> liters.</p>
+<p><strong>Problem 6-6. Answer:</strong> 9.</p>
+<p>If a number is divisible by 9, then the sum of its digits is also divisible by 9. Since <span class="math inline">\(3^{1986} = 9 \cdot 3^{1984}\)</span>, all terms of the given sequence are divisible by 9.</p>
+<p>Let’s estimate their values. From the inequality <span class="math inline">\(3^4 &lt; 10^2\)</span> it follows that <span class="math inline">\(3^{1986} &lt; 10^{993}\)</span>, therefore the number <span class="math inline">\(3^{1986}\)</span> has no more than 993 digits. This means that the second term of the sequence is no more than <span class="math inline">\(9 \cdot 993 &lt; 10^4\)</span>, i.e., it has no more than four digits. Then the third term of the sequence is no more than <span class="math inline">\(9 \cdot 4 = 36\)</span>, and the fourth is less than 18. Since the fourth term, like the previous ones, is divisible by 9, it is equal to 9. And this means that all subsequent terms are equal to 9.</p>
+<p>∇ <strong>In general,</strong> in a sequence of natural numbers where the <span class="math inline">\(n\)</span>-th term is the sum of the digits of the <span class="math inline">\((n-1)\)</span>-th term, all terms, starting from some point, are the same and equal to the remainder <span class="math inline">\(r\)</span> when the first term is divided by 9 (if <span class="math inline">\(r \ne 0\)</span>) or 9 (if <span class="math inline">\(r = 0\)</span>).</p>
+<p><strong>Problem 6-7.</strong> Consider the number of pairs of gnome friends whose houses are of different colors. Every month, their number does not increase. Indeed, if the next gnome paints the house the same color as it was before, then this number remains the same; if he paints it a different color, then it will decrease. Since this whole number is non-negative, it cannot decrease all the time, which means that starting from some moment it will not change. From this moment on, each gnome will always paint his house the same color.</p>
+<p>∇ <strong>Note that</strong> in the problem statement, the oddness of the number of friends for each gnome is only needed to make it clear what the majority is, and the number of gnomes can be replaced by any other even number. The following technique helped us solve this problem: find a quantity (the number of pairs of friends with different colored houses) that remains the same or decreases under the operation specified in the condition. This technique often helps to understand what happens when an operation is repeated many times on a certain set.</p>
+<p><strong>Problem 6-8.</strong> Let’s draw a horizontal line through the top side of the topmost sick cell. It is clear that no cell located above this line will get sick. Similarly, no cell to the right of the rightmost initially sick cell will get sick. Thus, all the cells that may get sick lie inside some right angle. Consider the diagonal farthest from the vertex of the angle, perpendicular to the bisector of this angle, on which sick cells still lie. It is clear that all sick cells lying on it will recover in an hour. Thus, each hour the diagonal farthest from the vertex, containing sick cells, “steps” towards the vertex of the angle. Consequently, at some point it will reach the vertex of the angle, inside which sick cells may lie. This means that all cells have recovered.</p>
+<p><strong>For experts.</strong> Let each cell on the plane be able to be in two states, 0 and 1 (or in one of a finite number N of states), and at each moment of time t = 1, 2, 3, … it takes one of these states, depending on the states of several of its neighbors, according to a certain rule F, the same for all neighbors. Such systems, called cellular automata, have been intensively studied in the last decade by physicists, computer designers, and mathematicians. For some relatively simple rules (such as, for example, the rules of the game “Life” by J. Conway - see [74]), the cellular automaton has a remarkably complex behavior. This applies not only to two-dimensional, but also to one-dimensional (located on the integer line) cellular automata. They are widely studied using computer simulation; even special programs have been built that allow you to observe the behavior of a cellular automaton on a display screen.</p>
+<p>Few mathematical results related to cellular automata have been obtained so far. For some problems related to them, their algorithmic undecidability has been proven; for example, for the game “Life” there is no algorithm that allows you to find out from the initial configuration of a finite number of units whether it will turn into an empty configuration “all zeros” after some time.</p>
+<p><strong>Problem 6-9.</strong> Let’s associate a broken line on graph paper with a row of soldiers, the lines of which go at an angle of 45° to the horizontal line, as shown in Figure 78a: each soldier corresponds to the next segment of the broken line, and if the soldier looks to the right, then the corresponding segment of the broken line goes up, and if to the left, then down. The changes that occur in the row of soldiers in the next second can now be described as follows: the ends A and B of the broken line do not move, and each corner of two adjacent segments sticking up (“hill”) turns into a corner sticking down (“pit”). Thus, the height of the highest “hill” decreases every second, and this will continue until there are no “hills” left in the broken line, i.e., it turns into a broken line AOB from two sides of the rectangle AOBC (see Figure 78b).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig78.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 78</figcaption>
+</figure>
+</div>
+<p>The maximum number of seconds during which movement can occur in a row of N soldiers is equal to N – 1: this will be the case if the initial position corresponds to the broken line ACB, and for any other broken line with the same end vertices, the time to complete stop will be less.</p>
+<p>∇ <strong>If in an infinite row</strong> almost all soldiers are turned to the left and only a finite set are looking to the right, then the movement according to the rule specified in the problem will continue indefinitely - a wave that retains its shape moves along the row.</p>
+<p>It is interesting that there are rules that are the same for all soldiers, symmetrical with respect to replacing “left” with “right” and require only dependence on three neighbors, which allow you to correct any finite defect in an infinite row. Here is one of them. Let each soldier who sees that the first and third soldiers in front of him (on the side he is looking at) are facing him turn his back to them, then after a finite period of time the movement in any row with a “finite defect” will stop (see [53]).</p>
+<p><strong>Problem 6-10.</strong> a) <strong>Answer:</strong> (3, 2, 1).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig79.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 79</figcaption>
+</figure>
+</div>
+<p>Figure 79 shows a diagram. It depicts all possible types of entries in the register for n = 6. An arrow leading from one entry to another shows that the second entry will necessarily follow the first one. We see that no later than the seventh day, the entry (3, 2, 1) will be in the register every day.</p>
+<ol start="2" type="a">
+<li><strong>Answer:</strong> (4, 3, 2, 1).</li>
+</ol>
+<p>This answer can be obtained by constructing a diagram similar to the one shown in Figure 79. Those who wish can draw it themselves (it contains 42 entries) and see that no later than the thirteenth day, the entry (4, 3, 2, 1) will be in the register every day.</p>
+<p>∇ <strong>In principle,</strong> a similar diagram can be drawn for any given n, although for large n this requires a lot of time. However, it turns out that, without doing a complete enumeration, it is possible to find out which entries will appear in the register after a sufficiently long time. The general result can be formulated as follows. If the number of volumes n can be written as the sum of consecutive natural numbers, starting from 1, i.e., <span class="math inline">\(n = 1 + 2 + ... + k = \frac{k(k+1)}{2}\)</span> for some k, then, starting from some day, the entry (k, k-1, k-2, …, 2, 1) will be repeated in the register all the time. (In problem 6-10 a) and b) it was like this: <span class="math inline">\(6 = \frac{3 \cdot 4}{2}\)</span>, <span class="math inline">\(10 = \frac{4 \cdot 5}{2}\)</span>.) If the number n is not represented in the form <span class="math inline">\(\frac{k(k+1)}{2}\)</span>, then the register “loops”: the entries in it begin to repeat with a period of k such that <span class="math inline">\(\frac{(k-1)k}{2} &lt; n &lt; \frac{k(k+1)}{2}\)</span>.</p>
+<p>The following construction helps to prove this result and, in addition, to find out what the cycles will be for <span class="math inline">\(n \ne \frac{k(k+1)}{2}\)</span>. Consider the first coordinate quarter with a coordinate grid applied to it. We will depict the entry in the register (k, k, …, k), where <span class="math inline">\(k_1 \ge k_2 \ge k_3 \ge ... \ge k_l\)</span>, as follows. Let’s blacken a column of height <span class="math inline">\(k_1\)</span> in the figure, next to it - a column of height <span class="math inline">\(k_2\)</span>, then - of height <span class="math inline">\(k_3\)</span>, and so on, up to a column of height <span class="math inline">\(k_l\)</span> (Fig. 80).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig80.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 80</figcaption>
+</figure>
+</div>
+<p>It is convenient to perform the procedure that the official performs on our drawing as follows.</p>
+<p><strong>First stage.</strong> Cut off the bottom row from the black figure, shift what is left one cell to the right and down, rotate the cut off part by 90° counterclockwise (turn the cut off row into the first column).</p>
+<p><strong>Second stage.</strong> If the new first column is not the tallest (lower than the second), then cut off and move from right to left those black squares for which there is free space on the left. At the end of the second stage, the columns are arranged in ascending order.</p>
+<p>Let’s assume that each black cell has two integer coordinates: the column number and the row number in which it stands.</p>
+<p><strong>Main idea.</strong> When the first stage is performed, the sum of the coordinates of each black cell does not change, and when the second stage is performed, it decreases for the moved cells. Now consider the sum of both coordinates of all black cells. This sum does not change in the first stage and decreases in the second. From this it follows that the second stage can be repeated only a finite number of times (the sum of the coordinates of the cells is an integer and a positive number, so it cannot decrease indefinitely). This means that, starting from some moment, only the first stage will occur. Consequently, the sum of coordinates will be constant for each cell. From this moment on, each cell (x; y) will move along the cycle (1; q − 1) → (2; q − 2) → … → (q − 1; 1) → (1; q − 1), which we will call the q-diagonal.</p>
+<p>Moreover, only the last longest diagonal can be unfilled. In fact, since the second stages no longer occur, the black squares “walk” cyclically along the q-diagonal with a period of q. The periods in the q-th and (q − 1)-th diagonals differ by one. Therefore, it cannot happen that there are empty cells in the (q − 1)-th diagonal, and in the q-th diagonal, sooner or later, it would be to the right of the empty cell and the second stage would have to be carried out.</p>
+<p>So, empty spaces can only be on the last diagonal. If <span class="math inline">\(n = \frac{k(k+1)}{2}\)</span>, then all the diagonals are filled; if <span class="math inline">\(n \ne \frac{k(k+1)}{2}\)</span>, then, obviously, there will be cycles.</p>
+<p>Stepped figures made up of squares, as well as numerical tables of this form, made up of numbers 1, 2, …, n, help to solve many problems of combinatorics and algebra related to counting the partitions of a natural number into natural terms, the theory of representations of the permutation group, etc. They have a special name - Young diagrams.</p>
+<p>The problem is known to mathematicians under the name “Bulgarian Solitaire” or “Bulgarian Patience”. As far as we know, the solution given in the text of our book belongs to A. Toom (1981), then (another) solution was published in 1982. It became more widely known thanks to the famous popularizer of mathematics M. Gardner (see [134]). Comprehensive information on this issue can be found in [135] - [137].</p>
+<p><strong>Problem 6-11. Answer:</strong> 144 numbers.</p>
+<p>Let’s divide all ten-digit numbers that satisfy the condition into two groups. The first group will include those numbers that end in 5, and the second group will include those that end in 2.</p>
+<p>By crossing out the last digit 5 for all numbers from the first group, we get all nine-digit numbers in which no two twos are next to each other.</p>
+<p>By crossing out the last two digits - 52 - for all numbers from the second group, we get all eight-digit numbers in which no two twos are next to each other.</p>
+<p>Let’s denote the number of n-digit numbers consisting of digits 2 and 5, in which no two twos are next to each other, by <span class="math inline">\(a_n\)</span>.</p>
+<p>Our reasoning shows that <span class="math inline">\(a_{10} = a_9 + a_8\)</span>.</p>
+<p>Note that it is suitable for any <span class="math inline">\(n \ge 3\)</span>, i.e., <span class="math inline">\(a_n = a_{n-1} + a_{n-2}\)</span>.</p>
+<p>Since <span class="math inline">\(a_1 = 2\)</span>, <span class="math inline">\(a_2 = 3\)</span>, then according to this formula <span class="math inline">\(a_3 = 5\)</span>, <span class="math inline">\(a_4 = 8\)</span>, <span class="math inline">\(a_5 = 13\)</span>, etc., <span class="math inline">\(a_{10} = 144\)</span>.</p>
+<p>∇ The sequence <span class="math inline">\(a_n\)</span> is simply the Fibonacci sequence <span class="math inline">\((F_n)\)</span> 1, 1, 2, 3, 5, 8, … numbered from the third term, i.e., <span class="math inline">\(a_n = F_{n+2}\)</span> - see the discussion of problem 2-4, b).</p>
+<p>For recurrent sequences, where the general term is given by a linear function of several previous ones, there is a standard procedure that allows you to find an explicit formula that defines the term of such a sequence as a function of its number. Let’s demonstrate it on the Fibonacci sequence.</p>
+<p>We are looking for a geometric progression <span class="math inline">\(u_k = a\lambda^k\)</span> that satisfies the relation <span class="math inline">\(u_{n+1} = u_n + u_{n-1}\)</span>. We get the equation <span class="math inline">\(\lambda^2 = \lambda + 1\)</span>. We find its roots: <span class="math inline">\(\lambda_{1,2} = \frac{1 \pm \sqrt{5}}{2}\)</span>. Thus, we get two geometric progressions of the form <span class="math inline">\(b(\frac{1+\sqrt{5}}{2})^n\)</span> and <span class="math inline">\(c(\frac{1-\sqrt{5}}{2})^n\)</span>. For the sequence obtained by their term-by-term addition, the relation <span class="math inline">\(u_{n+1} = u_n + u_{n-1}\)</span> also holds. Now we find b and c so that the formula</p>
+<p><span class="math inline">\(u_n = b(\frac{1+\sqrt{5}}{2})^n + c(\frac{1-\sqrt{5}}{2})^n\)</span></p>
+<p>works for the initial terms <span class="math inline">\(u_1, u_2\)</span>.</p>
+<p>For the Fibonacci sequence <span class="math inline">\(u_1 = u_2 = 1\)</span>, from which</p>
+<p><span class="math inline">\(b = \frac{1}{\sqrt{5}}, c = -\frac{1}{\sqrt{5}}\)</span>.</p>
+<p>For the sequence <span class="math inline">\((a_n)\)</span> from problem 6-11, we get</p>
+<p><span class="math inline">\(a_n = F_{n+2} = \frac{1}{\sqrt{5}}[(\frac{1+\sqrt{5}}{2})^{n+2} - (\frac{1-\sqrt{5}}{2})^{n+2}]\)</span>.</p>
+<p>After 32 people leave the circle, 32 people will remain in it, and the count will start again from the first one.</p>
+<p>The same thing will happen again: another 16 people will leave and the count will start again from the first one. Going around the circle a few more times, we are convinced that the first one will remain.</p>
+<ol start="2" type="a">
+<li>Answer: 1925th.</li>
+</ol>
+<p>As we can see from the solution to part a), if there are <span class="math inline">\(2^n\)</span> people in the circle, the first one (the one from whom the count starts) will remain until the end. Let there be 1986 people in the circle. We’ll go around the circle, removing every other person, and stop at the moment when 962 people have left the circle. At this moment, there will remain</p>
+<p><span class="math inline">\(1986 - 962 = 1024 = 2^{10}\)</span> kids, and the first of the remaining ones has the number <span class="math inline">\(2 \cdot 962 + 1 = 1925\)</span>. He will remain in the circle until the end.</p>
+<p>∇ For the general problem - when there are N kids in the circle - the number of the remaining one can be elegantly determined using the binary number system: you need to write the number N in binary and move the first digit (one) to the end. The result will be the binary representation of the sought “leader’s” number.</p>
+<p>For example: a) <span class="math inline">\(64_{10} = 1000000_2 \rightarrow 0000001_2 = 1_{10}\)</span>; b) <span class="math inline">\(1986_{10} = 11111000010_2 \rightarrow 11110000101_2 = 1925_{10}\)</span>.</p>
+<p>It would be interesting to find a solution to a similar general problem when every m-th person leaves the circle (at the end, (m-1) people remain) (see [94], ex. 1.3.2-22 and 5.1.1-2).</p>
+<p>Problem 6-13. a) Answer: 0.</p>
+<p>For convenience, let’s write: <span class="math inline">\(\overline{0} = 1\)</span> and <span class="math inline">\(\overline{1} = 0\)</span>.</p>
+<p>Let’s denote the (n+1)-th term of the constructed sequence as <span class="math inline">\(x_n\)</span>: <span class="math inline">\(x_0 = 0\)</span>, <span class="math inline">\(x_1 = 1\)</span>, <span class="math inline">\(x_2 = 1\)</span>, … We need to find <span class="math inline">\(x_{1986}\)</span>.</p>
+<p>At each step of constructing the sequence, its length doubles. Let’s figure out at which step the term <span class="math inline">\(x_{1986}\)</span> will appear.</p>
+<p>After 10 steps, we’ll get <span class="math inline">\(2^{10} = 1024\)</span> terms of the sequence, so we need to make 11 steps. On the 11th step, we should append the same terms that were before and replace 0 with 1, and 1 with 0, therefore, <span class="math inline">\(x_{1986} = \overline{x_{962}}\)</span> (<span class="math inline">\(1986 - 1024 = 962\)</span>).</p>
+<p>Reasoning in the same way, we’ll find that <span class="math inline">\(x_{962} = x_{450}\)</span> (<span class="math inline">\(962 - 2^9 = 450\)</span>), and so on. As a result, we get a chain of equalities</p>
+<p><span class="math inline">\(x_{1986} = \overline{x_{962}} = \overline{x_{450}} = \overline{x_{194}} = \overline{x_{66}} = \overline{x_2} = \overline{x_0} = 0\)</span>.</p>
+<p>∇ When solving problem 6-13 a), we actually used this property of the given sequence:</p>
+<p>1°. <span class="math inline">\(x_n = \overline{x_{n-2^k}}\)</span>, where <span class="math inline">\(2^k \leq n &lt; 2^{k+1}\)</span>.</p>
+<p>Another solution to this problem can be obtained based on the following properties of our sequence, which will also be used in solving problem b): for all n</p>
+<p>2°. <span class="math inline">\(x_{2n} = x_n\)</span>; 3°. <span class="math inline">\(x_{2n+1} = \overline{x_{2n}}\)</span>.</p>
+<ol start="2" type="a">
+<li><strong>Answer:</strong> Non-periodic.</li>
+</ol>
+<p>To prove this, note that the sequence can be constructed according to a new rule: first, there is a pair (0; 1), then a pair (1; 0) is added to it, then two pairs: (1; 0), (0; 1), and so on: at each step, the same number of new pairs is added to the existing pairs, which are obtained from the old ones by replacing each pair (0; 1) with a pair (1; 0), and (1; 0) with (0; 1).</p>
+<p>Now suppose that the given sequence is periodic and <span class="math inline">\(k\)</span> is the length of its smallest period.</p>
+<p>Let first <span class="math inline">\(k = 2p\)</span> be an even number. Then the periodicity of the sequence means that there exists a natural number <span class="math inline">\(N\)</span> such that for all <span class="math inline">\(n \ge N\)</span> the equality <span class="math inline">\(x_n = x_{n+2p}\)</span> holds. But from the new rule it follows that if we divide our sequence into pairs <span class="math inline">\((x_0, x_1); (x_2, x_3), ..., (x_{2n}, x_{2n+1}), ...\)</span>, then the first terms of all pairs form the sequence <span class="math inline">\(x_0, x_2, x_4, ..., x_{2n}, ...\)</span>, which coincides with the original one (property 2°). From here we get <span class="math inline">\(x_n = x_{2n} = x_{2n+2p} = x_{2(n+p)} = x_{n+p}\)</span>, i.e., the sequence has a period <span class="math inline">\(p\)</span>, which contradicts the fact that <span class="math inline">\(2p\)</span> is the smallest period.</p>
+<p>Now let <span class="math inline">\(k = 2p + 1\)</span> be an odd number. Then in a piece of the sequence of length <span class="math inline">\(k\)</span> there is a different number of zeros and ones. Suppose that the number of ones is greater - at least <span class="math inline">\(p + 1\)</span> (the case when the number of zeros is greater is considered similarly).</p>
+<p>Consider a piece of the sequence of length <span class="math inline">\(2k\)</span>. It contains at least <span class="math inline">\(2p + 2\)</span> ones, and no more than <span class="math inline">\(2p\)</span> zeros, i.e., there are at least 2 more ones. But from the new rule it follows that <span class="math inline">\(x_{2n+1} = \overline{x_{2n}}\)</span> (property 3°). Therefore, in any piece of our sequence starting with <span class="math inline">\(x_{2^m}\)</span>, the number of ones differs from the number of zeros by no more than one. This means that the sequence is non-periodic.</p>
+<p>∇ This sequence is called the Morse sequence and is often found in various areas of mathematics (see problem 6-18).</p>
+<p>Its general term can be defined as follows: if the notation of the number <span class="math inline">\(n\)</span> in the binary number system contains an even number of ones, then <span class="math inline">\(x_n = 0\)</span>; if it is odd, then <span class="math inline">\(x_n = 1\)</span>.</p>
+<p>A similar sequence is obtained from the triple 001, if you do not double, but triple the pieces:</p>
+<p>001 001 110 001 001 110 110 110 001…</p>
+<p>This sequence is called the “waltz of infinite order”, and, glancing over it, you can, as it were, hear the melody of the waltz.</p>
+<p>Interest in such sequences is associated, in particular, with Kolmogorov’s complexity theory. Both given sequences, being by no means random, have some properties required from tables of random numbers. Thus, the proportion of ones among the first <span class="math inline">\(k\)</span> terms of each of these two sequences tends to one-half as <span class="math inline">\(k \rightarrow \infty\)</span> (see [138]).</p>
+<p>The considered sequence was first constructed in 1851 by Prouhet (P. Prouhet), who applied it in number theory, but limited himself to these applications, without touching on many interesting, unique properties of this sequence.</p>
+<p>In 1906, Axel Thue, who was engaged in combinatorics, rediscovered this sequence, but his work did not receive wide response and recognition.</p>
+<p>In 1921, Marston Morse, who was engaged in differential geometry, rediscovered this sequence again.</p>
+<p>Since then, it has been rediscovered independently many times. Interestingly, the world chess champion grandmaster Max Euwe discovered its application in chess. He showed how to play endlessly without breaking the rules of a draw. However, there are some subtleties associated with chess rules (see the book [140]).</p>
+<p>The Morse-Thue sequence is the simplest example of a fractal. Therefore, it has a number of symmetries, in particular, it does not change when all elements in even places are removed.</p>
+<p>Among its other properties, we note that it does not contain three identical pieces in a row, i.e., it is impossible to meet the fragment AAA in it, where A is any finite sequence of zeros and ones.</p>
+<p>There is a number <span class="math inline">\(\tau\)</span>, the binary notation of which is the Morse-Thue sequence, it is called the Prouhet-Thue-Morse number;</p>
+<p><span class="math display">\[\tau = \sum_{i=0}^{\infty} \frac{t_i}{2^{i+1}} = 0.412454033640...,\]</span></p>
+<p>where <span class="math inline">\(t_i\)</span> are the elements of the Morse-Thue sequence. As K. Mahler proved in 1929, this number is transcendental, i.e., it is not a root of any polynomial with integer coefficients.</p>
+<p>Generalizations of the Morse-Thue sequence are also considered both to an arbitrary alphabet (i.e., instead of zeros and ones, one can consider n arbitrary symbols) and to the multidimensional case (for example, a two-dimensional sequence is a matrix obtained from the previous transformation <span class="math inline">\(\begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} \rightarrow \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 1 &amp; 0 \end{pmatrix}\)</span>, see [139]).</p>
+<p><strong>Problem 6-14. Answer:</strong> Either A had the number 20 and B had the number 21, or A had the number 21 and B had the number 22.</p>
+<p>The following table explains what conclusions an intelligent viewer (for example, you and I) can draw, and what A and B drew based on each replica (replicas are given in abbreviated form).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Replica No.</th>
+<th>Replica</th>
+<th>Conclusion from the replica</th>
+<th>Our comment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1a</td>
+<td>A: “I don’t know what you have.”</td>
+<td>A doesn’t have the number 1.</td>
+<td>Otherwise, A would know that B has the number 2.</td>
+</tr>
+<tr class="even">
+<td>1b</td>
+<td>B: “I don’t know what you have.”</td>
+<td>B doesn’t have 1 or 2.</td>
+<td>If B had 1, then he would know that A has the number 2, and if B had 2, then, taking into account the information from the previous replica, B would know that A has the number 3.</td>
+</tr>
+<tr class="odd">
+<td>2a</td>
+<td>A: “I don’t know what you have.”</td>
+<td>A doesn’t have 1, 2, or 3.</td>
+<td>Otherwise, A would know, taking into account the previous conclusions, that B has either 3 or 4, respectively.</td>
+</tr>
+<tr class="even">
+<td>2b</td>
+<td>B: “I don’t know what you have.”</td>
+<td>B doesn’t have 1, 2, 3, or 4.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr class="even">
+<td>10a</td>
+<td>A: “I don’t know what you have.”</td>
+<td>A doesn’t have 1, 2, 3, …, 19.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>10b</td>
+<td>B: “I don’t know what you have.”</td>
+<td>B doesn’t have 1, 2, 3, …, 20.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>11a</td>
+<td>A: “I don’t know what you have.”</td>
+<td>Either A has the number 20, then B has the number 21, or A has the number 21, then B has the number 22.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>∇ <strong>In solving this problem,</strong> we used considerations like “A thinks that B thinks that…”. Such multiple reflections of reality in the minds of people (similar to multiple reflections in mirrors) have recently attracted the attention of scientists and are discussed under the name “reflexive reflections” (the Latin word reflexus means “reflected”)2.</p>
+<p>Among the mathematical problems involving reflexive reasoning, let’s name a series of problems “about wise men with dirty foreheads” (see, for example, [55]).</p>
+<p><strong>Problem 6-15.</strong> Consider the mapping <span class="math inline">\(f\)</span> that maps the large map <span class="math inline">\(K_0\)</span> to the smaller map <span class="math inline">\(K_1\)</span>; each point representing a certain point on the map <span class="math inline">\(K_0\)</span> ( <span class="math inline">\(K_0 \supset K_1\)</span> ) is mapped to the point representing the same point on the map <span class="math inline">\(K_1\)</span>. Let’s denote by <span class="math inline">\(K_2\)</span> the image of the map <span class="math inline">\(K_1\)</span> under the same mapping (Fig. 81) <span class="math inline">\(f(K_{n-1}) = K_n\)</span>, <span class="math inline">\(n = 1, 2, ...\)</span>. The rectangles <span class="math inline">\(K_0\)</span>, <span class="math inline">\(K_1\)</span>, <span class="math inline">\(K_2\)</span>, …, <span class="math inline">\(K_n\)</span>, … have exactly one common point <span class="math inline">\(x\)</span>, since the sizes of the rectangles tend to zero.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig81.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 81</figcaption>
+</figure>
+</div>
+<p>The point <span class="math inline">\(x\)</span> is the desired puncture point. Indeed, the fact that <span class="math inline">\(x \in K_{n-1}\)</span> implies that <span class="math inline">\(f(x) \in K_n\)</span> (for any <span class="math inline">\(n\)</span>). Thus, the point <span class="math inline">\(f(x)\)</span> also belongs to all rectangles, and there is only one such point, so <span class="math inline">\(x = f(x)\)</span>.</p>
+<p>∇ <strong>In general,</strong> the following theorem is true: any continuous mapping of a rectangle into itself has a fixed point. So the statement of problem 6-15 will remain true even if one map is crumpled and placed on another map (see [30, 44, 98]).</p>
+<p>Another approach is possible to our problem (when the map is not crumpled). You can imagine a smaller map as obtained from a larger one using a geometric transformation of the composition of homothety and rotation. If the plane on which the maps lie is represented as a complex plane, then such a transformation is represented by a linear function <span class="math inline">\(w(z) = qz + b\)</span>, where <span class="math inline">\(q\)</span>, <span class="math inline">\(b\)</span>, <span class="math inline">\(z\)</span> are complex numbers and <span class="math inline">\(q \ne 0, 1\)</span>.</p>
+<p>Then the fixed point <span class="math inline">\(z_0\)</span> is found as a solution to the equation <span class="math inline">\(z = qz + b\)</span>, i.e., <span class="math inline">\(z_0 = \frac{b}{1-q}\)</span>.</p>
+<p><strong>Problem 6-16. Answer:</strong> The limit is equal to <span class="math inline">\(\frac{1 + \sqrt{5}}{2}\)</span>.</p>
+<p>The given sequence <span class="math inline">\((a_n)\)</span> is defined by the conditions <span class="math inline">\(a_1 = 1\)</span>, <span class="math inline">\(a_{n+1} = 1 + \frac{1}{a_n}\)</span>.</p>
+<p>First, let’s assume that it has a limit <span class="math inline">\(\tau\)</span>. Since <span class="math inline">\(\lim a_n = \lim a_{n+1} = \tau\)</span>, we pass to the limit in the equality <span class="math inline">\(a_{n+1} = 1 + \frac{1}{a_n}\)</span> and get <span class="math inline">\(\tau = 1 + \frac{1}{\tau}\)</span>. Squaring both sides of the resulting equality, we arrive at the quadratic equation <span class="math inline">\(\tau^2 - \tau - 1 = 0\)</span> with the condition that <span class="math inline">\(\tau &gt; 0\)</span>. The roots of this equation will be the numbers <span class="math inline">\(\frac{1 + \sqrt{5}}{2}\)</span> and <span class="math inline">\(\frac{1 - \sqrt{5}}{2}\)</span>, and, consequently, <span class="math inline">\(\tau = \frac{1 + \sqrt{5}}{2}\)</span>.</p>
+<p>Now let’s prove that the sequence <span class="math inline">\((a_n)\)</span> is monotonically increasing and all its terms are no greater than the number <span class="math inline">\(\tau\)</span>; from this, according to the Weierstrass theorem, it will follow that it has a limit. We will carry out the proof by induction.</p>
+<p><strong>Base of induction:</strong> <span class="math inline">\(a_1 &lt; a_2 &lt; \tau\)</span>, i.e.&nbsp;<span class="math inline">\(1 &lt; 1 + \frac{1}{1} &lt; \frac{1 + \sqrt{5}}{2}\)</span>. Here, both inequalities can be checked by term-by-term squaring.</p>
+<p>Now let’s do the induction step: suppose that <span class="math inline">\(a_{k-1} &lt; a_k &lt; \tau\)</span>, and prove that <span class="math inline">\(a_k &lt; a_{k+1} &lt; \tau\)</span>.</p>
+<p>The inequality <span class="math inline">\(a_k &lt; a_{k+1}\)</span> is equivalent to the inequality <span class="math inline">\(1 + \frac{1}{a_{k-1}} &lt; 1 + \frac{1}{a_k}\)</span>. The last inequality is true, since according to the induction hypothesis <span class="math inline">\(a_{k-1} &lt; a_k\)</span>.</p>
+<p>The inequality <span class="math inline">\(a_{k+1} &lt; \tau\)</span>, or <span class="math inline">\(1 + \frac{1}{a_k} &lt; \tau\)</span>, is equivalent to the inequality <span class="math inline">\(a_k &lt; \tau^2 - 1\)</span>. Since <span class="math inline">\(\tau^2 - \tau - 1 = 0\)</span>, then <span class="math inline">\(\tau^2 - 1 = \tau\)</span> and, consequently, <span class="math inline">\(a_k &lt; \tau\)</span>.</p>
+<p>The proof by induction is completed.</p>
+<p>∇ Note that we denoted the limit by the Greek letter <span class="math inline">\(\tau\)</span> (tau), since it is customary to denote the remarkable number <span class="math inline">\(\frac{\sqrt{5} + 1}{2}\)</span> in this way (see problem 3-14).</p>
+<p>If we consider the function <span class="math inline">\(f(x) = 1 + \frac{1}{x}\)</span>, then the sequence from problem 6-16 can be thought of as the sequence <span class="math inline">\(f(0)\)</span>, <span class="math inline">\(f(f(0))\)</span>, <span class="math inline">\(f(f(f(0)))\)</span>, …</p>
+<p>The behavior of sequences of the form <span class="math inline">\(x_0\)</span>, <span class="math inline">\(f(x_0)\)</span>, <span class="math inline">\(f(f(x_0))\)</span>, <span class="math inline">\(f(f(f(x_0)))\)</span>, … is conveniently studied graphically. The graph of the function <span class="math inline">\(y = f(x)\)</span> and the line <span class="math inline">\(y = x\)</span> are drawn in one coordinate system. Then our sequence corresponds to the geometric procedure shown in Figure 82.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig82.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 82</figcaption>
+</figure>
+</div>
+<p>From the point <span class="math inline">\(M_0 = (x_0, 0)\)</span> on the <span class="math inline">\(Ox\)</span> axis, we draw a vertical line until it intersects the graph of the function <span class="math inline">\(y = f(x)\)</span>. The intersection point has coordinates <span class="math inline">\(N_0 = (x_0, f(x_0))\)</span>. From this point we draw a horizontal line until it intersects the line <span class="math inline">\(y = x\)</span> at the point <span class="math inline">\(M_1 = (f(x_0), f(x_0))\)</span>. From this point, we again draw a vertical line until it intersects the graph of the function <span class="math inline">\(y = f(x)\)</span> at the point <span class="math inline">\(N_1 = (f(x_0), f(f(x_0)))\)</span>, and so on. The abscissas of the points <span class="math inline">\(N_0, N_1, ...\)</span> (or the ordinates of the points <span class="math inline">\(M_0, M_1, ...\)</span>) are the terms of our sequence.</p>
+<p>Figure 82 shows the graph of the function <span class="math inline">\(f(x) = 1 + \frac{1}{x}\)</span> from problem 6-16. We see that the terms of the sequence grow and tend to the number <span class="math inline">\(\tau\)</span>, where <span class="math inline">\(\tau\)</span> is the abscissa of the intersection point of the graph of the function <span class="math inline">\(f(x) = 1 + \frac{1}{x}\)</span> with the line <span class="math inline">\(y = x\)</span>.</p>
+<p>By calculating one after another the terms of this sequence using the formula <span class="math inline">\(x_{n+1} = 1 + \frac{1}{x_n}\)</span>, starting with <span class="math inline">\(x_0 = 0\)</span>, we thereby find with ever greater accuracy the root <span class="math inline">\(\tau\)</span> of the equation <span class="math inline">\(x^2 - x - 1 = 0\)</span>. This observation explains the following technique for the approximate solution of equations. The equation <span class="math inline">\(F(x) = 0\)</span> is rewritten in the form <span class="math inline">\(x = f(x)\)</span>. A number <span class="math inline">\(x_0\)</span> is chosen and the terms of the sequence <span class="math inline">\(x_n\)</span> are found one after another using the formula <span class="math inline">\(x_{n+1} = f(x_n)\)</span> for <span class="math inline">\(n \ge 1\)</span>. This method of finding the roots of an equation is called the iteration method or the method of successive approximations (see [44, 64]).</p>
+<p><strong>Problem 6-17. Answer:</strong> <span class="math inline">\(\frac{\sqrt{5} + 1}{2}\)</span>.</p>
+<p>Note that all terms <span class="math inline">\(a_k\)</span> of the sequence are positive and that the number <span class="math inline">\(\tau = \frac{\sqrt{5} + 1}{2}\)</span> is the root of the equation <span class="math inline">\(\frac{1}{\tau} = 1 + \frac{1}{\tau}\)</span>. Let’s show that if <span class="math inline">\(a_k &lt; \tau\)</span>, then <span class="math inline">\(a_{k+1} &gt; \tau\)</span> and <span class="math inline">\(a_{k+2} &lt; \tau\)</span>.</p>
+<p>The inequality <span class="math inline">\(a_k &lt; \tau\)</span> implies the following relations:</p>
+<p><span class="math display">\[\frac{1}{a_k} &gt; \frac{1}{\tau}, \quad a_{k+1} = 1 + \frac{1}{a_k} &gt; 1 + \frac{1}{\tau} = \tau,\]</span></p>
+<p><span class="math display">\[\frac{1}{a_{k+1}} &lt; \frac{1}{\tau}, \quad a_{k+2} = 1 + \frac{1}{a_{k+1}} &lt; 1 + \frac{1}{\tau} = \tau.\]</span></p>
+<p>∇ Consider the function <span class="math inline">\(f(x) = 1 + \frac{1}{x}\)</span>. The sequence from problem 6-17 is the sequence <span class="math inline">\(f(1), f(f(1)), ...\)</span>. The behavior of this sequence can be represented graphically in the same way as in the previous problem (Fig. 83).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig83.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 83</figcaption>
+</figure>
+</div>
+<p><strong>For experts.</strong> Experts, of course, noticed that the sequence considered in problem 6-17 can be defined as follows: <span class="math inline">\(a_n = \frac{F_{n+1}}{F_n}\)</span>, where <span class="math inline">\(F_k\)</span> is the k-th term of the Fibonacci sequence (see the discussion of problem 6-11), i.e., <span class="math inline">\(a_n\)</span> are suitable fractions of the expansion of the number <span class="math inline">\(\tau\)</span> into an infinite continued fraction (see [63]).</p>
+<p><strong>Problem 6-18. Answer:</strong> (0; 2), (2; 0), (<span class="math inline">\(-1 + \sqrt{5}; -1 + \sqrt{5}\)</span>), (<span class="math inline">\(-1 - \sqrt{5}; -1 - \sqrt{5}\)</span>).</p>
+<p>Substituting <span class="math inline">\(y = (4 - x^2)^2\)</span> from the first equation into the second, we get a fourth-degree equation</p>
+<p><span class="math display">\[2 - x^2 = (4 - (2 - x^2)^2)^2,\]</span></p>
+<p>whence <span class="math inline">\(x^4 - 4x^2 + 2x = 0\)</span>, or <span class="math inline">\(x(x - 2)(x^2 + 2x - 4) = 0\)</span>. Solving this equation, we find the answer.</p>
+<p>∇ Consider a more general system of equations of the form</p>
+<p><span class="math display">\[y = f(x), \quad x = f(y)\]</span></p>
+<p>(in problem 6-18 <span class="math inline">\(f(x)=(4-x^2)^2\)</span>).</p>
+<p>Substituting <span class="math inline">\(y\)</span> from the first equation into the second, we reduce the problem to solving the equation <span class="math inline">\(x = f(f(x))\)</span>.</p>
+<p>It is clear that if <span class="math inline">\(x\)</span> is a fixed point of the mapping <span class="math inline">\(f\)</span>, i.e., <span class="math inline">\(f(x) = x\)</span>, then <span class="math inline">\(f(f(x)) = f(x) = x\)</span>. Therefore, among the roots of the equation <span class="math inline">\(x = f(f(x))\)</span> will be all the roots of the equation <span class="math inline">\(f(x) = x\)</span>. In problem 6-18, the equation <span class="math inline">\(x = f(x)\)</span> has the form <span class="math inline">\(x = (4 - x^2)^2\)</span> and its roots <span class="math inline">\(x = -1 \pm \sqrt{5}\)</span> give two solutions to the original system.</p>
+<p>Its two other solutions, <span class="math inline">\(x = 0\)</span>, <span class="math inline">\(x = 2\)</span>, form a “cycle” of period 2.</p>
+<p><strong>For experts.</strong> Consider a more general system:</p>
+<p><span class="math display">\[x_2^2 = a - x_1^2,\]</span> <span class="math display">\[x_3^2 = a - x_2^2,\]</span> <span class="math display">\[...\]</span> <span class="math display">\[x_p^2 = a - x_{p-1}^2.\]</span> (*)</p>
+<p>Let’s denote the mapping <span class="math inline">\(x \rightarrow (a - x^2)^2\)</span> by <span class="math inline">\(f\)</span>, and the n-fold iteration of this mapping by <span class="math inline">\(f^n\)</span>.</p>
+<p>We will call the sequence</p>
+<p><span class="math display">\[x_0, f(x_0), f(f(x_0)), ..., f^n(x_0), ...\]</span></p>
+<p>the orbit of the point <span class="math inline">\(x_0\)</span> under the mapping <span class="math inline">\(f\)</span>.</p>
+<p>The orbit of a point <span class="math inline">\(x_0\)</span> is called periodic (of period <span class="math inline">\(p\)</span>) if <span class="math inline">\(f^p(x_0) = x_0\)</span> and <span class="math inline">\(f^k(x_0) \ne x_0\)</span> for <span class="math inline">\(1 \le k &lt; p\)</span>.</p>
+<p>Our system (*) reduces to the algebraic equation <span class="math inline">\(f^p(x) = x\)</span> of degree <span class="math inline">\(2^p\)</span>. The question of whether this system has a solution <span class="math inline">\((x_1, x_2, ..., x_p)\)</span> with <span class="math inline">\(p\)</span> different numbers (for given values of the parameter <span class="math inline">\(a\)</span>) can be formulated as follows: does the mapping <span class="math inline">\(f\)</span> have an orbit of period <span class="math inline">\(p\)</span>? This question, and in general the study of iterations of continuous functions, has recently been devoted to a number of serious mathematical works.</p>
+<p>For example, in the family of mappings <span class="math inline">\(f_a(x) = (a - x^2)^2\)</span> (<span class="math inline">\(0 \le a \le 8\)</span>), one can trace many interesting phenomena that arise during iterations of mappings of a segment into itself, in particular, the behavior of orbits of different points.</p>
+<p>It is not difficult to see that for <span class="math inline">\(0 \le a \le 8\)</span> our mapping <span class="math inline">\(f\)</span> maps the segment <span class="math inline">\(\left[-1 - \sqrt{1+a}; -1 + \sqrt{1+a}\right]\)</span> into itself and has two “orbits of period 1” (i.e., two fixed points: <span class="math inline">\(x = -1 \pm \sqrt{1+a}\)</span>). For <span class="math inline">\(0 \le a \le 3\)</span>, the mapping <span class="math inline">\(f\)</span> has no other periodic orbits. It can be proved that with increasing <span class="math inline">\(a\)</span>, orbits with other periods begin to appear: for <span class="math inline">\(a &gt; a_1 = 3\)</span> - with period 2, for <span class="math inline">\(a &gt; a_2 = 5\)</span> - with period 4, for <span class="math inline">\(a &gt; a_3 = 5.47...\)</span> - with period 8, and so on. In general, there is an increasing sequence of numbers <span class="math inline">\(a_m\)</span> such that for <span class="math inline">\(a_m &lt; a \le a_{m+1}\)</span> the mapping has orbits of each of the periods 1, 2, <span class="math inline">\(2^2\)</span>, …, <span class="math inline">\(2^m\)</span> and has no orbits with other periods. This sequence converges to the critical value <span class="math inline">\(a_\infty = 5.6046 ...\)</span> (found using a computer), after which the nature of typical orbits changes dramatically. In this case, the sequence of differences <span class="math inline">\(a_m - a_\infty\)</span> behaves approximately like a geometric progression with denominator <span class="math inline">\(\lambda = \frac{1}{(4.66920...)^{m-1}}\)</span>. (Exactly the same for many other families of continuous mappings, there are sequences of parameter values <span class="math inline">\(a_m\)</span> at which “period doublings” occur, converging to critical values <span class="math inline">\(a_\infty\)</span>, and always the difference <span class="math inline">\(a_m - a_\infty\)</span> tends to zero as a progression <span class="math inline">\(b = c\lambda^m\)</span>, i.e., the ratio <span class="math inline">\((a_m - a_{m-1})/(a_{m+1} - a_m)\)</span> always tends to the same limit <span class="math inline">\(\lambda\)</span> - Feigenbaum’s constant.)</p>
+<p>For <span class="math inline">\(a &lt; a_\infty\)</span>, the behavior of the orbit of almost any point <span class="math inline">\(x\)</span> is relatively simple: if <span class="math inline">\(a_m &lt; a \le a_{m+1}\)</span>, then it approaches some orbit of period <span class="math inline">\(2^m\)</span>. In other words, for <span class="math inline">\(p = 2^m\)</span> and <span class="math inline">\(a \le a_{m+1}\)</span>, one solution of our system of equations (*) can be found by the method of successive approximations.</p>
+<p>For example, for the function <span class="math inline">\(f_4(x) = (4 - x^2)^2\)</span> from problem 6-18, it is easy to verify that the orbit of any point <span class="math inline">\(x \in [-2; 2]\)</span> approaches the orbit of zero (0; 2; 0; 2; …) of period 2.</p>
+<p>For <span class="math inline">\(a &gt; a_\infty\)</span>, the picture becomes dramatically more complicated: the orbits of many points <span class="math inline">\(x\)</span> wander chaotically over some infinite subset of the segment. For example, for <span class="math inline">\(a = a_\infty\)</span>, the orbit of zero does not approach any periodic orbit; moreover, even the sequence <span class="math inline">\((\theta_n)\)</span> of signs of these numbers is non-periodic and has a complex structure (see table).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>n</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(f^n(0)\)</span></td>
+<td>2.80…</td>
+<td>-1.12…</td>
+<td>2.17…</td>
+<td>0.44…</td>
+<td>2.70…</td>
+<td>-0.84…</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\theta_n\)</span></td>
+<td>+</td>
+<td>-</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>It is interesting to note that this sequence of pluses and minuses <span class="math inline">\(\theta_n\)</span> is closely related to the Morse sequence from problem 6-13. It turns out that if you write a “+” sign under each pair of adjacent members of the Morse sequence if these members are different, and a “-” sign if they are the same, then you get exactly the sequence <span class="math inline">\(\theta_n\)</span>:</p>
+<pre><code>0 1 1 0 1 0 0 1 1 0 0 1 0 1...
++ - + + + - + - + - + + + ...</code></pre>
+<p>For <span class="math inline">\(a &gt; a_\infty\)</span>, the mapping <span class="math inline">\(f_a\)</span> has periodic orbits not only of period <span class="math inline">\(2^p\)</span>. The following Sharkovsky’s theorem (see [78]) shows what periods, in principle, the orbits of this mapping can have.</p>
+<p>All natural numbers are ordered in this way:</p>
+<pre><code>3, 5, 7, ...; 3 * 2, 5 * 2, 7 * 2, ...; 3 * 2^2, 5 * 2^2, 7 * 2^2, ...; 2^3, 2^2, 2, 1
+odd        odd x 2      odd x 4        powers of 2</code></pre>
+<p>Then, for any two natural numbers, we can say which of them is to the left and which is to the right. If a continuous mapping of a segment into itself has an orbit of period <span class="math inline">\(r\)</span>, then it also has orbits of all periods to the right of <span class="math inline">\(r\)</span>.</p>
+<p>For example, the number 3 is to the left of all, and, accordingly, a mapping that has an orbit of period 3 also has orbits of all periods. There are other results on how the properties of iterations of families of continuous mappings of a segment into itself can change depending on the parameter. But many observations obtained using a computer are still waiting for their explanation.</p>
+<p>Interest in this topic is explained by the fact that it is closely related to the study of complex, chaotic (random), i.e.&nbsp;unstable and non-periodic behavior of dynamical systems with three or more variables, modeling a variety of physical processes (see [111, 113]).</p>
+</section>
+<section id="independent-practice-problems" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="independent-practice-problems"><span class="header-section-number">6.2</span> Independent Practice Problems</h2>
+<p><strong>6-19.</strong> a) Find the 1986th digit after the decimal point in the decimal notation of the number 1/31. b) For what natural numbers <span class="math inline">\(m &lt; 31\)</span> will the period of the decimal notation of the number <span class="math inline">\(m/31\)</span> consist of the same digits as the period of the number <span class="math inline">\(1/31\)</span>?</p>
+<p><strong>6-20.</strong> a) The teacher asks the student to divide 19 by 73 using long division. What digit will be in the 100th place after the decimal point? b) Let <span class="math inline">\(n\)</span> be an integer, <span class="math inline">\(0 &lt; n &lt; 73\)</span>. The number <span class="math inline">\(n/73\)</span> is expanded into an infinite decimal fraction. Prove that this fraction does not contain two identical digits in a row. c) Specify all prime numbers <span class="math inline">\(p\)</span> for which the decimal expansions of all fractions <span class="math inline">\(n/p\)</span> (<span class="math inline">\(0 &lt; n &lt; p\)</span>) do not have two identical digits in a row.</p>
+<p><strong>6-21.</strong> The sequence <span class="math inline">\((a_n)\)</span> is given as follows: <span class="math inline">\(a_1 = 7\)</span>, <span class="math inline">\(a_{n+1}\)</span> is the sum of the digits of the number <span class="math inline">\(a_n^2\)</span>. Find <span class="math inline">\(a_{1000}\)</span>.</p>
+<p><strong>6-22.</strong> The sequence <span class="math inline">\((a_n)\)</span> is given as follows: <span class="math inline">\(a_1\)</span> is some natural number, <span class="math inline">\(a_{n+1}\)</span> is the sum of the squares of the digits of the number <span class="math inline">\(a_n\)</span>, <span class="math inline">\(n \ge 1\)</span>. Prove that one of the numbers 1 or 89 will necessarily occur in this sequence.</p>
+<p><strong>6-23.</strong> The sequence <span class="math inline">\((x_n)\)</span> is given by its first two terms <span class="math inline">\(x_1 \ne 0\)</span>, <span class="math inline">\(x_2 \ne 0\)</span> and the condition</p>
+<p><span class="math display">\[x_{n+1} = kx_n - x_{n-1}.\]</span></p>
+<p>Does this sequence have a period if:</p>
+<ol type="a">
+<li><span class="math inline">\(k = \frac{3}{2}\)</span>; b) <span class="math inline">\(k = \sqrt{3}\)</span>; c) <span class="math inline">\(k = \frac{\sqrt{5}+1}{2}\)</span>; d) <span class="math inline">\(k = \pi\)</span>?</li>
+</ol>
+<p><strong>6-24.</strong> A stream of students took the same test five times (those who failed the test came the next day). Every day, a third of all the students who came successfully passed the test, and another third of a student. What is the smallest possible number of students who did not pass the test in five times?</p>
+<p><strong>6-25.</strong> The inhabitants of the islands of Chung and Chang exchange valuables once a year for a holiday. The inhabitants of Chung bring half of their valuables to the island of Chang, and the inhabitants of Chang simultaneously bring a third of their valuables to the island of Chung. This has been going on since time immemorial. What proportion of valuables is on each of the islands? (No new valuables have appeared on the islands during this time, and the old ones have not been lost.)</p>
+<p><strong>6-26.</strong> Solve the system</p>
+<p><span class="math display">\[x_2^2 = 1 - x_1^2,\]</span> <span class="math display">\[x_3^2 = 1 - x_2^2,\]</span> <span class="math display">\[...\]</span> <span class="math display">\[x_n^2 = 1 - x_{n-1}^2,\]</span> <span class="math display">\[x_1^2 = 1 - x_n^2.\]</span></p>
+<p><strong>6-27.</strong> Find the hundredth term <span class="math inline">\(x_{100}\)</span> of the sequence <span class="math inline">\((x_n)\)</span> given by the conditions:</p>
+<ol type="a">
+<li><span class="math inline">\(x_1 \in [0; 1]\)</span>, <span class="math inline">\(x_{n+1} = x_n(1 - x_n)\)</span>, <span class="math inline">\(n &gt; 1\)</span>;</li>
+<li><span class="math inline">\(x_1 \in [0.1; 0.9]\)</span>, <span class="math inline">\(x_{n+1} = 2x_n(1 - x_n)\)</span>, <span class="math inline">\(n &gt; 1\)</span>.</li>
+</ol>
+<p><strong>6-28.</strong> The sequence of polynomials <span class="math inline">\(P_n(x)\)</span> is given by the condition</p>
+<p><span class="math display">\[P_0(x) = 1, \quad P_1(x) = x, \quad P_2(x) = x^2 - 1, ...\]</span> <span class="math display">\[P_{n+1}(x) = xP_n(x) - P_{n-1}(x).\]</span></p>
+<p>Prove that the equation <span class="math inline">\(P_{100}(x) = 0\)</span> has 100 different real roots.</p>
+<p><strong>6-29.</strong> An ant crawled along a broken line <span class="math inline">\(H_0H_1H_2H_3...\)</span> of an infinite number of links <span class="math inline">\(H_0H_1\)</span>, <span class="math inline">\(H_1H_2\)</span>, <span class="math inline">\(H_2H_3\)</span>, … The lengths of the segments <span class="math inline">\(H_0H_1\)</span>, <span class="math inline">\(H_1H_2\)</span>, and <span class="math inline">\(H_0H_2\)</span> are 5, 4, and 3 cm, respectively; <span class="math inline">\(H_nH_{n+1}\)</span> is the perpendicular dropped from the point <span class="math inline">\(H_n\)</span> to the segment <span class="math inline">\(H_{n-2}H_{n-1}\)</span> (<span class="math inline">\(n = 2, 3, 4, ...\)</span>).</p>
+<ol type="a">
+<li>What distance did the ant crawl?</li>
+<li>At what distances from the segments <span class="math inline">\(H_0H_2\)</span> and <span class="math inline">\(H_0H_1\)</span> is the point to which it crawled?</li>
+</ol>
+<p>6-30. In a sequence of triangles, the side lengths of each subsequent triangle <span class="math inline">\(A_nB_nC_n\)</span> are equal to the lengths of the medians of the previous triangle <span class="math inline">\(A_{n-1}B_{n-1}C_{n-1}\)</span>. Find the side lengths of triangle <span class="math inline">\(A_{1000}B_{1000}C_{1000}\)</span>, if a, b, c are the side lengths of triangle <span class="math inline">\(A_0B_0C_0\)</span>.</p>
+<p>6-31. A square is inscribed in a circle of radius 1, then a circle is inscribed in the square, then a regular octagon is inscribed in this circle, then a circle is inscribed in the octagon, then a regular 16-gon is inscribed in this circle, and so on; a regular <span class="math inline">\(2^{n+1}\)</span>-gon is inscribed in the n-th circle. Prove that the radii of all circles are greater than <span class="math inline">\(\frac{2}{\pi}\)</span>.</p>
+<p>6-32. The sequence <span class="math inline">\((a_n)\)</span> is defined by the first term <span class="math inline">\(a_1 = 1\)</span> and the condition <span class="math inline">\(a_{n+1} = a_n + \frac{n^2}{n+1}\)</span>. Prove that: a) this sequence is unbounded; b) <span class="math inline">\(a_{9000} &gt; 30\)</span> c) Find the limit <span class="math inline">\(\lim_{n\to\infty} \frac{a_n}{n^3}\)</span></p>
+<p>6-33. The sequence <span class="math inline">\((a_n)\)</span> is defined by the first term <span class="math inline">\(a_1 = 1\)</span> and the condition <span class="math inline">\(a_{n+1} = \frac{3a_n+1}{4a_n}\)</span>. Prove that: a) the sequence is bounded; b) <span class="math inline">\(|a_{1000} - 2| &lt; (\frac{3}{4})^{1000}\)</span></p>
+<p>6-34. Find the limit of the sequence <span class="math inline">\((a_n)\)</span>, which is defined by the conditions: <span class="math inline">\(a_1 = 2\)</span>, <span class="math inline">\(a_{n+1} = \frac{a_n^2}{2a_n-1}\)</span></p>
+<p>6-35. From a triple of numbers a, b, c, we form a new triple a-b, b-c, c-a, then from this triple by the same rule - the next one, and so on. Will 0 always appear among the numbers obtained in this way if the numbers a, b, c are: a) integers; b) not necessarily integers? c) The same questions for a similar operation on quadruples of numbers: <span class="math inline">\((a, b, c, d) \to (a - b, b - c, c - d, d - a)\)</span></p>
+<p>6-36. The population of a city consists of n people, and each lives in a separate house. One day, the city residents decided to exchange their houses. After the exchange, it turned out that the distance between the new houses of any two residents is not less than the distance between their old houses. Prove that as a result of the exchange, the distances between the houses of any two city residents did not change.</p>
+<p>6-37. All numbers divisible by nine are written out in order: 9, 18, 27, 36, 45, 54, 63, 72, 81, 90, 99, 108, 117, … and for each of these numbers, the sum of its digits is found: 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 18, 9, 9, … (*)</p>
+<p>It is required to specify the law describing the alternation of numbers in the sequence (*). At what position in this sequence will the number 81 first appear, and what will be the number following it? What will occur earlier in this sequence - the number 27 four times in a row or the number 36 three times in a row?</p>
+<p>6-38. The segment of the number line from 0 to 1 is painted green. Then its middle third - the segment <span class="math inline">\([\frac{1}{3}, \frac{2}{3}]\)</span> - is repainted red; then the middle third of each of the remaining green segments is also repainted red, the same operation is performed with the remaining four green segments, and so on to infinity.</p>
+<ol type="a">
+<li>Find the sum of the lengths of the red segments.</li>
+<li>Prove that the number 1/4 will remain green until the very end.</li>
+<li>From the sum <span class="math inline">\(\frac{2}{3} + \frac{2}{9} + \frac{2}{27} + \frac{2}{81} + ...\)</span>, an infinite number of terms are arbitrarily crossed out so that an infinite number of terms also remain; prove that their sum is a green number.</li>
+<li>Prove that all other numbers (between 0 and 1) are red.</li>
+</ol>
+<p>6-39. Let’s call the Dragon curve an infinite sequence of segments <span class="math inline">\(A_0A_1\)</span>, <span class="math inline">\(A_1A_2\)</span>, <span class="math inline">\(A_2A_3\)</span>, … (on a plane), which is constructed according to the following rule. First, points <span class="math inline">\(A_0\)</span> and <span class="math inline">\(A_1\)</span> are chosen, different from each other. Then, step by step, the following points are constructed. At the k-th step, where k = 1, 2, …, the already constructed broken line <span class="math inline">\(A_0A_1...A_{2^{k-1}}\)</span> is rotated around its last point <span class="math inline">\(A_{2^{k-1}}\)</span> clockwise by 90°. During this rotation, <span class="math inline">\(A_0\)</span> moves to <span class="math inline">\(A_{2^k}\)</span>, <span class="math inline">\(A_1\)</span> moves to <span class="math inline">\(A_{2^k-1}\)</span>, in general <span class="math inline">\(A_m\)</span> moves to <span class="math inline">\(A_{2^k-m}\)</span> for all <span class="math inline">\(m \in {0,1,...,2^{k-1}-1}\)</span>. This produces the broken line <span class="math inline">\(A_0A_1...A_{2^k}\)</span>, and then the next step is made (Fig.84).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig84.png" class="img-fluid figure-img"></p>
+<figcaption>Fig.84</figcaption>
+</figure>
+</div>
+<ol type="a">
+<li>Construct the broken line <span class="math inline">\(A_0A_1...A_{32}\)</span>.</li>
+<li>Find the general formula for the sequence of distances <span class="math inline">\(A_0A_1\)</span>, <span class="math inline">\(A_0A_2\)</span>, <span class="math inline">\(A_0A_4\)</span>, …, <span class="math inline">\(A_0A_{2^k}\)</span>, …</li>
+<li>Prove that the Dragon curve does not pass twice along any segment.</li>
+<li>It is convenient to draw the Dragon curve on graph paper (each link is a side of a cell). Prove that four infinite Dragon curves starting from one node of the graph paper in four different directions pass through all segments of an infinite sheet of graph paper.</li>
+</ol>
+<p>6-40. Gnomes living in white and red houses paint their houses simultaneously every year, and only those gnomes change the color of their house who have more than half of their friends living in houses of a different color in the past year. Prove that a year will come, starting from which the color of some houses will not change at all, while the rest will change every year.</p>
+</section>
+<section id="hints-for-independent-practice-problems" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="hints-for-independent-practice-problems"><span class="header-section-number">6.3</span> Hints for Independent Practice Problems</h2>
+<p>2-23. You need to determine if the equation <span class="math inline">\(13x + 16y = 300\)</span> has a solution in non-negative integers (see 2-1, 2-6, p.&nbsp;17, 21).</p>
+<p>2-24. The ratio of the lengths of the circumferences is <span class="math inline">\(40/18 = 20/9\)</span>. Therefore, the nail will leave marks every <span class="math inline">\(9/20\)</span> of the length of the larger circumference (see 2-8, p.&nbsp;22).</p>
+<p>2-25. See 2-7, 2-8, p.&nbsp;21–23.</p>
+<p>2-26. Since gcd(360, 48) = 24, question a) reduces to this: does there exist a figure that, when rotated around point O by 24°, transforms into itself, but not when rotated by 90°?</p>
+<p>2-27. See 2-7, p.&nbsp;21.</p>
+<p>2-28. You can perform a “descent” similar to the Euclidean algorithm (see 2-4, p.&nbsp;18), using the following statements: gcd(a − b, b) = gcd(a, b); gcd(a + b, b) = gcd(a, b); if the numbers a and b are odd, then gcd(2k ⋅a,b) = gcd(a,b). ∇ Discarding the excess power of two is the main idea of the “binary algorithm” for finding the greatest common divisor, which for numbers in binary notation (used in computers) is more convenient than the Euclidean algorithm (see [94], vol.&nbsp;2, 4-5-2).</p>
+<p>2-29. See 2-4, p.&nbsp;18.</p>
+<p>2-30. Find the sum of all numbers in the rectangle in two ways: “by rows” and “by columns”.</p>
+<p>2-31. b) See 2-9, 2-10, p.&nbsp;23–24.</p>
+<p>2-33. In the equation <span class="math inline">\(pq − p − q + 1 = 6\)</span>, the left side can be factored.</p>
+<p>2-34. b) See 2-10, p.&nbsp;24.</p>
+<p>2-35. b) The number <span class="math inline">\(n^3 - 1\)</span> is divisible by <span class="math inline">\(n - 1\)</span>.</p>
+<p>2-36. a) The polynomial <span class="math inline">\(x^2 − (y + 1)^2\)</span> can be factored; after that, you need to consider all possible factorizations of the number 12 into a product of two integers of the same parity.</p>
+<p>2-38. See 2-10, 2-16, p.&nbsp;24, 28.</p>
+<p>2-39. If <span class="math inline">\(m\)</span> is not divisible by 5, then <span class="math inline">\(m^2 - n^2\)</span> is divisible by 5; this can be proved by finding out what remainders the squares (and fourth powers) give when divided by 5.</p>
+<p>2-40. Factorize <span class="math inline">\(a^k - 1\)</span> using the formula from the solution of problem 2-17 b), p.&nbsp;29, and use the fact that the remainder when dividing <span class="math inline">\(a\)</span> by <span class="math inline">\(k\)</span> is 1.</p>
+<p>2-41. The last three digits of any natural number greater than 100 are the same as the 100th power of the number formed by its last three digits (and even the 100th power of its last digit).</p>
+<p>2-42. See 2-13, p.&nbsp;26.</p>
+<p>2-43. See 2-14, p.&nbsp;27.</p>
+<p>2-44. See 2-15, p.&nbsp;28.</p>
+<p>2-45. a) <span class="math inline">\(n^4 + 4 = (n^2 + 2)^2 - (2n)^2\)</span>. b) See 2-18, p.&nbsp;30.</p>
+<p>2-47. It is sufficient to prove that this polynomial is divisible by each of the polynomials <span class="math inline">\(x\)</span>, <span class="math inline">\(x + 1\)</span>, <span class="math inline">\(2x + 1\)</span> (by Bezout’s theorem, see the comment to 2-17 b), p.&nbsp;30).</p>
+<p>2-48. You can find out for which <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> this polynomial is divisible by <span class="math inline">\(x - 1\)</span> (see 2-17, p.&nbsp;29–30), and factor out the factor <span class="math inline">\(x - 1\)</span>. ∇ The polynomial <span class="math inline">\(p(x)\)</span> is divisible by <span class="math inline">\((x - d)\)</span> if and only if it itself and its derivative <span class="math inline">\(p'(x)\)</span> are divisible by <span class="math inline">\(x - d\)</span>.</p>
+<p>2-49. Dividing the polynomial <span class="math inline">\(f(x)\)</span> by <span class="math inline">\((x - 1)(x - 2)\)</span> with a remainder means representing it in the form <span class="math inline">\(f(x) = g(x)(x - 1)(x - 2) + ax + b\)</span>. You can find the numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> further by Bezout’s theorem (see 2-17 b), p.&nbsp;29).</p>
+<p>2-50. For any polynomial <span class="math inline">\(f(x)\)</span> with integer coefficients, the number <span class="math inline">\(f(k)\)</span> for even <span class="math inline">\(k\)</span> has the same parity as <span class="math inline">\(f(0)\)</span>, and for odd <span class="math inline">\(k\)</span> – the same as <span class="math inline">\(f(1)\)</span>.</p>
+<p>2-51. If a polynomial with integer coefficients has an integer root <span class="math inline">\(c\)</span>, then its value at an integer point <span class="math inline">\(d\)</span> (with <span class="math inline">\(c \ne d\)</span>) is divisible by <span class="math inline">\(d - c\)</span> (see 2-17 b), p.&nbsp;29).</p>
+<p>2-52. One of the factors must be a polynomial of the third (or lower) degree. Such a polynomial cannot take the value 1 at four or more points (this follows from Bezout’s theorem). Prove that a polynomial of the third degree cannot take the value 1 at three integer points and the value -1 at two points.</p>
+<p>2-53. a) Reasoning in the same way as in problem 2-40, you can make sure that the number of cards of each type. Let <span class="math inline">\(x_k\)</span> denote the product of the first <span class="math inline">\(k\)</span> numbers. It is represented as <span class="math inline">\(x_k = y^2 S_k\)</span>, where <span class="math inline">\(y\)</span> is a natural number, and <span class="math inline">\(S_k = (\alpha_k, \beta_k, \gamma_k, \delta_k)\)</span> is a set of 0s and 1s. The sets <span class="math inline">\(S_m\)</span> and <span class="math inline">\(S_{m+1}\)</span> differ only in one of the four places. For the condition of the problem to be satisfied, it is necessary that none of these sets consists of only zeros and no two sets <span class="math inline">\(S_m\)</span> and <span class="math inline">\(S_n\)</span> coincide when <span class="math inline">\(m \ne n\)</span>. Indeed, if some set <span class="math inline">\(S_k\)</span> consists of only zeros, then the product of the first <span class="math inline">\(k\)</span> numbers is a perfect square, and if some two sets <span class="math inline">\(S_m\)</span> and <span class="math inline">\(S_n\)</span>, where <span class="math inline">\(m &gt; n\)</span>, coincide, then the product of numbers from the <span class="math inline">\((n+1)\)</span>-th to the <span class="math inline">\(m\)</span>-th is a perfect square.</p>
+<ol type="a">
+<li><p>The problem reduces to this: is it possible to write out 15 non-zero sets of four digits 0 and 1 one after another so that any two adjacent ones differ in exactly one place, and the first one is a set of three zeros and one one?</p></li>
+<li><p>Calculate the total number of sets <span class="math inline">\(S_k\)</span> (see [7], problem 3-17).</p></li>
+<li><p>For “experts”, this problem can be reformulated as follows: what is the largest number of edges of an <span class="math inline">\(n\)</span>-dimensional cube that a chain of edges can contain without passing through the same vertex twice?</p></li>
+</ol>
+<p>2-54. If the sets <span class="math inline">\(S_m\)</span> and <span class="math inline">\(S_n\)</span>, where <span class="math inline">\(m &gt; n\)</span>, coincide, then the product of numbers from the <span class="math inline">\((n+1)\)</span>-th to the <span class="math inline">\(m\)</span>-th is a perfect square. a) The problem reduces to this: is it possible to write out 15 non-zero sets of four digits 0 and 1 one after another so that any two adjacent ones differ in exactly one place, and the first one is a set of three zeros and one one? b) Calculate the total number of sets <span class="math inline">\(S_m\)</span> (see [7], problem 3-17). c) For “experts”, this problem can be reformulated as follows: what is the largest number of edges of an <span class="math inline">\(n\)</span>-dimensional cube that a chain of edges can contain without passing through the same vertex twice?</p>
+<p>2-55. If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are coprime, then on each line <span class="math inline">\(ax + by = c\)</span>, where <span class="math inline">\(c\)</span> is an integer, a tree grows (see 2-2, 2-6, 2-7, p.&nbsp;17, 20, 21).</p>
+<p>2-56. See 2-21, p.&nbsp;32.</p>
+<p>2-57. In the proof, you can use the formula for the Euler totient function, given in the comment to the solution of 2-8, p.&nbsp;22.</p>
+<p>2-58. b) The proof is conveniently carried out by induction, starting with the last digit 5 or 6. ∇ The entire infinite leftward sequence of such digits (for example, <span class="math inline">\(x = ...376\)</span>) forms a so-called 10-adic number, for which <span class="math inline">\(x^2 = x\)</span>; thus, in 10-adic numbers, the quadratic equation <span class="math inline">\(x^2 = x\)</span> has, besides the solutions <span class="math inline">\(x = 0 = ...000\)</span> and <span class="math inline">\(x = 1 = ...001\)</span>, two more solutions. In the theory of <span class="math inline">\(p\)</span>-adic numbers, the properties of integers and real numbers are intertwined in a curious way (see [82]).</p>
+<p>2-59. Let the triple of numbers <span class="math inline">\((x_0, y_0, z_0)\)</span> be a solution to the given equation. Then all triples obtained from it by permutations of the numbers <span class="math inline">\(x_0\)</span>, <span class="math inline">\(y_0\)</span>, <span class="math inline">\(z_0\)</span> are also solutions. If we substitute the triple <span class="math inline">\((x_0, y_0, z_0)\)</span> into the equation, then from the resulting quadratic equation in <span class="math inline">\(x\)</span>, a new solution to the original equation is found.</p>
+<p>2-60. Consider simultaneously the number <span class="math inline">\((3 + 2)^{1987} = a^3 + b^2\)</span>.</p>
+<p>2-61. It is useful to associate the expression <span class="math inline">\(a + ab + b^2\)</span> from <span class="math inline">\(M\)</span> with the expression <span class="math inline">\(a + b\omega\)</span> and, when multiplying two such expressions, consider <span class="math inline">\(\omega^2\)</span> equal to <span class="math inline">\(\omega - 1\)</span> (then, in particular, the equality <span class="math inline">\((a + b\omega)(a - b\omega^2) = a^2 + ab + b^2\)</span> will hold). Here, <span class="math inline">\(\omega\)</span> denotes the complex number <span class="math inline">\(\frac{1 + \sqrt{-3}}{2}\)</span>, and <span class="math inline">\(-\omega^2 = 1 - \omega = \frac{1 - \sqrt{-3}}{2}\)</span> is the conjugate to this number.</p>
+<p>2-62. You can take <span class="math inline">\(y = x! - 1\)</span>.</p>
+<p>3-26. 1) See the solution and comment to 3-7, p.&nbsp;49–50, Fig. 19. 3) If <span class="math inline">\(t = ab/c\)</span>, then <span class="math inline">\(c/a = b/n\)</span>. 4) Let <span class="math inline">\(m = a^2 = a + a\)</span>, <span class="math inline">\(n = a^3 = m + a\)</span>, then <span class="math inline">\(a^2(2 + 3) = a m(m + n)\)</span>. 6) Let <span class="math inline">\(m = 2a\)</span>, then <span class="math inline">\(a^2 = m \cdot a\)</span>.</p>
+<p>3-27. Regarding such constructions, see 3-2, p.&nbsp;44–46. In part 1), <span class="math inline">\(b^2 - a^2 = (b - a)(b + a)\)</span>, in part 2) <span class="math inline">\(a^3 = 3a \cdot a\)</span>, in part 3) <span class="math inline">\(a^2 = 2a \cdot a\)</span>, so in these parts, the constructions reduce to the construction of the geometric mean <span class="math inline">\(\sqrt{ab}\)</span> of segments <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> – see p.&nbsp;49, Fig. 19. To do this, repeat Fig. 19, draw the radius <span class="math inline">\(OK\)</span> on it and the segment symmetric to it with respect to the line <span class="math inline">\(KB\)</span>. 4) Here, you can use the segment <span class="math inline">\(a^2\)</span> already constructed in part 3).</p>
+<p>3-28. See 3-3, p.&nbsp;46.</p>
+<p>3-29. Here, it is convenient to use the method of geometric loci – see 3-4, p.&nbsp;46. The geometric locus of the midpoints of segments, one end of which is at a given point, and the other is on a given circle, is a circle.</p>
+<p>3-30–3-31. Here, it is convenient to act using the similarity method – see 3-6, p.&nbsp;48–49.</p>
+<p>3-32. The vertex of the rectangle farthest from the origin is on the line <span class="math inline">\(y = \frac{\pi}{3} - 2x\)</span>.</p>
+<p>3-33. <span class="math inline">\(r_{\pi} = r_{\pi} \cdot 11\)</span>.</p>
+<p>3-34. Use the identity <span class="math inline">\(\cos \phi = 4 \cos^3 \frac{\phi}{3} - 3 \cos \frac{\phi}{3}\)</span>. Let <span class="math inline">\(\cos \frac{\phi}{3} = x\)</span>, then <span class="math inline">\(4x^3 = \cos \phi + 3x\)</span>.</p>
+<p>3-35–3-36. It is convenient to reflect the figures themselves from the walls: angle and billiards – see 3-16, p.&nbsp;58. In 3-36, consider first a billiard with dimensions 3 × 5 and make a drawing.</p>
+<p>3-37. Circumscribe a circle around triangle <span class="math inline">\(ABC\)</span>.</p>
+<p>3-38. See 3-8, p.&nbsp;50.</p>
+<p>3-39. Use 3-14 (p.&nbsp;55) and the fact that <span class="math inline">\(\sqrt{16 - \sqrt{110}} = \sqrt{115}\)</span>.</p>
+<p>3-40. An ellipse is the geometric locus of points in a plane, the sum of the distances from which to two given points of this plane is constant. A hyperbola is the geometric locus of points in a plane, the absolute value of the difference of the distances from which to two given points of this plane is constant.</p>
+<p>3-41. b) Prove that if the segments lie on different lines, then any axis of symmetry of the union of the segments is the axis of symmetry of one of the segments.</p>
+<p>3-42. Here, it is convenient to act using the similarity method – see 3-6, p.&nbsp;48.</p>
+<p>3-43, 3-44. See 3-10, p.&nbsp;51–53.</p>
+<p>3-46. Prove that the three common chords of three pairwise intersecting circles intersect at one point, and use the previous problem 3-45.</p>
+<p>3-47. Among the vertices of a regular dodecagon, you can choose four vertices in different ways, all pairwise distances between which are different.</p>
+<p>3-48. The proof is conveniently carried out using the method of mathematical induction (see [112]) by the number of lines.</p>
+<p>3-50. See 3-19, p.&nbsp;62. The geometric locus of the centers of spheres tangent to two intersecting planes is a pair of perpendicular planes. The geometric locus of the centers of spheres tangent to three pairwise intersecting planes is the intersection of two pairs of planes, i.e., four lines. The number of points equidistant from four pairwise intersecting planes is no more than eight.</p>
+<p>3-51. Not all parts are tetrahedra, some of them are octahedra (Fig. 68 on p.&nbsp;116).</p>
+<p>3-52. See 3-19, p.&nbsp;62.</p>
+<p>3-53. a) The plane passing through the midpoint of the diagonal of the cube and perpendicular to it is the geometric locus of points equidistant from its ends. Find such points on the edges of the cube. b) Divide the diagonal into three equal parts and find the formula for <span class="math inline">\(S(x)\)</span> in each of these parts. The area of the projection of the cross-section onto the face of the cube is equal to <span class="math inline">\(S(x) \cdot \sin \phi\)</span>, where <span class="math inline">\(\phi\)</span> is the angle between the diagonal and the face of the cube.</p>
+<p>3-54. Prove that the trihedral angles of a tetrahedron are equal (see 3-24, 3-25, p.&nbsp;66–68).</p>
+<p>3-55. First draw a planar diagram of such a polyhedron (see 3-23, p.&nbsp;66).</p>
+<p>3-56. Prove that: a) the area of a “slice” – a spherical digon cut out on a sphere by a dihedral angle of a trihedral angle, is equal to <span class="math inline">\(2\alpha\)</span>, where <span class="math inline">\(\alpha\)</span> is the magnitude of the dihedral angle; b) a spherical triangle is the intersection of three digons formed by the three dihedral angles of a trihedral angle.</p>
+<p>4-25. The maximum value is achieved when <span class="math inline">\(a = b\)</span>. You can express all the necessary elements of the triangle, for example, through the magnitude of an acute angle.</p>
+<p>4-26. Use the fact that <span class="math inline">\(f(0) = f(1) = 1\)</span>, and the minimum value <span class="math inline">\(f\left(\frac{1}{2}\right)\)</span> of the function <span class="math inline">\(f(x)\)</span> is not less than -1.</p>
+<p>4-27. See 4-5, p.&nbsp;77.</p>
+<p>4-28. The sum of the three smallest numbers is no greater than three times the arithmetic mean of all 10 numbers.</p>
+<p>4-30. See 4-3, p.&nbsp;75. Start by calculating all the areas for several characteristic cases: a point at a vertex, in the middle of a side, at the intersection point of the medians.</p>
+<p>4-31. First, it is useful to find what minimum value the product of the diagonals can have.</p>
+<p>4-32. How much, the smallest and the largest, does one pen cost?</p>
+<p>4-33. You can act in the same way as in 4-6 b), p.&nbsp;78–79, using the equality <span class="math inline">\(\sqrt{1}(\sqrt{3} - 1) = (\sqrt{3} + 1)^2\)</span>. ∇ The expansion of <span class="math inline">\(\sqrt{3}\)</span> into a continued fraction is periodic. The fact that 220 volts and 127 volts are the usual voltage in the network is not accidental – see [57].</p>
+<p>4-34. See 4-8, p.&nbsp;80.</p>
+<p>4-35. See 4-9, p.&nbsp;82. Let <span class="math inline">\(p\)</span> be the distance a person manages to walk from one overtake to the next. Then <span class="math inline">\(5p \le 4 &lt; 7p\)</span>, <span class="math inline">\(7p \le 7 &lt; 9p\)</span>, <span class="math inline">\((x - 1)p \le 17 &lt; (x + 1)p\)</span>, where <span class="math inline">\(x\)</span> is the desired number of buses.</p>
+<p>4-37. Let <span class="math inline">\(S\)</span> be the sum of all eleven numbers. Then each of them is the root of the equation <span class="math inline">\(x^2 = (S - x)^2\)</span>, which has no more than two solutions. Therefore, among the desired numbers, there are no more than two different ones.</p>
+<p>4-38. Find the ratio of the value of the given quantity for <span class="math inline">\(n = k + 1\)</span> to the value for <span class="math inline">\(n = k\)</span> and find out for which <span class="math inline">\(k\)</span> this ratio is greater than 1, and for which it is less (see 4-13, p.&nbsp;85).</p>
+<p>4-39. It is useful to consider first the case when all the numbers are equal to each other. To obtain an upper bound for <span class="math inline">\(n\)</span>, it is convenient to add the inequalities <span class="math inline">\(a_{ij}^2 + a_{ik}^2 \ge 2a_{ij}a_{ik}\)</span>, where <span class="math inline">\(a_k\)</span> (1 ≤ k ≤ n) are the numbers referred to in the condition of the problem.</p>
+<p>4-40. See 4-15, p.&nbsp;86.</p>
+<p>4-41. The integrals on the left side can be represented as the areas of curvilinear triangles located below and above the graph of the function <span class="math inline">\(y = \sin x\)</span> (see 4-16, p.&nbsp;87).</p>
+<p>4-42. Here, it is convenient to use the same technique as in the proof of each inequality in 4-15, p.&nbsp;86; in one of the cases, you also need to take into account the triangle inequality.</p>
+<p>4-43. a) Represent the given numbers as powers with the same exponents and compare the bases of these powers. b) To compare the numbers <span class="math inline">\(2^{34}\)</span> and <span class="math inline">\(3^{98}\)</span> with <span class="math inline">\(2^{148}\)</span> (i.e., <span class="math inline">\(\left(\frac{3}{2}\right)^9\)</span> with <span class="math inline">\(2^2\)</span> – see 4-4, p.&nbsp;75–77). c) Compare the numbers <span class="math inline">\(\log_5(6^5)\)</span>, <span class="math inline">\(\log_6(6^5)\)</span>, <span class="math inline">\(\log_7(7^6)\)</span>. d) You can use the equality <span class="math inline">\(2 \sin 7^\circ \cdot \sin 5^\circ = \cos 2^\circ - \cos 12^\circ\)</span>. Other solutions to parts c), d), and e) can be obtained using the following fact: if the function <span class="math inline">\(\lg f(x)\)</span> is convex upwards (see 4-18, p.&nbsp;89), then <span class="math inline">\(\frac{f(x+1)}{f(x)} \ge \frac{f(x)}{f(x-1)}\)</span>.</p>
+<p>4-44. You can reason in the same way as in the solution of problem 4-18, p.&nbsp;89, using the functions: a) <span class="math inline">\(f(x) = \frac{1}{1 + x}\)</span>; b) <span class="math inline">\(f(x) = \lg \sin x\)</span>.</p>
+<p>4-45. It is advantageous to include only twos and threes in the desired sum.</p>
+<p>4-46. See 4-19, p.&nbsp;91.</p>
+<p>4-47. Estimate the number of nodes of an infinite grid of equilateral triangles with side 1 lying in a circle of radius 10 centered at one of the nodes of the grid (it is sufficient to count the number of nodes lying in a regular hexagon with sides of length 10, going along the lines of the grid).</p>
+<p>4-48. See 4-23, p.&nbsp;93.</p>
+<p>4-49. Reflecting the hypotenuse symmetrically with respect to the legs, we obtain on its images – two parallel segments – new points <span class="math inline">\(K'\)</span> and <span class="math inline">\(H'\)</span> – the images of points <span class="math inline">\(K\)</span> and <span class="math inline">\(H\)</span>. The problem reduces to minimizing the length of the broken line <span class="math inline">\(K'PQH'\)</span>. (There are infinitely many positions of points <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> for which the minimum length is achieved.)</p>
+<p>4-50. The square of the distance between two points moving uniformly and rectilinearly is expressed by a quadratic trinomial of time (it is easier to prove this by switching to a coordinate system associated with one of these points). From three values of the quadratic trinomial, you can calculate its coefficients, and then find its minimum.</p>
+<p>5-22. b) Negative numbers make sense to write in five cells – the central one and the four that have a common vertex with it – and positive ones in the remaining 20 cells.</p>
+<p>5-23. The snail could have crawled from 4 to 12 meters (see 5-1, p.&nbsp;100).</p>
+<p>5-24. See 5-3, p.&nbsp;103.</p>
+<p>5-25. See 5-5, p.&nbsp;104–105.</p>
+<p>5-26. a) It is useful to consider first the situation when 2, 3, and 4 people are riding in the bus. b) After the exchange, everyone must have at least one coin left. c) It is useful to find out how many of the 15 people have only one 15-kopeck coin.</p>
+<p>5-27. It is convenient to make a table where the rows correspond to colors, and the columns correspond to styles.</p>
+<p>5-28. See 5-6, p.&nbsp;105.</p>
+<p>5-29. a) Construct a triangle using a compass and a ruler from two sides and an angle opposite one of them. Investigate how many solutions this construction problem has. b) Consider two triangles: one with sides 1, <span class="math inline">\(a\)</span>, <span class="math inline">\(\sqrt{a}\)</span>, the second with sides <span class="math inline">\(a\)</span>, <span class="math inline">\(\sqrt{a}\)</span>, <span class="math inline">\(\sqrt{a}\)</span>. For which <span class="math inline">\(a\)</span> do these triangles exist?</p>
+<p>5-30. Prove that one of the angles between the angle bisectors of a triangle is not less than <span class="math inline">\(60^\circ\)</span> (express the angles between the angle bisectors through the angles of the triangle for this). Estimate the area of the quadrilateral whose diagonals are these angle bisectors. See [36], problem 272.</p>
+<p>5-32. This problem is related to the equality <span class="math inline">\(4 + 4 \cdot 2^3 + 4 \cdot 3^3 + ... + 4 \cdot k^3 = k^2(k+1)^2\)</span>.</p>
+<p>5-33. d) Try to first cut a right triangle into two isosceles ones.</p>
+<p>5-35. a) An internal quadrilateral is not necessarily convex. b) The length of any segment located inside a quadrilateral does not exceed half of its perimeter.</p>
+<p>5-36. b) Consider the cases of even and odd <span class="math inline">\(n\)</span> (see 5-16, p.&nbsp;116).</p>
+<p>5-37. a) Consider a wire icosahedron, see 5-15 b), p.&nbsp;116. b) Try to count the number of segments (see 5-16 b), 5-17 b), p.&nbsp;117).</p>
+<p>5-38. It is convenient to represent each of the numbers from 1 to 81 as a sum of powers of three, i.e., write it in the ternary number system.</p>
+<p>5-40. If <span class="math inline">\(7^8 = q^k\)</span>, <span class="math inline">\(9^8 = q^n\)</span> for some integers <span class="math inline">\(k\)</span> and <span class="math inline">\(n\)</span>, then <span class="math inline">\(7 \cdot 9 = 8^{n+k}\)</span>.</p>
+<p>5-41. 6) If each switch has two states (on-off), then three switches have a total of eight different states, one of which corresponds to the case when all the bulbs are off.</p>
+<p>5-42. Let’s depict the problems with black circles, the participants with white ones, and from each participant, let’s draw segments to those problems that he solved. Then all the segments form one or several closed paths – cycles. d) In each cycle, the choice is made in two ways, and there are no more than 10 cycles.</p>
+<p>5-43. It is more convenient to describe the periodic arrangement of officers on an infinite checkered plane <span class="math inline">\(Oху\)</span>, divided into 5 × 5 squares, in each of which the arrangement with the necessary properties is repeated. Officers of each rank can be arranged along parallel inclined lines of the same direction, say, with a slope of 1, and each type of troops in a different direction, say, with a slope of 2. ∇ The required arrangement can also be obtained using a finite field of remainders from division by 5 – see the comment to 5-20, p.&nbsp;121.</p>
+<p>5-44. a) Let’s take a segment, place three vertices of the outer pyramid very close to one of its ends, and the fourth to the other. Let’s place two vertices of the inner pyramid near one end of the segment, and the other two near the other. b) This problem is a generalization of the following theorem: the perimeter of a convex polygon is less than the perimeter of any polygon containing it.</p>
+<p>5-47. The stations can be placed at the vertices of a cube.</p>
+<p>5-48. In such a polyhedron, all edges of the same direction have the same length, and for each pair of directions, there are exactly two faces with the corresponding directions of the sides.</p>
+<p>5-49. 6) The polynomial in part a) can be written as <span class="math inline">\(C_n + C_n^* + y + 1\)</span> (see the comment to 2-16, p.&nbsp;28).</p>
+<p>5-50. Find the range of the polynomial <span class="math inline">\((1 - xy) + x^2\)</span>.</p>
+<p>6-19. See 6-16), p.&nbsp;134.</p>
+<p>6-20. c) Prove that if in the decimal expansion of the fraction <span class="math inline">\(p/r\)</span>, <span class="math inline">\(0 &lt; p &lt; r\)</span>, two identical digits <span class="math inline">\(a\)</span> appear somewhere, then there exists a natural number <span class="math inline">\(m\)</span> such that <span class="math inline">\(m/r = 0.aa...\)</span>, i.e., the inequalities <span class="math inline">\(\frac{m}{r} - \frac{a}{10} &lt; \frac{1}{100}\)</span>, <span class="math inline">\(0 &lt; \frac{a}{10} &lt; \frac{m}{r} + \frac{1}{100}\)</span> hold. The problem reduces to this: you need to choose primes <span class="math inline">\(r\)</span> such that for no natural <span class="math inline">\(a &lt; 9\)</span> the two-digit number formed by the last two digits of the number <span class="math inline">\(11a\)</span> does not exceed the number <span class="math inline">\(100/r\)</span>. It remains to investigate the cases where <span class="math inline">\(a &lt; 162\)</span>.</p>
+<p>6-21. Find the period.</p>
+<p>6-22. Prove that if <span class="math inline">\(a_n &gt; 163\)</span>, then <span class="math inline">\(a_{n+1} &lt; a_n\)</span>. Investigate the cases where <span class="math inline">\(a_n &lt; 162\)</span>.</p>
+<p>6-23. See 6-3, p.&nbsp;135.</p>
+<p>6-24. See 6-2, p.&nbsp;134–135.</p>
+<p>6-25. See 6-5, p.&nbsp;136.</p>
+<p>6-26. See p.&nbsp;149–151. After drawing the graphs of the functions <span class="math inline">\(y = -x^2\)</span> and <span class="math inline">\(y = x\)</span>, you need to study the behavior of the sequence <span class="math inline">\((x_n)\)</span>, defined by the relation <span class="math inline">\(x_{n+1} = 1 - x_n^2\)</span> for different <span class="math inline">\(x_1\)</span>. The answer in the problem depends on the parity of <span class="math inline">\(n\)</span>.</p>
+<p>6-27. a) The function <span class="math inline">\(f(x) = x(-x)\)</span> increases for <span class="math inline">\(0 &lt; x &lt; 1/2\)</span>; <span class="math inline">\(f(x) &lt; 1/4\)</span> for <span class="math inline">\(0 &lt; x &lt; 1\)</span>, and from <span class="math inline">\(f(\sqrt{x}) &lt; \sqrt{x + 1}\)</span>, it can be shown that <span class="math inline">\(x_n &lt; \frac{1}{n + 2}\)</span> for <span class="math inline">\(n &gt; 1\)</span>. b) It is convenient to make the substitution <span class="math inline">\(x_n = -\frac{1}{n} + h_n\)</span>.</p>
+<p>6-28. It can be proved by mathematical induction that <span class="math inline">\(P_n(x)\)</span> has <span class="math inline">\(n\)</span> roots. Considering the alternation of the signs of the polynomial <span class="math inline">\(P_{n+1}(x)\)</span> at the points where <span class="math inline">\(P_n(x)\)</span> is zero, it can be proved that between any two roots of <span class="math inline">\(P_n(x)\)</span> there is a root of <span class="math inline">\(P_{n+1}(x)\)</span>; in addition, by determining the sign of <span class="math inline">\(P_n(x)\)</span> and <span class="math inline">\(P_{n+1}(x)\)</span> for large absolute values of <span class="math inline">\(x\)</span>, it can be proved that <span class="math inline">\(P_{n+1}(x)\)</span> has a root to the right of the largest of the roots of <span class="math inline">\(P_n(x)\)</span> and to the left of its smallest root.</p>
+<p>6-29. a) The ant’s path consists of segments whose lengths form two infinitely decreasing geometric progressions.</p>
+<p>6-30. Triangles taken every other one will be similar to each other.</p>
+<p>6-31. Use the inequality <span class="math inline">\(\sin x &lt; x\)</span> for <span class="math inline">\(x &gt; 0\)</span>.</p>
+<p>6-32. b), c) You can prove the inequality <span class="math inline">\(a_n &gt; 3n\)</span> and estimate the difference <span class="math inline">\(a_n - 3n\)</span>.</p>
+<p>6-33. Both statements can be proved by mathematical induction (see 6-16, p.&nbsp;149): if the inequalities <span class="math inline">\(0 &lt; 2 - a_n &lt; \left(\frac{3}{4}\right)^n\)</span> are true for <span class="math inline">\(n = k\)</span>, then they are also true for <span class="math inline">\(n = k + 1\)</span>.</p>
+<p>6-34. You can indicate a <span class="math inline">\(q &lt; 1\)</span> such that (starting from some <span class="math inline">\(n\)</span>) <span class="math inline">\(|a_{n+1} - 2| &lt; q |a_n - 2|\)</span>.</p>
+<p>6-35. b) Consider a triple of numbers of the form <span class="math inline">\(kx^2\)</span>, <span class="math inline">\(kx\)</span>, <span class="math inline">\(k\)</span>.</p>
+<p>6-36. Consider the sum of all pairwise distances; it, of course, does not change during relocations.</p>
+<p>6-38. It is convenient to consider numbers between 0 and 1 as infinite ternary fractions consisting of the digits 0, 1, 2; the numbers referred to in part c) are those in whose ternary representation there are infinitely many zeros and twos and no ones.</p>
+<p>6-39. c) For the proof, it is more convenient to use a different method of constructing the Dragon curve than the one indicated in the condition (of course, you need to prove that it leads to the same curve): at the <span class="math inline">\(n\)</span>-th step, on each segment of the already constructed curve, as on the hypotenuse, an isosceles right-angled triangle is constructed, alternately on the right and on the left (so that the adjacent triangles are obtained from each other by a rotation of <span class="math inline">\(90^\circ\)</span> around the common vertex); the legs of the constructed triangles form a new curve; rotating it by <span class="math inline">\(45^\circ\)</span> relative to the initial point and increasing it similarly by <span class="math inline">\(\sqrt{2}\)</span> times, you can proceed to the <span class="math inline">\((n + 1)\)</span>-th step. (A detailed story about Dragon curves can be found in “Kvant” No.&nbsp;2, 1970.) d) The known proof uses Gaussian (integer complex) numbers; it would be interesting to find a simple elementary solution.</p>
+<p>6-40. Let’s draw the houses of all the gnomes on one sheet of paper in two copies. On the first copy, we will paint the houses (according to the rules specified in the problem) in odd years (1st, 3rd, 5th, etc.), and on the second in even years. Let’s connect each house with the houses of the friends of the gnome who lives in it, on the other copy. For the resulting scheme (it is called a bipartite graph), you can use the same technique as in the solution of 6-7, p.&nbsp;137.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./par5.html" class="pagination-link" aria-label="UNUSUAL EXAMPLES AND CONSTRUCTIONS">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">UNUSUAL EXAMPLES AND CONSTRUCTIONS</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./subjectindex.html" class="pagination-link" aria-label="Thematic Index">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Thematic Index</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

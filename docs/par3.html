@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; CONSTRUCTIONS IN THE PLANE AND IN SPACE – Profound Puzzles: Deep Mathematics through Playful Problems</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./par4.html" rel="next">
+<link href="./par2.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./par3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">CONSTRUCTIONS IN THE PLANE AND IN SPACE</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Profound Puzzles: Deep Mathematics through Playful Problems</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">INTRODUCTORY PROBLEMS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">INTEGERS AND POLYNOMIALS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">CONSTRUCTIONS IN THE PLANE AND IN SPACE</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>INEQUALITIES, EXTREMAL PROBLEMS, ESTIMATES</strong></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">UNUSUAL EXAMPLES AND CONSTRUCTIONS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">SEQUENCES AND ITERATIONS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./subjectindex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Thematic Index</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#problems-discussion" id="toc-problems-discussion" class="nav-link active" data-scroll-target="#problems-discussion"><span class="header-section-number">3.1</span> Problems Discussion</a></li>
+  <li><a href="#independent-practice-problems" id="toc-independent-practice-problems" class="nav-link" data-scroll-target="#independent-practice-problems"><span class="header-section-number">3.2</span> Independent Practice Problems</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">CONSTRUCTIONS IN THE PLANE AND IN SPACE</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>3-1.</strong> Divide a given segment AB into four equal parts using a compass and a straightedge, drawing a total of 6 lines (straight lines and circles).</p>
+<p><strong>3-2.</strong> Two points A and B are given in a plane. Construct the midpoint of the segment AB using only a compass (without a straightedge).</p>
+<p><strong>3-3.</strong> Construct a triangle with a compass and a straightedge, given two sides <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> (<span class="math inline">\(b &gt; a\)</span>), if it is known that the angle opposite one of them is 3 times larger than the angle opposite the other.</p>
+<p><strong>3-4.</strong> Construct a circle of a given radius, tangent to a given line and a given circle, using a compass and a straightedge.</p>
+<p><strong>3-5.</strong> Construct a circle tangent to two given parallel lines <span class="math inline">\(l\)</span> and <span class="math inline">\(m\)</span> and a given circle of radius <span class="math inline">\(r\)</span> located between <span class="math inline">\(l\)</span> and <span class="math inline">\(m\)</span>, using a compass and a straightedge.</p>
+<p><strong>3-6.</strong> A point F is given inside a given acute angle AOB. Construct, using a compass and a straightedge, a point M on the side OA that is equidistant from point F and the other side of the angle, OB.</p>
+<p><strong>3-7.</strong> A segment of length 1 is given in a plane. Construct a segment of length <span class="math inline">\(\sqrt{1+\sqrt{2}}\)</span> using a compass and a straightedge.</p>
+<p><strong>3-8.</strong> A ruler with markings every 1 cm is given. Construct, using only this ruler, a line perpendicular to a given line.</p>
+<p><strong>3-9.</strong> A parallelogram OBCA is given. A line is drawn that cuts off one-third of the side OA and one-fourth of the side OB, counting from the vertex O. What part of the diagonal OC does this line cut off?</p>
+<p><strong>3-10.</strong> Two parallel lines are given, and two points A and B are marked on one of them. Divide the segment AB into 3 equal parts using only a ruler.</p>
+<p><strong>3-11.</strong> A convex quadrilateral is given. We draw two lines that divide two of its opposite sides into three equal parts. Prove that the area between these lines is one-third of the area of the quadrilateral.</p>
+<p><strong>3-12.</strong> Points A, B, and C are the vertices of a non-isosceles triangle. In how many ways can we place a point D in the plane so that the set of points {A, B, C, D} has an axis of symmetry?</p>
+<p><strong>3-13.</strong> From an arbitrary point M inside a given acute angle A, drop perpendiculars MP and MQ to its sides. From vertex A, drop a perpendicular AK to the segment PQ. Prove that <span class="math inline">\(\angle PAK = \angle MAQ\)</span>.</p>
+<p><strong>3-14.</strong> Construct a regular decagon using a compass and a straightedge.</p>
+<p><strong>3-15.</strong> Draw a circle and divide it into 12 equal parts. Choose one of the division points A and connect it with straight lines to the other division points, and also draw a tangent to the circle at point A. As a result, you will have a pencil of 12 lines passing through point A.</p>
+<ol type="a">
+<li><p>Prove that the constructed lines divide the plane into 24 equal angles.</p></li>
+<li><p>Choose another division point B on the circle and construct from it the same pencil of 12 lines as from point A. Prove that all 110 intersection points of the 23 constructed lines (excluding points A and B) lie on 11 circles - 10 points on each circle.</p></li>
+</ol>
+<p><strong>3-16.</strong> On a rectangular billiard table with sides of integer length (in suitable units, e.g., cm, where the lengths are natural numbers), a ball rolls at an angle of 30° to the wall of the billiard table. Prove that the ball will never hit a corner. (Of course, the ball is considered a point.)</p>
+<p><strong>3-17.</strong> Four points are located in a plane. Can:</p>
+<ol type="a">
+<li><p>the pairwise distances between them be equal to 1 cm, 2 cm, 3 cm, 4 cm, 5 cm, and 6 cm, respectively;</p></li>
+<li><p>five pairwise distances between them be equal to 1 cm, and the sixth be 1.8 cm?</p></li>
+</ol>
+<p><strong>3-18.</strong> Into how many parts can four lines divide a plane?</p>
+<p><strong>3-19.</strong> Into how many parts do the following divide space:</p>
+<ol type="a">
+<li><p>four;</p></li>
+<li><p>five planes passing through one point (no three planes have a common line)?</p></li>
+</ol>
+<p><strong>3-20.</strong> A convex tetrahedral angle is given. Construct a section of it by a plane such that the section is a parallelogram.</p>
+<p><strong>3-21.</strong> Prove that any triangular prism with a sufficiently large height can be intersected by a plane such that the section is an equilateral triangle.</p>
+<p><strong>3-22.</strong> Andrei cut a convex cardboard polyhedron along the edges and sent the resulting set of faces by mail to Kolya. Kolya glued all these faces together to form a convex polyhedron. Could it happen that Andrei’s and Kolya’s polyhedra are not the same?</p>
+<p><strong>3-23.</strong> Does there exist a convex nonagon in which all nine faces are quadrilaterals?</p>
+<p><strong>3-24.</strong> It is given that the net of some pyramid is an acute triangle in which three midlines are drawn. Prove that there exists a rectangular parallelepiped whose four non-adjacent vertices are the vertices of this pyramid.</p>
+<p><strong>3-25.</strong> A trihedral angle is given with vertex O and dihedral angles equal to <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, and <span class="math inline">\(\gamma\)</span>. From vertex O, a ray perpendicular to each face is drawn, directed outward (i.e., so that this ray and the trihedral angle lie on opposite sides of the plane of the face). Find the plane angles of the trihedral angle formed by the constructed rays.</p>
+<section id="problems-discussion" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="problems-discussion"><span class="header-section-number">3.1</span> Problems Discussion</h2>
+<p><strong>Problem 3-1.</strong> Draw two circles of radius AB with centers at points A and B. Through the intersection points of these circles, draw a line that intersects segment AB at point C. Now draw a circle with center at point C and radius AB. This circle will intersect each of the drawn circles at two points. Finally, draw two lines through these two pairs of points - see Figure 13.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig13.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 13</figcaption>
+</figure>
+</div>
+<p>Thus, we have drawn 6 lines: three circles and three straight lines. Let’s prove that the three drawn lines divide segment AB into four equal parts.</p>
+<p>As is known, the locus of points equidistant from the ends of a segment is the perpendicular bisector of that segment - a line drawn through the midpoint of the segment perpendicular to it.</p>
+<p>The two intersection points of the first two constructed circles are at the same distance AB from points A and B, so the line passing through them is the perpendicular bisector of segment AB and divides it into two equal parts at point C.</p>
+<p>Similarly, the intersection points of the third circle with one of the first two are at the same distance AB from both the midpoint C of segment AB and the end of this segment, so the line passing through these intersection points divides half of segment AB in half again.</p>
+<p>To construct using a compass and a straightedge means to reduce the solution of the problem to performing a certain sequence of the following operations:</p>
+<p>I. Draw a line through two given points. II. Draw a circle of a given radius from a given center. III. Find the intersection points of: a) two lines; b) a line and a circle; c) two circles.</p>
+<p>In our problem, the sequence of these operations is as follows: II, II, III c), I, III a), II, III c), III c), I, I, III a), III a). At the same time, the condition of the problem is fulfilled: the number of operations I and II is equal to six.</p>
+<p>Try to come up with ways to divide a segment into 3 or 5 equal parts so that the number of operations I and II is as small as possible. Figure 14 shows a way to divide a segment into 6 equal parts, in which the number of operations I and II is equal to 8.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig14.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 14</figcaption>
+</figure>
+</div>
+<p>Now, starting from points A, B, and C, let’s find the midpoint of segment AB. Draw a circle with center C and radius CA = 2r (see Figure 15). Mark the points L and M of its intersection with the circle with center A and radius r = AB. Next, draw two circles with centers L and M and radius r = AB. These circles intersect at point A and at another point D.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig15.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 15</figcaption>
+</figure>
+</div>
+<p>Let’s prove that D is the midpoint of segment AB. Indeed, points L and M are symmetric with respect to line AC, and point D is equidistant from points L and M, i.e., it lies on line AC. Now consider two isosceles triangles ALD and CAL. They are similar to each other because they have a common angle at the bases, A. Let’s write the proportion: AD : AL = AL : CA or AD : r = r : 2r. From this, we get that 2AD = r = AB.</p>
+<p>At the beginning of the solution to problem 3-2, we doubled segment AB (constructed point C) by drawing four circles. This construction can be done more economically by drawing three circles - see Figure 16, a.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig16.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 16</figcaption>
+</figure>
+</div>
+<p>Problem 3-2 can be generalized: to indicate a method for dividing a given segment into n equal parts using a compass. Similarly, we construct segment LC = nAB, and then, similarly, using points A, B, and C, we construct point D - see Figure 16, b. From the similarity of isosceles triangles ALD and ACL, it follows that DA * CA = r^2 (in our case, CA = nr and DA = r/n).</p>
+<p>This construction is related to a transformation of the plane called inversion with respect to a circle with center A and radius r = AB. The image of a point P under this transformation is defined as the point P’ lying on the ray AP for which AP’ * AP = r^2. In problem 3-2, we actually constructed the point D, which was the image of point C under inversion.</p>
+<p>The inversion transformation has a remarkable property: it transforms lines and circles back into circles and lines.</p>
+<p>Using inversion, it can be shown that operations III a) and III b) (finding the intersection points of two lines and a line with a circle), which were mentioned in the commentary to the previous problem, can be performed with a single compass. From this, it can be deduced that any construction problem solvable with a compass and a straightedge can be solved with a single compass (Mascheroni’s theorem). (Of course, we cannot perform operation I - draw a line through two given points - without a straightedge. Instead, we should agree that a line is defined if two of its points are given.) (See [45, 98].)</p>
+<p><strong>Problem 3-3.</strong> Suppose that triangle ABC is constructed, <span class="math inline">\(\angle B = 3\angle A\)</span> (Figure 17). Draw segment BE from point B to line AC such that <span class="math inline">\(\angle ABE = \angle BAC\)</span>. Then triangle ABE will be isosceles: AE = BE. Triangle BCE will also be isosceles because each of the angles BEC and CBE is equal to <span class="math inline">\(2\angle BAC\)</span> (angle BEC is an external angle of triangle AEB); therefore, BC = CE = a. Consequently, AE = EB = b - a, since the entire side AC is equal to b.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig17.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 17</figcaption>
+</figure>
+</div>
+<p>In triangle BCE, we know the lengths of all three sides, so it can be constructed with a compass and a straightedge. After that, on the extension of side CE, we mark off segment EA = b - a with a compass. Triangle ABC is the desired one.</p>
+<p>Indeed, it obviously has BC = a and AC = b. Let’s prove that <span class="math inline">\(\angle ABC = 3\angle BAC\)</span>. Triangle ABE is isosceles, so <span class="math inline">\(\angle AEB = \angle EAB = \angle BAC\)</span>. …</p>
+<p>The problem has a solution when a triangle can be constructed from segments a, a, and b, i.e., when 3a &gt; b &gt; a. Under this condition, the solution is unique.</p>
+<p>The text of the solution written above consists of four paragraphs. They can be titled as follows: (1) analysis, (2) construction, (3) proof, (4) investigation. Usually, solutions to construction problems are formatted this way.</p>
+<p><strong>Problem 3-4.</strong> The locus of centers of circles of a given radius r tangent to a given line is a pair of lines <span class="math inline">\(l_1\)</span> and <span class="math inline">\(l_2\)</span> parallel to this line, passing at a distance r from it.</p>
+<p>Let O be the center of the given circle with radius R. Then the locus of centers of circles of radius r tangent to the given circle is: 1) two circles with radii R + r and R 2) a circle with radius R + r centered at point O and the point O itself if R = r; 3) a circle with radius R + r centered at point O if R &lt; r.</p>
+<p>The center of the desired circle belongs to the intersection of these two loci. Since the intersection of two parallel lines with two circles can consist of at most 8 points, the number of solutions to problem 3-4 can range from 0 to 8 (check that all these cases are possible).</p>
+<p>Problem 3-4 was solved by us using the method of loci. It consists of the following. Let the point X that needs to be constructed be determined by two conditions arising from the requirements of the problem. First, the locus of points satisfying only one of the conditions is found. Then the locus of points satisfying only the second condition is found. The common points of these two sets satisfy both conditions - these are the desired points X.</p>
+<p>Problem 3-4 reduces to constructing the center X of the circle. We have identified two conditions: 1) X is at a distance r from the given circle and 2) X is at a distance r from the given line. Having found the loci of points satisfying each of these conditions, we determined the possible positions of point X.</p>
+<p><strong>Problem 3-5.</strong> Since the desired circle must be tangent to the parallel lines <span class="math inline">\(l\)</span> and <span class="math inline">\(m\)</span>, its center K lies on a line parallel to these lines and passing midway between them. The radius R of this circle is thus equal to half the distance between lines <span class="math inline">\(l\)</span> and <span class="math inline">\(m\)</span>. On the other hand, the desired circle must be tangent to the given circle, which means that its center K must be at a distance R + r or R - r (if R &gt; r) from point O. Thus, point K must lie on one of the circles with center O and radii R + r and R - r. The construction can be carried out as follows. Construct a line passing midway between <span class="math inline">\(l\)</span> and <span class="math inline">\(m\)</span>, and then construct two circles with center O and radii R + r and R - r (if R &gt; r). Point K will be one of the intersection points of the line with the circles.</p>
+<p>This problem is closely related to the famous problem of Apollonius (around 200 BC): given three circles, it is required to draw a fourth circle tangent to the three given ones. It turns out that this difficult problem can be reduced to problem 3-5 using the inversion transformation.</p>
+<p>For definiteness, we will assume that the given circles are located outside each other. If we increase their radii by the same value, then the center of the circle tangent to them will remain in place. Let’s increase the radii so that two of the given circles touch each other. After that, we perform an inversion of the entire plane (see the commentary to problem 3-2) with respect to some circle centered at the point of tangency of the two given circles. These circles will then transform into two parallel lines, and the third one…</p>
+<p>Having solved problem 3-5 for these lines and the circle, having constructed the image of point K under the inverse inversion and having performed a “compression” of the circles, we will obtain the desired circle in Apollonius’ problem.</p>
+<p><strong>Problem 3-6.</strong> Draw line OF and mark some point N on ray OA. Drop the perpendicular NK from point N to line OB. Draw a circle with center N and radius NK. Let L be one of the intersection points of this circle with ray OF. Draw a line through point F parallel to NL. The point M of intersection of this line with ray OA will be the desired one - see Figure 18.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig18.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 18</figcaption>
+</figure>
+</div>
+<p>Indeed, the homothety with center O that maps point L to point F maps, due to the parallelism of the corresponding lines, point N to point M, point K to point P (the base of the perpendicular dropped from point M to OB). Thus, from the equality NK = NL follows the equality MF = MP.</p>
+<p>The problem has two solutions (during the construction, the circle with center N and radius NK will intersect ray OA at two points).</p>
+<p>Problem 3-6 was solved by us using the method of similarity. It generally consists of the following. First, a figure similar to the desired one is constructed, and then it is enlarged (or reduced) in the desired ratio.</p>
+<p>In problem 3-6, we first constructed the broken line KNL, for which the condition of the problem is satisfied, and then we constructed a similar broken line PMF passing through point F.</p>
+<p>Let’s try to apply the method of loci (see the commentary to problem 3-4) to the solution of problem 3-6. It turns out that the locus of points equidistant from a given point F and a given line OB is a parabola. coordinate system Oxy so that the Ox axis coincides with line OB and the Oy axis passes through point F. Then the points (x, y) that are equidistant from point F and line OB must satisfy the equation</p>
+<p><span class="math inline">\(|y| = \sqrt{x^2 + (y - h)^2}\)</span></p>
+<p>Squaring both sides, we get the equation of a parabola: <span class="math inline">\(y = x^2/2h + h/2\)</span>.</p>
+<p>Thus, the desired points in problem 3-6 are the intersection points of the parabola and line OA. Of course, we cannot construct the entire parabola with a compass and a straightedge, but its intersection points with a given line, according to problem 3-6, are easy to construct.</p>
+<p><strong>Problem 3-7.</strong> 1) Construct a right angle and mark off segments of length 1 on its sides from the vertex. The segment connecting their ends has length <span class="math inline">\(\sqrt{2}\)</span>.</p>
+<ol start="2" type="1">
+<li>Mark off a segment AB of length <span class="math inline">\(1 + \sqrt{2}\)</span> on a line, and then a segment BC of length 1 - see Figure 19.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig19.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 19</figcaption>
+</figure>
+</div>
+<ol start="3" type="1">
+<li><p>Construct a circle on segment AC as a diameter.</p></li>
+<li><p>Draw a line through point B perpendicular to diameter AC. Let K be one of the intersection points of the last line with the circle. Let’s prove that BK = <span class="math inline">\(\sqrt{1 + \sqrt{2}}\)</span>. Indeed, triangle AKC is a right triangle since angle AKC is an inscribed angle subtended by the diameter. The square of the altitude of a right triangle dropped onto the hypotenuse is equal to the product of the segments into which this altitude divides the hypotenuse, i.e., <span class="math inline">\((1 + \sqrt{2}) \cdot 1\)</span>.</p></li>
+</ol>
+<p>In this problem, we showed how to construct segments <span class="math inline">\(\sqrt{a^2 + b^2}\)</span> and <span class="math inline">\(\sqrt{ab}\)</span> from given segments a and b. Using the theorem on parallel lines intersecting the sides of an angle, it is possible to construct a segment ab/c from given segments a, b, and c.</p>
+<p>By combining these constructions, many other segments can be constructed. For example, a segment of length <span class="math inline">\(\sqrt{ab + cd}\)</span> can be constructed as follows: construct segments of length m = <span class="math inline">\(\sqrt{4ab}\)</span> and n = <span class="math inline">\(\sqrt{4cd}\)</span>, and then a segment of length <span class="math inline">\(\sqrt{m^2 + n^2}\)</span>.</p>
+<p>It turns out that from a given segment of length 1, it is possible to construct only those segments whose lengths are expressed by rational (arithmetic) operations and repeated extraction of square roots.</p>
+<p><strong>For experts.</strong> The lengths of all such segments form a field. The solvability of problem 3-7 follows from the fact that the number <span class="math inline">\(\sqrt{1 + \sqrt{2}}\)</span> belongs to this field. The unsolvability of the classical problem of doubling the cube follows from the fact that the number <span class="math inline">\(\sqrt[3]{2}\)</span> does not belong to this field (see [98]).</p>
+<p><strong>Problem 3-8.</strong> Mark off segments OA and OB of length 1 on the given line <span class="math inline">\(l\)</span>, and from the same point O, two more segments OK and OL of length 1 (points K and L lie on the same side of the line; see Figure 20). Let C be the intersection point of lines AK and BL, and H be the intersection point of lines AL and BK. Then line CH will be the desired perpendicular to line <span class="math inline">\(l\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig20.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 20</figcaption>
+</figure>
+</div>
+<p>To prove this, we need to use two theorems: 1) if in a triangle the median drawn to the base is equal to half its length, then the angle at the vertex is a right angle; 2) in a triangle, the three altitudes intersect at one point.</p>
+<p>In problem 3-8, we were talking about constructions with an unusual set of tools: a straightedge and a unit length. As you can see, with their help, it is possible to solve many standard construction problems: draw a line through a given point parallel or perpendicular to a given line, mark off a given segment on a given line, and mark off a given angle in any direction from a given ray.</p>
+<p>However, not everything that can be constructed with a compass and a straightedge can be constructed with a straightedge and a unit length. For example, it is impossible to construct, starting from a segment of length 1, a segment of length <span class="math inline">\(\sqrt{1 + \sqrt{2}}\)</span> (compare with problem 3-7); moreover, in the general case, it is impossible to construct even a right triangle from a given leg and hypotenuse.</p>
+<p>It turns out that, starting from a segment of length 1, it is possible to construct only those segments whose lengths are expressed by rational operations and extraction of square roots from sums of squares of lengths of already constructed segments (in other words, expressions for lengths must remain real for all possible changes of sign in front of all radicals, see [90]).</p>
+<p>Problem 3-9. Answer: 1/7. Let M, N, and P be the intersection points of the given line with sides OA, OB, and diagonal OC, respectively - see Figure 21. Let’s perform the following constructions, which will allow us to represent all the necessary ratios as ratios of segments of diagonal OC.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig21.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 21</figcaption>
+</figure>
+</div>
+<p>Draw segments BB’ and AA’ parallel to the given line, where B’ and A’ are points on diagonal OC. Then triangles OBB’ and CAA’ are equal (they are symmetric with respect to the center of the parallelogram), so OB’ = CA’. From the equalities 3 = OB : OL = OB’ : OM, 4 = OA : OK = OA’ : OM, OC = OB’ + OA’, we get:</p>
+<p>OC : OM = 3 + 4 = 7.</p>
+<p>Similarly, it can be shown that a line that cuts off 1/A and 1/μ parts from the sides of a parallelogram, respectively, cuts off a 1/(A + μ) part from the diagonal.</p>
+<p>Based on this fact, it is possible to prove an important inequality for the norm of a vector defined as follows (see [80]). Let Φ be a bounded closed set with a center of symmetry O (an interior point of Φ - see Figure 22). For each vector a = OA, let ||a|| be equal to the ratio OA/OL, where L is the intersection point of the ray OA with the boundary of the figure Φ.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig22.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 22</figcaption>
+</figure>
+</div>
+<p>Then if Φ is convex, the “triangle inequality” holds:</p>
+<p>||a + b|| ≤ ||a|| + ||b||</p>
+<p>In particular, if Φ is a circle of radius 1 centered at O in the Oxy plane, then <span class="math inline">\(\sqrt{(x_1 + x_2)^2 + (y_1 + y_2)^2} ≤ \sqrt{x_1^2 + y_1^2} + \sqrt{x_2^2 + y_2^2}\)</span> - this is the usual triangle inequality for vectors <span class="math inline">\((x_1, y_1)\)</span> and <span class="math inline">\((x_2, y_2)\)</span>.</p>
+<p>Problem 3-10. It is sufficient to draw (not counting the two given) 9 lines (in Figure 23, the lines are numbered in the order of their appearance). Let’s prove that in this figure, AH = BH = AB/2.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig23.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 23</figcaption>
+</figure>
+</div>
+<p>Segment CD can be obtained from AB by homothety with center E and with center F; under both homotheties, point H goes to G (see Figure 24).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig24.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 24</figcaption>
+</figure>
+</div>
+<p>Therefore,</p>
+<p>CG/AH = EC/EA = CD/AB = FC/FB = CG/BH</p>
+<p>from which AH = BH.</p>
+<p>Segment CG can be obtained from segment AH by homothety with center E and from AB by homothety with center M (see Figure 25). Under both homotheties, point L goes to point K.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig25.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 25</figcaption>
+</figure>
+</div>
+<p>Since 2AH = AB,</p>
+<p>CL/AK = EC/EA = CG/AH = 2CG/AB = 2CM/MB = 2CL/BK</p>
+<p>from which 2AK = BK, i.e., AK = AB/3. Similarly, it is proved that in Figure 24, BK’ = AB/3, i.e., AK = KK’ = K’B.</p>
+<p>We can act in the same way further (drawing line AL and so on) to divide segment AB into n equal parts for any natural n.</p>
+<p>Let us also note the connection of this problem, which deals with the ratio of segments in a trapezoid, with the previous one, which studied the ratio of segments in a parallelogram (see Figure 26, a). The line passing through the vertex B’ of parallelogram A’B’C’D’ and the midpoint H’ of its side A’D’ cuts off segment A’M’ = A’C’/3 from its diagonal A’C’.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig26.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 26</figcaption>
+</figure>
+</div>
+<p>The line passing through point M’ and parallel to side A’B’ also cuts off 1/3 from sides B’C’ and A’D’. Figures 26, a and 26, b, as we see, are very similar. We will discuss the reason for the analogy between them in the commentary to problem 3-20.</p>
+<p>Problem 3-11. To solve the problem, let’s make an additional construction: draw diagonals in all quadrilaterals, as shown in Figure 27, a. Let the areas of the outermost shaded triangles in Figure 27, a be <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, respectively. Then the area of the middle triangle is <span class="math inline">\((x + y)/2\)</span>. Indeed, their bases are the same, and the height of the middle triangle is equal to half the sum of the heights of the outermost triangles (this follows from the fact that the height of the middle triangle is the midline of the trapezoid whose bases are the heights - see Figure 27, b).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig27.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 27</figcaption>
+</figure>
+</div>
+<p>The same reasoning can be carried out for the three unshaded triangles in Figure 27, a. So, the area of the entire quadrilateral is <span class="math inline">\(3(x + y + z + u)/2\)</span>, and the area of the part of the quadrilateral enclosed between the lines is <span class="math inline">\((x + y + z + u)/2\)</span>, i.e., 3 times smaller.</p>
+<p>A more general statement is also true. If several lines divide each of two opposite sides of a quadrilateral into equal parts, then the areas of the quadrilaterals into which they divide the given quadrilateral form an arithmetic progression. If the other two opposite sides of the given quadrilateral are also divided into equal parts and the corresponding lines are drawn so that a grid of small cells appears inside the quadrilateral - see Figure 28 - then each segment with endpoints on opposite sides of the quadrilateral will be divided by the intersection points into equal parts, and thus the areas of the cells in each row in one and the other direction will form an arithmetic progression.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig28.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 28</figcaption>
+</figure>
+</div>
+<p>It is curious that all the lines drawn in the figure are tangent to some parabola - see Figure 28.</p>
+<p>If we imagine that the original quadrilateral is made up of hinged rods, then when it is bent in space, the corresponding lines will still intersect - they lie on a saddle-shaped surface “woven” from two families of lines.</p>
+<p>Problem 3-12. Answer: if the triangle is not right-angled, then there are 7 ways; if it is right-angled, then there are 6 ways. Let the set of points <span class="math inline">\({A, B, C, D}\)</span> have an axis of symmetry. Only an even number of points can lie outside the axis of symmetry, otherwise they cannot be divided into mutually symmetric pairs. Since all 4 points cannot lie on the axis (points A, B, and C do not lie on the same line), we need to consider two cases.</p>
+<p>There are no points of our set on the axis. Then the axis is the perpendicular bisector of one of the sides of triangle ABC, and point D is symmetric to the vertex opposite this side. Thus, we get 3 ways to position point D - points <span class="math inline">\(D_1, D_2, D_3\)</span> in Figure 29; if <span class="math inline">\(\angle C = 90^\circ\)</span>, then the perpendicular bisectors of the legs AC and BC give us the same point <span class="math inline">\(D = D_2\)</span>, since these perpendicular bisectors are the axes of symmetry of rectangle ACBD.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig29.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 29</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
+<li>There are 2 points on the axis. Then the axis of symmetry passes through two of the points A, B, C, and point D is symmetric to the third of these points with respect to the axis. This gives us 3 more ways - see Figure 30. No other coincidences of two of the six constructed points, except for the one considered in item 1), are possible for a non-isosceles triangle.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig30.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 30</figcaption>
+</figure>
+</div>
+<p><strong>Problem 3-13.</strong> Construct a circle with diameter AM (Figure 31). Since angles APM and AQM are right angles, points P and Q lie on this circle; <span class="math inline">\(\angle MAQ = \angle QPM\)</span> (since these are inscribed angles subtended by the same arc). Also note that <span class="math inline">\(\angle PAK = \angle QPM\)</span>. Indeed, <span class="math inline">\(\angle PAK = 90^\circ - \angle APK\)</span> (AK is perpendicular to PQ) and <span class="math inline">\(\angle QPM = 90^\circ - \angle APK\)</span> (MP is perpendicular to AP). From this, <span class="math inline">\(\angle MAQ = \angle PAK\)</span>, which is what we needed to prove.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig31.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 31</figcaption>
+</figure>
+</div>
+<p>This problem was repeatedly used by D. Hilbert in his famous book “Foundations of Geometry,” in particular, to find out which construction problems can be solved using only a straightedge and a unit length (see the discussion of problem 3-8 and [90]).</p>
+<p><strong>Problem 3-14.</strong> Let’s calculate the side of a regular decagon given the radius of the circumscribed circle. To do this, consider the isosceles triangle AOB, where O is the center of the regular decagon, and AB is one of its sides (see Figure 32). Then <span class="math inline">\(\angle AOB = 36^\circ\)</span> and <span class="math inline">\(\angle OAB = 72^\circ\)</span>. Draw the bisector AX of angle OAB. Since triangles OBXA and BXAB are isosceles, then AB = AX = OBX. Let OA = 1, AB = <span class="math inline">\(x\)</span>; from the similarity of triangles AOB and BXAB, the proportion follows:</p>
+<p><span class="math inline">\(x/(1 - x) = 1/x\)</span></p>
+<p>Solving the resulting equation, we find its positive root <span class="math inline">\(x = (\sqrt{5} - 1)/2\)</span> (see problem 3-7). Next, draw a circle of radius 1 and successively mark off on it with a compass with a radius of <span class="math inline">\((\sqrt{5} - 1)/2\)</span> all the vertices of the regular decagon one after another. We can construct a segment of such length.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig32.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 32</figcaption>
+</figure>
+</div>
+<p>The number <span class="math inline">\(x = (\sqrt{5} - 1)/2\)</span> often appears in various problems. For example, <span class="math inline">\(\sin 18^\circ = x/2 = (\sqrt{5} - 1)/4\)</span>. The number <span class="math inline">\(\tau = 1/x = (\sqrt{5} + 1)/2\)</span> has been known since ancient times - it corresponds to the “golden ratio”: if a segment is divided in this ratio <span class="math inline">\(\tau\)</span>, then the ratio of the segment to its larger part will be equal to the ratio of the larger part to the smaller one. This number also arises in connection with the Fibonacci numbers (see problems 6-11, 6-16, and 6-17).</p>
+<p><strong>For experts.</strong> The possibility of constructing a regular <span class="math inline">\(n\)</span>-gon is determined by whether the number <span class="math inline">\(\sin(180^\circ/n)\)</span> belongs to the field of numbers described in the commentary to problem 3-7. As shown by C.F. Gauss, a regular <span class="math inline">\(n\)</span>-gon can be constructed if and only if <span class="math inline">\(n = 2^k p_1 p_2 ... p_m\)</span>, where <span class="math inline">\(p_1, p_2, ..., p_m\)</span> are distinct prime numbers of the form <span class="math inline">\(2^{2^l} + 1\)</span>. The condition that distinguishes such numbers <span class="math inline">\(n\)</span> is equivalent to the following: the value of Euler’s totient function <span class="math inline">\(\phi(n)\)</span> (see the commentary to problem 2-8) is a power of two, i.e., <span class="math inline">\(\phi(n) = 2^k\)</span>. For example, <span class="math inline">\(\phi(10)\)</span>, the number of integers relatively prime to 10, is equal to <span class="math inline">\(4 = 2^2\)</span>.</p>
+<p>The origin of the condition <span class="math inline">\(\phi(n) = 2^k\)</span> can be explained approximately as follows. When constructing with a compass and a straightedge, the number of points obtained each time we find the intersection points of two circles and the intersection points of a line and a circle doubles. Therefore, as a result, we generally get <span class="math inline">\(2^l\)</span> solutions. Now, let’s assume that we have found an algorithm for constructing a regular ( n )-gon. Using this algorithm, we can not only construct the regular ( n )-gon, but also any of the regular closed ( n )-sided polygons (see problem 2-8). The number of such polygons is ( ), which implies that ( (n) ) (Euler’s totient function) must be a power of two. The necessity and sufficiency of this condition are proved algebraically (see [31, 51]).</p>
+<p>Problem 3-15. a) Two adjacent lines pass through point A of the circle and form an angle inscribed in the circle and subtended by an arc of <span class="math inline">\(30^\circ\)</span>. According to the inscribed angle theorem, this angle is measured by half the arc on which it is subtended, i.e., <span class="math inline">\(15^\circ\)</span>, which proves the required statement.</p>
+<ol start="2" type="a">
+<li>Consider the point M of intersection of some line of the first pencil with some line of the second pencil. Draw a circle through this point, as well as through points A and B (in Figure 33, it is shown by black dots). Now consider the point N of intersection of the lines adjacent to the taken lines (for example, clockwise). Then angles AMB and ANB are equal, since the sums of the angles at the vertices A and B of triangles AMB and ANB are the same (angle MAB is <span class="math inline">\(15^\circ\)</span> greater than angle NAB, and angle NBA is <span class="math inline">\(15^\circ\)</span> greater than angle MBA).</li>
+</ol>
+<p>Since angles AMB and ANB are equal, points A, M, N, and B lie on the same circle.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig33.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 33</figcaption>
+</figure>
+</div>
+<p>The fact established in problem 3-15 b) is well explained in the language of “motions.” If a line rotates uniformly with angular velocity <span class="math inline">\(\omega\)</span> around point A of the circle, then, according to the inscribed angle theorem, its other intersection point with the circle moves uniformly along the circle with angular velocity <span class="math inline">\(2\omega\)</span>.</p>
+<p>If two intersecting lines <span class="math inline">\(l_A\)</span> and <span class="math inline">\(l_B\)</span> rotate in the plane around their two points A and B with the same angular velocity <span class="math inline">\(\omega\)</span>, then the trajectory of the intersection point of these lines is a circle. Indeed, let’s construct a circle <span class="math inline">\(\gamma\)</span> passing through three points: A, B, and the point M of intersection of the lines at some point in time. On the one hand, the intersection point of line <span class="math inline">\(l_A\)</span> with circle <span class="math inline">\(\gamma\)</span> moves along circle <span class="math inline">\(\gamma\)</span> uniformly with angular velocity <span class="math inline">\(2\omega\)</span>, and on the other hand, the intersection point of line <span class="math inline">\(l_B\)</span> with the same circle <span class="math inline">\(\gamma\)</span> moves in the same way. But since at some point in time the intersection points of lines <span class="math inline">\(l_A\)</span> and <span class="math inline">\(l_B\)</span> with circle <span class="math inline">\(\gamma\)</span> were at the same point of circle <span class="math inline">\(\gamma\)</span>, then for all other times of rotation of the lines, the points of their intersection will be on this circle.</p>
+<p>For experts. The 23 drawn lines form a grid. If we color the cells of this grid in a checkerboard pattern, we will see a family of circles passing through points A and B, and a family of hyperbolas (the picture will be more visual if we take pencils of 24 lines instead of 12 at points A and B).</p>
+<p>Hyperbolas arise here due to the following circumstance. If lines <span class="math inline">\(l_A\)</span> and <span class="math inline">\(l_B\)</span> rotate around their points A and B, one with angular velocity <span class="math inline">\(\omega\)</span> and the other with angular velocity <span class="math inline">\((-\omega)\)</span> (in different directions), then their intersection point moves along a hyperbola.</p>
+<p>Indeed, there will be a moment in time when the lines <span class="math inline">\(l_A\)</span> and <span class="math inline">\(l_B\)</span> under consideration are parallel. Let’s choose a coordinate system with the origin in the middle of segment AB, and direct the Ox axis parallel to lines <span class="math inline">\(l_A\)</span> and <span class="math inline">\(l_B\)</span>.</p>
+<p>Let the coordinates of point A be <span class="math inline">\((a, b)\)</span>, then the coordinates of point B are <span class="math inline">\((-a, -b)\)</span>. At time <span class="math inline">\(t\)</span>, the equations of the lines can be written as:</p>
+<p><span class="math inline">\(x \sin(\omega t) - y \cos(\omega t) = a \sin(\omega t) - b \cos(\omega t)\)</span> <span class="math inline">\(x \sin(\omega t) + y \cos(\omega t) = -a \sin(\omega t) - b \cos(\omega t)\)</span></p>
+<p>The coordinates of their intersection point are <span class="math inline">\(x = -b \cot(\omega t)\)</span>, <span class="math inline">\(y = -a \tan(\omega t)\)</span>.</p>
+<p>Therefore, <span class="math inline">\(xy = ab\)</span>, i.e., the intersection points of the lines lie on a hyperbola (see [16]).</p>
+<p>Problem 3-16. We will reflect not the ball, but the rectangular billiard table itself from the walls. After all possible multiple reflections of the rectangle with respect to its sides (it is most convenient to do this on graph paper), we will obtain a grid of rectangles folded like an “accordion” (Fig. 34).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig34.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 34</figcaption>
+</figure>
+</div>
+<p>Now let’s prove that a line drawn through a node O of the grid at an angle of <span class="math inline">\(30^\circ\)</span> to the wall of the billiard table does not pass through other nodes. This will imply the statement of the problem.</p>
+<p>If the ball had passed through any other node, a right triangle with a 30° angle would have been formed, whose legs have integer lengths. But <span class="math inline">\(\tan(30°) = \frac{1}{\sqrt{3}}\)</span> (an irrational number) cannot be equal to the ratio of two integers.</p>
+<p><strong>For experts:</strong> The trajectory of the ball in problem 3-16 will “densely sweep” the entire billiard table, although its direction will always be at an angle of 30° with one of the sides. If the billiard table has the shape of a circle or an ellipse, the trajectory of the ball will no longer be everywhere dense - there will be areas where it does not enter. In general, the behavior of a typical ball trajectory in a billiard table on a plane or in a multidimensional space strongly depends on the shape of the billiard table. For billiard tables, all sides of which are convex inward, ergodicity has been proven: a typical ball trajectory is everywhere dense in the phase space, it passes arbitrarily close to any point of the billiard table, and in various directions. It is to such problems about scattering billiards that some mathematical models of a gas of solid colliding “atoms” are reduced. Convex billiards, in particular billiards with straight walls, as a rule, do not have this property, and it was possible to describe the trajectories in such billiards only in special cases (see [110, 111]).</p>
+<p><strong>Problem 3-17.</strong> a) Answer: they can.</p>
+<p>An example is shown in Figure 35. b) Answer: they cannot.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig35.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 35</figcaption>
+</figure>
+</div>
+<p>Consider three points, all pairwise distances between which are equal to 1 cm. They form an equilateral triangle with a side length of 1 cm. The distances from the fourth point to some two of them are equal to 1 cm, therefore the fourth point with these two also forms an equilateral triangle. Therefore, all four points must form a rhombus with a side length of 1 cm (see Figure 36). But then the length of the longer diagonal of this rhombus, which is equal to <span class="math inline">\(\sqrt{3}\)</span> cm, and <span class="math inline">\(1.8 \times \sqrt{3}\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig36.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 36</figcaption>
+</figure>
+</div>
+<p>Let’s generalize this problem as follows.</p>
+<p>For what values of <span class="math inline">\(a\)</span> do there exist four points: a) on the plane; b) in space, the pairwise distances between which are equal to 1, 1, 1, 1, 1, <span class="math inline">\(a\)</span>?</p>
+<p>From the solution to problem 3-17, it is clear that the answer to question a) is: only for <span class="math inline">\(a = \sqrt{3}\)</span>. The same solution implies the answer to question b): for <span class="math inline">\(0 &lt; a &lt; \sqrt{3}\)</span>. Indeed, by bending the rhombus in space along its smaller diagonal, we see that the distance between its opposite vertices can vary from <span class="math inline">\(\sqrt{3}\)</span> to 0.</p>
+<p><strong>For experts:</strong> Let’s make one more observation: for <span class="math inline">\(\sqrt{3} &lt; a &lt; 2\)</span>, the triangle inequalities (the length of the larger side does not exceed the sum of the lengths of the other two) are satisfied for any three of these four points, however, in space (and even in <span class="math inline">\(n\)</span>-dimensional Euclidean space) there are no four points with such pairwise distances.</p>
+<p>A more general question can be posed: is it possible to arrange a) on the plane; b) in space four points 1, 2, 3, 4 so that the pairwise distances between them are equal to the given numbers <span class="math inline">\(r_{12}\)</span>, <span class="math inline">\(r_{13}\)</span>, <span class="math inline">\(r_{14}\)</span>, <span class="math inline">\(r_{23}\)</span>, <span class="math inline">\(r_{24}\)</span>, <span class="math inline">\(r_{34}\)</span> (where <span class="math inline">\(r_{ij}\)</span> is the distance between points <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>)? Of course, all numbers <span class="math inline">\(r_{ij}\)</span> must be non-negative and satisfy the triangle inequalities <span class="math inline">\(r_{ij} + r_{jk} &gt; r_{ik}\)</span>. But this is not enough.</p>
+<p><span class="math display">\[\Delta_4 = \begin{vmatrix} 0 &amp; r_{12}^2 &amp; r_{13}^2 &amp; r_{14}^2 &amp; 1 \\ r_{12}^2 &amp; 0 &amp; r_{23}^2 &amp; r_{24}^2 &amp; 1 \\ r_{13}^2 &amp; r_{23}^2 &amp; 0 &amp; r_{34}^2 &amp; 1 \\ r_{14}^2 &amp; r_{24}^2 &amp; r_{34}^2 &amp; 0 &amp; 1 \\ 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \end{vmatrix}\]</span></p>
+<p>For an affirmative answer to question b), it is necessary and sufficient that the determinant <span class="math inline">\(\Delta_4\)</span> be non-negative, and for the possibility of placement on a plane (question a)), the determinant <span class="math inline">\(\Delta_4\)</span> must equal 0.</p>
+<p>If four points 1, 2, 3, 4 are placed in space, then</p>
+<p><span class="math inline">\(\Delta_4 = 288V^2\)</span>, where <span class="math inline">\(V\)</span> is the volume of the tetrahedron with vertices at these points. From this, it is clear that the condition <span class="math inline">\(\Delta_4 &gt; 0\)</span> is necessary for the possibility of placing points in space.</p>
+<p>Let’s explain why the conditions <span class="math inline">\(\Delta_4 &gt; 0\)</span> + <span class="math inline">\(r_{ij} &gt; 0\)</span> are sufficient for this. If we fix all distances except <span class="math inline">\(r_{34}\)</span>, then triangles 123 and 124 can be rotated around the common edge 12 (the dihedral angle <span class="math inline">\(\phi\)</span> between them varies from 0° to 180°). Then <span class="math inline">\(\Delta_4\)</span> as a function of <span class="math inline">\(x = r_{34}\)</span> will be a quadratic trinomial with a negative leading coefficient. Its roots correspond to those values of <span class="math inline">\(x\)</span> for which the triangles lie in one plane (<span class="math inline">\(\phi = 0°\)</span> and <span class="math inline">\(\phi = 180°\)</span>). When <span class="math inline">\(\phi\)</span> changes from 0° to 180°, the value of <span class="math inline">\(x\)</span> runs through all values between the roots, i.e., all values for which <span class="math inline">\(\Delta_4(x) &gt; 0\)</span>.</p>
+<p>By the way, we note that in a similar way, using a determinant, we can write Heron’s formula for the area <span class="math inline">\(S\)</span> of a triangle with sides <span class="math inline">\(r_{12}\)</span>, <span class="math inline">\(r_{13}\)</span>, <span class="math inline">\(r_{23}\)</span>:</p>
+<p><span class="math inline">\(S^2 = \Delta_3 / (2^2(2!)^2) = \Delta_3 / 16\)</span>,</p>
+<p>where <span class="math display">\[\Delta_3 = \begin{vmatrix} 0 &amp; r_{12}^2 &amp; r_{13}^2 &amp; 1 \\ r_{12}^2 &amp; 0 &amp; r_{23}^2 &amp; 1 \\ r_{13}^2 &amp; r_{23}^2 &amp; 0 &amp; 1 \\ 1 &amp; 1 &amp; 1 &amp; 0 \end{vmatrix} \text{ (see [83, 86]).}\]</span></p>
+<p><strong>Problem 3-18.</strong> Answer: 5, 8, 9, 10, or 11.</p>
+<p>Figure 37 shows examples of division into 5, 8, 9, 10, 11 parts. We will prove that there cannot be a different number of parts.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig37.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 37</figcaption>
+</figure>
+</div>
+<p>If all lines are parallel to each other, then there are five parts.</p>
+<p>Suppose not all lines are parallel. Consider a pair of intersecting lines - they divide the plane into 4 angles. Each newly drawn line intersects at least two parts into which the plane is divided by the already drawn lines, and divides each of these parts into two. Therefore, each subsequent line adds at least two new parts. In particular, four lines, among which there are non-parallel ones, divide the plane into at least <span class="math inline">\(4 + 2 \times 2 = 8\)</span> parts.</p>
+<p>Now we will prove that there are no more than eleven parts. We will draw the lines one by one. The first two lines divide the plane into no more than four parts. The third line has no more than two intersection points with the previous lines, is divided by them into no more than three parts, and therefore the number of parts increases by no more than three.</p>
+<p>The fourth line is divided by the intersection points with the previous ones into no more than four parts and therefore adds no more than four new parts.</p>
+<p>In total, we get no more than <span class="math inline">\(4 + 3 + 4 = 11\)</span> parts.</p>
+<p>This problem naturally generalizes: into how many parts can <span class="math inline">\(n\)</span> different lines divide the plane?</p>
+<p>Reasoning similar to what we did above, we can prove that the number of parts is either equal to <span class="math inline">\((n+1)\)</span> or lies in the interval from <span class="math inline">\(2n\)</span> to <span class="math inline">\((n^2 + n + 2)/2\)</span>. But, it turns out, not every number of parts in this interval can be realized. For example, 5 lines cannot divide the plane into <span class="math inline">\(2 \times 5 + 1 = 11\)</span> parts and, in general, <span class="math inline">\(n\)</span> lines for <span class="math inline">\(n &gt; 5\)</span> cannot divide the plane into <span class="math inline">\((2n + 1)\)</span> parts. It would be interesting to find out which numbers from the interval from <span class="math inline">\(2n\)</span> to <span class="math inline">\((n^2 + n + 2)/2\)</span> can be realized for <span class="math inline">\(n\)</span> lines.</p>
+<p>The question of what kind of regions <span class="math inline">\(n\)</span> lines in general position (no three of which pass through one point and no two are parallel) divide the plane into is also interesting. For <span class="math inline">\(n = 4\)</span>, the arrangement of lines in general position will always be as in Figure 37, i.e., among the three finite regions there is always one quadrilateral, two triangles, among the eight infinite ones there are four “infinite” triangles and one “infinite” quadrilateral. For <span class="math inline">\(n &gt; 5\)</span>, different cases (by the number of triangles and other regions) are already possible.</p>
+<p>The problem of estimating the maximum number of triangles in the partition of the plane by <span class="math inline">\(n\)</span> lines is essentially equivalent to the following problem by V.I. Arnold: let all <span class="math inline">\(a_n = (n^2 + n + 2)/2\)</span> regions of the partition be colored with two colors - black and white - so that neighboring regions (bordering along a line segment or a ray) are colored in different colors, and the number of black regions is equal to <span class="math inline">\(b_n\)</span>. What is the largest value that the ratio <span class="math inline">\(b_n/a_n\)</span> can take?</p>
+<p>It can be proved (using, for example, Euler’s theorem - see problem 5-15) that <span class="math inline">\(b_n/a_n &lt; 2/3\)</span> (for any <span class="math inline">\(n\)</span>), and in the partition with the largest number of black regions, all (or almost all) of them must be triangles.</p>
+<p>Interesting facts are contained in the article [127]. See also [128], [129].</p>
+<p><strong>Problem 3-19.</strong> Answer: 4 planes divide space into 14 parts, 5 planes divide space into 22 parts.</p>
+<p>Let’s prove this. Three planes <span class="math inline">\(\alpha_1\)</span>, <span class="math inline">\(\alpha_2\)</span>, <span class="math inline">\(\alpha_3\)</span> divide space into 8 parts. When we draw the fourth plane <span class="math inline">\(\alpha_4\)</span>, it intersects the three previous ones along three lines passing through their common point. These lines divide the plane <span class="math inline">\(\alpha_4\)</span> into 6 angles. Consequently, out of the 8 parts into which space was divided by the planes <span class="math inline">\(\alpha_1\)</span>, <span class="math inline">\(\alpha_2\)</span>, <span class="math inline">\(\alpha_3\)</span>, the fourth plane <span class="math inline">\(\alpha_4\)</span> intersects 6 parts and divides each of them into 2 parts. Thus, another 6 parts are added, for a total of <span class="math inline">\(8 + 6 = 14\)</span>.</p>
+<p>Similarly, the fifth plane, intersecting the previous ones along four lines, adds <span class="math inline">\(4 \times 2 = 8\)</span> parts, and there become <span class="math inline">\(14 + 8 = 22\)</span>.</p>
+<p>In the general case, for <span class="math inline">\(n\)</span> planes, the proof can be carried out similarly: the 6th, 7th, …, <span class="math inline">\(n\)</span>th planes add, respectively, <span class="math inline">\(2 \times 5\)</span>, <span class="math inline">\(2 \times 6\)</span>, …, <span class="math inline">\(2(n-1)\)</span> new parts, and the total number of parts becomes (it is convenient to write the sum starting from the first term) <span class="math display">\[2 + 2 \times 1 + 2 \times 2 + ... + 2(n-1).\]</span> To find this sum, it is convenient to add the numbers in pairs from different ends: <span class="math display">\[2 + 2(n-1) + 2 \times 1 + 2(n-2) + ... + 2(\frac{n-1}{2}) + 2(\frac{n+1}{2}) = (1 + (n-1)) + (2 + (n-2)) + ... + ((\frac{n-1}{2}) + (\frac{n+1}{2})) = n \times \frac{n}{2} = \frac{n^2}{2}.\]</span> <span class="math display">\[2 + 2 \times 1 + 2 \times 2 + ... + 2(n-1) = 2 + 2 \times \frac{(n-1)n}{2} = n^2 - n + 2.\]</span> Problem 3-19 can be reduced to the planar problem 3-18 as follows: draw planes near one of the <span class="math inline">\(n\)</span> planes on both sides of it. Then each of these planes will be divided by the lines of intersection with the remaining <span class="math inline">\((n-1)\)</span> of the given planes into <span class="math inline">\((1/2)((n-1)^2 + (n-1) + 2) = (n^2 - n + 2)/2\)</span> parts (see the discussion of problem 3-18), and these <span class="math inline">\(n^2 - n + 2\)</span> parts lie exactly one each in different regions of space.</p>
+<p>The description of partitions of space by <span class="math inline">\(n\)</span> planes passing through one point <span class="math inline">\(O\)</span> is obviously equivalent to the description of partitions of a sphere with center <span class="math inline">\(O\)</span> by great circles. For example, 5 great circles in general position always divide the sphere into 10 triangles, 10 quadrilaterals, and 2 pentagons.</p>
+<p>For <span class="math inline">\(n &gt; 6\)</span>, different types of partitions are possible (as in the previous problem 3-18 for <span class="math inline">\(n &gt; 5\)</span>) (see [130], [131]).</p>
+<p><strong>Problem 3-20.</strong> Let’s find the lines of intersection of the planes of opposite faces of the given tetrahedral angle. Through these two lines, we draw a plane <span class="math inline">\(\alpha\)</span>. Then we draw a plane <span class="math inline">\(\beta\)</span> parallel to it, intersecting all four edges.</p>
+<p>We will prove that the section is a parallelogram. The plane <span class="math inline">\(\beta\)</span> is parallel to the line of intersection of the planes of two opposite faces, and therefore it intersects them along parallel lines. Thus, in the section, we obtained a quadrilateral whose opposite sides are pairwise parallel, i.e., a parallelogram.</p>
+<p>Now let’s show how, using our construction, we can connect two problems 3-9 and 3-10 - see Figures 26, 38.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig38.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 38</figcaption>
+</figure>
+</div>
+<p>Consider a quadrangular pyramid whose base is a trapezoid. Let’s draw a section of this pyramid with a plane so that the section is a parallelogram. Two opposite sides of this parallelogram will be parallel to the bases of the trapezoid.</p>
+<p>Under central projection (with the center at the vertex of the tetrahedral angle), the parallelogram goes into a trapezoid, and the ratio of segments on parallel lines is preserved.</p>
+<p><strong>Problem 3-21.</strong> Consider the unfolding of the lateral surface of the prism - see Figure 39.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig39.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 39</figcaption>
+</figure>
+</div>
+<p>The existence of the desired section is equivalent to the existence of a broken line with vertices on the four parallel lines of the unfolding, such that all three of its segments have the same length <span class="math inline">\(x\)</span>, and the ends lie on a line perpendicular to these parallel lines. Thus, it is sufficient to prove that the equation <span class="math display">\[\sqrt{x^2 - a^2} + \sqrt{x^2 - b^2} = \sqrt{x^2 - c^2} \quad (1)\]</span> has a solution for <span class="math inline">\(a &gt; b &gt; c &gt; 0\)</span>, <span class="math inline">\(a &lt; b + c\)</span>. Consider the function <span class="math display">\[f(x) = \sqrt{x^2 - a^2} + \sqrt{x^2 - b^2} - \sqrt{x^2 - c^2}.\]</span> This function is defined for <span class="math inline">\(x^2 &gt; a^2\)</span> and is continuous. Note that <span class="math display">\[f(a) = \sqrt{a^2 - b^2} - \sqrt{a^2 - c^2} &lt; 0,\]</span> since <span class="math inline">\(b &gt; c\)</span>, and <span class="math display">\[f(a+b) = \sqrt{(a+b)^2 - a^2} + \sqrt{(a+b)^2 - b^2} - \sqrt{(a+b)^2 - c^2} = \sqrt{2ab + b^2} + \sqrt{2ab + a^2} - \sqrt{a^2 + 2ab + b^2 - c^2} &gt; 0.\]</span> If the values of a continuous function at the ends of a segment have different signs, then at some point inside the segment the function becomes zero. In our case, these conditions are satisfied on the segment <span class="math inline">\([a, a+b]\)</span>. Therefore, at some point <span class="math inline">\(x_0\)</span> inside this segment, the function <span class="math inline">\(f\)</span> becomes zero: <span class="math inline">\(f(x_0) = 0\)</span>, and thus the equation has a solution.</p>
+<p>By solving equation (1), we will find a formula with which the broken line can be constructed using a compass and ruler.</p>
+<p><strong>Explanation:</strong></p>
+<p>The problem deals with finding a specific type of section of a triangular prism. By unfolding the lateral surface of the prism, the problem is transformed into a geometric problem on a plane. The goal is to find a broken line with three equal segments connecting four parallel lines, with its endpoints lying on a line perpendicular to these parallel lines.</p>
+<p>The proof uses the Intermediate Value Theorem. The function <span class="math inline">\(f(x)\)</span> represents the difference between the sum of the lengths of the two shorter segments of the broken line and the length of the longest segment. By showing that <span class="math inline">\(f(a) &lt; 0\)</span> and <span class="math inline">\(f(a+b) &gt; 0\)</span>, we demonstrate that there exists a value <span class="math inline">\(x_0\)</span> within the interval <span class="math inline">\([a, a+b]\)</span> where <span class="math inline">\(f(x_0) = 0\)</span>. This means that for this value <span class="math inline">\(x_0\)</span>, the sum of the lengths of the two shorter segments equals the length of the longest segment, satisfying the conditions for the desired section.</p>
+<p>Finally, the note suggests that by solving equation (1) for <span class="math inline">\(x\)</span>, we can obtain a formula that allows us to construct the broken line (and therefore the section of the prism) using a compass and ruler, which is a classic problem in Euclidean geometry.</p>
+<p><strong>Problem 3-22.</strong> Answer: it can.</p>
+<p>Let’s construct an example. Consider a triangular pyramid whose base is a regular triangle, the dihedral angles at the base are acute, and the lateral edges are different. From two copies of such a pyramid, gluing them along a common base, you can make a hexahedron (bipyramid) in three different ways - see Figure 40, a. All of them have the same set of faces, but are not equal to each other. Another example is shown in Figure 40, b.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig40.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 40</figcaption>
+</figure>
+</div>
+<p>If Andrei had numbered all the edges and written their numbers next to the edges on each face, then Kolya would have glued exactly the same convex polyhedron: if the faces of one convex polyhedron are respectively equal to the faces of another convex polyhedron, then these polyhedra are equal (Cauchy’s theorem - see [83, 99]).</p>
+<p>For non-convex polyhedra, Cauchy’s theorem ceases to be true. See Figure 41 for an example.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig41.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 41</figcaption>
+</figure>
+</div>
+<p>Since the middle of the last century, the following question has arisen: does there exist a non-rigid polyhedron composed of rigid, hinged faces - plates? Only in 1977 did the American mathematician R. Connelly construct an example of such a polyhedron ([50, 83]).</p>
+<p><strong>Problem 3-23.</strong> Answer: yes, it exists.</p>
+<p>Let’s construct such a polyhedron - Figure 42.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig42.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 42</figcaption>
+</figure>
+</div>
+<p>Consider a quadrangular pyramid ABCDE, the base of which is a rhombus ABCD, and the vertex E is projected into the center of the rhombus. Consider in the plane of the base a square AXBCXD with diagonal BD (BD is the smaller diagonal of the rhombus) and a cube whose lower base is this square. Take the intersection of the cube with the pyramid and the part of the pyramid lying above the cube. As a result, we get the desired polyhedron.</p>
+<p>An expert could answer the question of problem 3-23 quite simply.</p>
+<p>It is enough to draw a flat diagram shown in Figure 43 and refer to Steinitz’s theorem, which states that under natural conditions on a flat diagram, there exists a convex polyhedron whose faces, edges, and vertices are interconnected in the same way as regions, links, and nodes of this diagram - compare the diagram in Figure 43 with Figure 42 - see [99].</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig43.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 43</figcaption>
+</figure>
+</div>
+<p><strong>Problem 3-24.</strong> Let the acute-angled triangle <span class="math inline">\(D_1D_2D_3\)</span> with midlines AB, AC, and BC (see Figure 44) be the unfolding of the triangular pyramid ABCD (vertices <span class="math inline">\(D_1\)</span>, <span class="math inline">\(D_2\)</span>, and <span class="math inline">\(D_3\)</span> are glued into one point D). If the edge corresponds to half of the side of the triangle <span class="math inline">\(D_1D_2D_3\)</span>, then the edge skew to it corresponds to the midline parallel to this side, and vice versa. Therefore, the skew edges of the pyramid are equal.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig44.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 44</figcaption>
+</figure>
+</div>
+<p>Let’s construct a parallelepiped, four non-adjacent vertices of which are the vertices of a triangular pyramid. To do this, we draw a plane through each edge of the pyramid parallel to the edge skew to it.</p>
+<p><strong>Explanation of Problem 3-24:</strong></p>
+<p>This problem explores the relationship between the unfolding of a triangular pyramid and the properties of its edges. The key observation is that when the pyramid is unfolded into a triangle, the edges that are skew (i.e., do not share a common vertex) in the pyramid correspond to segments in the unfolded triangle that have a specific relationship: one is half of a side of the triangle, and the other is the midline parallel to that side. This leads to the conclusion that skew edges in the pyramid have equal lengths.</p>
+<p>The second part of the problem involves constructing a parallelepiped that contains the triangular pyramid. This is achieved by drawing planes through each edge of the pyramid, parallel to the edge that is skew to it. The intersection of these planes forms the parallelepiped. This construction highlights a connection between the geometry of the pyramid and a simpler, more regular shape.</p>
+<p>We obtain three pairs of parallel planes, the intersection of which forms a parallelepiped. Since the skew edges of the original pyramid are equal, each face of the parallelepiped is a parallelogram with equal diagonals, i.e., a rectangle. A parallelepiped whose all faces are rectangles is a rectangular parallelepiped, which is what we needed to prove.</p>
+<p>Interestingly, the converse statement is also true.</p>
+<p>If the vertices of a tetrahedron are four non-adjacent vertices of some rectangular parallelepiped, then its unfolding is an acute-angled triangle in which the midlines are drawn.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig45.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 45</figcaption>
+</figure>
+</div>
+<p>Indeed (Figure 45), three identical triangles are adjacent to each vertex, and they are adjacent with their three different angles; thus, the sum of the plane angles at the vertex of the tetrahedron is 180°. A tetrahedron whose all faces are identical, but not necessarily regular triangles, is often called an isosceles tetrahedron. Such a tetrahedron has the following properties:</p>
+<ol type="1">
+<li>Skew edges are equal to each other.</li>
+<li>The centers of the inscribed and circumscribed spheres coincide.</li>
+<li>The projection onto each plane parallel to two skew edges is a rectangle.</li>
+<li>The sum of the plane angles at each vertex is 180°.</li>
+<li>Each segment connecting the midpoints of opposite edges is perpendicular to these edges, or, which is the same, when rotated around each such segment by 180°, the tetrahedron is aligned with itself (these segments are the axes of symmetry of the rectangular parallelepiped described around it).</li>
+<li>Three segments connecting the midpoints of opposite edges are mutually perpendicular.</li>
+</ol>
+<p>Interestingly, each of these properties can be used to derive all the others.</p>
+<p><strong>Problem 3-25.</strong> Answer: <span class="math inline">\(\pi - \alpha\)</span>, <span class="math inline">\(\pi - \beta\)</span>, and <span class="math inline">\(\pi - \gamma\)</span>.</p>
+<p>Let’s choose two of the three constructed rays. Let the faces perpendicular to them form a dihedral angle <span class="math inline">\(\alpha\)</span>. Its edge is perpendicular to the plane in which the selected rays lie, so it cuts a linear angle <span class="math inline">\(\alpha\)</span> on this plane. The sides of this linear angle and the selected rays divide the plane into four angles; one of them is equal to <span class="math inline">\(\alpha\)</span>, two adjacent to it are right angles, the remaining - the fourth angle - is <span class="math inline">\(\pi - \alpha\)</span>. The angle between the selected rays is equal to <span class="math inline">\(\pi - \alpha\)</span>.</p>
+<p>Problem 3-25 shows how the plane angles of one trihedral angle are related to the dihedral angles of another. For trihedral angles, it is easy to derive the cosine formula, which makes it possible, knowing its plane angles A, B, C, to find the dihedral angles; for example, the cosine of the dihedral angle <span class="math inline">\(\gamma\)</span> can be calculated as:</p>
+<p><span class="math display">\[\cos \gamma = \frac{\cos C - \cos A \cos B}{\sin A \sin B} \quad (1)\]</span></p>
+<p>At first glance, it is much more difficult to solve the inverse problem: knowing the dihedral angles <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span>, find the cosines of the plane angles. However, if we use the new trihedral angle constructed in problem 3-25, then the required formula is obtained automatically.</p>
+<p>We know from the problem that if A, B, C are the plane angles of the original trihedral angle, then <span class="math inline">\(\alpha' = \pi - \alpha\)</span>, <span class="math inline">\(\beta' = \pi - \beta\)</span>, <span class="math inline">\(\gamma' = \pi - \gamma\)</span> are the dihedral angles, and <span class="math inline">\(A' = \pi - A\)</span>, <span class="math inline">\(B' = \pi - B\)</span>, <span class="math inline">\(C' = \pi - C\)</span> are the plane angles of the new trihedral angle:</p>
+<p><span class="math display">\[\cos C' = \frac{\cos \gamma' - \cos \alpha' \cos \beta'}{\sin \alpha' \sin \beta'} \quad (2)\]</span></p>
+<p>Formulas (1) and (2) are also called the cosine formulas for spherical triangles. Consider a sphere of unit radius with center at the vertex of the trihedral angle. The trihedral angle cuts out a curvilinear triangle on this sphere. Its sides are arcs of great circles of radius 1, their lengths are respectively equal to the values of the plane angles A, B, C (taken in radians) of the trihedral angle. Its angles are the dihedral angles <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span> of the trihedral angle. Formula (1) allows us to find its angles from its three sides, and formula (2) allows us to find its sides from its three angles.</p>
+<p>The trihedral angle constructed in problem 3-25 also cuts out a triangle on the sphere, which is called the polar to the first one. The problem establishes how their sides and angles are related to each other.</p>
+</section>
+<section id="independent-practice-problems" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="independent-practice-problems"><span class="header-section-number">3.2</span> Independent Practice Problems</h2>
+<p><strong>3-26.</strong> Construct segments given by the formulas (a, b, c, d, e are given segments) using a compass and ruler:</p>
+<ol type="1">
+<li><span class="math inline">\(\sqrt{ab}\)</span>; 2) <span class="math inline">\(\sqrt{a^2 + b^2 + c^2}\)</span>; 3) <span class="math inline">\(ab/c\)</span>;</li>
+<li><span class="math inline">\(a\sqrt{2}/(\sqrt{2} + \sqrt{3})\)</span>; 5) <span class="math inline">\((abc)/(de)\)</span>; 6) <span class="math inline">\(a\sqrt{2}\)</span>; 7) <span class="math inline">\(\sqrt{a^2 + ab + ac}\)</span>; 8) <span class="math inline">\(\sqrt[4]{abcd}\)</span>; 9) <span class="math inline">\(\sqrt[4]{a^3b + ab^3}\)</span>;</li>
+<li><span class="math inline">\(\sqrt[4]{(a^3/e) + (c^3/d)}\)</span>.</li>
+</ol>
+<p><strong>3-27.</strong> Segments <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> (<span class="math inline">\(b &gt; a\)</span>) are given on a line. Construct segments given by the formulas using only one compass: 1) <span class="math inline">\(\sqrt{b^2 - a^2}\)</span>; 2) <span class="math inline">\(a\sqrt{3}\)</span>; 3) <span class="math inline">\(a\sqrt{2}\)</span>; 4) <span class="math inline">\(\sqrt{b^2 + a^2}\)</span>.</p>
+<p><strong>3-28.</strong> Construct a triangle using a compass and ruler given two sides <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> (<span class="math inline">\(b &gt; a\)</span>), if it is known that the angle opposite one of them is twice the angle opposite the other.</p>
+<p><strong>3-29.</strong> A circle and a point outside it are given. Construct a secant passing through this point using a compass and ruler such that the segment of the secant outside the circle is equal to the segment inside it.</p>
+<p><strong>3-30.</strong> Two radii are drawn in a circle. Construct a chord using a compass and ruler that is divided by these radii into three equal parts.</p>
+<p><strong>3-31.</strong> Inscribe a square in a given circular segment using a compass and ruler.</p>
+<p><strong>3-32.</strong> A half-wave of a sinusoid (<span class="math inline">\(0 &lt; x &lt; \pi\)</span>, <span class="math inline">\(y = \sin x\)</span>) is drawn on the coordinate plane. Construct a rectangle of a given perimeter <span class="math inline">\(P\)</span> using a compass and ruler, two vertices of which lie on the sinusoid, and the other two are on the x-axis.</p>
+<p><strong>3-33.</strong> Two segments with lengths 1 and <span class="math inline">\(\pi\)</span> are given. Construct (using a compass and ruler) a square equal in area to the given circle.</p>
+<p><strong>3-34.</strong> The graph of the function <span class="math inline">\(y = x^3\)</span> is drawn on the coordinate plane. Using this graph, a compass, and a ruler, divide a given angle into three equal parts.</p>
+<p><strong>3-35.</strong> Two mirrors form an acute angle. A ray of light falls on one of its sides. Prove that, no matter how small the angle is, after several reflections the ray will exit it.</p>
+<p><strong>3-36.</strong> A ball is launched from one corner of a rectangular billiard table with dimensions 19x86 at an angle of 45°. Into which of the pockets located at the corners of the billiard table will the ball fall, and how many times will it bounce off the sides before that? (The ball and pockets are considered points.)</p>
+<p><strong>3-37.</strong> An equilateral triangle is constructed on the side AB of triangle ABC outwards. Find the distance from its center to vertex C, if the length of side AB is equal to <span class="math inline">\(c\)</span> and <span class="math inline">\(\angle C = 120^\circ\)</span>.</p>
+<p><strong>3-38.</strong> Construct the bisector of a given angle using a ruler with 1 cm divisions.</p>
+<p><strong>3-39.</strong> Construct a regular pentadecagon using a compass and ruler.</p>
+<p><strong>3-40.</strong> Two points A and B are taken on a plane, the distance between which is an integer <span class="math inline">\(n\)</span>. All circles of integer radii with centers A and B are drawn. A sequence of nodes (intersection points of circles) is marked on the resulting grid, in which every two neighboring nodes are opposite vertices of a curvilinear quadrilateral.</p>
+<ol type="a">
+<li><p>Make a drawing, taking 0.5 cm as a unit, and <span class="math inline">\(n = 12\)</span>.</p></li>
+<li><p>Prove that all points of this sequence lie either on one ellipse or on one hyperbola.</p></li>
+</ol>
+<p><strong>3-41.</strong> a) Draw a figure of three segments on a plane that has six axes of symmetry.</p>
+<ol start="2" type="a">
+<li>Can the union of three segments on a plane have more than six axes of symmetry?</li>
+</ol>
+<p><strong>3-42.</strong> Given a triangle ABC. Find points K and L on its sides AB and BC such that:</p>
+<ol type="a">
+<li>AK = KL = LB; b) AK = KL = LC.</li>
+</ol>
+<p>3-43. Given a segment and its midpoint is marked. Using only a ruler, construct a line passing through the given point parallel to the given segment.</p>
+<p>3-44. Two parallel lines are given, and on one of them, a certain segment. Using a ruler, construct a segment twice as long as the given one.</p>
+<p>3-45. On the sides of an acute-angled triangle, three circles are constructed as on diameters. Prove that the common chords of each pair of these circles are the altitudes of this triangle.</p>
+<p>3-46. On each side of an acute-angled triangle, a point is marked and connected to the opposite vertex. On each of the three drawn segments, a circle is constructed as on a diameter. Common chords of each pair of these circles are drawn. Prove that these chords intersect at the orthocenter of the original triangle.</p>
+<p>3-47. Kolya marked four points on a plane, measured all six distances between them, and told Vitya these six numbers. Vitya constructed four points on his plane with the same pairwise distances. Is it necessarily possible to superimpose Vitya’s figure onto Kolya’s if: a) only six numbers are given; b) it’s specified which pair of points corresponds to each distance?</p>
+<p>3-48. Let <span class="math inline">\(n\)</span> different lines be drawn on a plane. If <span class="math inline">\(k\)</span> of these lines pass through a point, then the number <span class="math inline">\((k-1)\)</span> is called the multiplicity of this point. Prove that the drawn lines divide the plane into <span class="math inline">\((n + m + 1)\)</span> parts, where <span class="math inline">\(m\)</span> is the sum of multiplicities of all intersection points of the lines.</p>
+<p>3-49. a) A pair of numbers <span class="math inline">\((n_1; n_2)\)</span>, where <span class="math inline">\(n_1 &lt; n_2\)</span>, is called feasible if a triangle can be cut by a line passing through its internal point into an <span class="math inline">\(n_1\)</span>-gon and an <span class="math inline">\(n_2\)</span>-gon. How many feasible pairs are there in total? b) A quartet of numbers <span class="math inline">\((n_1; n_2; n_3; n_4)\)</span>, where <span class="math inline">\(n_1 &lt; n_2 &lt; n_3 &lt; n_4\)</span>, is called feasible if a triangle can be cut by a pair of lines passing through its internal point into an <span class="math inline">\(n_1\)</span>-gon, <span class="math inline">\(n_2\)</span>-gon, <span class="math inline">\(n_3\)</span>-gon, and <span class="math inline">\(n_4\)</span>-gon. How many feasible quartets are there in total?</p>
+<p>3-50. Four planes divide space into 15 parts. How many of these parts can contain a sphere touching all four planes?</p>
+<p>3-51. Each edge of a tetrahedron is divided into 4 equal parts, and planes parallel to all its faces are drawn through all division points. Into how many parts is the tetrahedron divided?</p>
+<p>3-52. What is the maximum number of parts into which four spheres can divide space?</p>
+<p>3-53. a) Construct a section of a cube by a plane passing through its center perpendicular to any of its diagonals. b) Take the diagonal <span class="math inline">\(d\)</span> of the cube as the Ox axis (point O is the center of the cube) and denote by <span class="math inline">\(S(x)\)</span> the area of the section of the cube by a plane perpendicular to diagonal <span class="math inline">\(d\)</span> and passing through point <span class="math inline">\(x\)</span> of the diagonal. Construct the graph of function <span class="math inline">\(S(x)\)</span>.</p>
+<p>3-54. In a tetrahedron, the dihedral angles at any pair of opposite edges are the same. Is it true that the opposite edges of this tetrahedron are equal in length?</p>
+<p>3-55. Construct a hexahedron in which exactly three edges meet at each vertex, and exactly two faces are pentagons.</p>
+<p>3-56. Given a sphere of unit radius and a trihedral angle with its vertex at the center of the sphere. Prove that the area of the spherical triangle - the part of the sphere lying inside the trihedral angle - is equal to <span class="math inline">\((\alpha + \beta + \gamma - \pi)\)</span>, where <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span> are the dihedral angles of this trihedral angle (angles of the spherical triangle).</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./par2.html" class="pagination-link" aria-label="INTEGERS AND POLYNOMIALS">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">INTEGERS AND POLYNOMIALS</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./par4.html" class="pagination-link" aria-label="**INEQUALITIES, EXTREMAL PROBLEMS, ESTIMATES**">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>INEQUALITIES, EXTREMAL PROBLEMS, ESTIMATES</strong></span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

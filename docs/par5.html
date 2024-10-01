@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5&nbsp; UNUSUAL EXAMPLES AND CONSTRUCTIONS – Profound Puzzles: Deep Mathematics through Playful Problems</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./par6.html" rel="next">
+<link href="./par4.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./par5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">UNUSUAL EXAMPLES AND CONSTRUCTIONS</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Profound Puzzles: Deep Mathematics through Playful Problems</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">INTRODUCTORY PROBLEMS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">INTEGERS AND POLYNOMIALS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">CONSTRUCTIONS IN THE PLANE AND IN SPACE</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>INEQUALITIES, EXTREMAL PROBLEMS, ESTIMATES</strong></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par5.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">UNUSUAL EXAMPLES AND CONSTRUCTIONS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">SEQUENCES AND ITERATIONS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./subjectindex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Thematic Index</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#problems-discussion" id="toc-problems-discussion" class="nav-link active" data-scroll-target="#problems-discussion"><span class="header-section-number">5.1</span> Problems Discussion</a></li>
+  <li><a href="#independent-practice-problems" id="toc-independent-practice-problems" class="nav-link" data-scroll-target="#independent-practice-problems"><span class="header-section-number">5.2</span> Independent Practice Problems</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">UNUSUAL EXAMPLES AND CONSTRUCTIONS</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>5-1.</strong> A train moved in one direction for 5.5 hours. It is known that for any time interval of one hour, it traveled exactly 100 km.</p>
+<ol type="a">
+<li>Is it true that the train moved uniformly?</li>
+<li>Is it true that the average speed of the train is 100 km/h?</li>
+</ol>
+<p><strong>5-2.</strong> Every month, a person recorded their income and expenses. Could it be that for any five consecutive months, their total expenses exceeded their income, but for the whole year, their income exceeded their expenses?</p>
+<p><strong>5-3.</strong> Is it possible to represent the number 203 as a sum of several natural numbers so that the product of all these numbers is also equal to 203?</p>
+<p><strong>5-4.</strong> Is the following statement true: from any six natural numbers, one can choose either three pairwise relatively prime numbers, or three numbers that have a common divisor greater than one?</p>
+<p><strong>5-5.</strong> Are the following statements true:</p>
+<ol type="a">
+<li>from any five distinct numbers written in a row, one can choose some three that are in decreasing or increasing order in this row;</li>
+<li>from any nine distinct numbers written in a row, one can choose some four that are in decreasing or increasing order in this row?</li>
+</ol>
+<p><strong>5-6.</strong> a) The sum of several numbers is equal to 1. Can the sum of their cubes be greater than 1? b) The same question for numbers, each of which is also less than 1.</p>
+<p><strong>5-7.</strong> Let <span class="math inline">\(f(x)\)</span> be a function continuous at each point of the segment [0; 1] and such that <span class="math inline">\(f(0) = f(1)\)</span>. Is it true that the graph of this function has a chord parallel to the abscissa axis:</p>
+<ol type="a">
+<li>of length <span class="math inline">\(\frac{1}{5}\)</span>;</li>
+<li>of length <span class="math inline">\(\frac{2}{5}\)</span>?</li>
+</ol>
+<p>(A chord of a graph is a segment with endpoints on the graph.)</p>
+<p><strong>5-8.</strong> Could it be that the lengths of all sides of one triangle are less than 1 cm, the lengths of all sides of another triangle are greater than 100 m, and the area of the first triangle is greater than the area of the second?</p>
+<p><strong>5-9.</strong> Could it be that:</p>
+<ol type="a">
+<li>the lengths of all three altitudes of a triangle are less than 1 cm, and its area is greater than 100 cm<span class="math inline">\(^2\)</span>;</li>
+<li>the lengths of all three altitudes of a triangle are greater than 2 cm, and its area is less than 2 cm<span class="math inline">\(^2\)</span>?</li>
+</ol>
+<p><strong>5-10.</strong> Is the following statement true: for any point lying inside a convex quadrilateral, the sum of the distances from it to the vertices of the quadrilateral is less than its perimeter?</p>
+<p><strong>5-11.</strong> Is it possible to cut an isosceles right triangle into several triangles similar to it so that there are no equal triangles among them?</p>
+<p><strong>5-12.</strong> Is it possible to construct a rigid spatial structure from three rods and several threads so that the rods do not touch each other but are only connected by threads attached to their ends?</p>
+<p><strong>5-13.</strong> Is it possible to make a hole in a wooden cube through which the same cube can be passed?</p>
+<p><strong>5-14.</strong> Does there exist a polyhedron (not necessarily convex) that has the same number of edges, vertices, and faces as a cube, but does not have any quadrilateral faces?</p>
+<p><strong>5-15.</strong> Is it possible to arrange six points on a plane and connect them with non-intersecting segments so that each point is connected to exactly:</p>
+<ol type="a">
+<li>three;</li>
+<li>four other points?</li>
+</ol>
+<p><strong>5-16.</strong> Does there exist a closed polygonal chain that intersects each of its links exactly once and consists of:</p>
+<ol type="a">
+<li>6 links;</li>
+<li>7 links?</li>
+</ol>
+<p><strong>5-17.</strong> There are many identical round coins. Is it possible to arrange on a plane:</p>
+<ol type="a">
+<li>24;</li>
+<li>25 of them so that each touches three others?</li>
+</ol>
+<p><strong>5-18.</strong> It is known about a certain company that any two people who do not know each other have exactly two common acquaintances, and any two acquaintances do not have common acquaintances. Can such a company have more than four people?</p>
+<p><strong>5-19.</strong> Three friends played several games of chess, and each pair played the same number of games with each other. Then they began to decide which of them was the winner. The first said: “I have more wins than each of you.” The second said: “I have fewer losses than each of you.” The third remained silent, but when the points were counted, it turned out that the third had scored the most points. Could this have happened? (Points were calculated as follows: win - 1 point, draw - 1/2 point, loss - 0 points.)</p>
+<p>5-20. Is it possible to complete the 4 × 4 table (Fig. 53) with the letters B, 3, M, and Ш1, enclose them in frames of four types (square, rhombus, triangle, and circle), and color them in four colors so that all the following conditions are met simultaneously:</p>
+<ol type="a">
+<li>each row and each column must contain all letters, all colors, and all types of frames;</li>
+<li>each letter must be colored once with each color;</li>
+<li>each type of frame must contain each letter and each color once?</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig53.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 53</figcaption>
+</figure>
+</div>
+<p>5-21. After each lesson, several members of the math club (not one and not all together) go to the ice cream cafe. At the same time, a strict rule applies in the club: after each visit to the cafe, no two participants of this visit eat ice cream together anymore. At the last lesson, it turned out that now the members of the club can only eat ice cream alone.</p>
+<ol type="a">
+<li>How many club lessons could there have been if there are 4 members? (Give all possible answers.)</li>
+<li>Make a schedule of 7 visits to the ice cream cafe if there are 7 members in the club.</li>
+</ol>
+<section id="problems-discussion" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="problems-discussion"><span class="header-section-number">5.1</span> Problems Discussion</h2>
+<p>Problem 5-1. a), b). Answer: the train could move non-uniformly, and its average speed is not necessarily equal to 100 km/h. Let’s show this. Let’s divide the entire train travel time into 11 half-hour intervals. Let the train move exactly the same way as in the first half-hour during each odd half-hour, and cover k km during each such half-hour (0 ≤ k ≤ 100), and during each even half-hour, let it move exactly the same way as in the second half-hour, and cover (100−k) km during each even half-hour. Then, no matter how the train moves during the first two half-hours - uniformly or not - the train will cover exactly 100 km during each hour of movement.</p>
+<p>To answer question b), let’s find the average speed of the train. The distance traveled by the train during all odd half-hour intervals is equal to 6k, and the distance covered during all even intervals is equal to 5(100−k). Thus, during the entire 5.5 hours of movement, the train covered 6k + 5(100 − k) = 500 + k. Therefore, its average speed is equal to <span class="math inline">\(\frac{500 + k}{5.5}\)</span> (km/h). For k ≠ 50, this speed is not equal to 100 km/h.</p>
+<p>∇ In our example, the train’s movement was periodic with a period T = 1 hour. It can be shown that such periodicity of the speed of movement follows from the conditions of the problem. From our reasoning, it can be seen that the average speed of the train can be any number in the interval from 1000/11 (when k = 0) to 1200/11 (when k = 100) km/h.</p>
+<p><strong>Problem 5-2.</strong> Answer: it can. Here’s an example:</p>
+<p>2; 2; 2; 2; −9; 2; 2; 2; 2; −9; 2; 2.</p>
+<p>Here, the differences between the person’s income and expenses (balance) for each month of the year are written in a row (taking into account the sign). We see that the sum of any five consecutive numbers in the written chain is negative (equal to −1), and in general, for the year, the sum of all numbers is positive (equal to 2).</p>
+<p>∇ Generalization of this problem: n numbers are written in a row, while the sum of any k adjacent numbers is negative; can the sum of all n numbers be positive in such a situation? The answer here is: if n is a multiple of k, then this cannot be, and if n is not divisible by k, then it can. In our problem, n = 12, k = 5.</p>
+<p>This statement can, in turn, also be generalized. Let m numbers be written in a row. Let’s call the sum of q consecutive numbers from this row a q-sum. Then if for natural numbers m, n, and k the inequality <span class="math inline">\(m \le n + k − d − 1\)</span> is satisfied, where <span class="math inline">\(d = gcd(n, k)\)</span> is the greatest common divisor of the numbers n and k, then it is possible to write m numbers in a row so that all its n-sums have one sign, and all k-sums have another sign. Moreover, all these sums can take any pre-specified values.</p>
+<p>In fact, let’s compose a system of k + n − 2d linear equations with k + n − d − 1 unknowns:</p>
+<p><span class="math inline">\(x_1 + ... + x_n = a_1,\)</span> <span class="math inline">\(x_2 + ... + x_{n+1} = a_2,\)</span> … <span class="math inline">\(x_{k-d} + ... + x_{k+n-d-1} = a_{k-d},\)</span> <span class="math inline">\(x_1 + ... + x_k = b_1,\)</span> <span class="math inline">\(x_2 + ... + x_{k+1} = b_2,\)</span> … <span class="math inline">\(x_{n-d} + ... + x_{k+n-d-1} = b_{n-d}.\)</span></p>
+<p>It can be shown that this system is consistent: its matrix has the maximum possible rank k + n − 2d. If the numbers n and k are relatively prime (d = 1), then it has a unique solution; if d &gt; 1, then the system has d − 1 free unknowns.</p>
+<p>Thus, for given n and k, one can find a row of n + k − d − 1 numbers that satisfy the condition. If <span class="math inline">\(m \le n + k − d − 1\)</span>, then the row formed by the first m numbers of the already written row also satisfies the condition.</p>
+<p>Let’s now show that if <span class="math inline">\(m \ge n + k − d\)</span>, then there is no such row of m numbers that all its n-sums have one sign, and all k-sums have another.</p>
+<p>Suppose, on the contrary, that such a row of n + k − d numbers has been found, and let n &gt; k. Let’s cross out the first k numbers. Then, in the row of the remaining n − d numbers, all k-sums still have the same sign, and all (n − k)-sums have a different sign. Since</p>
+<p>n − d = (n − k) + k − d,</p>
+<p>we have moved from the problem with parameters n and k to the problem with smaller numbers: k and n − k. Repeating this procedure (similar to the Euclidean algorithm), we will arrive at a situation where there is a row of numbers in which all d-sums have one sign, and all ld-sums have a different sign, which is obviously impossible. (Note that by a similar procedure – descent from (n, k) to (k, n − k), similar to the Euclidean algorithm, one can also prove the consistency of the system written above.)</p>
+<p>Finally, it is clear that if there is no row of n + k − d numbers that satisfies the condition, then it is impossible to write a longer such row.</p>
+<p><strong>Problem 5-3.</strong> Answer: it is possible. Indeed:</p>
+<p><span class="math inline">\(203 = 7 + 29 + 1 + 1 + 1 + ... + 1 = 7 \cdot 29 \cdot 1 \cdot 1 \cdot ... \cdot 1.\)</span> 167 ones 167 ones</p>
+<p>∇ Let’s ask the question: which natural numbers cannot be represented simultaneously as a sum and as a product of several (the same) natural numbers?</p>
+<p>The answer to this question is: prime numbers.</p>
+<p>The following question related to problem 5-3 is also interesting: for which natural values of k does the equation</p>
+<p><span class="math inline">\(x_1 + x_2 + ... + x_k = x_1 \cdot x_2 \cdot ... \cdot x_k\)</span></p>
+<p>have a non-zero integer solution?</p>
+<p>It turns out that for all values of <span class="math inline">\(k\)</span>. For example:</p>
+<p>for <span class="math inline">\(k = 1\)</span>: <span class="math inline">\(x_1 = 1\)</span>; for <span class="math inline">\(k = 2\)</span>: <span class="math inline">\(x_1 = x_2 = 2\)</span>; for <span class="math inline">\(k &gt; 2\)</span>: <span class="math inline">\(x_1 = x_2 = ... = x_{k-2} = 1\)</span>, <span class="math inline">\(x_{k-1} = 2\)</span>, <span class="math inline">\(x_k = k\)</span> (see [109], problems 186–189).</p>
+<p><strong>Problem 5-4.</strong> Answer: false.</p>
+<p>Counterexample: 6, 10, 15, 77, 91, 143.</p>
+<p>From these six numbers, <span class="math inline">\(2 \cdot 3\)</span>, <span class="math inline">\(2 \cdot 5\)</span>, <span class="math inline">\(3 \cdot 5\)</span>, <span class="math inline">\(7 \cdot 11\)</span>, <span class="math inline">\(7 \cdot 13\)</span>, <span class="math inline">\(11 \cdot 13\)</span>, no three have a common prime factor, but two out of every three are included in the first or second triple and therefore are not relatively prime.</p>
+<p>This is clearly seen in the diagram – see Figure 54. Each vertex of the triangle has one of the numbers, and each side has a common factor of the numbers at its ends.</p>
+<p>∇ If you add one more word to the condition of the problem, the statement will become true: from any six natural numbers, you can choose either three pairwise relatively prime numbers, or three numbers that pairwise have a common divisor greater than one.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig54.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 54</figcaption>
+</figure>
+</div>
+<p>For connoisseurs, this problem will undoubtedly remind you of this: among six people, you can always choose three pairwise acquaintances or three pairwise strangers.</p>
+<p><strong>Problem 5-5.</strong> a) Answer: true.</p>
+<p>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be the largest and smallest of the written numbers. If there is a number between them, then the statement is true. If they are next to each other, then there are two more numbers either to the right or to the left of them. They form the desired triple of numbers either with the number <span class="math inline">\(a\)</span> or with the number <span class="math inline">\(b\)</span>.</p>
+<p>For connoisseurs. There is a general theorem on this subject: in a partially ordered set consisting of <span class="math inline">\(mn + 1\)</span> elements, there will always be either a chain of length <span class="math inline">\(m + 1\)</span> or <span class="math inline">\(n + 1\)</span> pairwise incomparable elements (this theorem is a consequence of the well-known Dilworth’s theorem: in a partially ordered set, the minimum number of chains containing all elements of the set is equal to the maximum number of pairwise incomparable elements).</p>
+<p>When considering five numbers, they can be ordered like this. We will assume that for the numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, the relation <span class="math inline">\(a \prec b\)</span> holds if <span class="math inline">\(a\)</span> is less than <span class="math inline">\(b\)</span> and the number <span class="math inline">\(a\)</span> is to the left of the number <span class="math inline">\(b\)</span> in the written row. The numbers <span class="math inline">\(c\)</span> and <span class="math inline">\(d\)</span> turn out to be incomparable in this sense if and only if they are in decreasing order in the written row.</p>
+<p>Since <span class="math inline">\(5 = 2 \cdot 2 + 1\)</span> (<span class="math inline">\(m = n = 2\)</span>), it follows from the formulated theorem that from five numbers, there will always be three that go either in increasing order (chain of length <span class="math inline">\(m + 1 = 3\)</span>) or in decreasing order (<span class="math inline">\(n + 1 = 3\)</span> pairwise incomparable elements). If in the formulated</p>
+<ol start="2" type="a">
+<li>Answer: false.</li>
+</ol>
+<p>Let’s give a counterexample – nine numbers: 3, 2, 1, 6, 5, 4, 9, 8, 7.</p>
+<p>Let’s prove that no four digits in this sequence are in either ascending or descending order. To do this, we divide the members of the sequence into three triples: 321, 654, 987.</p>
+<p>If any two digits out of these nine are in decreasing order (the one that is smaller is further from the beginning of the sequence), then they are necessarily from the same triple. This means that you cannot choose more than three digits in decreasing order, since all these digits must be in the same triple.</p>
+<p>If any two digits out of these nine are in ascending order, then they are necessarily from different triples. Since there are only three triples, you cannot choose more than three digits in ascending order.</p>
+<p><strong>Problem 5-6.</strong> a) Answer: it can.</p>
+<p>Example – two numbers, 2 and −1: <span class="math inline">\(2 + (-1) = 1\)</span>; <span class="math inline">\(2^3 + (-1)^3 = 7 &gt; 1\)</span>.</p>
+<ol start="2" type="a">
+<li>Answer: it can.</li>
+</ol>
+<p>Example – eight numbers: two numbers, each of which is equal to 0.8, and six numbers, each of which is equal to -0.1:</p>
+<p><span class="math inline">\(2 \cdot 0.8 + 6 \cdot (-0.1) = 1\)</span>; <span class="math inline">\((0.8)^3 + 6 \cdot (-0.1)^3 = 1.018 &gt; 1\)</span>.</p>
+<p>For connoisseurs. This idea – adding many negative numbers to positive numbers, but smaller in magnitude – helps to answer the following question: can the series <span class="math inline">\(\sum_{n=1}^{\infty} a_n\)</span> converge, and the series of cubes <span class="math inline">\(\sum_{n=1}^{\infty} a_n^3\)</span> diverge? The answer to this question is positive. Here’s an example:</p>
+<p>The series</p>
+<p><span class="math inline">\(\left(1 - \frac{1}{2} - \frac{1}{2} \right) + \left(\frac{1}{2} - \frac{1}{4} - \frac{1}{4} \right) + ... + \left(\frac{1}{2} - \frac{1}{4} - \frac{1}{4} \right) + \left(\frac{1}{3} - \frac{1}{6} - \frac{1}{6} \right) + ...\)</span> (*)</p>
+<p>is constructed as follows: after the sum <span class="math inline">\(\left(1 - \frac{1}{2} - \frac{1}{2} \right)\)</span>, we put <span class="math inline">\(2^3 = 8\)</span> sums <span class="math inline">\(\left(\frac{1}{2} - \frac{1}{4} - \frac{1}{4} \right)\)</span>, then <span class="math inline">\(3^3 = 27\)</span> sums <span class="math inline">\(\left(\frac{1}{3} - \frac{1}{6} - \frac{1}{6} \right)\)</span>, …, then <span class="math inline">\(n^3\)</span> sums <span class="math inline">\(\left(\frac{1}{n} - \frac{1}{2n} - \frac{1}{2n} \right)\)</span>, etc.</p>
+<p>The specified series converges, since the sum of <span class="math inline">\(N\)</span> of its first terms, where <span class="math inline">\(3^{1+2+3+...+n} &lt; N \le 3^{1+2+...+n+(n+1)}\)</span>, does not exceed the number <span class="math inline">\(\frac{1}{2(n+1)}\)</span> (it is either equal to zero or equal to <span class="math inline">\(\frac{1}{2(n+1)}\)</span>).</p>
+<p>The series of cubes of the terms of the series (*) diverges, since the sum of <span class="math inline">\(n^3\)</span> terms is equal to <span class="math inline">\(\frac{3}{4}\)</span>, therefore the sum of the first <span class="math inline">\(3(1^3 + 2^3 + ... + n^3)\)</span> terms is equal to <span class="math inline">\(\frac{3n^4}{4}\)</span> and, therefore, grows indefinitely.</p>
+<p>It can be proved that only for functions of the form <span class="math inline">\(f(x) = kx\)</span> in some neighborhood of zero, the convergence of the series <span class="math inline">\(\sum_{n=1}^{\infty} a_n\)</span> implies the convergence of the series <span class="math inline">\(\sum_{n=1}^{\infty} f(a_n)\)</span>.</p>
+<p><strong>Problem 5-7.</strong> a) Answer: true.</p>
+<p>Consider the function <span class="math inline">\(y = F(x) = f\left(x + \frac{1}{5}\right) - f(x)\)</span>, defined and continuous on the segment <span class="math inline">\([0; \frac{4}{5}]\)</span>. We need to prove that there is a point <span class="math inline">\(x_0\)</span> on this segment such that <span class="math inline">\(F(x_0) = 0\)</span>. By the definition of the function <span class="math inline">\(y = F(x)\)</span>, we have:</p>
+<p><span class="math inline">\(F(0) = f\left(\frac{1}{5}\right) - f(0)\)</span>, (1) <span class="math inline">\(F\left(\frac{1}{5}\right) = f\left(\frac{2}{5}\right) - f\left(\frac{1}{5}\right)\)</span>, (2) <span class="math inline">\(F\left(\frac{2}{5}\right) = f\left(\frac{3}{5}\right) - f\left(\frac{2}{5}\right)\)</span>, (3) <span class="math inline">\(F\left(\frac{3}{5}\right) = f\left(\frac{4}{5}\right) - f\left(\frac{3}{5}\right)\)</span>, (4) <span class="math inline">\(F\left(\frac{4}{5}\right) = f(1) - f\left(\frac{4}{5}\right)\)</span>. (5)</p>
+<p>Since <span class="math inline">\(f(0) = f(1)\)</span>, by adding equalities (1)–(5) term by term, we get</p>
+<p><span class="math inline">\(F(0) + F\left(\frac{1}{5}\right) + F\left(\frac{2}{5}\right) + F\left(\frac{3}{5}\right) + F\left(\frac{4}{5}\right) = 0\)</span>. (*)</p>
+<p>Equality (*) is possible only in two cases: either all five terms in its left-hand side are equal to zero – then the problem is solved, or among these terms there are numbers of different signs. Let <span class="math inline">\(F(x_1)\)</span> and <span class="math inline">\(F(x_2)\)</span> be numbers of different signs, where <span class="math inline">\(0 \le x_1 &lt; x_2 \le \frac{4}{5}\)</span>. Then, due to the continuity of the function <span class="math inline">\(F(x)\)</span>, there is a number <span class="math inline">\(x_0\)</span> (<span class="math inline">\(x_1 &lt; x_0 &lt; x_2\)</span>) such that <span class="math inline">\(F(x_0) = 0\)</span>, which was required.</p>
+<ol start="2" type="a">
+<li>Answer: false, the graph may not have such a chord.</li>
+</ol>
+<p>Figure 55 shows the required example. Let’s explain how it is constructed.</p>
+<p>Let points A and B be the ends of the segment [0; 1], point C be its midpoint, and points D and E divide it into three equal parts.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig55.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 55</figcaption>
+</figure>
+</div>
+<p>Let’s draw parallel inclined lines <span class="math inline">\(l_1\)</span>, <span class="math inline">\(l_2\)</span>, and <span class="math inline">\(l_3\)</span> through points A, C, and B, and intersecting lines <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span> through points D and E, such that <span class="math inline">\(m_1 \perp m_2\)</span>. Denoting by <span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span>, <span class="math inline">\(P_3\)</span>, and <span class="math inline">\(P_4\)</span> the points of intersection of the lines <span class="math inline">\(l_1\)</span>, <span class="math inline">\(l_2\)</span>, and <span class="math inline">\(l_3\)</span> with the lines <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span> closest to the abscissa axis, we obtain the broken line <span class="math inline">\(AP_1DP_2CP_3EP_4B\)</span>. Let’s show that this broken line serves as the desired example.</p>
+<p>Firstly, it is the graph of a continuous function <span class="math inline">\(f(x)\)</span> on the segment [0; 1], and <span class="math inline">\(f(0) = f(1) = 0\)</span>.</p>
+<p>Secondly, it does not have a chord of length 2/5 parallel to the abscissa axis. Indeed, if the ends of the chord parallel to the Ox axis lie on adjacent links of the broken line, then it obviously does not exceed the segment DE, which is equal to 1/3. If the ends of the chord lie on links “through one” or “through two”, then it is not less than the segment AC, which is equal to 1/2. Since <span class="math inline">\(\frac{1}{3} &lt; \frac{2}{5} &lt; \frac{1}{2}\)</span>, our statement is proved.</p>
+<p>∇ Similar to the solution of problem 5-7 a), it can be proved that for the graph of the function <span class="math inline">\(y = f(x)\)</span> given in its condition, there exists a chord of length <span class="math inline">\(\frac{1}{n}\)</span>, parallel to the abscissa axis (<span class="math inline">\(n\)</span> is any natural number) – see [62].</p>
+<p>For connoisseurs. The last statement is a special case of Levy’s theorem: if a plane continuum has a chord of length <span class="math inline">\(a\)</span>, then it has a chord of length <span class="math inline">\(\frac{1}{n} \cdot a\)</span> (where <span class="math inline">\(n\)</span> is an arbitrary natural number) and a chord of length <span class="math inline">\(\alpha\)</span> parallel to it (where <span class="math inline">\(0 &lt; \alpha &lt; 1\)</span>).</p>
+<p>On the other hand, for any number <span class="math inline">\(\alpha\)</span> (<span class="math inline">\(0 &lt; \alpha &lt; 1\)</span>) that is not representable in the form <span class="math inline">\(\frac{1}{n}\)</span> (where <span class="math inline">\(n\)</span> is a natural number), it is possible, similarly to the solution of problem 5-7 b), to construct an example of a plane continuum that has a chord of length 1 and does not have a parallel chord of length <span class="math inline">\(\alpha\)</span> – see [99].</p>
+<p>Note also that for a periodic continuous function on a straight line, the situation is completely different: its graph will have a horizontal chord of any given length.</p>
+<p><strong>Problem 5-8.</strong> Answer: it can.</p>
+<p>Let’s give an example. As the first one, we take an equilateral triangle with a side length of 1/2 cm, and as the second one – an isosceles triangle with a base of 200 m and a height of <span class="math inline">\(10^{-7}\)</span> m. Its lateral side is greater than half the base, i.e., greater than 100 m, and its area is equal to <span class="math inline">\(\frac{10^{-5}}{2}\)</span> m<span class="math inline">\(^2\)</span> and thus less than the area of the first triangle, which is equal to <span class="math inline">\(\frac{\sqrt{3}}{16}\)</span> cm<span class="math inline">\(^2\)</span>.</p>
+<p><strong>Problem 5-9.</strong> a) Answer: it can.</p>
+<p>Let’s give an example. Consider an isosceles triangle with a base of 800 cm and a height of 0.3 cm. Its area is equal to <span class="math inline">\(\frac{800 \cdot 0.3}{2} = 120\)</span> cm<span class="math inline">\(^2\)</span> and thus greater than 100 cm<span class="math inline">\(^2\)</span>. Let’s show that this triangle satisfies the condition. Indeed, its height AH, dropped on the lateral side BC (Fig. 56), is equal to twice the length of the perpendicular DK, dropped from the midpoint of the base D to the lateral side BC, and this perpendicular, in turn, is less than the inclined line BD. From this it follows that the height AH is less than 0.6 cm and, therefore, all the heights of the triangle ABC are less than 1 cm.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig56.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 56</figcaption>
+</figure>
+</div>
+<ol start="2" type="a">
+<li>Answer: it cannot.</li>
+</ol>
+<p>Since the heights of the triangle are greater than 2 cm, its sides are also greater than 2 cm, and then its area is greater than <span class="math inline">\(\frac{1}{2} \cdot 2 \cdot 2 = 2\)</span> (cm<span class="math inline">\(^2\)</span>).</p>
+<p><strong>Problem 5-10.</strong> Answer: false.</p>
+<p>The counterexample is shown in Figure 57. We took three vertices A, B, and D of the quadrilateral ABCD very close to each other, and the fourth vertex C and the point O inside the quadrilateral – close to each other and far from A, B, and D.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig57.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 57</figcaption>
+</figure>
+</div>
+<p>For connoisseurs. Let’s pose a more general question. For what <span class="math inline">\(k\)</span> is the sum of the distances from any point lying inside the quadrilateral to the vertices of the quadrilateral less than <span class="math inline">\(kP\)</span> (<span class="math inline">\(P\)</span> – the perimeter of the quadrilateral)? Answer: for <span class="math inline">\(k \ge \frac{3}{2}\)</span>. Let’s explain why this is so.</p>
+<p>For each quadrilateral ABCD, the point for which the sum of the distances to the vertices is maximum is one of its vertices.</p>
+<p>Indeed, the function (on the plane) <span class="math inline">\(M \to AM\)</span>, where A is a fixed point of the plane, is convex (its graph is a cone), and the sum of four convex functions</p>
+<p><span class="math inline">\(f(M) = AM + BM + CM + DM\)</span></p>
+<p>is also convex. The largest value of a convex function on a polygon is reached at its vertex.</p>
+<p>Let’s now show that this largest value is less than <span class="math inline">\(kP\)</span> (<span class="math inline">\(P\)</span> is the perimeter of the quadrilateral). Answer: for <span class="math inline">\(k \ge \frac{3}{2}\)</span>. Let’s explain why this is so.</p>
+<p>For each quadrilateral <span class="math inline">\(ABCD\)</span>, the point for which the sum of the distances to the vertices is maximum is one of its vertices.</p>
+<p>Indeed, the function (on the plane) <span class="math inline">\(M \to AM\)</span>, where A is a fixed point of the plane, is convex (its graph is a cone), and the sum of four convex functions</p>
+<p><span class="math inline">\(f(M) = AM + BM + CM + DM\)</span></p>
+<p>is also convex. The largest value of a convex function on a polygon is reached at its vertex.</p>
+<p>Let’s now show that this largest value is less than <span class="math inline">\(\frac{3}{2}P\)</span>. Let it be achieved at vertex <span class="math inline">\(A\)</span>. Adding the inequalities <span class="math inline">\(AC &lt; AB + BC\)</span> and <span class="math inline">\(AC &lt; AD + DC\)</span> term by term, we get <span class="math inline">\(2|AC| &lt; P\)</span>, and even more so,</p>
+<p><span class="math inline">\(2AC &lt; P + 2(BC + CD)\)</span>.</p>
+<p>Adding the sum <span class="math inline">\(2AB + 2AD\)</span> to both sides of the last inequality, we obtain the required inequality</p>
+<p><span class="math inline">\(AB + AC + AD &lt; \frac{3}{2}P\)</span></p>
+<p>(see [24]).</p>
+<p>For any <span class="math inline">\(k &lt; \frac{3}{2}\)</span> it is possible to construct a counterexample by setting <span class="math inline">\(MA = MB = MD = CO = \epsilon\)</span>, where <span class="math inline">\(\epsilon\)</span> is a sufficiently small number (see Figure 57).</p>
+<p>Note also that to find the point inside a given convex quadrilateral with the smallest sum of distances to the vertices, you do not need to be a great expert: this is the point of intersection of its diagonals.</p>
+<p><strong>Problem 5-11.</strong> Answer: it is possible.</p>
+<p>Figure 58 shows how to cut a right-angled isosceles triangle with a leg length of 7 cm into 6 pairwise different right-angled isosceles triangles.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig58.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 58</figcaption>
+</figure>
+</div>
+<p>∇ It turns out that the following statement is true: a right-angled isosceles triangle can be cut into any number greater than 10 of pairwise unequal right-angled isosceles triangles.</p>
+<p>First, let’s show how you can cut it into any even number of parts <span class="math inline">\(2k\)</span>, where <span class="math inline">\(k \ge 3\)</span>. We will start from a right-angled isosceles triangle <span class="math inline">\(ABC\)</span> with a right angle <span class="math inline">\(C\)</span>. Let’s extend its legs <span class="math inline">\(CA\)</span> and <span class="math inline">\(CB\)</span> and draw a line <span class="math inline">\(l\)</span> through the vertex <span class="math inline">\(B\)</span> perpendicular to the hypotenuse – see Figure 59.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig59.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 59</figcaption>
+</figure>
+</div>
+<p>Let’s construct a broken line <span class="math inline">\(AB_1A_1B_2A_2B_3...B_kA_k\)</span>, all links <span class="math inline">\(B_iA_i\)</span> of which are parallel to the line <span class="math inline">\(AB\)</span>, and all links <span class="math inline">\(A_iB_{i+1}\)</span> are parallel to the line <span class="math inline">\(BC\)</span>; through the last link <span class="math inline">\(B_kA_k\)</span> of the broken line, we draw a line that will intersect the line <span class="math inline">\(BC\)</span> at some point <span class="math inline">\(D\)</span>. As a result, we will arrive, as is easy to show, at a right-angled isosceles triangle <span class="math inline">\(DCA\)</span>, divided in the required way into <span class="math inline">\(2k + 2\)</span> similar pairwise unequal right-angled isosceles triangles (a special case of this construction for <span class="math inline">\(k = 2\)</span> is used in the solution of problem 5-11). In the chain of triangles <span class="math inline">\(ABC\)</span>, <span class="math inline">\(BAB_1\)</span>, <span class="math inline">\(A_1BA_1\)</span>, <span class="math inline">\(A_1BB_2\)</span>, <span class="math inline">\(B_2AA_2\)</span>, …, <span class="math inline">\(A_{k-1}B_kA_k\)</span>, each subsequent triangle is similar to the previous one with a similarity coefficient of <span class="math inline">\(\sqrt{2}\)</span> (the hypotenuse of the previous triangle is equal to the leg of the next one), therefore, in the sequence of segments <span class="math inline">\(CA\)</span>, <span class="math inline">\(AA_1\)</span>, <span class="math inline">\(A_1A_2\)</span>, …, <span class="math inline">\(A_{k-1}A_k\)</span>, each subsequent one is twice as long as the previous one. From this follows a practical way of cutting a given triangle in the required way.</p>
+<p>Let it be required to divide a right-angled isosceles triangle with a leg <span class="math inline">\(a\)</span> into <span class="math inline">\(2k + 2\)</span> parts. Let’s set aside segments of length <span class="math inline">\(\frac{a}{2^{k-1}}\)</span>, <span class="math inline">\(\frac{2a}{2^{k-1}}\)</span>, <span class="math inline">\(\frac{4a}{2^{k-1}}\)</span>, …, <span class="math inline">\(\frac{2^{k-1}a}{2^{k-1}}\)</span> sequentially from the vertex of the right angle on the leg (since <span class="math inline">\(1 + 2 + ... + 2^{k-1} = 2^k - 1\)</span>, this can be done); the obtained points will be the vertices <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span>, <span class="math inline">\(A_3\)</span>, …, <span class="math inline">\(A_k\)</span> of the broken line of the construction described above.</p>
+<p>So, you can cut the triangle into <span class="math inline">\(2k\)</span> parts for <span class="math inline">\(k \ge 3\)</span>.</p>
+<p>Since the smaller of the triangles obtained in this way can again be cut into 6 parts in the way indicated above, we can cut the original triangle into <span class="math inline">\(2k + 5l\)</span> parts, where <span class="math inline">\(k\)</span> is any integer greater than 3, and <span class="math inline">\(l\)</span> is any natural number. In our construction, the ends of the rods form two equilateral triangles, located in planes perpendicular to the line connecting their centers and rotated by a certain angle relative to each other. The rods themselves lie on pairwise intersecting lines.</p>
+<p>∇ The connection of rods and threads in Figure 60 is the same as that of an octahedron (it forms the graph of an octahedron – see Fig. 67 for problem 5-15). It is difficult to mathematically prove the existence of such a construction (sufficiency of the condition <span class="math inline">\(d = l \sqrt{1 + \frac{k^2}{3}}\)</span>).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig60.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 60</figcaption>
+</figure>
+</div>
+<p>This connection was invented in the 1960s by the architect B. Fuller. After him, many different designs of this type appeared. When writing this book, the authors set the following task: to make a rigid spatial structure from rods and threads so that the rods do not touch each other and exactly two threads depart from each end of the rods. Such a connection was made by the architect V. Koleichuk. The connection diagram is shown in Figure 61.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig61.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 61</figcaption>
+</figure>
+</div>
+<p>Architect, engineer, and designer Richard Buckminster Fuller gained the most fame thanks to his constructions called “geodesic dome”. He introduced the term “tensegrity” associated with them.</p>
+<p>However, the architect Vyacheslav Koleichuk, who dealt a lot with such systems in the 90s of the last century, questioned the priority of B. Fuller. He argued that such systems were first invented by our domestic constructivist Karl Ioganson in 1921. A large number of modern studies are devoted to these systems with applications in interactive and adaptive structures.</p>
+<p>In architecture, the term “tensegrity” was defined by B. Fuller as “the property of frame structures, in which whole parts loaded in tension and composite parts loaded in compression are involved, to work in such a way that each part functions with maximum efficiency and economy”.</p>
+<p>Interestingly, the writer and anthropologist Carlos Castaneda (with the personal permission of B. Fuller!) used the term “tensegrity” to refer to a system of breathing, movements, and body positions developed by Indian shamans who lived in ancient Mexico, aimed at forming certain properties and qualities of a person engaged in this system. Thus, tensegrity according to Castaneda is a modernized version of some movements and breathing called “magical passes”.</p>
+<p>The concept of “tensegrity” is also used in the study of processes in biology (especially in cell biology) and in some other industries, for example, in studies of the structure of textile fabrics, design, research of social structures, ensemble music and geodesy.</p>
+<p>We especially note the application of the mathematical basis of this concept in chemistry. At the end of the 20th century, there was a great interest in fullerenes (of course, named after B. Fuller) or buckyballs. This is the name of molecular compounds belonging to the class of allotropic forms of carbon (Allotropy – the property of the existence of the same type of chemical element in the form of two or more simple substances that differ in structure and properties. For example, graphite and diamond are allotropic forms of carbon; other forms are diamond, carbyne and graphite) and representing convex closed polyhedra composed of an even number (three-coordinated) carbon atoms (this is the principle according to which the geodesic constructions of B. Fuller are built). At first, only structures were considered, including only pentagonal and hexagonal faces. According to Euler’s theorem for polyhedra, if <span class="math inline">\(n\)</span>, <span class="math inline">\(e\)</span>, and <span class="math inline">\(f\)</span> are the number of vertices, edges, and faces of a polyhedron, respectively, then <span class="math inline">\(n - e + f = 2\)</span>. Using this theorem, it can be proved that a necessary condition for the existence of the polyhedron indicated above is the presence of exactly 12 pentagonal faces and <span class="math inline">\(\frac{n}{2} - 10\)</span> hexagonal faces. In addition to carbon atoms, atoms of other chemical elements can also be included in the composition of fullerene molecules.</p>
+<p>The possibility of the existence of fullerenes was predicted in 1971 in Japan, and theoretically substantiated in 1973 in the USSR. For the discovery of fullerenes, H. Kroto, R. Smalley and R. Curl were awarded the Nobel Prize in Chemistry in 1996. Currently, intensive study of these compounds continues.</p>
+<p><strong>Problem 5-13.</strong> Answer: it is possible.</p>
+<p>Consider a cube <span class="math inline">\(ABCDA_1B_1C_1D_1\)</span> with edge <span class="math inline">\(a\)</span> (Fig. 62, a) and a spatial hexagon <span class="math inline">\(AA_1B_1C_1CD_1\)</span> (its vertices do not lie in the same plane). It turns out that through this hexagon (and hence through the cube) it is possible to freely stretch a cube with edge <span class="math inline">\(a\)</span> without touching its sides.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig62.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 62</figcaption>
+</figure>
+</div>
+<p>To verify this, let’s depict in Figure 62, b the projection of the cube onto a plane perpendicular to its diagonal <span class="math inline">\(BD_1\)</span>. Due to the symmetry of the cube, this projection is a regular hexagon <span class="math inline">\(A'A_1'B'C'C_1'D'\)</span>, where <span class="math inline">\(A'\)</span> is the projection of the point <span class="math inline">\(A\)</span>, <span class="math inline">\(A_1'\)</span> is the projection of the point <span class="math inline">\(A_1\)</span>, etc. Thus, the contour of the hexagon <span class="math inline">\(A'A_1'B'C'C_1'D'\)</span> is the projection of the spatial hexagon <span class="math inline">\(AAB_1C_1CD_1\)</span>, and both ends of the diagonal of the cube <span class="math inline">\(BD_1\)</span> are projected to the center <span class="math inline">\(O\)</span> of the regular hexagon.</p>
+<p>Since the sine of the angle between any edge of the cube and its diagonal is equal to <span class="math inline">\(\frac{\sqrt{2}}{3}\)</span>, the side of the regular hexagon is equal to <span class="math inline">\(a\frac{\sqrt{2}}{3}\)</span>, and the radius of the circle inscribed in it is equal to <span class="math inline">\(\frac{a\sqrt{2}}{2}\)</span> – half the diagonal of the square with side <span class="math inline">\(a\)</span>. Therefore, a square with a center at point <span class="math inline">\(O\)</span> and a side <span class="math inline">\(a\)</span> will fit entirely in the hexagon without touching its sides, as shown in Figure 62, b.</p>
+<p>From this it follows that if you put a cube with edge <span class="math inline">\(a\)</span> so that its lower face coincides with the square in Figure 62, b, and move the cube perpendicular to the plane of the hexagon, then the cube will not touch the sides of the hexagon. This means that it can also be stretched through a spatial hexagon along the diagonal <span class="math inline">\(BD_1\)</span>.</p>
+<p>Thus, a through hole can be made in a wooden cube through which the same cube can be stretched – see Figure 63.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig63.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 63</figcaption>
+</figure>
+</div>
+<p>∇ From the above reasoning, it follows that through a cube with edge <span class="math inline">\(a\)</span> it is possible to stretch even a cube of slightly larger dimensions than itself, namely any cube with an edge less than <span class="math inline">\((\sqrt{3} - 1)a\)</span>.</p>
+<p><strong>Problem 5-14.</strong> Answer: it exists.</p>
+<p>Figure 64 shows an example of such a polyhedron. It is obtained as follows: on the edge <span class="math inline">\(BD\)</span> of the tetrahedron <span class="math inline">\(ABCD\)</span>, a “notch” of two triangular faces – <span class="math inline">\(GEH\)</span> and <span class="math inline">\(GFH\)</span> – is made. It has 8 vertices, 6 faces, 12 edges.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig64.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 64</figcaption>
+</figure>
+</div>
+<p>∇ In the polyhedron shown in Figure 64, two faces are hexagons with two common edges, <span class="math inline">\(BE\)</span> and <span class="math inline">\(FD\)</span>. In a convex polyhedron, such a situation is impossible: two faces of a convex polyhedron can have no more than one common edge.</p>
+<p><strong>Problem 5-15.</strong> a) Answer: it is possible. An example is shown in Figure 65.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig65.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 65</figcaption>
+</figure>
+</div>
+<p>∇ This problem resembles the well-known problem “about houses and wells”: is it possible to draw nine non-intersecting roads on a plane that connect each of the three “houses” with each of the three “wells”? In this network of roads (as well as in problem 5-15) there are 6 vertices and 3 segments depart from each vertex (Fig. 66). However, the answer to the question “about houses and wells” is negative: such a network cannot be drawn. The reason for this fact is Euler’s theorem: let <span class="math inline">\(n\)</span> be the number of vertices, <span class="math inline">\(m\)</span> be the number of segments connecting some of these vertices, <span class="math inline">\(f\)</span> be the number of polygons into which the plane is divided by these segments; then <span class="math inline">\(n + f = m + 1\)</span> (see [92]).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig66.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 66</figcaption>
+</figure>
+</div>
+<p>For connoisseurs. There is a theorem (Wagner, Fáry, Stein): if a graph can be depicted on a plane without intersections, then it can be depicted on a plane so that all its edges are segments. A necessary and sufficient condition for the planarity of a graph is the Pontryagin–Kuratowski theorem: a graph can be depicted on a plane without intersections if and only if it does not contain a subgraph homeomorphic to a graph with six vertices of the “houses – wells” type or a complete graph with five vertices (five points, pairwise connected by edges) (see [92]).</p>
+<ol start="2" type="a">
+<li>Answer: it is possible.</li>
+</ol>
+<p>The example is shown in Figure 67. It can be assumed that a wire octahedron is depicted here (Fig. 68), photographed from a point lying near the center of one of its faces.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig67.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 67</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig68.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 68</figcaption>
+</figure>
+</div>
+<p><strong>Problem 5-16.</strong> a) Answer: it exists. The example is shown in Figure 69.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig69.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 69</figcaption>
+</figure>
+</div>
+<p>∇ For any even <span class="math inline">\(n \ge 6\)</span>, there exists a closed broken line of <span class="math inline">\(n\)</span> links that intersects each of its links exactly once. An example for <span class="math inline">\(n = 6\)</span> has already been constructed, and for <span class="math inline">\(n \ge 8\)</span>, Figure 70 shows the construction of part of such a broken line (the rule for constructing the rest is clear).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig70.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 70</figcaption>
+</figure>
+</div>
+<ol start="2" type="a">
+<li>Answer: it does not exist.</li>
+</ol>
+<p>Suppose that we managed to construct such a broken line. Let’s consider any point of its self-intersection. Two links intersect at it, and they do not intersect with any other links. Therefore, all links of the broken line can be divided into pairs corresponding to the points of its self-intersection. This means that there is an even number of links and there cannot be seven.</p>
+<p>∇ This reasoning shows that in general there is no broken line with an odd number of links that intersects each of its links exactly once.</p>
+<p><strong>Problem 5-17.</strong> Answer: a) it is possible; b) it is impossible.</p>
+<ol type="a">
+<li>Figure 71, a shows how you can decompose 24 coins in the required way. Let’s explain how this is done.</li>
+</ol>
+<p>Let the radius of the coins be <span class="math inline">\(R\)</span>. Let’s place the centers of four coins at the vertices of a rhombus with side <span class="math inline">\(2R\)</span>. From such rhombuses, you can type the desired patterns, joining them with extreme (located on a large diagonal) coins.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig71.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 71</figcaption>
+</figure>
+</div>
+<ol start="2" type="a">
+<li>Suppose that 25 coins are laid out on the plane in the required way, and we arrive at a contradiction.</li>
+</ol>
+<p>Mark on the edge of each coin the three places where it touches the three others. Let’s count the total number of marked places in two ways. On the one hand, the number of marked places is even, since these places are divided into pairs at the points of contact of the coins. On the other hand, the number of marked places is odd, since it is equal to the number of coins 25 multiplied by 3.</p>
+<p>The resulting contradiction proves our statement.</p>
+<p>∇ It is interesting to find out for which <span class="math inline">\(k\)</span> it is impossible to arrange a certain (finite) number of identical round coins on a plane so that each touches <span class="math inline">\(k\)</span> of the others. It turns out that this cannot be done for <span class="math inline">\(k &gt; 3\)</span>. Let’s prove it.</p>
+<p>Suppose that identical round coins are laid out on a plane so that each of them touches <span class="math inline">\(k\)</span> others. Mark the centers of all coins on the plane and consider their convex hull – the smallest convex polygon containing them. Let <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span> be three consecutive vertices of it; then the angle <span class="math inline">\(ABC\)</span> is less than 180°. Let the coin centered at point <span class="math inline">\(B\)</span> touch the coins centered at <span class="math inline">\(O_1\)</span>, <span class="math inline">\(O_2\)</span>, …, <span class="math inline">\(O_k\)</span> (the centers are numbered in the order of traversal around point <span class="math inline">\(B\)</span> in one of the two possible directions). It is easily shown that each of the angles <span class="math inline">\(O_1BO_2\)</span>, <span class="math inline">\(O_2BO_3\)</span>, …, <span class="math inline">\(O_{k-1}BO_k\)</span> is not less than 60°. From this it follows that the inequality <span class="math inline">\(k \cdot 60° \le 180°\)</span> must be satisfied, which implies that <span class="math inline">\(k \le 3\)</span>.</p>
+<p>Let’s now show how, for <span class="math inline">\(k = 3\)</span>, it is possible to decompose any sufficiently large even number of coins in the required way. For this, it is convenient to use blanks of two types: a “rhombus” of four coins and a “flashlight” of six coins.</p>
+<p>It is easy to assemble a chain of 16 coins from four “rhombuses”. Figure 71, b shows how these “rhombuses” and “flashlights” can be folded into a closed chain containing 18 coins. Any larger even number can be represented as a sum of <span class="math inline">\(4n + 6m\)</span> and assemble the corresponding chain from <span class="math inline">\(n\)</span> “rhombuses” and <span class="math inline">\(m\)</span> “flashlights”.</p>
+<p>Similar questions about the arrangement of balls in space are interesting. In 1953, it was proved that no more than 12 identical balls can be attached to a ball in space [116].</p>
+<p><strong>Problem 5-18.</strong> Answer: it can.</p>
+<p>Let’s assign a point to each person, and different points to different people. If two people know each other, then we connect the corresponding points with a segment. Then the problem will be reduced to the following: is there a diagram that does not have triangles, and any two points are either connected by a segment or are opposite vertices of exactly one quadrilateral?</p>
+<p>Figure 72, a, b shows two simplest examples of such schemes. We need to give an example of a scheme consisting of more than four points. Figure 72, c shows an example of a scheme of 16 points and 40 segments that satisfies the condition. The resulting scheme satisfies the condition of the problem. This can be verified by enumeration, which is simplified due to the symmetry of the scheme.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig72.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 72</figcaption>
+</figure>
+</div>
+<p>∇ It is interesting that the configuration described in the solution of problem 5-18 can be described as a set of vertices, edges, and large diagonals of a four-dimensional cube.</p>
+<p>It can be shown that under the conditions of problem 5-18, each person in a given company has the same number of acquaintances. Indeed, let for each person <span class="math inline">\(A\)</span>, <span class="math inline">\(M_A\)</span> denote the set of his acquaintances, and <span class="math inline">\(N_A\)</span> denote the set of people unfamiliar with <span class="math inline">\(A\)</span>. Then each element from <span class="math inline">\(N_A\)</span> can be associated with a pair of elements from <span class="math inline">\(M_A\)</span> (those with whom he is familiar). It is not difficult to prove that the correspondence between the set <span class="math inline">\(N_A\)</span> and the set of all possible pairs of elements of <span class="math inline">\(M_A\)</span> will be one-to-one. Therefore, if <span class="math inline">\(M_A\)</span> contains <span class="math inline">\(m_A\)</span> elements, then <span class="math inline">\(N_A\)</span> contains <span class="math inline">\(\frac{1}{2}m_A(m_A - 1)\)</span> elements, and in total, the company will have <span class="math inline">\(n = 1 + m_A + \frac{1}{2}m_A(m_A - 1)\)</span> people. This equality holds for any person <span class="math inline">\(A\)</span>.</p>
+<p>But the equation <span class="math inline">\(1 + x + \frac{1}{2}x(x-1) = n\)</span> has (for <span class="math inline">\(n &gt; 1\)</span>) only one positive root, so the number <span class="math inline">\(m_A\)</span> is the same for all <span class="math inline">\(A\)</span> (see [10]).</p>
+<p>We do not know the complete answer to the question of for which values of <span class="math inline">\(n\)</span> such companies exist. As shown above, <span class="math inline">\(n = 1 + \frac{m(m+1)}{2}\)</span>, where <span class="math inline">\(m\)</span> is the number of acquaintances of one person. It is not difficult to prove that such companies do not exist for <span class="math inline">\(m = 3\)</span>, <span class="math inline">\(m = 4\)</span>, and for <span class="math inline">\(m = 4k + 3\)</span>, where <span class="math inline">\(k\)</span> is any natural number. All examples of such companies known to us are shown in Figure 72, a, b, c.</p>
+<p><strong>Problem 5-19.</strong> Answer: it could.</p>
+<p>Figure 73 schematically shows the results of all games of the chess players’ tournament, satisfying the condition of the problem. In it, each pair of chess players</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig73.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 73</figcaption>
+</figure>
+</div>
+<p>played 7 games. In this case:</p>
+<p>– the first one won two games against the second one; – the second one won two games against the first one; – the first one won three games against the third one; – the third one won four games against the first one; – the rest of the tournament games ended in a draw.</p>
+<p>In this tournament, the first chess player scored 6.5 points, the second one – 7 points, the third one – 7.5 points; at the same time, the first one won the most – 5 games, the second one lost the least – 2 games, and the third one scored the most points.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig74.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 74</figcaption>
+</figure>
+</div>
+<p>∇ You can make a tournament table (Fig. 74): denote all the number of wins (+), losses (–), and draws (=) with letters and write down all the conditions of the problem. This will result in a system of linear inequalities with a large number of variables. The solution of problem 5-19 shows that this system has at least one solution in natural numbers. Of course, it is not unique; it is interesting to obtain a description of all solutions. For a detailed discussion of this problem, see [39, 40].</p>
+<p><strong>Problem 5-20.</strong> Answer: it is possible. The filling method is shown in Figure 75, different colors are shown in this figure with different hatching.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig75.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 75</figcaption>
+</figure>
+</div>
+<p>∇ When <span class="math inline">\(n\)</span> different symbols are written in an <span class="math inline">\(n \times n\)</span> table so that all different symbols are in each row and each column, it is said that a Latin square is given. Two Latin squares <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are called orthogonal if in those cells where the <span class="math inline">\(i\)</span>-th symbol is in square <span class="math inline">\(A\)</span>, all symbols are different in square <span class="math inline">\(B\)</span> (and so for each (<span class="math inline">\(i = 1, 2, ..., n\)</span>).</p>
+<p>Our task was to construct three pairwise orthogonal Latin squares <span class="math inline">\(4 \times 4\)</span> (one gives the color, the second – the shape of the frame, and the third – the letter).</p>
+<p>For connoisseurs. To compile similar square tables (they are useful in applied problems, for example, in planning multi-purpose experiments), it is convenient to use the concept of a finite affine plane (see [42]).</p>
+<p>Let <span class="math inline">\(F\)</span> be a finite field of <span class="math inline">\(q\)</span> elements; pairs <span class="math inline">\((x; y)\)</span> of elements of <span class="math inline">\(F\)</span> will be called points of the finite affine plane, and sets of the form <span class="math inline">\(\{(x;y): ax + by + c = 0\}\)</span>, where <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, <span class="math inline">\(c \in F\)</span>, and <span class="math inline">\(a\)</span> or <span class="math inline">\(b\)</span> is not equal to zero, are called lines.</p>
+<p>In total, there are <span class="math inline">\(q^2\)</span> points and <span class="math inline">\(q(q + 1)\)</span> lines, and they are divided into <span class="math inline">\(q + 1\)</span> families so that in each family there are exactly <span class="math inline">\(q\)</span> lines “parallel” to each other, and <span class="math inline">\(q + 1\)</span> lines pass through each point.</p>
+<p>For example, one family is the lines <span class="math inline">\(x + c = 0\)</span>, another is <span class="math inline">\(y + c = 0\)</span>, the third is <span class="math inline">\(x + y + c = 0\)</span>, the fourth (if <span class="math inline">\(q &gt; 2\)</span>) is <span class="math inline">\(x + 2y + c = 0\)</span>, and so on.</p>
+<p>Let’s assign a certain property to each of the <span class="math inline">\(q + 1\)</span> families: “column number”, “row number”, “letter”, “frame shape”, etc. Let’s assign a certain row number to the points of each of the <span class="math inline">\(q\)</span> lines of the first family, a certain column number to the points of each of the lines of the second family, a letter to the third, a frame shape to the fourth, and so on. Then we will get a way to find out in which cell of the table <span class="math inline">\(q \times q\)</span> to place each point <span class="math inline">\((x; y)\)</span>, what color to assign to it, what letter, etc. Any two non-parallel lines intersect at one point, so that for any two given properties there is exactly one cell with the desired pair of properties.</p>
+<p>For <span class="math inline">\(q = 4\)</span>, there is a finite field of elements 0, 1, <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, leading precisely to the solution of our problem. The addition and multiplication tables in this field are given below.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>+</th>
+<th>0</th>
+<th>1</th>
+<th>a</th>
+<th>b</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>a</td>
+<td>b</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>b</td>
+<td>a</td>
+</tr>
+<tr class="odd">
+<td>a</td>
+<td>a</td>
+<td>b</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>b</td>
+<td>b</td>
+<td>a</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>×</th>
+<th>0</th>
+<th>1</th>
+<th>a</th>
+<th>b</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>a</td>
+<td>b</td>
+</tr>
+<tr class="odd">
+<td>a</td>
+<td>0</td>
+<td>a</td>
+<td>b</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>b</td>
+<td>0</td>
+<td>b</td>
+<td>1</td>
+<td>a</td>
+</tr>
+</tbody>
+</table>
+<p>It can be shown that there are no more than <span class="math inline">\(n - 1\)</span> pairwise orthogonal Latin squares of order <span class="math inline">\(n\)</span>. Moreover, the existence of <span class="math inline">\(n - 1\)</span> such squares is equivalent to the existence of a projective plane of order <span class="math inline">\(n\)</span> (see the solution of the next problem 5-21 about the projective plane). If <span class="math inline">\(n\)</span> is a prime number or a power of a prime number, then a projective plane of order <span class="math inline">\(n\)</span> exists. For other <span class="math inline">\(n\)</span>, the existence of a projective plane of order <span class="math inline">\(n\)</span> is an unsolved problem.</p>
+<p>In 1782, Leonhard Euler proposed the following problem.</p>
+<p>Is it possible to arrange 36 officers of six different ranks, taken from six different regiments, in the form of a <span class="math inline">\(6 \times 6\)</span> square so that each row and each column contains officers of each rank and from each regiment?</p>
+<p>In other words, L. Euler asked if there are two orthogonal Latin squares of order 6.</p>
+<p>It can be shown that if <span class="math inline">\(n\)</span> does not give a remainder of 2 when divided by 4, then two orthogonal squares of order <span class="math inline">\(n\)</span> exist. L. Euler suggested that if <span class="math inline">\(n\)</span> gives a remainder of 2 when divided by 4, then there are no such squares.</p>
+<p>For <span class="math inline">\(n = 2\)</span>, Euler’s hypothesis is easy to verify, so <span class="math inline">\(n = 6\)</span> is the first difficult case. In 1900, Tarry verified the indicated hypothesis in this case, listing all Latin squares of order 6. The book [133] provides a proof of Euler’s hypothesis for <span class="math inline">\(n = 6\)</span>, and it is not based on complete enumeration.</p>
+<p>It turned out that for <span class="math inline">\(n &gt; 6\)</span>, Euler’s hypothesis is incorrect. In 1959, Parker found two orthogonal Latin squares of order 10, and a year later his construction was generalized, and a pair of Latin squares of order <span class="math inline">\(n\)</span> was constructed for all <span class="math inline">\(n \equiv 2 (\text{mod } 4)\)</span>, except, of course, <span class="math inline">\(n = 2\)</span> and <span class="math inline">\(n = 6\)</span>.</p>
+<p>Almost nothing is known about three pairwise orthogonal Latin squares. The first unresolved case is <span class="math inline">\(n = 10\)</span>.</p>
+<p><strong>Problem 5-21.</strong> a) Answer: 4 or 6 lessons.</p>
+<p>It follows from the condition that the members of the club go to the cafe either in pairs or in threes.</p>
+<p>If they went in pairs every time, then there were 6 lessons. Indeed, if we number the participants with numbers from 1 to 4, then they could only go to the cafe in the following combinations: (1 2), (1 3), (1 4), (2 3), (2 4), (3 4).</p>
+<p>If, however, there was at least one visit to the cafe in threes, then, in addition to it, there were only three visits: each of these three could only go to the cafe with the fourth one.</p>
+<ol start="2" type="a">
+<li>Answer: there can be schedules of two types: (1 2 3 4 5 6), (1 7), (2 7), (3 7), (4 7), (5 7), (6 7) or (1 2 3), (1 4 7), (1 5 6), (2 5 7), (2 4 6), (3 6 7), (3 4 5).</li>
+</ol>
+<p>These situations can be depicted graphically. Figure 76, a shows the first schedule: the horizontal line corresponds to the first visit to the cafe, and the lines connecting point 7 with other points correspond to the rest of the visits.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig76.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 76</figcaption>
+</figure>
+</div>
+<p>The second of the given schedules is illustrated by Figure 76, b. Each line in this figure shows one visit; the numbers of the points through which it passes show the composition of the students who visited the cafe this time.</p>
+<p>∇ The following general questions are related to this problem.</p>
+<p>Let <span class="math inline">\(m\)</span> different subsets, different from <span class="math inline">\(E\)</span> itself, be distinguished in the set <span class="math inline">\(E\)</span> of <span class="math inline">\(n\)</span> elements, so that for any two elements from <span class="math inline">\(E\)</span> there is exactly one of the selected subsets containing both of these elements.</p>
+<p>Can it be that <span class="math inline">\(m &lt; n\)</span>? When is equality <span class="math inline">\(m = n\)</span> possible? (See [84], ch.&nbsp;III, § 5, exercise. 12.)</p>
+<p>For connoisseurs. Let’s prove that always <span class="math inline">\(m \ge n\)</span>. Let’s number all the selected subsets: <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span>, …, <span class="math inline">\(A_m\)</span> and the elements of the set <span class="math inline">\(E\)</span>: <span class="math inline">\(a_1\)</span>, <span class="math inline">\(a_2\)</span>, <span class="math inline">\(a_3\)</span>, …, <span class="math inline">\(a_n\)</span>.</p>
+<p>We assign an <span class="math inline">\(m\)</span>-dimensional vector <span class="math inline">\(a_i = (\lambda_{i1}, \lambda_{i2}, ..., \lambda_{im})\)</span> to each element <span class="math inline">\(a_i\)</span> in the following way: <span class="math inline">\(\lambda_{ij} = 0\)</span> if the element <span class="math inline">\(a_i\)</span> is not included in the set <span class="math inline">\(A_j\)</span>; <span class="math inline">\(\lambda_{ij} = 1\)</span> if this element is included in <span class="math inline">\(A_j\)</span>.</p>
+<p>It follows from the condition that the scalar product of any two such vectors is equal to 1, i.e., <span class="math inline">\((a_i, a_j) = 1\)</span> for <span class="math inline">\(i \ne j\)</span>, and the scalar square of the vector is not less than 2 (since each element is included in at least 2 sets).</p>
+<p>Now suppose that <span class="math inline">\(m &lt; n\)</span>. Since the number <span class="math inline">\(n\)</span> of vectors <span class="math inline">\(a_i\)</span> is greater than the dimension of the space <span class="math inline">\(m\)</span>, the system of vectors <span class="math inline">\(a_1\)</span>, <span class="math inline">\(a_2\)</span>, …, <span class="math inline">\(a_n\)</span> is linearly dependent, i.e., the equation <span class="math inline">\(x_1 a_1 + x_2 a_2 + ... + x_n a_n = 0\)</span> has a non-zero solution. Sequentially multiplying both sides of this equation scalarly by the vectors <span class="math inline">\(a_1\)</span>, <span class="math inline">\(a_2\)</span>, …, <span class="math inline">\(a_n\)</span>, we obtain a system of linear equations of the form</p>
+<p><span class="math inline">\(b_1 x_1 + x_2 + ... + x_n = 0\)</span>, <span class="math inline">\(x_1 + b_2 x_2 + ... + x_n = 0\)</span>, … <span class="math inline">\(x_1 + x_2 + ... + b_n x_n = 0\)</span>,</p>
+<p>where all <span class="math inline">\(b_i \ge 2\)</span>. But this system has only a zero solution (its determinant is different from zero), which contradicts our assumption. Thus, <span class="math inline">\(m \ge n\)</span>.</p>
+<p>For the equality <span class="math inline">\(m = n\)</span> to hold, it is necessary and sufficient that one of the following two cases takes place:</p>
+<ol type="1">
+<li><p>all elements of <span class="math inline">\(E\)</span>, except for one, are included in one of the selected subsets, and the remaining selected subsets consist of pairs formed by this remaining element and all the others;</p></li>
+<li><p>the number <span class="math inline">\(n\)</span> is represented as <span class="math inline">\(l(l-1) + 1\)</span>, each selected subset consists of <span class="math inline">\(l\)</span> elements, and each element of the set <span class="math inline">\(E\)</span> belongs to exactly <span class="math inline">\(l\)</span> subsets.</p></li>
+</ol>
+<p>Note that the question of when case 2) is realized is not solved. The system of subsets of the set <span class="math inline">\(E\)</span> from the generalization ∇, satisfying condition 2), has a special name: a finite projective plane of order <span class="math inline">\(q = l - 1\)</span>.</p>
+<p>Let’s show how to construct a finite projective plane of order <span class="math inline">\(q = p^k\)</span> (for <span class="math inline">\(n = p^{2k} + p^k + 1\)</span>), where <span class="math inline">\(p\)</span> is a prime number. To do this, you need to use “numbers” from a finite field of order <span class="math inline">\(p^k\)</span>.</p>
+<p>We call a triple of “numbers” <span class="math inline">\((x_1, x_2, x_3)\)</span>, considered up to proportionality (i.e., the triples <span class="math inline">\((x_1, x_2, x_3)\)</span> and <span class="math inline">\((cx_1, cx_2, cx_3)\)</span> define the same point), a point of our plane. We agree not to consider the triple <span class="math inline">\((0; 0; 0)\)</span> as a point. A line is given by a triple of “numbers” <span class="math inline">\((a_1, a_2, a_3)\)</span> (except for the triple <span class="math inline">\((0; 0; 0)\)</span>), considered up to proportionality. The point <span class="math inline">\((x_1, x_2, x_3)\)</span> belongs to the line <span class="math inline">\((a_1, a_2, a_3)\)</span> if and only if <span class="math inline">\(a_1 x_1 + a_2 x_2 + a_3 x_3 = 0\)</span>.</p>
+<p>It is clear that the constructed projective plane implements case 2). In this case, the points of the plane are the elements of the set <span class="math inline">\(E\)</span>, the lines are the selected subsets. The number of points and the number of lines are the same, and any two points belong to only one line.</p>
+<p>For <span class="math inline">\(q = 2\)</span>, we get exactly the same example of a projective plane of order 2, which is shown in Figure 76, b.</p>
+<p>In paragraph b) of problem 5-21, the required system of sets was constructed for the case <span class="math inline">\(l = 3\)</span>, <span class="math inline">\(n = 7\)</span>.</p>
+<p>More details about finite projective planes are written, for example, in the article [132].</p>
+<p>Problem 5–21 can be reformulated in the following equivalent form.</p>
+<p>If <span class="math inline">\(n\)</span> subsets are selected in a set <span class="math inline">\(X\)</span> of <span class="math inline">\(m\)</span> elements, any two of which have exactly one common element, then <span class="math inline">\(m \ge n\)</span>. (<span class="math inline">\(X\)</span> is the set of visits to the cafe; for each member of the club <span class="math inline">\(a\)</span>, we select the set of all visits that included <span class="math inline">\(a\)</span>.)</p>
+<p>This formulation allows a natural generalization.</p>
+<p>Given a natural number <span class="math inline">\(\lambda\)</span> and a set <span class="math inline">\(X\)</span> of <span class="math inline">\(m\)</span> elements, in which <span class="math inline">\(n\)</span> subsets are selected, any two of which have exactly <span class="math inline">\(\lambda\)</span> common elements. Then <span class="math inline">\(m \ge n\)</span>.</p>
+<p>Proof. Let <span class="math inline">\(Y\)</span> be the set of all selected subsets of the set <span class="math inline">\(X\)</span>. If <span class="math inline">\(|A| = \lambda\)</span> for some <span class="math inline">\(A \in Y\)</span>, then <span class="math inline">\(A\)</span> must be a subset of any <span class="math inline">\(B \in Y\)</span>. If we remove <span class="math inline">\(A\)</span> from <span class="math inline">\(X\)</span> and from each <span class="math inline">\(B\)</span>, we get a partition of the set <span class="math inline">\(X \setminus A\)</span> into <span class="math inline">\(n\)</span> pairwise disjoint subsets. The number of such subsets is maximum if one of them is empty, and all the others are single-element. Since <span class="math inline">\(|X \setminus A| = m - \lambda\)</span>, we get that</p>
+<p><span class="math inline">\(n \le m - \lambda + 1 \le m\)</span>.</p>
+<p>Suppose that <span class="math inline">\(|A| &gt; \lambda\)</span> for each <span class="math inline">\(A \in Y\)</span>. Let <span class="math inline">\(X = \{1, 2, ..., m\}\)</span>. Consider all possible linear polynomials</p>
+<p><span class="math inline">\(f(z_1, z_2, ..., z_m) = a_0 + a_1 z_1 + a_2 z_2 + ... + a_m z_m\)</span></p>
+<p>with real coefficients <span class="math inline">\(a_0\)</span>, <span class="math inline">\(a_1\)</span>, …, <span class="math inline">\(a_m\)</span>. They form a vector space of dimension <span class="math inline">\(m + 1\)</span>. For each subset <span class="math inline">\(P\)</span> of the set <span class="math inline">\(X\)</span>, we introduce <span class="math inline">\(f(P) = f(\alpha_1, \alpha_2, ..., \alpha_m)\)</span>, where <span class="math inline">\(\alpha_i = 1\)</span> if <span class="math inline">\(i \in P\)</span>, and <span class="math inline">\(\alpha_i = 0\)</span> if <span class="math inline">\(i \notin P\)</span>. For example, <span class="math inline">\(f(\emptyset) = a_0\)</span>, <span class="math inline">\(f(X) = a_0 + a_1 + ... + a_m\)</span>.</p>
+<p>For each <span class="math inline">\(A \in Y\)</span>, consider the polynomial <span class="math inline">\(f_A = -\lambda + \sum_{i \in A} z_i\)</span>. Then <span class="math inline">\(f_A(P) = -\lambda + |A \cap P|\)</span> for any subset <span class="math inline">\(P\)</span> of the set <span class="math inline">\(X\)</span>. Therefore, if <span class="math inline">\(A, B \in Y\)</span>, then <span class="math inline">\(f_A(B) = 0\)</span> for <span class="math inline">\(A \ne B\)</span> and <span class="math inline">\(f_A(A) = |A| - \lambda &gt; 0\)</span>. This implies that the <span class="math inline">\(n\)</span> polynomials <span class="math inline">\(f_A\)</span>, <span class="math inline">\(A \in Y\)</span>, are linearly independent.</p>
+<p>Indeed, if <span class="math inline">\(\sum_{A \in Y} \alpha_A f_A = 0\)</span> for some real coefficients <span class="math inline">\(\alpha_A\)</span>, then <span class="math inline">\(\sum_{A \in Y} \alpha_A f_A (B) = 0\)</span> for any <span class="math inline">\(B \in Y\)</span> and, therefore, <span class="math inline">\(\alpha_B = 0\)</span>. Moreover, no linear combination of polynomials <span class="math inline">\(f_A\)</span>, <span class="math inline">\(A \in Y\)</span>, is equal to 1.</p>
+<p>Indeed, if <span class="math inline">\(\sum_{A \in Y} \alpha_A f_A = 1\)</span> for some real coefficients <span class="math inline">\(\alpha_A\)</span>, then <span class="math inline">\(\sum_{A \in Y} \alpha_A f_A (B) = 1\)</span> for any <span class="math inline">\(B \in Y\)</span> and, therefore, <span class="math inline">\(\sum_{A \in Y} \frac{\alpha_B}{B - \lambda} = 1\)</span>, which is impossible, since the constant term of each polynomial <span class="math inline">\(f_A\)</span> is negative, and therefore the constant term of the left-hand side of the last equality must be negative.</p>
+<p>So, the polynomials <span class="math inline">\(f_A\)</span> and the constant polynomial 1 are linearly independent. Therefore,</p>
+<p><span class="math inline">\(n + 1 \le m + 1 \Rightarrow n \le m\)</span>.</p>
+<p>What happens if <span class="math inline">\(m = n\)</span>?</p>
+<p>If all sets <span class="math inline">\(A \in Y\)</span> consist of the same number of elements, then the corresponding structure is called a symmetric <span class="math inline">\((m, k, \lambda)\)</span>-design.</p>
+<p>A projective plane of order <span class="math inline">\(n\)</span> is a symmetric <span class="math inline">\((n^2 + n + 1, n + 1, 1)\)</span>-design.</p>
+<p>Example. Let’s number the vertices of the graph shown in Figure 72, c, with the numbers 1, 2, 3, …, 16. If <span class="math inline">\(i\)</span> is any of these numbers, then let <span class="math inline">\(A_i\)</span> be the set consisting of the vertex <span class="math inline">\(i\)</span> and its five neighbors. Then <span class="math inline">\(|A_i \cap A_j| = 2\)</span> for any two different <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>, so that we get a symmetric <span class="math inline">\((16, 6, 2)\)</span>-design.</p>
+<p>If not all sets <span class="math inline">\(A \in Y\)</span> consist of the same number of elements, then, according to the Ryser–Woodall conjecture, all sets <span class="math inline">\(A \in Y\)</span>, except for one, consist of the same number of elements. By 2011, this conjecture has been proven for <span class="math inline">\(m = p + 1\)</span>; <span class="math inline">\(m = 2p + 1\)</span>; <span class="math inline">\(m = 3p + 1\)</span>; <span class="math inline">\(m = 4p + 1\)</span>; <span class="math inline">\(m = 6p + 1\)</span>, where <span class="math inline">\(p\)</span> is a prime number, and also for <span class="math inline">\(\lambda &lt; 60\)</span> for any <span class="math inline">\(m\)</span>.</p>
+<p>You can learn about the current state of the theory of symmetric designs and the Ryser–Woodall conjecture from the monograph [133], which was mentioned in the solution of the previous problem 5-20.</p>
+</section>
+<section id="independent-practice-problems" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="independent-practice-problems"><span class="header-section-number">5.2</span> Independent Practice Problems</h2>
+<p><strong>5-22.</strong> a) Is it possible to create a square table 100 × 100 of numbers so that the sum of the numbers in each column is positive, and the sum of the numbers in each row is negative? b) Is it possible to arrange 25 numbers in a square table of size 5 × 5 cells so that the sum of four numbers in each 2 × 2 square is negative, and the sum of all 25 numbers is positive?</p>
+<p><strong>5-23.</strong> Several people watched a snail for 7 hours. Each observed it for exactly 1 hour and noticed that during this hour the snail crawled exactly 1 meter (although it crawled unevenly, with stops). Could the snail crawl during these 7 hours: a) more than 7 meters; b) more than 12 meters; c) less than 5 meters; d) less than 4 meters?</p>
+<p><strong>5-24.</strong> a) Is it possible to represent the number 123 as a product of several natural numbers so that the sum of the squares of these numbers is also equal to 123? b) The same question regarding the number 456.</p>
+<p><strong>5-25.</strong> Is it possible to place on a straight line: a) 6; b) 7 segments so that each point of their union contains no more than three segments and any two of any three segments intersect?</p>
+<p><strong>5-26.</strong> 15 strangers entered a bus without a conductor. Each of them has only silver coins in denominations of 10, 15, and 20 kopecks. The ticket costs 5 kopecks. a) Could it be that all passengers paid correctly for the fare, taking change from each other? b) Prove that if passengers have less than 19 silver coins, then they will not be able to pay correctly for the fare. c) Prove that if all passengers have less than 2 rubles 50 kopecks, then they will not be able to pay.</p>
+<p><strong>5-27.</strong> a) Dresses of two colors and two styles were brought to the store. Prove that for the window you can choose two dresses that differ from each other in both color and style. b) Dresses of three colors and three styles were brought to the store. Is it possible to choose three dresses for the window so that all three colors and three styles are presented?</p>
+<p><strong>5-28.</strong> The sum of several numbers is 1. Can the sum of their squares be: a) less than 0.01; b) greater than 100?</p>
+<p><strong>5-29.</strong> Are the following statements true: a) if in triangles <span class="math inline">\(ABC\)</span> and <span class="math inline">\(A_1B_1C_1\)</span>, <span class="math inline">\(AB = A_1B_1\)</span>, <span class="math inline">\(BC = B_1C_1\)</span>, and <span class="math inline">\(\angle A = \angle A_1\)</span>, then the triangles are equal; b) if three angles and two sides of one triangle are equal to three angles and two sides of another triangle, then such triangles are equal; c) if the bases and lateral sides of one trapezoid are respectively equal to the bases and lateral sides of another trapezoid, then such trapezoids are equal?</p>
+<p><strong>5-30.</strong> Could it be that: a) the lengths of all three bisectors of a triangle are less than 1 cm, and its area is greater than 1 cm<span class="math inline">\(^2\)</span>; b) the lengths of all three bisectors of a triangle are greater than 100 cm, and its area is less than 1 cm<span class="math inline">\(^2\)</span>?</p>
+<p><strong>5-31.</strong> How many sides can a planar polygon have, which is: a) the intersection; b) the union of a triangle and a convex quadrilateral?</p>
+<p><strong>5-32.</strong> Is it possible to fold a square from four tiles of size 1 × 1, eight tiles of size 2 × 2, twelve tiles of size 3 × 3, and sixteen tiles of size 4 × 4?</p>
+<p><strong>5-33.</strong> a) Is it possible to cut any scalene triangle into two equal ones? b) Is it possible to cut a square into several obtuse triangles? c) How to cut a triangle with angles 15°, 105°, and 60° into isosceles triangles? d) Can any triangle be cut into several isosceles triangles?</p>
+<p><strong>5-34.</strong> Can any triangle fit inside a circle whose radius is less than the radius of the circle circumscribed around this triangle?</p>
+<p><strong>5-35.</strong> A quadrilateral with perimeter <span class="math inline">\(P_1\)</span> is located on a plane inside a quadrilateral with perimeter <span class="math inline">\(P_2\)</span>. Could it be that: a) <span class="math inline">\(P_1 &gt; P_2\)</span>; b) <span class="math inline">\(P_1 &gt; 2P_2\)</span>?</p>
+<p><strong>5-36.</strong> Is it possible to draw a closed broken line on a plane that intersects each of its links: a) 3 times; b) <span class="math inline">\(n\)</span> times, if the intersection points of the links of the broken line should not coincide with its vertices and no more than two links should pass through any one intersection point?</p>
+<p><strong>5-37.</strong> Is it possible to arrange on a plane: a) 12; b) 13 points and connect them with non-intersecting segments so that each point is connected to five others?</p>
+<p><strong>5-38.</strong> Choose four triples of non-negative integers so that each integer from 1 to 81 can be represented as the sum of four numbers – one from each triple.</p>
+<p><strong>5-39.</strong> Does there exist an increasing geometric progression in which the first 100 terms are integers, and all other terms are not integers?</p>
+<p><strong>5-40.</strong> Can the numbers 7, 8, 9 be members (not necessarily adjacent) of the same geometric progression?</p>
+<p><strong>5-41.</strong> a) It is required to connect a chandelier with seven bulbs to the network so that it is possible to light any number of bulbs from one to seven. Can this be done if only three switches are allowed? b) The same question about a chandelier with eight bulbs.</p>
+<p><strong>5-42.</strong> The head of the math club gave 20 problems as homework. At the next lesson, it turned out that each member of the club solved exactly two problems, and each problem was solved by exactly two participants. a) How many members were in the club? b) Can the head of the club organize a discussion of all the problems in such a way that each participant tells the solution to one of the problems they solved? c) Prove that there are at least two ways to organize a discussion of problems in this way, and give an example of a situation where there are exactly two of these ways. d) What can be the number of ways to organize such a discussion of problems?</p>
+<p><strong>5-43.</strong> Among 25 officers, there are equal numbers of infantrymen, artillerymen, tankers, signalmen, and pilots, and, in addition, equal numbers of generals, colonels, majors, captains, and lieutenants, with each of the five branches of the military represented by officers of all five ranks. Arrange these officers in a 5 × 5 square so that officers of all branches of the military and all ranks meet in each column and each row.</p>
+<p><strong>5-44.</strong> One triangular pyramid is located inside another triangular pyramid. a) Can the sum of the lengths of all edges of the inner pyramid be greater than the sum of the lengths of the edges of the outer? b) Can the total surface area of the inner pyramid be greater than the total surface area of the outer?</p>
+<p><strong>5-45.</strong> Is it possible to wrap a cube with an edge of 1 cm in a square piece of paper with a side of 3 cm? <strong>5-46.</strong> Does there exist an irregular tetrahedron in which five dihedral angles are equal to <span class="math inline">\(\alpha\)</span>? If so, what is its sixth dihedral angle?</p>
+<p><strong>5-47.</strong> Is it possible to place 8 tracking stations on a planet shaped like a sphere with a diameter of 1 so that any body located at a height of 1 above the planet’s surface is visible from at least two stations?</p>
+<p><strong>5-48.</strong> a) Come up with an example of a convex polyhedron in which all faces are parallelograms, but it is not a parallelepiped. b) Let the number of different directions of the edges of such a polyhedron be equal to <span class="math inline">\(k\)</span>. How many faces does it have?</p>
+<p><strong>5-49.</strong> a) Given a polynomial of two variables <span class="math inline">\(P(x, y) = x^2 + (x + y + 1)(x + y)\)</span>. Let’s create a table of its values for non-negative integers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. Prove that each non-negative integer will occur in this table once. b) Come up with such a polynomial <span class="math inline">\(Q(x, y, z)\)</span> of three variables so that among its values for non-negative integers <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, <span class="math inline">\(z\)</span>, each non-negative integer occurs once.</p>
+<p><strong>5-50.</strong> Does there exist a polynomial <span class="math inline">\(P(x, y)\)</span> whose set of values is the set of all positive numbers?</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./par4.html" class="pagination-link" aria-label="**INEQUALITIES, EXTREMAL PROBLEMS, ESTIMATES**">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>INEQUALITIES, EXTREMAL PROBLEMS, ESTIMATES</strong></span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./par6.html" class="pagination-link" aria-label="SEQUENCES AND ITERATIONS">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">SEQUENCES AND ITERATIONS</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

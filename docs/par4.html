@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>4&nbsp; INEQUALITIES, EXTREMAL PROBLEMS, ESTIMATES – Profound Puzzles: Deep Mathematics through Playful Problems</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./par5.html" rel="next">
+<link href="./par3.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./par4.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>INEQUALITIES, EXTREMAL PROBLEMS, ESTIMATES</strong></span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Profound Puzzles: Deep Mathematics through Playful Problems</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">INTRODUCTORY PROBLEMS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">INTEGERS AND POLYNOMIALS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">CONSTRUCTIONS IN THE PLANE AND IN SPACE</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par4.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>INEQUALITIES, EXTREMAL PROBLEMS, ESTIMATES</strong></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">UNUSUAL EXAMPLES AND CONSTRUCTIONS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./par6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">SEQUENCES AND ITERATIONS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./subjectindex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Thematic Index</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#problems-discussion" id="toc-problems-discussion" class="nav-link active" data-scroll-target="#problems-discussion"><span class="header-section-number">4.1</span> Problems Discussion</a></li>
+  <li><a href="#independent-practice-problems" id="toc-independent-practice-problems" class="nav-link" data-scroll-target="#independent-practice-problems"><span class="header-section-number">4.2</span> Independent Practice Problems</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>INEQUALITIES, EXTREMAL PROBLEMS, ESTIMATES</strong></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Problems</strong></p>
+<p><strong>4-1.</strong> In a right triangle, <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are the legs, <span class="math inline">\(c\)</span> is the hypotenuse, and <span class="math inline">\(h\)</span> is the altitude dropped onto the hypotenuse. Prove that <span class="math inline">\(c + h\)</span> is greater than <span class="math inline">\(a + b\)</span>.</p>
+<p><strong>4-2.</strong> The equation <span class="math inline">\(ax + bx + c = 0\)</span> has no real roots, and <span class="math inline">\(a + b + c &lt; 0\)</span>. What sign does the number <span class="math inline">\(c\)</span> have?</p>
+<p><strong>4-3.</strong> Given rectangle <span class="math inline">\(ABCD\)</span>. A random point is taken inside it, and through this point, two lines are drawn parallel to its sides. They divide the rectangle into four smaller rectangles. Prove that at least one of the rectangles containing points <span class="math inline">\(A\)</span> and <span class="math inline">\(C\)</span> has an area not exceeding <span class="math inline">\(\frac{1}{4}\)</span> of the total rectangle’s area.</p>
+<p><strong>4-4.</strong> A bank deposit of 1000 rubles. In which case will the depositor receive more money after 10 years: if the bank adds 5% of the existing sum once a year, or if it adds <span class="math inline">\(\frac{5}{12}\%\)</span> once a month?</p>
+<p><strong>4-5.</strong> A bus is considered overcrowded if there are more than fifty passengers. Two inspectors checked a line of buses. Inspector Podberezovikov calculated the percentage of overcrowded buses, while Inspector Podosinovikov calculated the percentage of passengers traveling in overcrowded buses. Whose percentage is higher?</p>
+<p><strong>4-6.</strong> What is the minimum number of participants in a math club if it’s known that girls make up: a) less than 50%, but more than 40%;<br>
+b) less than 44%, but more than 43%?</p>
+<p><strong>4-7.</strong> The front tires of a truck wear out after 15,000 km of travel, while the rear tires wear out after 25,000 km. (There are two tires per rear axle and one per front axle.) How should the tires be rotated on the wheels to travel the maximum distance on the same set of tires? Find this distance.</p>
+<p><strong>4-8.</strong> A kid can eat a cake in 10 minutes, cook a bun in 13 minutes, and drink a jug of milk in 14 minutes, while Karlson can do these in 6, 6, and 7 minutes respectively. What is the minimum time they need to finish a snack consisting of a cake, a bun, and a jug of milk?</p>
+<p><strong>4-9.</strong> Vitya usually meets Olya at the last metro station. Metro trains leave at strictly regular intervals. The first time, Vitya waited for Olya for 12 minutes, during which 5 trains left. The second time, he waited for 20 minutes, during which 6 trains left. The third time, he waited for 30 minutes. How many trains could have left during this time?</p>
+<p><strong>4-10.</strong> Several boxes weigh together 10 tons, with each box weighing no more than one ton. What is the minimum number of three-ton trucks needed to transport all this cargo in one trip?</p>
+<p><strong>4-11.</strong> Find three numbers, each of which equals the square of the difference of the other two numbers.</p>
+<p><strong>4-12.</strong> Prove that for any natural numbers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> greater than 1, the product <span class="math inline">\(nm\)</span> and <span class="math inline">\(mn\)</span> does not exceed 33.</p>
+<p><strong>4-13.</strong> For what <span class="math inline">\(n\)</span> does the product <span class="math inline">\(\lg 2 \cdot \lg 3 \cdot ... \cdot \lg n\)</span> reach its minimum value?</p>
+<p><strong>4-14.</strong> It’s known that numbers <span class="math inline">\(x_1, x_2, x_3, x_4, x_5\)</span> are non-negative and <span class="math inline">\(x_1 + x_2 + x_3 + x_4 + x_5 = 1\)</span>. Find the maximum value of <span class="math inline">\(x_1 x_2 + x_2 x_3 + x_3 x_4 + x_4 x_5\)</span>.</p>
+<p><strong>4-15.</strong> Prove that for any <span class="math inline">\(a, b, c\)</span>, the inequality holds: <span class="math inline">\(a^4 + b^4 + c^4 \geq a^2bc + b^2ac + c^2ab\)</span>.</p>
+<p><strong>4-16.</strong> Prove that for any positive <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, the inequality <span class="math inline">\(2^a + 3^b \geq 5\sqrt{ab}\)</span> holds.</p>
+<p><strong>4-17.</strong> Prove that in any convex hexagon there exists a diagonal that cuts off a triangle whose area does not exceed <span class="math inline">\(\frac{1}{6}\)</span> of the hexagon’s area.</p>
+<p><strong>4-18.</strong> Prove that for any angles <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span> between 0 and <span class="math inline">\(\pi\)</span>, the inequality holds: [ + + () ]</p>
+<p><strong>4-19.</strong> What is the maximum area of a quadrilateral where the lengths of three sides are each 1?</p>
+<p><strong>4-20.</strong> A convex polyhedron with five vertices is inscribed in a sphere of radius 1. Find the maximum volume of such a polyhedron.</p>
+<p><strong>4-21.</strong> On a grid paper with cell side length 1, a circle of radius 10 is drawn. Prove that inside this circle there are more than 250 grid points.</p>
+<p><strong>4-22.</strong> Is it possible from point <span class="math inline">\(O\)</span> to direct 15 rays into space such that the angle between any two of them is greater than 60°?</p>
+<p><strong>4-23.</strong> On the first of two equal circles, three arcs of 25° each are marked, on the second - two arcs of 30° each. Prove that the second circle can be so placed on the first that the marked arcs do not intersect.</p>
+<p><strong>4-24.</strong> Prove that five weights can be arranged in order of their masses, having performed no more than 7 weighings on a balance scale (allowing for the comparison of two weights in one weighing).</p>
+<p>Here’s the discussion translated into English:</p>
+<section id="problems-discussion" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="problems-discussion"><span class="header-section-number">4.1</span> Problems Discussion</h2>
+<p><strong>Problem 4-1.</strong> By two methods of calculating the area of a triangle, we get <span class="math inline">\(ch = ab\)</span>, hence <span class="math inline">\(h = \frac{ab}{c}\)</span>. The inequality <span class="math inline">\(c + h &gt; a + b\)</span> can be written as: [ + c &gt; a + b. ] Multiplying both sides by <span class="math inline">\(c\)</span> (where <span class="math inline">\(c &gt; 0\)</span>), we obtain the equivalent inequality: [ c^2 - c(a+b) + ab &gt; 0, ] or [ (c - a)(c - b) &gt; 0. ] This inequality is true because the hypotenuse is greater than each leg.</p>
+<p><span class="math inline">\(\nabla\)</span> In solving this problem, we established that if the products <span class="math inline">\(ch\)</span> and <span class="math inline">\(ab\)</span> of two pairs of positive numbers are equal, then the sum is greater for the pair whose numbers are more “spread out”: if <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are between <span class="math inline">\(c\)</span> and <span class="math inline">\(h\)</span>, then <span class="math inline">\(c + h &gt; a + b\)</span>. This fact also follows from the fact that the function <span class="math inline">\(f(x) = x + \frac{A}{x}\)</span> is monotonically increasing for <span class="math inline">\(x \geq A\)</span>.</p>
+<p><strong>Problem 4-2.</strong> Answer: <span class="math inline">\(c &lt; 0\)</span>.</p>
+<p>Consider the function <span class="math inline">\(f(x) = ax^2 + bx + c\)</span>. By condition, it does not cross zero, so its graph - a parabola - is either entirely above or entirely below the x-axis.</p>
+<p>Notice that <span class="math inline">\(f(1) = a + b + c\)</span>; this number, by condition, is less than zero, which means the parabola is below the x-axis. Therefore <span class="math inline">\(f(x) &lt; 0\)</span> for all values of <span class="math inline">\(x\)</span> and, in particular, <span class="math inline">\(f(0) = c &lt; 0\)</span>.</p>
+<p>∇ In the solution, we essentially used the continuity of the function <span class="math inline">\(f\)</span>: if a function is continuous on an interval and does not become zero on it, then all its values on this interval have the same sign.</p>
+<p><strong>Problem 4-3.</strong> Let’s draw the axes of symmetry of the rectangle. They divide the given rectangle into 4 quarters. If the selected point lies in any of the two quarters containing points A and C, or on the boundary of these quarters, then the statement of the problem is obvious. Let the selected point lie inside one of the two remaining quarters. Reflect both cut lines with respect to the center of symmetry of the rectangle. Four lines (two cut lines and two symmetrical to them) divide the rectangle into 9 parts: four parts with area <span class="math inline">\(S_1\)</span>, two parts with area <span class="math inline">\(S_2\)</span>, two parts with area <span class="math inline">\(S_3\)</span>, and one part with area <span class="math inline">\(S_0\)</span> (Fig. 46). We must prove that <span class="math inline">\(S_1 + S_2\)</span> or <span class="math inline">\(S_1 + S_3\)</span> does not exceed <span class="math inline">\(\frac{S}{4}\)</span>, where <span class="math inline">\(S\)</span> is the area of the entire rectangle.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig46.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 46</figcaption>
+</figure>
+</div>
+<p>Since <span class="math display">\[4S_1 + 2S_2 + 2S_3 = S - S_0 &lt; S,\]</span> then <span class="math display">\[2S_1 + S_2 + S_3 &lt; \frac{S}{2}, \text{ or } (S_1 + S_2) + (S_1 + S_3) &lt; \frac{S}{2}.\]</span> This means that one of the numbers <span class="math inline">\(S_1 + S_2\)</span>, <span class="math inline">\(S_1 + S_3\)</span> is less than <span class="math inline">\(\frac{S}{4}\)</span> (if both were not less than <span class="math inline">\(\frac{S}{4}\)</span>, then their sum would be not less than <span class="math inline">\(\frac{S}{2}\)</span>).</p>
+<p>∇ The following stereometric problem, similar to problem 4-3, is of interest: let <span class="math inline">\(V_1 \leq V_2 \leq \dots \leq V_8\)</span> be the volumes of the eight parts into which a parallelepiped of volume 1 is divided by three planes passing through its point and parallel to its faces; within what limits can each of the values <span class="math inline">\(V_i\)</span>, <span class="math inline">\(i = 1, 2, \dots, 8\)</span> vary? For example, it turns out that <span class="math inline">\(0 \leq V_4 \leq \frac{1}{8}\)</span> and for any <span class="math inline">\(V_4\)</span> from this interval, there is a corresponding partition of the parallelepiped. (When proving the inequality <span class="math inline">\(V_4 \leq \frac{1}{8}\)</span>, it is convenient to use the fact that two opposite parts have volumes whose products are not greater than <span class="math inline">\(\frac{1}{64}\)</span>.) A similar question can be considered for an <span class="math inline">\(n\)</span>-dimensional parallelepiped of unit volume.</p>
+<p><strong>Problem 4-4.</strong> Answer: if the bank accrues interest once a month. Let the interest be accrued once a year. Then at the end of the first year, the deposit will be equal to <span class="math display">\[\left(1000 + 1000 \cdot \frac{5}{100} \right) = 1000 \left(1 + \frac{5}{100} \right) \text{ rubles}.\]</span> At the end of the second year, the deposit will increase by 5% from this amount and will become equal to <span class="math display">\[1000 \left(1 + \frac{5}{100} \right) \left(1 + \frac{5}{100} \right) = 1000 \left(1 + \frac{5}{100} \right)^2 \text{ rubles}.\]</span> Reasoning similarly, we see that after 10 years the depositor will receive <span class="math display">\[1000 \left(1 + \frac{5}{100} \right)^{10} \text{ rubles}.\]</span> If interest is accrued once a month, then in the same way we find that the depositor will receive after 10 years (i.e., after 120 months) <span class="math display">\[1000 \left(1 + \frac{5}{1200} \right)^{120} \text{ rubles}.\]</span> We will show that the second number is greater than the first. To do this, it is enough to show that <span class="math display">\[\left(1 + \frac{5}{100} \right) &lt; \left(1 + \frac{5}{1200} \right)^{12}.\]</span> Let’s start calculating the right side of this inequality – the product of twelve identical expressions <span class="math display">\[\left(1 + \frac{5}{1200} \right) \left(1 + \frac{5}{1200} \right) \dots \left(1 + \frac{5}{1200} \right).\]</span> In the process of multiplication, we will have to take 1 in each bracket and multiply them all – we get 1 as a result. If we take <span class="math inline">\(\frac{5}{1200}\)</span> in one bracket and 1 in the others, then we get <span class="math inline">\(\frac{5}{1200}\)</span>; but there are as many such products as there are brackets, i.e.&nbsp;12, and they give the number <span class="math inline">\(12 \cdot \frac{5}{1200} = \frac{5}{100}\)</span>. Although we have not taken into account all the terms, we already got <span class="math inline">\(1 + \frac{5}{100}\)</span>, so the entire product will be greater than this number.</p>
+<p>∇ Let K rubles be deposited in the bank and the bank pays p% per annum. Reasoning in the same way as in the solution to problem 4-4, we will see that after m years the depositor will receive <span class="math inline">\(K \left(1 + \frac{p}{100} \right)^m\)</span> rubles (the so-called compound interest formula). This value can be roughly estimated from below using Bernoulli’s inequality, which we have essentially already proved: <span class="math display">\[\left(1 + x \right)^n &gt; 1 + nx \text{ for } x &gt; 0, n &gt; 1.\]</span> (In the solution to problem 4-4, it was <span class="math inline">\(x = \frac{5}{1200}\)</span>, <span class="math inline">\(n = 12\)</span>.) It follows from this inequality that if we reduce the payment periods and proportionally reduce the interest rate, then the depositor will receive a larger amount. This is due to the fact that for <span class="math inline">\(a &gt; 0\)</span> the sequence <span class="math display">\[x = \left(1 + \frac{a}{n} \right)^n\]</span> is increasing. However, it turns out that the depositor will not be able to get too much benefit from reducing the terms, since this sequence is bounded. Its limit is the number <span class="math inline">\(e^a\)</span>. If you calculate the sums from problem 4-4 on a calculator, then in the first case we get about 1629 rubles, in the second – about 1647 rubles, and <span class="math inline">\(1000e^{0.05} \approx 1649\)</span>.</p>
+<p>Let there be <span class="math inline">\(k\)</span> overcrowded and <span class="math inline">\(l\)</span> non-overcrowded buses in the column. Denote the number of passengers traveling in overcrowded buses by <span class="math inline">\(A\)</span>, and the number of the rest by <span class="math inline">\(B\)</span>. Then <span class="math inline">\(A &gt; 50k\)</span>, <span class="math inline">\(B \leq 50l\)</span>, and therefore <span class="math inline">\(\frac{A}{k} &gt; 50\)</span>, <span class="math inline">\(\frac{B}{l} \leq 50\)</span>. Thus, <span class="math inline">\(\frac{A}{k} &gt; \frac{B}{l}\)</span>. From the last inequality, the following follows: <span class="math display">\[\frac{B}{A} &lt; \frac{l}{k},\]</span> <span class="math display">\[\frac{A + B}{A} &lt; \frac{l + k}{k},\]</span> <span class="math display">\[\frac{A}{A + B} &gt; \frac{k}{l + k},\]</span> from where <span class="math display">\[\frac{A}{A + B} \cdot 100\% &gt; \frac{k}{l + k} \cdot 100\%.\]</span> In the last inequality, on the left is the percentage of people traveling in overcrowded buses, and on the right is the percentage of overcrowded buses.</p>
+<p><strong>Problem 4-6.</strong> Answer: a) 7; b) 16. Let there be <span class="math inline">\(n\)</span> participants in the circle, of which <span class="math inline">\(m\)</span> are girls. We need to find the smallest natural number <span class="math inline">\(n\)</span> for which there exists such a natural number <span class="math inline">\(m\)</span> that <span class="math display">\[\frac{2}{5} &lt; \frac{m}{n} &lt; \frac{1}{2}.\]</span> Iterating through the values of <span class="math inline">\(n\)</span> from 2 to 7, we find that only the fraction <span class="math inline">\(\frac{3}{7}\)</span> with denominator 7 satisfies this inequality. Thus, 7 is the smallest possible value of <span class="math inline">\(n\)</span>.</p>
+<p>∇ Note that the fraction <span class="math inline">\(\frac{3}{7}\)</span> is obtained from the fractions <span class="math inline">\(\frac{2}{5}\)</span> and <span class="math inline">\(\frac{1}{2}\)</span> as follows: its numerator is the sum of their numerators, and the denominator is the sum of their denominators.</p>
+<p>For any positive fractions <span class="math inline">\(\frac{a}{b}\)</span> and <span class="math inline">\(\frac{c}{d}\)</span> (<span class="math inline">\(\frac{a}{b} &lt; \frac{c}{d}\)</span>), the fraction <span class="math inline">\(\frac{a+c}{b+d}\)</span> satisfies the inequalities <span class="math inline">\(\frac{a}{b} &lt; \frac{a+c}{b+d} &lt; \frac{c}{d}\)</span> and is called the mediant of these fractions.</p>
+<p>Writing out irreducible fractions with a denominator not exceeding <span class="math inline">\(n\)</span> in ascending order, we get the following table: <img src="illustrations/p78.png" class="img-fluid"> Each <span class="math inline">\(n\)</span>-th row (Farey sequence) is obtained from the <span class="math inline">\((n-1)\)</span>-th row according to the following rule: in the <span class="math inline">\((n-1)\)</span>-th row, one needs to mark all such pairs of neighboring fractions <span class="math inline">\(\frac{a}{b}\)</span>, <span class="math inline">\(\frac{c}{d}\)</span>, for which the sum of the denominators is equal to <span class="math inline">\(n\)</span>, and insert their mediants – fractions <span class="math inline">\(\frac{a+c}{b+d}\)</span> (they are always irreducible) between them.</p>
+<p>In problem a), we found the row number <span class="math inline">\(n=7\)</span>, in which the fraction located between the fractions <span class="math inline">\(\frac{2}{5}\)</span> and <span class="math inline">\(\frac{1}{2}\)</span> first appears.</p>
+<p>In problem b), acting by brute force is quite tedious. Let’s proceed as follows. We must find a solution to the inequalities <span class="math display">\[
+\frac{43}{100} &lt; \frac{m}{n} &lt; \frac{44}{100} = \frac{11}{25}
+\]</span> with the smallest natural <span class="math inline">\(n\)</span>.</p>
+<p>Let’s invert all the fractions and subtract their common integer part: <span class="math display">\[
+\frac{n}{43} - 2 &gt; \frac{m}{11} &gt; \frac{25}{11} - 2
+\]</span> <span class="math display">\[
+\frac{n-86}{43} &gt; \frac{m}{11} &gt; \frac{3}{11}
+\]</span> <span class="math display">\[
+\frac{11(n-86)}{43} &gt; m &gt; 3
+\]</span> Let’s do the same thing again: <span class="math display">\[
+\frac{1}{m-3(n-2m)} = \frac{1}{7m-3n} \le \frac{2}{3}
+\]</span> and one more time: <span class="math display">\[
+\frac{14}{n-2m} &gt; \frac{3}{7m-3n} &gt; 2
+\]</span> Notice that here, for the first time, integers appear between the bounds of the inequality. The smallest of them is the number 2. The system of equations <span class="math inline">\(n-2m=2\)</span>, <span class="math inline">\(7m-3n=1\)</span> has a solution in natural numbers <span class="math inline">\(n=16\)</span>, <span class="math inline">\(m=7\)</span>.</p>
+<p>Let’s prove that this is the solution to the problem. From inequalities (2)–(4) it follows that <span class="math display">\[
+n-2m &gt; 0, \quad 7m-3n \ge 1, \quad n-2m \ge 2
+\]</span> Therefore <span class="math display">\[
+n = 7(n-2m) + 2(7m-3n) \ge 7 \cdot 2 + 2 \cdot 1 = 16
+\]</span> ∇ Analyzing this solution, we notice that, in essence, we are expanding the numbers <span class="math inline">\(\frac{43}{100}\)</span> and <span class="math inline">\(\frac{11}{25}\)</span> into continued fractions: <span class="math display">\[
+\frac{43}{100} = \frac{1}{2+\frac{14}{43}} = \frac{1}{2+\frac{1}{3+\frac{1}{14}}}
+\]</span> <span class="math display">\[
+\frac{11}{25} = \frac{1}{2+\frac{3}{11}} = \frac{1}{2+\frac{1}{3+\frac{2}{3}}}
+\]</span> Then we take the common part of these expansions at the step where the expansions differ, between <span class="math inline">\(\frac{1}{14}\)</span> and <span class="math inline">\(\frac{2}{3}\)</span> we insert the smallest integer, i.e.&nbsp;1, and as a result we get the answer: <span class="math display">\[
+\frac{1}{2+\frac{1}{3+1}} = \frac{1}{2+\frac{1}{4}} = \frac{4}{9} = \frac{16}{36}
+\]</span> This algorithm allows you to quickly find a fraction <span class="math inline">\(\frac{m}{n}\)</span> with the smallest denominator <span class="math inline">\(n\)</span> in any given interval <span class="math inline">\(0 &lt; \alpha &lt; \frac{m}{n} &lt; \beta\)</span> (see [61, 119]).</p>
+<p>Problem 4-7. Answer: The maximum distance is 620454/11 km. Tires need to be changed so that each of them is front for one third of the way.</p>
+<p>Let’s take as a unit the amount of rubber that can be worn out on one tire before it becomes unusable. Then, before the trip, there are 6 units of rubber in total. From the condition, it follows that for 1 km of the path, 1/15000 units are erased if the tire is in front, and 1/25000 if it is in the back. This means that for 1 km of the path, 2/15000 + 4/25000 = 11/37500 units of rubber are erased. Let the car have travelled x km. Then 11x/37500 units of rubber have been erased. Since no more than 6 units can be erased, we have <span class="math display">\[
+\frac{11x}{37500} \le 6
+\]</span> from where <span class="math display">\[
+x \le \frac{20454}{11} \times 6
+\]</span> To drive all 20454/11 km, it is necessary to change the tires so that each of them is in front for a third of this distance: then they will all wear out simultaneously - by the end of the journey.</p>
+<p>Problem 4-8. Answer: 12 minutes.</p>
+<p>It is quite clear that if the Kid and Carlson want to eat breakfast in the shortest possible time, then they must start and finish eating at the same time - otherwise, one of them can help the other and reduce the time spent.</p>
+<p>Let us denote by x, y, z the shares of cake, jam and milk that the Kid ate; then (1-x), (1-y), (1-z) are the shares of these products that Carlson ate, and the time they spent is equal to <span class="math display">\[
+t = 10x + 13y + 14z = 6(1-x) + 6(1-y) + 7(1-z)
+\]</span> Thus, we come to the following problem: find the minimum value of the quantity t = 10x + 13y + 14z, if the numbers x, y, z satisfy the conditions 0≤x≤1, 0≤y≤1, 0≤z≤1 and <span class="math display">\[
+10x + 13y + 14z = 6(1-x) + 6(1-y) + 7(1-z)
+\]</span> From the last relation, one can express z in terms of x and y: <span class="math display">\[
+z = \frac{1}{21}(19 - 16x - 19y)
+\]</span> Substituting this expression into the formula for t, we get <span class="math display">\[
+t = -\frac{2}{3}x + \frac{1}{3}y + \frac{38}{3}
+\]</span> From this formula, we see that <span class="math inline">\(t\)</span> will be smaller the larger <span class="math inline">\(x\)</span> is and the smaller <span class="math inline">\(y\)</span> is. Let’s take the largest possible value of <span class="math inline">\(x\)</span> and the smallest possible value of <span class="math inline">\(y\)</span>: <span class="math inline">\(x=1, y=0\)</span>. In this case, <span class="math inline">\(t=12\)</span> minutes, and <span class="math inline">\(z\)</span> is within the permissible limits. Consequently, the minimum value of <span class="math inline">\(t\)</span> is achieved in the case when the Kid eats the cake and drinks the milk, and Carlson eats all the jam and drinks the milk.</p>
+<p><span class="math inline">\(\nabla\)</span> We have reduced problem 4-8 to a linear programming problem: find the minimum of a linear function under the condition that the variables are non-negative and satisfy a system of linear inequalities and equations.</p>
+<p>If it were required to solve a similar problem for <span class="math inline">\(n &gt; 3\)</span> products, then such a solution method would lead to rather cumbersome calculations; however, it is possible to specify a simple general rule that indicates the optimal plan for the distribution of products.</p>
+<p>Let <span class="math inline">\(a_i\)</span> be the time it takes for the Kid to eat the <span class="math inline">\(i\)</span>-th product, and <span class="math inline">\(b_i\)</span> be the time it takes for Carlson to eat it; we will assume that the products are numbered in ascending order of the ratios of these times: <span class="math display">\[\frac{a_1}{b_1} \le \frac{a_2}{b_2} \le ... \le \frac{a_n}{b_n}. \quad (1)\]</span> The plan, in which the breakfast time will be the smallest, is as follows: the Kid starts with the first product and eats them further in the order of numbers, and Carlson starts simultaneously with him from the last product and eats them in reverse order.</p>
+<p>In our problem, three products should be ordered as follows: the first is the cake, the second is the milk, the third is the jam. The ratios of times will then satisfy the inequalities <span class="math display">\[\frac{10}{6} \le \frac{4}{7} \le \frac{13}{6}.\]</span> In the first 6 minutes, Carlson eats the jam, and the Kid eats part of the cake. In the next 4 minutes, the Kid finishes the cake, and Carlson drinks <span class="math inline">\(\frac{4}{7}\)</span> of the milk. And finally, in the last 2 minutes, they both finish the milk.</p>
+<p>To prove the optimality of the proposed plan, it is convenient to introduce a conditional measure for each product. We will consider the nutritional value of the <span class="math inline">\(i\)</span>-th product to be equal to <span class="math inline">\((a_i + b_i)\)</span> calories, then the eating rate (calories per unit of time) when eating the <span class="math inline">\(i\)</span>-th product for the Kid is equal to <span class="math inline">\(\frac{a_i+b_i}{a_i} = 1 + \frac{b_i}{a_i}\)</span>, and for Carlson <span class="math inline">\(\frac{a_i+b_i}{b_i} = 1 + \frac{a_i}{b_i}\)</span>. We see that the Kid’s speed is greater the smaller <span class="math inline">\(\frac{a_i}{b_i}\)</span> is, and Carlson’s speed is the opposite. Thus, in order to get as many calories as possible in time <span class="math inline">\(t\)</span>, the Kid should eat the products in the order of numbers, and Carlson in the reverse order. Let the Kid and Carlson get all <span class="math inline">\((a_1 + b_1) + ... + (a_n + b_n)\)</span> calories in some time <span class="math inline">\(t\)</span> according to our plan. Then, with any other plan, in the same time <span class="math inline">\(t\)</span>, they will receive fewer calories, which means they will not be able to eat all the products.</p>
+<p>You can specify a graphical procedure that gives the answer. Let’s draw in the second quarter of the coordinate plane <span class="math inline">\(Oxy\)</span> a broken line whose links are vectors with coordinates <span class="math inline">\((b_1, a_1), (b_2, a_2), ..., (b_n, a_n)\)</span>, going in such an order that inequalities (1) are satisfied; the beginning <span class="math inline">\(M\)</span> of this broken line lies on the <span class="math inline">\(Ox\)</span> axis, the end <span class="math inline">\(K\)</span> on the <span class="math inline">\(Oy\)</span> axis (Fig. 47 corresponds to the case <span class="math inline">\(n = 3\)</span>; in problem 4-8, the three vectors that make up the broken line have coordinates <span class="math inline">\((6, 10), (7, 14)\)</span>, and <span class="math inline">\((6, 13)\)</span>).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig47.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 47</figcaption>
+</figure>
+</div>
+<p>Let’s mark the point <span class="math inline">\(L\)</span> of intersection of this broken line with the bisector <span class="math inline">\(x + y = 0\)</span> of the second coordinate quarter. The ordinate <span class="math inline">\(t\)</span> of the point <span class="math inline">\(L\)</span> indicates the desired minimal time, and the part <span class="math inline">\(ML\)</span> of the broken line indicates the products that Malysh eats, and the part <span class="math inline">\(LK\)</span> indicates the products that Karlsson eats.</p>
+<p><strong>Problem 4-9.</strong> Answer: 10 or 11 trains.</p>
+<p>Let the trains depart with an interval of <span class="math inline">\(T\)</span> minutes. Since in 12 minutes 4 full intervals have definitely passed, <span class="math inline">\(4T \le 12\)</span>, i.e., <span class="math inline">\(T \le 3\)</span>. Since no more than <span class="math inline">\(T\)</span> minutes have passed before the departure of the first of the 5 trains and after the departure of the last of them, <span class="math inline">\(T + 4T + T &gt; 12\)</span>, i.e., <span class="math inline">\(T &gt; 2\)</span>. So, <span class="math inline">\(2 &lt; T \le 3\)</span>.</p>
+<p>Similarly, from the fact that exactly 6 trains departed in 20 minutes, we get <span class="math inline">\(\frac{20}{7} &lt; T \le 4\)</span>. From these inequalities it follows that <span class="math inline">\(2 &lt; T \le 3\)</span>.</p>
+<p>Let <span class="math inline">\(n\)</span> trains depart in 30 minutes. Then, similarly, we get <span class="math inline">\((n-1)T \le 30 &lt; (n+1)T\)</span> or <span class="math inline">\(\frac{30}{T} - 1 &lt; n \le \frac{30}{T} + 1\)</span>.</p>
+<p>Taking into account that <span class="math inline">\(2 &lt; T \le 3\)</span>, we find that <span class="math inline">\(9 &lt; n \le 11\)</span>, i.e., <span class="math inline">\(n = 10\)</span> or <span class="math inline">\(n = 11\)</span>.</p>
+<p>If <span class="math inline">\(T = 3\)</span> and the first train departs immediately upon Vitya’s arrival, then 11 trains will depart in 30 minutes, and if with the same <span class="math inline">\(T\)</span> the first train departs 1 minute after his arrival, then 10 trains will depart in 30 minutes, i.e., both answer options are realized.</p>
+<p><span class="math inline">\(\nabla\)</span> The solution to this problem is related to the following general question. Let points be placed on a straight line at equal distances <span class="math inline">\(T\)</span> from each other. What is the number <span class="math inline">\(n\)</span> of these points that a segment of length <span class="math inline">\(b\)</span> can contain?</p>
+<p>Answer: <span class="math inline">\(\frac{b}{T} - 1 &lt; n \le \frac{b}{T} + 1\)</span>.</p>
+<p><strong>Problem 4-10.</strong> Answer: 5 three-ton trucks.</p>
+<p>Let’s first show that 4 three-ton trucks may not be enough. Let’s take 13 identical boxes weighing <span class="math inline">\(\frac{10}{13}\)</span> tons each. Then we cannot put more than three boxes in one three-ton truck, and no more than 12 boxes in four trucks.</p>
+<p>Now let’s prove that 5 three-ton trucks are always enough. Indeed, we can load at least two tons of cargo into each three-ton truck (if less than two tons are loaded, we can add another box). Then at least 10 tons can be loaded into 5 three-ton trucks.</p>
+<p><span class="math inline">\(\nabla\)</span> A more general problem. Several boxes weigh a total of <span class="math inline">\(T\)</span> tons, and each of them weighs no more than 1 ton. What is the minimum number of <span class="math inline">\(p\)</span>-ton trucks (<span class="math inline">\(p &gt; 1\)</span>) that is definitely enough to carry all this cargo at once?</p>
+<p>Let <span class="math inline">\(\gamma = \frac{p}{[p] + 1}\)</span>, where <span class="math inline">\([p]\)</span> is the integer part of the number <span class="math inline">\(p\)</span>. Then the answer is the smallest integer <span class="math inline">\(N\)</span> greater than or equal to <span class="math inline">\(\frac{T - \gamma}{p - \gamma}\)</span>.</p>
+<p>In the example showing that a smaller number of trucks may not be enough, it is necessary to take all the loads equal (and slightly larger than <span class="math inline">\(\gamma\)</span>). You can load <span class="math inline">\(N\)</span> trucks in descending order of their masses. For the proof, it is convenient to use the following lemma: if there are several boxes with a total mass of more than <span class="math inline">\(p\)</span> tons (each is no more than 1), then you can load more than <span class="math inline">\(p - \gamma\)</span> tons onto a <span class="math inline">\(p\)</span>-ton truck. In problem 4-10, <span class="math inline">\(p = 3\)</span>, <span class="math inline">\(T = 10\)</span>, <span class="math inline">\(\gamma = \frac{3}{4}\)</span>; it follows from the lemma that more than <span class="math inline">\(\frac{9}{4}\)</span> tons can be loaded onto one three-ton truck, and the weight of the cargo, 10 tons, as we know, can be transported on 5 three-ton trucks; this is exactly the smallest integer greater than or equal to <span class="math inline">\(\frac{T - \gamma}{p - \gamma} = \frac{37}{9}\)</span>.</p>
+<p>For experts. It is interesting to compare this problem with the “stone problem” often encountered in applications. There are several stones with known masses <span class="math inline">\(a_1, a_2, ..., a_n\)</span> and a <span class="math inline">\(p\)</span>-ton truck (<span class="math inline">\(p, a_1, a_2, ..., a_n\)</span> are natural numbers). The question is whether it is possible to select several of these stones so as to completely load the <span class="math inline">\(p\)</span>-ton truck with them. In other words, are there such numbers <span class="math inline">\(x_1, x_2, ..., x_n\)</span>, equal to 0 or 1, that the equality <span class="math inline">\(a_1x_1 + a_2x_2 + ... + a_nx_n = p\)</span> is satisfied?</p>
+<p>The latter problem belongs to the class of so-called universal enumeration problems. There is no known algorithm for solving them that works significantly faster than brute-force enumeration of all options. (Unlike this problem, loading boxes, which was discussed in the generalization of problem 4-10, can be done very quickly; see [97].)</p>
+<p><strong>Problem 4-11. Answer: either all three numbers are equal to zero, or one of them is equal to zero, and the other two are ones.</strong></p>
+<p>Note that all three numbers are non-negative, since each of them is a square. Let’s denote them in descending order as follows: <span class="math display">\[x \ge y \ge z \ge 0.\]</span> Then <span class="math inline">\(x - z \ge y - z \ge 0\)</span>, whence <span class="math inline">\((x - z)^2 \ge (y - z)^2\)</span>. But <span class="math inline">\((x - z)^2 = y\)</span>, and <span class="math inline">\((y - z)^2 = x\)</span>. So, on the one hand, <span class="math inline">\(x \ge y\)</span>, on the other hand, <span class="math inline">\(y \ge x\)</span>, and thus <span class="math inline">\(x = y\)</span>. In this case, we get <span class="math inline">\(z = 0\)</span> and <span class="math inline">\(x = x^2\)</span>, i.e., <span class="math inline">\(x = 0\)</span> or <span class="math inline">\(x = 1\)</span>.</p>
+<p><span class="math inline">\(\nabla\)</span> Inequalities were not involved in the condition of this problem, but they appeared in the solution. The idea of ordering equal unknowns helps in many other situations as well.</p>
+<p><strong>Problem 4-12.</strong> Note that <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> enter symmetrically into the condition of the problem, so we can assume that <span class="math inline">\(m \ge n \ge 2\)</span>. In this case, <span class="math inline">\(m^n \le n^n\)</span>. Thus, it is sufficient to prove the inequality <span class="math inline">\(n^n \le 3^3\)</span> or <span class="math display">\[n^{\frac{1}{n}} \le 3^{\frac{1}{3}}.\]</span> (1) If <span class="math inline">\(n = 2\)</span>, the inequality <span class="math inline">\(2^{\frac{1}{2}} \le 3^{\frac{1}{3}}\)</span> is true, since when both sides are raised to the sixth power, we get <span class="math inline">\(8 &lt; 9\)</span>. Now let’s take the natural logarithm of both sides of inequality (1) and prove that <span class="math inline">\(\frac{\ln n}{n} \le \frac{\ln 3}{3}\)</span> for <span class="math inline">\(n \ge 3\)</span>.</p>
+<p>The derivative of the function <span class="math inline">\(\frac{\ln x}{x}\)</span> is negative for <span class="math inline">\(x \ge 3\)</span>: <span class="math display">\[\left(\frac{\ln x}{x}\right)' = \frac{(1 - \ln x)}{x^2} &lt; 0,\]</span> since <span class="math inline">\(\ln x &gt; 1\)</span> for <span class="math inline">\(x \ge 3 &gt; e\)</span>.</p>
+<p>Hence it follows that the function <span class="math inline">\(\frac{\ln x}{x}\)</span> is decreasing for <span class="math inline">\(x \ge 3\)</span> and, consequently, <span class="math inline">\(\frac{\ln x}{x} \le \frac{\ln 3}{3}\)</span> for <span class="math inline">\(x \ge 3\)</span>.</p>
+<p><span class="math inline">\(\nabla\)</span> The inequality <span class="math inline">\(n^{\frac{1}{n}} \le 3^{\frac{1}{3}}\)</span> for natural <span class="math inline">\(n \ge 3\)</span> can also be proved by induction; if it is true for some <span class="math inline">\(n = k\)</span>, then it is also true for the next <span class="math inline">\(n = k + 1\)</span>: the inequality <span class="math inline">\((k + 1)^{\frac{1}{k+1}} \le 3^{\frac{1}{3}}\)</span> is obtained from <span class="math inline">\(k^{\frac{1}{k}} \le 3^{\frac{1}{3}}\)</span> by multiplying term by term by the true (for <span class="math inline">\(k \ge 3\)</span>) inequality <span class="math inline">\(\left(1 + \frac{1}{k}\right)^{\frac{1}{3}} \le 3^{\frac{1}{3}}\)</span>.</p>
+<p><strong>Problem 4-13.</strong> Answer: the smallest value is reached at <span class="math inline">\(n = 10^{10} - 1\)</span> and at <span class="math inline">\(n = 10^{10}\)</span>. Let <span class="math inline">\(a_n = \frac{\lg 2 \cdot \lg 3 \cdot ... \cdot \lg n}{n}\)</span>. Note that <span class="math inline">\(a_n = \left(\frac{\lg n}{10}\right)^{a_n}\)</span>.</p>
+<p>If <span class="math inline">\(\lg n &lt; 10\)</span>, then <span class="math inline">\(a_n &lt; a_{n-1}\)</span>; if <span class="math inline">\(\lg n = 10\)</span>, then <span class="math inline">\(a_n = a_{n-1}\)</span>; if <span class="math inline">\(\lg n &gt; 10\)</span>, then <span class="math inline">\(a_n &gt; a_{n-1}\)</span>. Thus, the sequence <span class="math inline">\((a_n)\)</span> decreases up to <span class="math inline">\(n = 10^{10} - 1\)</span>, then has two equal terms with numbers <span class="math inline">\(10^{10} - 1\)</span> and <span class="math inline">\(10^{10}\)</span>, and starting from the next number, the sequence increases.</p>
+<p><strong>Problem 4-14.</strong> Answer: The maximum value is 1/4.</p>
+<p>This value is achieved, for example, when <span class="math inline">\(x_1 = x_2 = 1/2\)</span> and <span class="math inline">\(x_3 = x_4 = x_5 = 0\)</span>.</p>
+<p>Let’s show that <span class="math inline">\(x_1x_2 + x_2x_3 + x_3x_4 + x_4x_5 \leq 1/4\)</span> for all non-negative values of <span class="math inline">\(x_1, x_2, x_3, x_4, x_5\)</span>. Indeed,</p>
+<p><span class="math inline">\(x_1x_2 + x_2x_3 + x_3x_4 + x_4x_5 \leq (x_1 + x_3 + x_5)(x_2 + x_4)\)</span>,</p>
+<p>because if we expand the brackets on the right side, we get all the terms on the left side, plus several non-negative terms.</p>
+<p>Now it’s sufficient to apply the inequality between geometric and arithmetic means to two numbers, <span class="math inline">\(u = x_1 + x_3 + x_5 \geq 0\)</span> and <span class="math inline">\(v = x_2 + x_4 \geq 0\)</span>, which sum to one:</p>
+<p><span class="math inline">\(uv \leq (\frac{u+v}{2})^2 = (\frac{1}{2})^2 = \frac{1}{4}\)</span></p>
+<p>Thus,</p>
+<p><span class="math inline">\((x_1 + x_3 + x_5)(x_2 + x_4) = uv \leq \frac{(u+v)^2}{4} = \frac{1}{4}\)</span></p>
+<p><span class="math inline">\(\nabla\)</span> Similarly, it can be proved that for any <span class="math inline">\(n\)</span> non-negative numbers <span class="math inline">\(x_1, x_2, ..., x_n\)</span> that add up to 1, the largest value of the quantity <span class="math inline">\(x_1x_2 + x_2x_3 + ... + x_{n-1}x_n\)</span> is equal to <span class="math inline">\(\frac{1}{4}\)</span>.</p>
+<p><strong>Problem 4-15.</strong> To prove, we compare the left and right sides of the inequality given in the condition with the expression <span class="math inline">\(a^2b^2 + b^2c^2 + a^2c^2\)</span>: we will prove that <span class="math display">\[a^4 + b^4 + c^4 \ge a^2b^2 + b^2c^2 + a^2c^2 \ge a^2bc + b^2ac + c^2ab.\]</span> Adding term by term three valid inequalities <span class="math inline">\(a^4 + b^4 - 2a^2b^2 \ge 0\)</span>, <span class="math inline">\(b^4 + c^4 - 2b^2c^2 \ge 0\)</span>, <span class="math inline">\(c^4 + a^4 - 2a^2c^2 \ge 0\)</span>, we get <span class="math inline">\(2(a^4 + b^4 + c^4) \ge 2(a^2b^2 + b^2c^2 + a^2c^2)\)</span>. Adding term by term three valid inequalities <span class="math inline">\(a^2(b^2 + c^2 - 2bc) \ge 0\)</span>, <span class="math inline">\(b^2(a^2 + c^2 - 2ac) \ge 0\)</span>, <span class="math inline">\(c^2(b^2 + a^2 - 2ba) \ge 0\)</span>, we get <span class="math display">\[2(a^2b^2 + b^2c^2 + a^2c^2) \ge 2(a^2bc + b^2ac + c^2ab).\]</span></p>
+<p><span class="math inline">\(\nabla\)</span> The following general Muirhead’s theorem is related to the inequality from problem 4-15. Let a monomial <span class="math inline">\(x_1^{\alpha_1}x_2^{\alpha_2}...x_n^{\alpha_n}\)</span> of <span class="math inline">\(n\)</span> variables <span class="math inline">\(x_1, x_2, ..., x_n\)</span> be given. Let’s call its symmetrization the polynomial <span class="math inline">\(\Phi_{\alpha_1, \alpha_2, ..., \alpha_n}\)</span>, equal to the arithmetic mean of all possible monomials obtained from the given one by permutation of variables; for example, <span class="math display">\[\Phi_{2, 2, 0}(x, y, z) = \frac{1}{3}(x^2y^2 + y^2z^2 + z^2x^2).\]</span> Consider two sets <span class="math inline">\(\alpha = (\alpha_1, ..., \alpha_n)\)</span> and <span class="math inline">\(\beta = (\beta_1, ..., \beta_n)\)</span> of exponents <span class="math inline">\(\alpha_1 \ge \alpha_2 \ge ... \ge \alpha_n \ge 0\)</span> and <span class="math inline">\(\beta_1 \ge \beta_2 \ge ... \ge \beta_n \ge 0\)</span>.</p>
+<p>For the inequality <span class="math display">\[\Phi_{\alpha_1, \alpha_2, ..., \alpha_n} \ge \Phi_{\beta_1, \beta_2, ..., \beta_n}\]</span> to hold for all non-negative values of <span class="math inline">\(x_1, x_2, ..., x_n\)</span>, it is necessary and sufficient that the set <span class="math inline">\(\alpha\)</span> majorizes the set <span class="math inline">\(\beta\)</span> in the following sense: <span class="math display">\[\alpha_1 \ge \beta_1,\]</span> <span class="math display">\[\alpha_1 + \alpha_2 \ge \beta_1 + \beta_2,\]</span> <span class="math display">\[...................................................\]</span> <span class="math display">\[\alpha_1 + \alpha_2 + ... + \alpha_{n-1} \ge \beta_1 + \beta_2 + ... + \beta_{n-1},\]</span> <span class="math display">\[\alpha_1 + \alpha_2 + ... + \alpha_n \ge \beta_1 + \beta_2 + ... + \beta_n.\]</span> This system of conditions is briefly written as: <span class="math display">\[(\alpha_1, \alpha_2, ..., \alpha_n) \succ (\beta_1, \beta_2, ..., \beta_n).\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig48.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 48</figcaption>
+</figure>
+</div>
+<p>It has the following visual interpretation: if the sets of exponents are depicted as stairs, in which the width of the steps is equal to 1, and the height is the numbers of the set, then the second set should be obtained from the first by cutting off pieces of steps and throwing them down to the right (to one of the following steps). In problem 4-15 (Fig. 48), (2, 2, 0) is obtained from the set (4, 0, 0), and (2, 1, 1) is obtained from it: <span class="math display">\[(4, 0, 0) \succ (2, 2, 0) \succ (2, 1, 1).\]</span> The operation of “throwing steps” suggests a way to prove any of the inequalities referred to in Muirhead’s theorem (see [102]).</p>
+<p>Figures of several cells that have the shape of stairs turn out to be convenient in many other combinatorial and algebraic problems (see problem 6-10).</p>
+<p><strong>Problem 4-16.</strong> To get rid of the radicals, let <span class="math inline">\(x = b^{\frac{1}{15}}\)</span>, <span class="math inline">\(y = a^{\frac{1}{10}}\)</span>. Then the given inequality will take the form <span class="math display">\[3x^5 + 2y^5 - 5x^3y^2 \ge 0.\]</span> Dividing both sides of the inequality by <span class="math inline">\(y^5\)</span> and denoting <span class="math inline">\(\frac{x}{y}\)</span> by <span class="math inline">\(t\)</span>, we get the equivalent inequality <span class="math display">\[3t^5 - 5t^3 + 2 \ge 0.\]</span> The left side is factored: <span class="math display">\[(t-1)^2(3t^3 + 6t^2 + 4t + 2) \ge 0.\]</span> For <span class="math inline">\(t &gt; 0\)</span>, both factors are non-negative, so the inequality is true. It turns into equality only for <span class="math inline">\(t = 1\)</span>, i.e., for <span class="math inline">\(a = b\)</span>.</p>
+<p><span class="math inline">\(\nabla\)</span> You can prove the original inequality using the inequality between the arithmetic mean and the geometric mean for five numbers: <span class="math display">\[\frac{1}{5}(3\sqrt[15]{b} + 3\sqrt[15]{b} + 3\sqrt[15]{b} + 2\sqrt[10]{a} + 2\sqrt[10]{a})^5 \ge 5(3\sqrt[15]{b})^3 \cdot (2\sqrt[10]{a})^2 = 108 \sqrt[5]{ab}.\]</span></p>
+<p>Similarly, it can be proved that for any <span class="math inline">\(k\)</span> positive numbers <span class="math inline">\(a_1, a_2, ..., a_k\)</span> and natural numbers <span class="math inline">\(p_1, p_2, ..., p_k\)</span> with the sum <span class="math inline">\(p_1 + ... + p_k = p\)</span>, <span class="math display">\[\frac{p_1 a_1^{p_1} + p_2 a_2^{p_2} + ... + p_k a_k^{p_k}}{p} \ge (a_1 a_2 ... a_k)^{\frac{p_1 + p_2 + ... + p_k}{p}}.\]</span> And here is another proof (leading to a different generalization).</p>
+<p>Putting <span class="math inline">\(a = y^{\frac{5}{3}}\)</span>, <span class="math inline">\(b = x^{\frac{5}{2}}\)</span>, we reduce the original inequality to the form <span class="math display">\[3x^{\frac{5}{2}} + 2y^{\frac{5}{3}} \ge 5xy.\]</span> This is a special case of Young’s inequality: for any positive <span class="math inline">\(x, y, \alpha, \beta\)</span>, where <span class="math inline">\(\frac{1}{\alpha} + \frac{1}{\beta} = 1\)</span>, <span class="math display">\[\frac{x^\alpha}{\alpha} + \frac{y^\beta}{\beta} \ge xy.\]</span> This, in turn, is a special case of the inequality <span class="math inline">\(f(x) + g(y) \ge xy\)</span>, (*) where <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are differentiable functions defined for all non-negative values of the argument, for which <span class="math inline">\(f'\)</span> and <span class="math inline">\(g'\)</span> are mutually inverse monotonically increasing functions, and <span class="math display">\[f(0) = g(0) = f'(0) = g'(0) = 0\]</span> (the functions <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are called dual according to Young).</p>
+<p>Note that for each value of <span class="math inline">\(y\)</span> there is exactly one value of <span class="math inline">\(x\)</span> for which the inequality (*) turns into an equality; for these values <span class="math inline">\(y = f'(x)\)</span> and <span class="math inline">\(x = g'(y)\)</span>. Therefore, the function <span class="math inline">\(g\)</span> can be defined through the function <span class="math inline">\(f\)</span> as follows: for each <span class="math inline">\(k\)</span>, <span class="math display">\[g(k) = \max_x (kx - f(x)).\]</span> Such a transition from the function <span class="math inline">\(f\)</span> to the function <span class="math inline">\(g\)</span> is called the Legendre transform of the function <span class="math inline">\(f\)</span>. In this case, the function <span class="math inline">\(f\)</span> will, in turn, be the Legendre transform of the function <span class="math inline">\(g\)</span> – see Figure 49 (see [79]).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig49.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 49</figcaption>
+</figure>
+</div>
+<p><strong>Problem 4-17.</strong> Let’s draw three diagonals <span class="math inline">\(AD, BE\)</span>, and <span class="math inline">\(CF\)</span> of the hexagon <span class="math inline">\(ABCDEF\)</span>, connecting each vertex to the opposite one. Let them intersect at the points <span class="math inline">\(K, L, M\)</span> – see Figure 50, a; in the special case, the points <span class="math inline">\(K, L\)</span>, and <span class="math inline">\(M\)</span> may coincide.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig50.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 50</figcaption>
+</figure>
+</div>
+<p>Consider six triangles, which together with the triangle <span class="math inline">\(KLM\)</span> make up the hexagon <span class="math inline">\(ABCDEF\)</span> – in our figure, these are triangles <span class="math inline">\(ABL, BCL, CDM, DEM, EFK, FAK\)</span> (Fig. 50, b). The area of at least one of them is not greater than <span class="math inline">\(\frac{S}{6}\)</span>, where <span class="math inline">\(S\)</span> is the area of the hexagon (otherwise, the sum of these six areas would be greater than <span class="math inline">\(S\)</span>, which is impossible). Let, for example, <span class="math inline">\(S_{ABL} \le \frac{S}{6}\)</span> (Fig. 50, c). We claim that then the area of one of the triangles <span class="math inline">\(ABC\)</span> and <span class="math inline">\(ABF\)</span> with the same base <span class="math inline">\(AB\)</span> is not greater than <span class="math inline">\(\frac{S}{6}\)</span>. Indeed, the area of a triangle with base <span class="math inline">\(AB\)</span> and height <span class="math inline">\(h\)</span> is equal to <span class="math inline">\(\frac{AB \cdot h}{2}\)</span>, and the height of triangle <span class="math inline">\(ABL\)</span> is enclosed between the heights of triangles <span class="math inline">\(ABC\)</span> and <span class="math inline">\(ABF\)</span>, i.e., it is not greater than one of them.</p>
+<p><span class="math inline">\(\nabla\)</span> In the last reasoning, one can single out a frequently encountered consideration: the largest value of a linear function <span class="math inline">\(f(x)\)</span> defined on some interval <span class="math inline">\([a; b]\)</span> is always reached at one of the ends of the interval, i.e., for any <span class="math inline">\(x\)</span>, the value of <span class="math inline">\(f(x)\)</span> does not exceed <span class="math inline">\(f(a)\)</span> or <span class="math inline">\(f(b)\)</span>. In our problem, such a function was the area of the triangle <span class="math inline">\(f(h) = \frac{AB \cdot h}{2}\)</span>.</p>
+<p><strong>Problem 4-18.</strong> Let <span class="math inline">\(\alpha \le \beta \le \gamma\)</span>. Considering <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> as fixed, let’s consider the derivative with respect to <span class="math inline">\(\gamma\)</span> of the difference between the right and left sides. It is equal to <span class="math display">\[\left(3 \sin \frac{\alpha + \beta + \gamma}{3} - \sin \alpha - \sin \beta - \sin \gamma \right)' = \cos \frac{\alpha + \beta + \gamma}{3} - \cos \gamma \ge 0,\]</span> since <span class="math inline">\(0 \le \frac{\alpha + \beta + \gamma}{3} \le \gamma \le \pi\)</span> and for <span class="math inline">\(t \in [0; \pi]\)</span> the function <span class="math inline">\(y = \cos t\)</span> is decreasing (the derivatives of the constants <span class="math inline">\(\sin \alpha\)</span> and <span class="math inline">\(\sin \beta\)</span> are equal to 0). If we prove the validity of our inequality for <span class="math inline">\(\gamma = \beta\)</span>, then it will also be valid for <span class="math inline">\(\gamma \ge \beta\)</span> – with the growth of <span class="math inline">\(\gamma\)</span>, the difference between the right and left sides of the inequality will increase. So, it remains to prove that for all <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\alpha \le \beta\)</span>, <span class="math display">\[\sin \alpha + 2 \sin \beta \le 3 \sin \frac{\alpha + 2\beta}{3}.\]</span></p>
+<p>Let’s repeat the same reasoning. The derivative with respect to <span class="math inline">\(\beta\)</span> of the difference between the right and left sides is equal to <span class="math display">\[2 \cos \frac{\alpha + 2\beta}{3} - 2 \cos \beta \ge 0,\]</span> since <span class="math inline">\(0 \le \frac{\alpha + 2\beta}{3} \le \beta \le \pi\)</span>. But for <span class="math inline">\(\beta = \alpha\)</span>, the inequality turns into an equality. Therefore, it is true for <span class="math inline">\(\beta \ge \alpha\)</span>.</p>
+<p><span class="math inline">\(\nabla\)</span> Taking <span class="math inline">\(\alpha + \beta + \gamma = \pi\)</span> or <span class="math inline">\(\alpha + \beta + \gamma = 2\pi\)</span> in the condition of the problem, we get inequalities equivalent to the fact that the perimeter and area of any triangle are not greater than those of a regular triangle with the same radius of the circumscribed circle.</p>
+<p>The method by which this problem is solved allows us to prove the following general theorem. Let a function <span class="math inline">\(f(x)\)</span> be defined on the interval <span class="math inline">\([a; b]\)</span>, whose derivative <span class="math inline">\(f'(x)\)</span> does not increase (such a function is called convex upward). Then for any <span class="math inline">\(n\)</span> points <span class="math inline">\(x_1, x_2, ..., x_n\)</span> on this interval and for any <span class="math inline">\(n\)</span> positive numbers <span class="math inline">\(p_1, p_2, ..., p_n\)</span> with the sum <span class="math inline">\(p_1 + ... + p_n = 1\)</span>, the following Jensen’s inequality holds: <span class="math display">\[f(p_1x_1 + ... + p_nx_n) \ge p_1f(x_1) + ... + p_nf(x_n).\]</span> In our problem, <span class="math inline">\(f(x) = \sin x\)</span>, <span class="math inline">\(x \in [0; \pi]\)</span>, and <span class="math inline">\(p_1 = p_2 = p_3 = \frac{1}{3}\)</span>.</p>
+<p>If we take the function <span class="math inline">\(f(x) = \ln x\)</span> and <span class="math inline">\(p_1 = p_2 = ... = p_n = \frac{1}{n}\)</span>, then we get the inequality <span class="math display">\[\frac{x_1 + ... + x_n}{n} \ge \sqrt[n]{x_1 ... x_n},\]</span> or <span class="math display">\[\ln \frac{x_1 + ... + x_n}{n} \ge \frac{\ln x_1 + ... + \ln x_n}{n} \ge \ln \sqrt[n]{x_1 ... x_n},\]</span> – the classical inequality between the arithmetic mean and the geometric mean of <span class="math inline">\(n\)</span> numbers (<span class="math inline">\(x_1 &gt; 0, ..., x_n &gt; 0\)</span>).</p>
+<p>For the function <span class="math inline">\(f(x) = -x^2\)</span>, we get the inequality <span class="math display">\[(p_1x_1 + ... + p_nx_n)^2 \le p_1x_1^2 + ... + p_nx_n^2;\]</span> and from it, putting <span class="math inline">\(x_k = a_kb_k\)</span>, <span class="math inline">\(p_k = \frac{b_k^2}{(b_1^2 + ... + b_n^2)}\)</span>, we can derive the Cauchy-Bunyakovsky inequality: <span class="math display">\[(a_1b_1 + a_2b_2 + ... + a_nb_n)^2 \le (a_1^2 + a_2^2 + ... + a_n^2)(b_1^2 + b_2^2 + ... + b_n^2),\]</span> according to which the scalar product of two vectors is not greater than the product of their lengths (in our proof it was important that all <span class="math inline">\(b_k\)</span> are different from zero, but the last inequality is obviously true without this assumption) – see [80].</p>
+<p><strong>Problem 4-19.</strong> Answer: <span class="math inline">\(\frac{3\sqrt{3}}{4}\)</span>. (This area has a trapezoid, in which the lateral sides and one of the bases are equal to 1, and the other is 2.)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig51.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 51</figcaption>
+</figure>
+</div>
+<p>Let in the quadrilateral <span class="math inline">\(ABCD\)</span> (which, obviously, can be considered convex) <span class="math inline">\(AB = BC = CD = 1\)</span> and <span class="math inline">\(K\)</span> is the midpoint of the side <span class="math inline">\(AD\)</span> – see Figure 51. Completing the broken line <span class="math inline">\(ABCD\)</span> symmetrically with respect to the point <span class="math inline">\(K\)</span> with a three-link broken line <span class="math inline">\(DB'C'A\)</span>, we get a centrally symmetric hexagon, all sides of which are equal to 1. It can be divided into three rhombuses <span class="math inline">\(ABCO, CDB'O, B'C'AO\)</span>, and its area is equal to <span class="math inline">\(\sin \alpha + \sin \beta + \sin \gamma\)</span>, where <span class="math inline">\(\alpha, \beta\)</span>, and <span class="math inline">\(\gamma\)</span> are the angles between the segments <span class="math inline">\(OA, OC\)</span>, and <span class="math inline">\(OB'\)</span>, which add up to <span class="math inline">\(2\pi\)</span>. According to the previous problem, this area is not greater than <span class="math inline">\(3 \sin \frac{2\pi}{3} = \frac{3\sqrt{3}}{2}\)</span>, and equality is possible when <span class="math inline">\(\alpha = \beta = \gamma = \frac{2\pi}{3}\)</span>, i.e., when the constructed hexagon is regular.</p>
+<p><span class="math inline">\(\nabla\)</span> It can be proved that the largest in area among all <span class="math inline">\(n\)</span>-gons with given lengths <span class="math inline">\(a_1, a_2, ..., a_{n-1}\)</span> of consecutive sides (except for one, <span class="math inline">\(AZ\)</span>) will be the one whose vertices all lie on a semicircle with diameter <span class="math inline">\(AZ\)</span>. This is a variant of the “Dido problem” about what is the largest area adjacent to a given line that can be enclosed by a line of a given length with ends on this line (such a line will be a semicircle).</p>
+<p>If all the lengths of the sides of the <span class="math inline">\(n\)</span>-gon are known, then the largest in area will be (the only one – if the order of the sides is fixed) inscribed in a circle. Accordingly, the largest area among all figures of a given perimeter is possessed by a circle (isoperimetric theorem, see [35]).</p>
+<p>Figure 51</p>
+<p><strong>Problem 4-20. Answer: <span class="math inline">\(\frac{3}{2}\)</span>.</strong></p>
+<p>A convex polyhedron with 5 vertices cannot be anything other than the union of two tetrahedra (triangular pyramids) with a common base (Fig. 52). Indeed, it has such a vertex from which 4 edges emerge to all other vertices (if only 3 edges emerged from each vertex, then there would be a total of <span class="math inline">\(5 \cdot 3 = 15\)</span> ends of the edges, but each edge has two ends, so there would be <span class="math inline">\(\frac{15}{2}\)</span> edges, which is impossible). Let these vertices be <span class="math inline">\(A, B, C, D\)</span>, and let the edges emerge from vertex <span class="math inline">\(E\)</span> to them. Then the polyhedron is the union of two tetrahedra <span class="math inline">\(EABC\)</span> and <span class="math inline">\(EBCD\)</span> with a common face <span class="math inline">\(EBC\)</span>.</p>
+<p>Let <span class="math inline">\(S_{ABC}\)</span> be the area of triangle <span class="math inline">\(ABC\)</span>, and <span class="math inline">\(h_E\)</span> and <span class="math inline">\(h_D\)</span> be the heights of the tetrahedra <span class="math inline">\(EABC\)</span> and <span class="math inline">\(DABC\)</span> dropped from vertices <span class="math inline">\(E\)</span> and <span class="math inline">\(D\)</span> onto the plane <span class="math inline">\(ABC\)</span>. Then the sum of the volumes of these tetrahedra is equal to <span class="math display">\[\frac{1}{3} S_{ABC} h_E + \frac{1}{3} S_{ABC} h_D = \frac{1}{3} S_{ABC} (h_E + h_D).\]</span> Similarly, if we consider the tetrahedra <span class="math inline">\(EABD\)</span> and <span class="math inline">\(ECBD\)</span> with a common face <span class="math inline">\(EBD\)</span>, then the sum of their volumes is equal to <span class="math inline">\(\frac{1}{3} S_{ABD} (h_E + h_C)\)</span>. Finally, if we consider the tetrahedra <span class="math inline">\(EADC\)</span> and <span class="math inline">\(EBDC\)</span> with a common face <span class="math inline">\(EDC\)</span>, then the sum of their volumes is equal to <span class="math inline">\(\frac{1}{3} S_{ACD} (h_E + h_B)\)</span>.</p>
+<p>The sum of the volumes of these three pairs of tetrahedra is equal to the doubled volume of the polyhedron, so the volume of the polyhedron is equal to <span class="math display">\[V = \frac{1}{6} (S_{ABC} (h_E + h_D) + S_{ABD} (h_E + h_C) + S_{ACD} (h_E + h_B)).\]</span> We need to find the smallest possible value of <span class="math inline">\(V\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="illustrations/fig52.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 52</figcaption>
+</figure>
+</div>
+<p>Indeed, it has such a vertex from which 4 edges emerge to all other vertices (if only 3 edges emerged from each vertex, then there would be a total of <span class="math inline">\(5 \cdot 3 = 15\)</span> ends of edges, but this number is equal to the doubled number of all edges and should be even). If <span class="math inline">\(AB, AD, AC\)</span>, and <span class="math inline">\(AE\)</span> are four consecutive edges of a tetrahedral angle with vertex <span class="math inline">\(A\)</span>, then our polyhedron is the union of tetrahedra <span class="math inline">\(ABCD\)</span> and <span class="math inline">\(ABCE\)</span> with a common base <span class="math inline">\(ABC\)</span>. Let’s estimate the volume of the polyhedron: <span class="math display">\[V = \frac{S(h_D + h_E)}{3},\]</span> where <span class="math inline">\(h_D\)</span> and <span class="math inline">\(h_E\)</span> are the heights of the tetrahedra, dropped respectively from vertices <span class="math inline">\(D\)</span> and <span class="math inline">\(E\)</span> onto the base <span class="math inline">\(ABC\)</span>, <span class="math inline">\(S\)</span> is the area of triangle <span class="math inline">\(ABC\)</span>.</p>
+<p>Let <span class="math inline">\(K\)</span> be the intersection point of the segment <span class="math inline">\(DE\)</span> with the plane <span class="math inline">\(ABC\)</span>; then <span class="math inline">\(h_D + h_E \le DK + KE = DE \le 2\)</span>, since the distance between any two points on a sphere is not greater than its diameter. Let <span class="math inline">\(R\)</span> be the radius of the circle circumscribed around triangle <span class="math inline">\(ABC\)</span> (i.e., the section of the sphere by the plane <span class="math inline">\(ABC\)</span>). Then (see problem 4-18 or 4-19) <span class="math display">\[S \le \frac{3\sqrt{3}R^2}{4} \le \frac{3\sqrt{3}}{4},\]</span> since the radius of any section of the sphere is not greater than the radius of the sphere. So, <span class="math inline">\(V \le \frac{3}{2}\)</span>, and <span class="math inline">\(V = \frac{3}{2}\)</span> in the case when <span class="math inline">\(ABC\)</span> is a regular triangle inscribed in the equator, and <span class="math inline">\(D\)</span> and <span class="math inline">\(E\)</span> are the poles of the sphere.</p>
+<p><span class="math inline">\(\nabla\)</span> The general problem: among all polyhedra inscribed in a sphere with <span class="math inline">\(n\)</span> vertices, find the polyhedron of maximum volume – is very difficult.</p>
+<p>It can be shown that for <span class="math inline">\(n = 6\)</span>, such a polyhedron will be a regular octahedron, but for <span class="math inline">\(n = 8\)</span>, the polyhedron of the largest volume will not be a cube. For the planar analogue of this problem, the situation is much simpler: the largest in area inscribed in a given circle <span class="math inline">\(n\)</span>-gon for each <span class="math inline">\(n\)</span> is, obviously, regular (this is a simple consequence of the convexity of the sine on the interval from 0 to <span class="math inline">\(\pi\)</span>, see the discussion of problem 4-18).</p>
+<p><strong>Problem 4-21.</strong> Consider unit squares centered at all the nodes of the grid that are inside a circle of radius 10 (the sides of the squares are parallel to the grid lines).</p>
+<p>Since the length of the diagonal of such a square is <span class="math inline">\(\sqrt{2} &lt; 2\)</span>, all these squares cover a circle of radius 9, concentric with the given circle. Therefore, the sum of their areas (numerically equal to the number of grid nodes) is greater than <span class="math inline">\(81\pi\)</span> – the area of a circle of radius 9. <span class="math inline">\(81\pi &gt; 251\)</span>.</p>
+<p><span class="math inline">\(\nabla\)</span> We can formulate a more general problem: estimate the number of solutions in integers <span class="math inline">\(x, y\)</span> of the inequality <span class="math inline">\(x^2 + y^2 &lt; n\)</span> (in our problem, <span class="math inline">\(n = 100\)</span>). From our reasoning, it follows that the number of solutions is not less than <span class="math inline">\(\pi(n-1)\)</span> (see [91]).</p>
+<p><strong>Problem 4-22. Answer: impossible.</strong></p>
+<p>Let’s draw a sphere of radius <span class="math inline">\(R\)</span> centered at the given point <span class="math inline">\(O\)</span>. For each ray, we construct a conical surface with vertex <span class="math inline">\(O\)</span>, whose axis is this ray, and the angle of the generatrix with the axis is <span class="math inline">\(30^\circ\)</span>; consider the “cap” – the part of the sphere lying inside this cone. The area of this “cap” (spherical segment) is equal to <span class="math inline">\(2\pi Rh\)</span>, where <span class="math inline">\(h\)</span> is the height of the “cap”: <span class="math display">\[h = R(1 - \cos 30^\circ) = R\left(1 - \frac{\sqrt{3}}{2}\right),\]</span> so the ratio of the area of the “cap” to the area <span class="math inline">\(4\pi R^2\)</span> of the entire sphere is equal to <span class="math display">\[\frac{1}{2}\left(1 - \frac{\sqrt{3}}{2}\right) &gt; \frac{1}{15}.\]</span> (The last inequality is equivalent to the following: <span class="math inline">\((2 - \sqrt{3})^{15} &gt; 4\)</span>, <span class="math inline">\(26 &gt; 15\sqrt{3}\)</span>, <span class="math inline">\(2^{12} = 4096 &gt; 15^2 \cdot 3 = 675\)</span>.)</p>
+<p>Thus, some two of the 15 “caps” corresponding to 15 rays will necessarily intersect, and therefore, some two rays form an angle less than <span class="math inline">\(60^\circ\)</span>.</p>
+<p><span class="math inline">\(\nabla\)</span> We can pose a more general question: what is the largest value <span class="math inline">\(\alpha\)</span> that the smallest of the angles between <span class="math inline">\(n\)</span> rays emanating from one point in space can take (or, equivalently, what is the largest size that <span class="math inline">\(n\)</span> identical non-intersecting “caps” on a sphere can have)? The exact answer to this question is known only for <span class="math inline">\(n \le 9\)</span> and <span class="math inline">\(n = 12\)</span>, although good estimates for the value of <span class="math inline">\(\alpha_n\)</span> have been obtained for many values of <span class="math inline">\(n\)</span>.</p>
+<p><strong>Problem 4-23.</strong> Let’s mark points on the circles: on the first – <span class="math inline">\(A\)</span>, on the second – <span class="math inline">\(B\)</span>. We will specify the position of the second circle relative to the first when they are superimposed by the angular value <span class="math inline">\(t\)</span> of the arc <span class="math inline">\(AB\)</span>, <span class="math inline">\(0^\circ \le t &lt; 360^\circ\)</span> (the count goes counterclockwise).</p>
+<p>Let’s call the value of <span class="math inline">\(t\)</span> forbidden if, with the corresponding arrangement of the circles, at least one pair of marked arcs intersects.</p>
+<p>Consider some arc of <span class="math inline">\(25^\circ\)</span> and some arc of <span class="math inline">\(30^\circ\)</span>. They intersect on some interval of values of <span class="math inline">\(t\)</span> of magnitude <span class="math inline">\(55^\circ\)</span>. In total, there are no more such forbidden segments than pairs of arcs, i.e., <span class="math inline">\(3 \cdot 2 = 6\)</span>. Therefore, the set of forbidden values of <span class="math inline">\(t\)</span> has a total value of no more than <span class="math inline">\(6 \cdot 55^\circ = 330^\circ\)</span> and does not cover the entire set of values of <span class="math inline">\(t\)</span> – from <span class="math inline">\(0^\circ\)</span> to <span class="math inline">\(360^\circ\)</span>.</p>
+<p>This means that there are also non-forbidden values of <span class="math inline">\(t\)</span> for which no pair of arcs intersects.</p>
+<p><span class="math inline">\(\nabla\)</span> Similarly, it can be proved that if non-overlapping arcs <span class="math inline">\(\alpha_1, \alpha_2, ..., \alpha_m\)</span> are marked on one unit circle, and arcs <span class="math inline">\(\beta_1, \beta_2, ..., \beta_n\)</span> are marked on the other, and <span class="math display">\[m(\alpha_1 + \alpha_2 + ... + \alpha_m) + n(\beta_1 + \beta_2 + ... + \beta_n) &lt; 360^\circ,\]</span> then the circles can be aligned so that the marked arcs do not intersect.</p>
+<p>An interesting and in some sense “reverse” question is: under what conditions on the numbers <span class="math inline">\(\alpha_1, ..., \alpha_m, \beta_1, ..., \beta_n\)</span> is it possible to arrange the corresponding arcs so that some arcs overlap for any superposition of the circles?</p>
+<p>Note also that the method of our solution to problem 4-23 can be called a continuous analogue of the Dirichlet principle (see problem 2-9); and they have a common drawback: this method does not show how to find the required method of superposition.</p>
+<p><strong>Problem 4-24.</strong> Let’s carry out the weighing of the weights in three stages.</p>
+<ol type="1">
+<li>Take two weights out of five and compare them. Let their masses be <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, and <span class="math inline">\(a &lt; b\)</span>. Take two more weights and compare them: <span class="math inline">\(c &lt; d\)</span>. Then compare the heavier weights of these pairs; we can assume that <span class="math inline">\(b &lt; d\)</span>.</li>
+<li>Find the place of the fifth weight with mass <span class="math inline">\(e\)</span> among the three <span class="math inline">\(a &lt; b &lt; d\)</span>. Two weighings are enough for this: first, you need to compare <span class="math inline">\(e\)</span> with <span class="math inline">\(b\)</span>, then you need to compare <span class="math inline">\(e\)</span> with <span class="math inline">\(a\)</span> if <span class="math inline">\(e &lt; b\)</span>, and with <span class="math inline">\(d\)</span> if <span class="math inline">\(e &gt; b\)</span>. Now we know how the four weights <span class="math inline">\(a, b, d\)</span>, and <span class="math inline">\(e\)</span> are ordered.</li>
+<li>Find the place of the weight with mass <span class="math inline">\(c\)</span> among the three weights <span class="math inline">\(a, b, e\)</span>; this will also take two weighings. Since after stage 1 we know that <span class="math inline">\(c &lt; d\)</span>, thus we will find the place of <span class="math inline">\(c\)</span> among the four remaining weights.</li>
+</ol>
+<p>At stage 1, we made three weighings, at stages 2 and 3 – two weighings each, i.e., a total of 7 weighings.</p>
+<p><span class="math inline">\(\nabla\)</span> We will prove that it is impossible to order 5 weights in less than 7 weighings. Indeed, there are a total of <span class="math inline">\(5! = 1 \cdot 2 \cdot 3 \cdot 4 \cdot 5 = 120\)</span> options for ordering five weights. Each weighing has two outcomes. Therefore, <span class="math inline">\(p\)</span> weighings can make a choice of no more than <span class="math inline">\(2^p\)</span> options. (In the worst case for us, after the next weighing, the number of possible options is reduced by no more than half.) Therefore, in order for 5 weights to be ordered in <span class="math inline">\(p\)</span> weighings, the inequality <span class="math inline">\(2^p \ge 120\)</span> must be satisfied, or <span class="math inline">\(p \ge \log_2 120\)</span>, whence <span class="math inline">\(p \ge 7\)</span>.</p>
+<p>In the general case, to order <span class="math inline">\(n\)</span> weights, at least <span class="math inline">\(\log_2(n!)\)</span> weighings are definitely needed.</p>
+<p>The general problem of the minimum number <span class="math inline">\(F(n)\)</span> of weighings for which <span class="math inline">\(n\)</span> weights can be ordered is far from being completely solved and is of great interest to programming specialists.</p>
+<p>Several general methods for ordering <span class="math inline">\(n\)</span> weights have been invented, but for large <span class="math inline">\(n\)</span>, the number of weighings in all these methods exceeds <span class="math inline">\([\log_2(n!)] + 1\)</span>. The simplest of them is the so-called “binary insertion” algorithm. At the <span class="math inline">\(k\)</span>-th stage of this algorithm (<span class="math inline">\(k = 1, 2, ..., n-1\)</span>), some new <span class="math inline">\((k+1)\)</span>-th weight is taken and its place is found among the chain of already ordered <span class="math inline">\(k\)</span> weights. First, it is compared in mass with the weight standing in the middle of this chain, then – with the weight in the middle of the half of the chain in which it turned out to be, and so on. At the <span class="math inline">\(k\)</span>-th stage, no more than <span class="math inline">\([\log_2 k] + 1\)</span> weighings are spent. Thus, we can order <span class="math inline">\(n\)</span> weights in no more than <span class="math display">\[(1 + \log_2 2) + (1 + \log_2 3) + ... + (1 + \log_2(n-1)) &lt; n(1 + \log_2 n)\]</span> weighings.</p>
+<p>So, the minimum number <span class="math inline">\(F(n)\)</span> of weighings satisfies the inequalities <span class="math display">\[\log_2(n!) \le F(n) &lt; n(1 + \log_2 n).\]</span> Only for <span class="math inline">\(n \le 4\)</span> does the “binary insertion” algorithm give the correct values of <span class="math inline">\(F(n)\)</span>: <span class="math inline">\(F(2) = 1\)</span>, <span class="math inline">\(F(3) = 3\)</span>, <span class="math inline">\(F(4) = 5\)</span>. For the case <span class="math inline">\(n = 5\)</span>, it requires 8, not <span class="math inline">\(F(5) = 7\)</span> weighings. A generalization of the weighing method that was indicated in the solution to the problem about five weights (the “insertion and merge” sorting algorithm [94]) gives the smallest possible number <span class="math inline">\(F(n)\)</span> of weighings for <span class="math inline">\(n \le 12\)</span> and <span class="math inline">\(n = 20, 21\)</span>, but it (as V.S. Grinberg told us) is not optimal for all <span class="math inline">\(n\)</span>.</p>
+</section>
+<section id="independent-practice-problems" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="independent-practice-problems"><span class="header-section-number">4.2</span> Independent Practice Problems</h2>
+<p><strong>4-25.</strong> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be the lengths of the legs, and <span class="math inline">\(c\)</span> and <span class="math inline">\(h\)</span> be the lengths of the hypotenuse and the height dropped on it of a right triangle. What is the largest value that the quantity <span class="math inline">\((c + h)(a + b)\)</span> can take?</p>
+<p><strong>4-26.</strong> It is known about the quadratic trinomial <span class="math inline">\(f(x) = ax^2 - ax + 1\)</span> that <span class="math inline">\(f(x) \le 1\)</span> for <span class="math inline">\(0 \le x \le 1\)</span>. Find the largest possible value of <span class="math inline">\(a\)</span>.</p>
+<p><strong>4-27.</strong> It is known that the proportion of blondes among blue-eyed people is greater than the proportion of blondes among all people. Which is greater: the proportion of blue-eyed people among blondes or the proportion of blue-eyed people among all people?</p>
+<p><strong>4-28.</strong> The sum of ten different natural numbers is 1986. What is the largest possible value that the sum of the three smallest of them can take?</p>
+<p><strong>4-29.</strong> Prove that if the values of the angles of a convex pentagon form an arithmetic progression, then each of them is greater than <span class="math inline">\(36^\circ\)</span>.</p>
+<p><strong>4-30.</strong> An arbitrary point is taken inside a triangle of area 1, and lines parallel to the sides of the triangle are drawn through it. As a result, the triangle is divided into 6 parts. Let’s number the areas of these parts in ascending order: <span class="math inline">\(S_1 \le S_2 \le ... \le S_6\)</span>. What values can each of these six quantities take?</p>
+<p><strong>4-31.</strong> The area of a quadrilateral is 1. What is the smallest value that the sum of its diagonals can have?</p>
+<p><strong>4-32.</strong> 9 identical pens cost 11 rubles and kopecks, and 13 of the same pens cost 15 rubles and kopecks. How much does one pen cost?</p>
+<p><strong>4-33.</strong> Find the smallest natural <span class="math inline">\(n\)</span> for which there exists such a natural <span class="math inline">\(m\)</span> that <span class="math display">\[2^{20} &lt; \frac{m}{n} &lt; 3.\]</span></p>
+<p><strong>4-34.</strong> Two industrial enterprises, “Malysh” and “Karlson”, can operate on any of three types of fuel: oil, coal, gas. The oil reserves are such that “Malysh” can work on the available oil for 16 months, and “Karlson” – for 9 months. Coal would be enough for “Malysh” for 11 months, and for “Karlson” – for 7 months. “Malysh” would consume gas for 5 months, and “Karlson” – for 3 months. What is the maximum time both enterprises can work on these fuel reserves? (Both enterprises start and finish working at the same time.)</p>
+<p><strong>4-35.</strong> Buses run along the highway in one direction at a constant speed at regular intervals without stopping. One person walked 4 km along the highway, and during this time 6 buses overtook him. Another time, he walked 7 km, and during this time 8 buses overtook him. The third time, he walked 17 km. How many buses could overtake him this time? (All three times the person walked at the same speed.)</p>
+<p><strong>4-36.</strong> Find all solutions to the system of equations <span class="math display">\[x + y = 2,\]</span> <span class="math display">\[xy - z^2 = 1.\]</span></p>
+<p><strong>4-37.</strong> Find 11 numbers, each of which is equal to the square of the sum of the other ten.</p>
+<p><strong>4-38.</strong> For what natural <span class="math inline">\(n\)</span> does the quantity <span class="math display">\[\left( \begin{array}{cc} 1 &amp; 0 \\ 0 &amp; 1 \end{array} \right)^n\]</span> take the largest value?</p>
+<p><strong>4-39.</strong> For what values of <span class="math inline">\(n\)</span> is it possible to choose <span class="math inline">\(n\)</span> numbers so that the sum of all pairwise products of these numbers is equal to 1, and the sum of the squares of all these numbers is less than 0.01?</p>
+<p><strong>4-40.</strong> Prove that for all positive <span class="math inline">\(a, b, c\)</span>, the inequality <span class="math display">\[a^5 + b^5 + c^5 \ge a^2b^2c + ac^2b^2 + bca^2\]</span> holds.</p>
+<p><strong>4-41.</strong> Prove that for <span class="math inline">\(0 &lt; a &lt; 1\)</span>, <span class="math inline">\(0 &lt; b &lt; 1\)</span>, the inequality <span class="math display">\[\int_0^{ab} \sin x \, dx + \int_0^{\frac{\pi}{2}} \arcsin x \, dx  \ge ab\]</span> holds.</p>
+<p><strong>4-42.</strong> Let <span class="math inline">\(a, b, c\)</span> be the sides of a triangle, <span class="math inline">\(P\)</span> and <span class="math inline">\(S\)</span> be its perimeter and area, respectively. Prove the inequalities: a) <span class="math inline">\(P^3 \le a^2 + b^2 + c^2 &lt; P^2\)</span>; b) <span class="math inline">\(S &lt; \frac{(ab + bc + ca)}{6}\)</span>.</p>
+<p><strong>4-43.</strong> Which is greater: a) <span class="math inline">\(3^{500}\)</span> or <span class="math inline">\(7^{300}\)</span>; b) <span class="math inline">\(2^{\sqrt{3}}\)</span> or <span class="math inline">\(3^{\sqrt{2}}\)</span>; c) <span class="math inline">\(\log_{100} 6\)</span> or <span class="math inline">\(\log_{150} 7\)</span>; d) <span class="math inline">\(\tan 6^\circ \tan 5^\circ\)</span> or <span class="math inline">\(\tan 7^\circ \tan 6^\circ\)</span>?</p>
+<p><strong>4-44.</strong> Prove that:</p>
+<ol type="a">
+<li><p>For any positive numbers <span class="math inline">\(x, y, z\)</span>: <span class="math display">\[\frac{1}{1+x} + \frac{1}{1+y} + \frac{1}{1+z} \ge \frac{9}{3 + x + y + z}\]</span></p></li>
+<li><p>For any numbers <span class="math inline">\(\alpha, \beta, \gamma\)</span> between <span class="math inline">\(0\)</span> and <span class="math inline">\(\pi\)</span>: <span class="math display">\[\sin \alpha \cdot \sin \beta \cdot \sin \gamma \le \sin^3 \frac{\alpha + \beta + \gamma}{3}\]</span></p></li>
+</ol>
+<p><strong>4-45.</strong> Represent the number 100 as a sum of several natural numbers so that their product is the largest.</p>
+<p><strong>4-46.</strong> What is the largest possible area of a pentagon with four sides of length 1?</p>
+<p><strong>4-47.</strong> Is it possible to place 300 points in a circle of radius 10 so that the pairwise distances between them are not less than 1?</p>
+<p><strong>4-48.</strong> On one of two identical circles, 50 red points are marked, on the other – several blue arcs, the sum of the lengths of which is less than <span class="math inline">\(\frac{1}{50}\)</span> of the length of the circle. Prove that it is possible to superimpose the first circle on the second so that none of the red points is on any of the blue arcs.</p>
+<p><strong>4-49.</strong> Points <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> are chosen on the legs <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> of a right triangle, from which perpendiculars <span class="math inline">\(PK\)</span> and <span class="math inline">\(QH\)</span> are dropped onto the hypotenuse. Find the smallest value of the sum <span class="math inline">\(KP + PQ + QH\)</span>.</p>
+<p><strong>4-50.</strong> Two cruisers are sailing on the sea at constant speeds. At 8:00 the distance between them was 20 miles, at 8:35 – 15 miles, at 8:55 – 13 miles. At what point in time will they be at the shortest distance from each other? What is this distance? (The sea is considered flat, and the cruisers are points.)</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./par3.html" class="pagination-link" aria-label="CONSTRUCTIONS IN THE PLANE AND IN SPACE">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">CONSTRUCTIONS IN THE PLANE AND IN SPACE</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./par5.html" class="pagination-link" aria-label="UNUSUAL EXAMPLES AND CONSTRUCTIONS">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">UNUSUAL EXAMPLES AND CONSTRUCTIONS</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
