@@ -26,8 +26,3 @@ format:
     theme:
       light: cosmo
     code-fold: false
-    css: custom.css
-
-
-
-
