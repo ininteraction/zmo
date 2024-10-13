@@ -1,6 +1,6 @@
 # Profound Puzzles: Deep Mathematics through Playful Problems
 
-Welcome to the repository for **Profound Puzzles: Deep Mathematics through Playful Problems**. This project is an online edition and translation of a collection of mathematical puzzles, originally written in Russian by Victor Gutenmacher and co-authors, [see PDF] (https://github.com/ininteraction/zmo/tree/main/ZMO_PDF). The goal of the book is to deepen mathematical understanding through playful problem-solving. The book is built using [Quarto](https://quarto.org/) and is open for contributions from the community.
+Welcome to the repository for **Profound Puzzles: Deep Mathematics through Playful Problems**. This project is an online edition and translation of a collection of mathematical puzzles, originally written in Russian by Victor Gutenmacher and co-authors. You can find the original PDF [here](https://github.com/ininteraction/zmo/tree/main/ZMO_PDF). The goal of the book is to deepen mathematical understanding through playful problem-solving. The book is built using [Quarto](https://quarto.org) and is open for contributions from the community.
 
 Explore the book online: [Profound Puzzles](https://ininteraction.github.io/zmo)
 
