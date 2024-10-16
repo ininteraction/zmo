@@ -1,1 +1,24 @@
-/.quarto/
+# Ignore all "libs" folders
+libs/
+
+# Ignore specific files
+_files
+.quarto
+README.html
+
+# Ignore generated files
+README_files/
+par1_files/
+par3_files/
+par4_files/
+par5_files/
+par6_files/
+subjectindex_files/
+
+# Ignore macOS-specific files
+.DS_Store
+
+# Ignore other common files
+*.log
+*.tmp
+*.swp
