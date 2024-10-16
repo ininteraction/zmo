@@ -14,6 +14,7 @@ par4_files/
 par5_files/
 par6_files/
 subjectindex_files/
+zmo.code-workspace/
 
 # Ignore macOS-specific files
 .DS_Store
